@@ -8,6 +8,7 @@
 import React from "react"
 import Header from "./header"
 import { Helmet } from "react-helmet"
+import Footer from "./Footer"
 
 const Layout = ({ children }) => {
   return (
@@ -34,6 +35,7 @@ const Layout = ({ children }) => {
       </Helmet>
       <Header />
       {children}
+      <Footer />
     </>
   )
 }
