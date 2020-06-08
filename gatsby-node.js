@@ -5,10 +5,14 @@ exports.createPages = async ({actions, graphql, reporter}) =>{
         query{
             allStrapiItinerary {
               nodes{
-                title_en
-                id
+                slug
               }
             }
+            allStrapiFeedbacks {
+                nodes {
+                  id
+                }
+              }
         }
     `);
 
@@ -20,13 +24,26 @@ exports.createPages = async ({actions, graphql, reporter}) =>{
     //Generate files for iterinary
     const iterinaries = result.data.allStrapiItinerary.nodes;
 
+    //Generate files for feedbacks
+    const feedbacks = result.data.allStrapiFeedbacks.nodes;
+
     //create iterinary templates
     iterinaries.forEach(iterinary => {
         actions.createPage({
-            path:urlSlug(iterinary.title_en),
+            path:iterinary.slug,
             component:require.resolve('./src/components/iterinaryEn/oneIterinary.js'),
             context:{
-                id:iterinary.id
+                slug:iterinary.slug
+            }
+        })
+    })
+    //create feedbacks templates
+    feedbacks.forEach(feedback => {
+        actions.createPage({
+            path:feedback.id,
+            component:require.resolve('./src/components/feedbackEn/oneFeedback.js'),
+            context:{
+                id:feedback.id
             }
         })
     })

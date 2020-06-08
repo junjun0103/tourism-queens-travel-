@@ -6,6 +6,7 @@ const UseFeedback = () =>{
         query{
             allStrapiFeedbacks {
               nodes {
+                id
                 title_en
                 title_cn
                 name_cn
@@ -15,19 +16,23 @@ const UseFeedback = () =>{
                 shortDescription_cn
                 shortDescription_en
                 date
-                photo {
-                  childImageSharp {
-                    fixed {
-                      src
-                    }
-                  }
-                }
               }
             }
           }    
     `);
 
-    console.log(result);
+    return result.allStrapiFeedbacks.nodes.map(feedback => ({
+        id:feedback.id,
+        title_en:feedback.title_en,
+        title_cn:feedback.title_cn,
+        name_cn:feedback.name_cn,
+        name_en:feedback.name_en,
+        content_cn:feedback.content_cn,
+        content_en:feedback.content_en,
+        shortDescription_cn:feedback.shortDescription_cn,
+        shortDescription_en:feedback.shortDescription_en,
+        date:feedback.date
+    }))
 }
 
 export default UseFeedback;

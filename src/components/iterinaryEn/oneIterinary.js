@@ -3,8 +3,8 @@ import {graphql} from 'gatsby';
 import Layaout from '../layout';
 
 export const query = graphql`
-    query($id:String!){
-        allStrapiItinerary (filter:{id:{eq:$id}}){
+    query($slug:String!){
+        allStrapiItinerary (filter:{slug:{eq:$slug}}){
           nodes {
             title_en
             excluded_en
