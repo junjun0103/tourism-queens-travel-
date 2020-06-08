@@ -1,14 +1,16 @@
-import React from 'react';
-import Layout from "../components/layout";
+import React from "react"
+import Layout from "../components/layout"
 
 const ContactUs = () => {
-    return ( 
-        <>  
-            <Layout>
-                <h1>From Contat Us</h1>
-            </Layout>            
-        </>
-     );
+  return (
+    <>
+      <Layout>
+        <section className="contactUs-page">
+          <h1>From Contat Us</h1>
+        </section>
+      </Layout>
+    </>
+  )
 }
- 
-export default ContactUs;
+
+export default ContactUs

@@ -8,7 +8,7 @@
 import React from "react"
 import Header from "./header"
 import { Helmet } from "react-helmet"
-import Footer from "./Footer"
+import Footer from "./footer"
 
 const Layout = ({ children }) => {
   return (
@@ -16,7 +16,10 @@ const Layout = ({ children }) => {
       <Helmet>
         <title>Queen Tourism</title>
         <meta name="description" content="Queen Tourism Description" />
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet"/>
+        <link
+          href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+          rel="stylesheet"
+        />
         <link
           href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
           rel="stylesheet"

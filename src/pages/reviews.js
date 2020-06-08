@@ -1,14 +1,16 @@
-import React from 'react';
-import Layout from "../components/layout";
+import React from "react"
+import Layout from "../components/layout"
 
 const Review = () => {
-    return ( 
-        <>  
-            <Layout>
-                <h1>From Review</h1>
-            </Layout>            
-        </>
-     );
+  return (
+    <>
+      <Layout>
+        <section className="reviews-page">
+          <h1>From Review</h1>
+        </section>
+      </Layout>
+    </>
+  )
 }
- 
-export default Review;
+
+export default Review

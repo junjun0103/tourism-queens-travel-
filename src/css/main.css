@@ -66,53 +66,43 @@ a {
 }
 
 h1,
-h2,
-h3,
-h4 {
-  letter-spacing: var(--spacing);
-  text-transform: capitalize;
-  line-height: 1.25;
+h2 {
   margin-bottom: 0.75rem;
-  font-family: var(--ff-primary);
+  text-transform: capitalize;
+  letter-spacing: var(--spacing);
 }
 h1 {
+  /* 36pt/11.9 = 3rem */
   font-size: 3rem;
+  font-family: var(--ff-slogan);
+  font-weight: 700;
 }
 h2 {
-  font-size: 2rem;
+  /* 22pt/11.9 = 1.84rem */
+  font-size: 1.84rem;
+  font-family: var(--ff-primary);
 }
 h3 {
-  font-size: 1.25rem;
+  /* 16pt/11.9 = 1.34rem */
+  font-size: 1.34rem;
+  font-family: var(--ff-primary);
+  text-transform: capitalize;
 }
 h4 {
-  font-size: 0.875rem;
+  /* 13pt/11.9 = 1.34rem */
+  font-size: 1.09rem;
+  font-family: var(--ff-secondary);
+  font-weight: 300;
+}
+h5 {
+  /* 11pt/11.9 = 0.92rem */
+  font-size: 0.92rem;
+  font-family: var(--ff-secondary);
+  font-weight: 700;
 }
 p {
   margin-bottom: 1.25rem;
   color: var(--clr-grey-3);
-}
-@media screen and (min-width: 800px) {
-  h1 {
-    font-size: 4rem;
-  }
-  h2 {
-    font-size: 2.5rem;
-  }
-  h3 {
-    font-size: 1.75rem;
-  }
-  h4 {
-    font-size: 1rem;
-  }
-  body {
-    font-size: 1rem;
-  }
-  h1,
-  h2,
-  h3,
-  h4 {
-    line-height: 1;
-  }
 }
 
 /*  global classes */
@@ -143,8 +133,128 @@ p {
   margin: 0 auto;
   margin-top: 3rem;
 }
+
+/* section */ /* title */
+.section {
+  padding: 2rem 0;
+}
+
+.section-center,
+.section-title,
+.section-subtitle {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+}
+@media screen and (min-width: 992px) {
+  .section-center,
+  .section-title,
+  .section-subtitle {
+    width: 95vw;
+  }
+}
+.section-title {
+}
+.title-style {
+  display: inline-block;
+  padding-bottom: 0.3rem;
+  box-shadow: 0px 3px var(--clr-black);
+}
+
+/* preview */
+
+.preview-container_bestSale,
+.preview-container_themeTour {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.2);
+}
+.preview-container_bestSale {
+  grid-template-rows: 40vh 2rem 4.3rem 1rem;
+}
+.preview-img {
+  width: 100%;
+  height: 100%;
+  grid-row: 1 / 2;
+  grid-column: 1 / -1;
+  z-index: 1;
+}
+.preview-title {
+  grid-row: 1 / 2;
+  grid-column: 1 / span 3;
+  align-self: end;
+  background-color: var(--clr-primary-2);
+  color: var(--clr-white);
+  text-align: center;
+  padding-top: 0.4rem;
+  height: 2.5rem;
+  z-index: 3;
+}
+/* preview for best sale*/
+.preview-departureDay {
+  grid-row: 2 / 3;
+  margin-top: 0.6rem;
+  color: var(--clr-primary-1);
+}
+.preview-departureDay,
+.preview-shortDescription,
+.preview-price {
+  grid-column: 1 / -1;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+.preview-shortDescription {
+  grid-row: 3 / 4;
+  margin-top: 0.2rem;
+}
+.preview-price {
+  grid-row: 4 / -1;
+  justify-self: end;
+}
+
 /*
 =============== 
 Navbar
 ===============
 */
+
+/*
+===============
+Pages
+===============
+*/
+.aboutUs-page,
+.bestSale-page,
+.contactUs-page,
+.custimized-page,
+.guideTeam-page,
+.reviews-page,
+.themeTour-page,
+.touristInformation-page {
+  /* background: var(--clr-grey-10); */
+  min-height: calc(100vh - 5rem - 9rem);
+}
+.error-page {
+  display: grid;
+  place-items: center;
+  background: var(--clr-primary-7);
+  text-align: center;
+}
+.error-page h1 {
+  text-transform: uppercase;
+  color: var(--clr-primary-1);
+  margin-bottom: 2rem;
+}
+
+/*
+=============== 
+Iterinary
+===============
+*/
+.iternaries-center {
+  margin-top: 1.5rem;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  grid-gap: 2.5rem;
+}
