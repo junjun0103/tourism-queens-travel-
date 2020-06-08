@@ -1,11 +1,12 @@
 import React from 'react';
 import Layout from "../components/layout";
+import ListIterinary from '../components/iterinaryEn/listIterinary';
 
 const BestSale = () => {
     return ( 
         <>  
             <Layout>
-                <h1>From Best Sale</h1>
+                <ListIterinary />
             </Layout>            
         </>
      );

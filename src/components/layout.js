@@ -16,6 +16,7 @@ const Layout = ({ children }) => {
       <Helmet>
         <title>Queen Tourism</title>
         <meta name="description" content="Queen Tourism Description" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet"/>
         <link
           href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
           rel="stylesheet"
