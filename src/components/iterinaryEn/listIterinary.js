@@ -13,11 +13,11 @@ const ListIterinary = () => {
 
   return (
     <>
-      <section className="section">
+      <section className="section section-center">
         <Title title="best sale"></Title>
         <SubTitle subtitle="Iterinary subtitle"></SubTitle>
         <SubTitle subtitle="Iterinary subtitle"></SubTitle>
-        <div className="section-center iternaries-center">
+        <div className="preview-center">
           {/**Map for the datas */}
           {iterinaries.map(iterinary => (
             <PreviewIterinary 

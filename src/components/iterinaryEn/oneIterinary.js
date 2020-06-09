@@ -32,12 +32,9 @@ const OneIterinary = ({data:{allStrapiItinerary: { nodes }}}) => {
     subTitle_en,
   } = nodes[0]
   return (
-    <>
-      <Layaout>
-        <h1>{title_en}</h1>
-        <p>{price_en}</p>
-      </Layaout>
-    </>
+    <Layaout>
+      <h1>one OneIterinary</h1>
+    </Layaout>
   )
 }
 
