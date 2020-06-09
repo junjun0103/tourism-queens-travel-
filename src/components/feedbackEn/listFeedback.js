@@ -1,28 +1,31 @@
-import React,{useState} from 'react';
-import Previewfeedback from './previewFeedback';
-import useFeefback from '../../hooks/usefeedback';
+import React, { useState } from "react"
+import Previewfeedback from "./previewFeedback"
+import useFeefback from "../../hooks/usefeedback"
+import Title from "../title"
+import SubTitle from "../subtitle"
 
 const ListFeedBack = () => {
+  //import feedback hook datas
+  const result = useFeefback()
 
-    //import feedback hook datas
-    const result = useFeefback();
+  //keep data en usestate
+  const [feedbacks] = useState(result)
 
-    //keep data en usestate
-    const [feedbacks] = useState(result);
-
-    return ( 
-        <>
-            <h1>Reviews</h1>
-            <ul>
-                {feedbacks.map(feedback => (
-                    <Previewfeedback 
-                        key={feedbacks.id}
-                        feedback={feedback}
-                    />
-                ))}
-            </ul>
-        </>
-     );
+  return (
+    <>
+      <section className="section">
+        <Title title="reviews"></Title>
+        <SubTitle subtitle="reviews subtitle"></SubTitle>
+        <SubTitle subtitle="reviews subtitle"></SubTitle>
+        <div className="section-center preview-center">
+          {/**Map for the datas */}
+          {feedbacks.map(feedback => (
+            <Previewfeedback key={feedbacks.id} feedback={feedback} />
+          ))}
+        </div>
+      </section>
+    </>
+  )
 }
- 
-export default ListFeedBack;
+
+export default ListFeedBack

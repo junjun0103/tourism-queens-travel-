@@ -17,7 +17,7 @@ const ListIterinary = () => {
         <Title title="best sale"></Title>
         <SubTitle subtitle="Iterinary subtitle"></SubTitle>
         <SubTitle subtitle="Iterinary subtitle"></SubTitle>
-        <div className="section-center iternaries-center">
+        <div className="section-center preview-center">
           {/**Map for the datas */}
           {iterinaries.map(iterinary => (
             <PreviewIterinary key={iterinary.id} iterinary={iterinary} />
