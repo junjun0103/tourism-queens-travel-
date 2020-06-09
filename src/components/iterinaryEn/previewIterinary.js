@@ -23,8 +23,7 @@ const PreviewIterinary = ({ iterinary }) => {
     priceDetail_en,
     departureDay_cn,
     departureDay_en,
-    plans_cn,
-    slug,
+    plans_cn
   } = iterinary
 
   console.log(iterinary)
