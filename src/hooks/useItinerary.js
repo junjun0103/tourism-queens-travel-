@@ -5,6 +5,7 @@ const UseItinerary = () => {
     query {
       allStrapiItinerary {
         nodes {
+          slug
           id
           included_cn
           included_en
@@ -46,6 +47,7 @@ const UseItinerary = () => {
   `)
 
   return result.allStrapiItinerary.nodes.map(itinerary => ({
+    slug:itinerary.slug,
     included_cn: itinerary.included_cn,
     included_en: itinerary.included_en,
     highlight_cn: itinerary.highlight_cn,

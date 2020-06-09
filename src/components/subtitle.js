@@ -1,6 +1,6 @@
 import React from "react"
 
-const subtitle = ({ subtitle }) => {
+const Subtitle = ({ subtitle }) => {
   return (
     <div className="section-subtitle">
       <h3 className="subtitle-style">{subtitle || ""}</h3>
@@ -8,4 +8,4 @@ const subtitle = ({ subtitle }) => {
   )
 }
 
-export default subtitle
+export default Subtitle

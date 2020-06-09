@@ -21,11 +21,11 @@ export const query = graphql`
 
 const OneFeedBack = ({data:{allStrapiFeedbacks:{nodes}}}) => {
     //restructure
-    const {content_cn,content_en,name_cn,name_en,shortDescription_cn,shortDescription_en,title_cn,title_en} = nodes[0];
+    const {shortDescription_en} = nodes[0];
 
     return (        
         <Layaout>
-            <h1>onefeedback</h1>
+            {shortDescription_en}
         </Layaout>        
      );
 }

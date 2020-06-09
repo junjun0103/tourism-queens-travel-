@@ -12,7 +12,22 @@ exports.createPages = async ({actions, graphql, reporter}) =>{
                 nodes {
                   id
                 }
+            }            
+            allStrapiThemeTour {
+                nodes {
+                slug
+                }
+            }
+            allStrapiTourGuides {
+                nodes {
+                  slug
+                }
               }
+            allStrapiTouristInformation {
+                nodes {
+                    slug
+                }
+            }
         }
     `);
 
@@ -26,6 +41,15 @@ exports.createPages = async ({actions, graphql, reporter}) =>{
 
     //Generate files for feedbacks
     const feedbacks = result.data.allStrapiFeedbacks.nodes;
+
+    //Generate files for theme tours
+    const tours = result.data.allStrapiThemeTour.nodes;
+
+    //Generate files for Guides tours
+    const guides = result.data.allStrapiTourGuides.nodes;
+
+    //Generate files for tourist information
+    const informations = result.data.allStrapiTouristInformation.nodes;
 
     //create iterinary templates
     iterinaries.forEach(iterinary => {
@@ -47,5 +71,34 @@ exports.createPages = async ({actions, graphql, reporter}) =>{
             }
         })
     })
-   
+   //create  theme tours templates
+   tours.forEach(tour => {
+    actions.createPage({
+        path:tour.slug,
+        component:require.resolve('./src/components/toursEn/oneTour.js'),
+        context:{
+            slug:tour.slug
+        }
+    })
+    //create feedbacks Guides tours templates
+    guides.forEach(guide => {
+        actions.createPage({
+            path:guide.slug,
+            component:require.resolve('./src/components/guideEn/oneGuide.js'),
+            context:{
+                slug:guide.slug
+            }
+        })
+    })
+    //create feedbacks Guides tours templates
+    informations.forEach(information => {
+        actions.createPage({
+            path:information.slug,
+            component:require.resolve('./src/components/touristinfo/oneTouristInfo.js'),
+            context:{
+                slug:information.slug
+            }
+        })
+    })
+})
 }

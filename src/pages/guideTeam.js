@@ -1,5 +1,6 @@
 import React from "react"
 import Layout from "../components/layout"
+import ListGuide from "../components/guideEn/listGuide";
 
 const GuideTeam = () => {
   return (
@@ -7,6 +8,7 @@ const GuideTeam = () => {
       <Layout>
         <section className="guideTeam-page">
           <h1>From Guide Team</h1>
+          <ListGuide />
         </section>
       </Layout>
     </>

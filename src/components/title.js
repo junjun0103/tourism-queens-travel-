@@ -1,6 +1,6 @@
 import React from "react"
 
-const title = ({ title }) => {
+const Title = ({ title }) => {
   return (
     <div className="section-title">
       <h2 className="title-style">{title || ""}</h2>
@@ -8,4 +8,4 @@ const title = ({ title }) => {
   )
 }
 
-export default title
+export default Title

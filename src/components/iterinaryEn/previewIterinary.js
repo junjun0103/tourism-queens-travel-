@@ -1,10 +1,10 @@
 import React from "react"
-import urlSlug from "url-slug"
 import { Link } from "gatsby"
 import img from "../../images/sample.jpg"
 
 const PreviewIterinary = ({ iterinary }) => {
   const {
+    slug,
     included_cn,
     included_en,
     highlight_cn,
@@ -29,7 +29,7 @@ const PreviewIterinary = ({ iterinary }) => {
   console.log(iterinary)
   return (
     <>
-      <Link to={"/" + urlSlug(title_en)}>
+      <Link to={"/" + slug}>
         <div className="preview-container_bestSale">
           <img src={img} alt="img" className="preview-img"></img>
           <h3 className="preview-title">{title_en}</h3>

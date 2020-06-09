@@ -5,8 +5,7 @@ const PreviewFeedback = ({feedback}) => {
 
     const {id,title_en,title_cn,name_cn,name_en,content_cn,content_en,
             shortDescription_cn,shortDescription_en,date} = feedback;
-
-        console.log(feedback);
+       
     return ( 
         <>            
             <p>previewfeed</p>
