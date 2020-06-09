@@ -394,3 +394,23 @@ About US
 .aboutUs-awards_img:not(:last-child) {
   margin-right: 1rem;
 }
+
+/*
+=============== 
+About US
+===============
+*/
+.contactUs-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 2rem;
+}
+.contactUs-container_info {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  grid-gap: 1rem;
+  margin: 3rem;
+}
+.contactUs-container_map {
+  background-color: yellow;
+}
