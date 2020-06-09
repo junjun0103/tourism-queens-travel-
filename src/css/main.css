@@ -281,6 +281,11 @@ Review (Feedback)
   border: solid 3px var(--clr-primary-1);
   position: relative;
 }
+@media screen and (max-width: 600px) {
+  .review-container {
+    width: 80vw;
+  }
+}
 .review-container::before {
   content: "\201C";
   position: absolute;
@@ -291,11 +296,40 @@ Review (Feedback)
   color: var(--clr-primary-5);
   z-index: 3;
 }
+@media screen and (max-width: 600px) {
+  .review-container::before {
+    left: -1rem;
+    top: 1rem;
+    font-size: 5rem;
+  }
+}
+.review-container::after {
+  content: "\201D";
+  position: absolute;
+  bottom: -3rem;
+  right: -1.5rem;
+  line-height: 1;
+  font-size: 7rem;
+  color: var(--clr-primary-5);
+  z-index: 3;
+}
+@media screen and (max-width: 600px) {
+  .review-container::after {
+    right: -1rem;
+    font-size: 5rem;
+  }
+}
 .review-container_items {
   padding-right: 1rem;
   margin: 3.5rem 0;
   display: grid;
   grid-template-columns: 0.5fr 1fr;
+}
+@media screen and (max-width: 600px) {
+  .review-container_items {
+    padding-left: 1rem;
+    grid-template-columns: 1fr;
+  }
 }
 .review-img {
   max-height: 18vw;
@@ -303,6 +337,13 @@ Review (Feedback)
   width: 100%;
   z-index: 2;
   margin-left: -3rem;
+}
+@media screen and (max-width: 600px) {
+  .review-img {
+    margin-left: 0;
+    min-height: 12rem;
+    width: 100%;
+  }
 }
 .review-contents_nameDate {
   text-align: end;
