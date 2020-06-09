@@ -13,11 +13,11 @@ const ListFeedBack = () => {
 
   return (
     <>
-      <section className="section">
+      <section className="section section-center">
         <Title title="reviews"></Title>
         <SubTitle subtitle="reviews subtitle"></SubTitle>
         <SubTitle subtitle="reviews subtitle"></SubTitle>
-        <div className="section-center preview-center">
+        <div className=" preview-center">
           {/**Map for the datas */}
           {feedbacks.map(feedback => (
             <Previewfeedback key={feedbacks.id} feedback={feedback} />
