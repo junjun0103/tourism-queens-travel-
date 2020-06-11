@@ -30,7 +30,7 @@ Variables
   --clr-primary-7: #efefef;
   /* etc */
   --transition: all 0.3s linear;
-  --spacing: 0.2rem;
+  --spacing: 0.1rem;
   --radius: 0.7rem;
   --radius-small: 0.4rem;
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -55,7 +55,7 @@ Global Styles
 body {
   font-family: var(--ff-secondary);
   background: var(--clr-white);
-  color: var(--clr-grey-1);
+  color: var(--clr-black);
   font-size: 0.875rem;
   margin-top: 5rem;
 }
@@ -122,14 +122,17 @@ p {
   -webkit-transition: var(--transition);
   transition: var(--transition);
   font-size: 0.875rem;
-  border: 2px solid transparent;
   cursor: pointer;
+  border: 2px solid transparent;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   border-radius: var(--radius);
 }
 .btn:hover {
   color: var(--clr-primary-1);
-  background: var(--clr-white);
+  background: var(--clr-primary-4);
+}
+.btn-right {
+  float: right;
 }
 .center-btn {
   display: block;
@@ -532,4 +535,67 @@ Tourist Information
 }
 .tourInfo-container_items_notice {
   background-color: var(--clr-primary-1);
+}
+
+/*
+===============
+Guide Team
+===============
+*/
+.listGuide-container {
+  margin-top: 5rem;
+  width: 90%;
+  margin: 5rem auto;
+}
+.previewGuide-container {
+  display: grid;
+  margin-top: 5rem;
+  justify-items: center;
+  align-items: center;
+}
+.previewGuide-img {
+  grid-column: 1 / span 4;
+  width: 60%;
+  min-width: 13rem;
+  max-height: 17rem;
+  border: solid 5px var(--clr-primary-1);
+  border-radius: 50%;
+}
+.previewGuide-contents {
+  grid-column: 5 / -1;
+}
+@media screen and (min-width: 600px) {
+  .previewGuide-container {
+    grid-template-columns: repeat(12, 1fr);
+    margin-top: 6rem;
+    grid-gap: 3.5rem;
+  }
+  .previewGuide-img {
+    grid-column: 1 / span 4;
+    width: 90%;
+    min-width: 13rem;
+    max-height: 17rem;
+  }
+  .previewGuide-contents {
+    grid-column: 5 / -1;
+  }
+  .previewGuide-container:nth-of-type(even) .previewGuide-img {
+    grid-column: 9 / -1;
+    grid-row: 1 / 1;
+  }
+  .previewGuide-container:nth-of-type(even) .previewGuide-contents {
+    grid-column: 1 / span 8;
+    grid-row: 1 / 1;
+    text-align: left;
+  }
+}
+
+.previewGuide-contents_iconWithName {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.previewGuide-contents_icon {
+  font-size: 1.3rem;
+  margin-right: 0.5rem;
 }

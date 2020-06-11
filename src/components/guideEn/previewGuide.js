@@ -1,16 +1,25 @@
-import React from 'react';
-import {Link} from 'gatsby';
+import React from "react"
+import img from "../../images/sample.jpg"
+import { FaUserTie } from "react-icons/fa"
+//import { Link } from "gatsby"
+//  <Link to={"/" + slug}>Here</Link>
+const PreviewGuide = ({ guide }) => {
+  const { slug } = guide
 
-const PreviewGuide = ({guide}) => {
-    
-    const {slug} = guide;
-        
-    return ( 
-        <>            
-            <p>previewGuide</p>          
-            <Link to={"/"+slug}>Here</Link>
-        </>
-     );
+  return (
+    <>
+      <div className="previewGuide-container">
+        <img src={img} alt="img" className="previewGuide-img"></img>
+        <div className="previewGuide-contents">
+          <div className="previewGuide-contents_iconWithName">
+            <FaUserTie className="previewGuide-contents_icon"></FaUserTie>
+            <h3>{guide.name}</h3>
+          </div>
+          <h4>{guide.profile}</h4>
+        </div>
+      </div>
+    </>
+  )
 }
- 
-export default PreviewGuide;
+
+export default PreviewGuide
