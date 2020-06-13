@@ -1,8 +1,6 @@
 import React, { useState } from "react"
 import Previewfeedback from "./previewFeedback"
 import useFeefback from "../../hooks/usefeedback"
-import Title from "../title"
-import SubTitle from "../subtitle"
 
 const ListFeedBack = () => {
   //import feedback hook datas
@@ -14,9 +12,9 @@ const ListFeedBack = () => {
   return (
     <>
       <section className="section section-center">
-        <Title title="reviews"></Title>
-        <SubTitle subtitle="reviews subtitle"></SubTitle>
-        <SubTitle subtitle="reviews subtitle"></SubTitle>
+        <h2 className="title-style">reviews</h2>
+        <h3 className="subtitle-style">Iterinary subtitle</h3>
+        <h3 className="subtitle-style">Iterinary subtitle</h3>
         <div className=" preview-center">
           {/**Map for the datas */}
           {feedbacks.map(feedback => (

@@ -2,7 +2,6 @@ import React from "react"
 import Image from "gatsby-image"
 import { graphql, useStaticQuery } from "gatsby"
 import Layout from "../components/layout"
-import Title from "../components/title"
 
 const query = graphql`
   {
@@ -26,7 +25,7 @@ const ContactUs = () => {
     <>
       <Layout>
         <section className="contactUs-page section section-center">
-          <Title title="contact detail"></Title>
+          <h2 className="title-style">contact detail</h2>
           <div className="contactUs-container">
             <div className="contactUs-container_info">
               <h4>Contact :</h4>

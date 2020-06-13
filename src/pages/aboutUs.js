@@ -1,7 +1,6 @@
 import React from "react"
 import Layout from "../components/layout"
 import logo from "../images/logo_bottom.png"
-import Title from "../components/title"
 import { FaMedal } from "react-icons/fa"
 import img1 from "../images/Qualmark_Quality_Assured.png"
 import img2 from "../images/new_zealand_tourism.png"
@@ -16,7 +15,7 @@ const AboutUs = () => {
           <section className="section section-center">
             <div className="aboutUs-container">
               <div className="aboutUs-content">
-                <Title title="introduction"></Title>
+                <h2 className="title-style">introduction</h2>
                 <h4 className="aboutUs-content_introduction">
                   Queens Travel is a registered inbound operator that is based
                   in Auckland, New Zealand. We aim to provide a diversified

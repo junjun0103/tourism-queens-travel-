@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react"
 import UseItinerary from "../../hooks/useItinerary"
 import PreviewIterinary from "./previewIterinary"
-import Title from "../title"
-import SubTitle from "../subtitle"
 
 const ListIterinary = () => {
   //bring data from hook
@@ -14,16 +12,13 @@ const ListIterinary = () => {
   return (
     <>
       <section className="section section-center">
-        <Title title="best sale"></Title>
-        <SubTitle subtitle="Iterinary subtitle"></SubTitle>
-        <SubTitle subtitle="Iterinary subtitle"></SubTitle>
+        <h2 className="title-style">best sale</h2>
+        <h3 className="subtitle-style">Iterinary subtitle</h3>
+        <h3 className="subtitle-style">Iterinary subtitle</h3>
         <div className="preview-center">
           {/**Map for the datas */}
           {iterinaries.map(iterinary => (
-            <PreviewIterinary 
-              key={iterinary.id} 
-              iterinary={iterinary} 
-            />
+            <PreviewIterinary key={iterinary.id} iterinary={iterinary} />
           ))}
         </div>
       </section>

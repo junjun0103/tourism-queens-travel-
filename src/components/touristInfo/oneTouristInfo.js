@@ -1,7 +1,6 @@
 import React from "react"
 import Layaout from "../layout"
 import { graphql } from "gatsby"
-import Title from "../../components/title"
 
 export const query = graphql`
   query($slug: String!) {
@@ -39,7 +38,7 @@ const OneFeedBack = ({
     <Layaout>
       <section className="section">
         <div className="section-center ">
-          <Title title={title_en}></Title>
+          <h2 className="title-style">{title_en}</h2>
           <div className="tourInfo-container">
             {information_en.map(item => {
               return (

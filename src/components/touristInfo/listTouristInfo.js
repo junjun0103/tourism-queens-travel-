@@ -1,7 +1,6 @@
 import React, { useState } from "react"
 import PreviewToursInfo from "./previewTouristInfo"
 import useToursInfo from "../../hooks/useToursInfo"
-import Title from "../title"
 
 const ListToursInfo = () => {
   //import tour hook datas
@@ -13,7 +12,7 @@ const ListToursInfo = () => {
     <>
       <section className="section section-center section-tourInfo">
         <div className="listTourInfo-container">
-          <Title title="tourist information"></Title>
+          <h2 className="title-style">tourist information</h2>
           <div className="preview-center_listTourInfo">
             {/**Map for the datas */}
             {toursinfo.map(tourinfo => (

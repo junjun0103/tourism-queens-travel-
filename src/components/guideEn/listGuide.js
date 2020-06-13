@@ -1,8 +1,6 @@
 import React, { useState } from "react"
 import PreviewGuide from "./previewGuide"
 import useGuide from "../../hooks/useGuide"
-import Title from "../title"
-import SubTitle from "../subtitle"
 
 const ListGuide = ({}) => {
   // "isChineseGuide = false" means show english speaking tour guides
@@ -18,9 +16,9 @@ const ListGuide = ({}) => {
 
   return (
     <section className="section section-center">
-      <Title title="Guide Team"></Title>
-      <SubTitle subtitle="guid subtitle"></SubTitle>
-      <SubTitle subtitle="guid subtitle"></SubTitle>
+      <h2 className="title-style">Guide Team</h2>
+      <h3 className="subtitle-style">Iterinary subtitle</h3>
+      <h3 className="subtitle-style">Iterinary subtitle</h3>
       {/* english/chinese guide change button */}
       <button onClick={toggleGuide} className="btn btn-right">
         {isChineseGuide
