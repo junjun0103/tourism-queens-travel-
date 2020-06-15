@@ -1,10 +1,10 @@
 import React, { useState } from "react"
 import Previewfeedback from "./previewFeedback"
-import useFeefback from "../../hooks/usefeedback"
+import useFeedfback from "../../hooks/usefeedback"
 
-const ListFeedBack = () => {
+const ListFeedBack = ({ contents, title }) => {
   //import feedback hook datas
-  const result = useFeefback()
+  const result = useFeedfback()
 
   //keep data en usestate
   const [feedbacks] = useState(result)

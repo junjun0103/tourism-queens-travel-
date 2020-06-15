@@ -1,15 +1,44 @@
-import React from "react"
+import React, { useState } from "react"
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import img from "../images/fern.jpg"
+import Slider from "../components/slider"
+import useFeedfback from "../hooks/usefeedback"
 
-const Custimized = () => {
+export const query = graphql`
+  {
+    allStrapiFeedbacks(
+      filter: { customTourFeedback: { eq: true } }
+      sort: { fields: date, order: DESC }
+    ) {
+      nodes {
+        customTourFeedback
+        id
+        shortDescription_en
+        shortDescription_cn
+        title_cn
+        title_en
+        name_cn
+        name_en
+        date
+      }
+    }
+  }
+`
+
+const Custimized = ({
+  data: {
+    allStrapiFeedbacks: { nodes },
+  },
+}) => {
+  console.log(nodes)
   return (
     <Layout>
       <section className="custimized-page section section-center">
         <article className="custimized-introduction_container">
           <div>
             <h2 className="title-style">customized tour</h2>
-            <p className="custimized-introduction_content">
+            <div className="custimized-introduction_content">
               <h4>
                 s simply dummy text of the printing and typesetting industry.
                 Lorem Ipsum has been the industry's standard dummy text ever
@@ -25,6 +54,7 @@ const Custimized = () => {
               <br />
               <br />
               <h3>text of the printing and typesetting industry.</h3>
+              <br />
               <h4>
                 psum has been the industry's standard dummy text ever since the
                 1500s, when an unknown printer took a galley of type and
@@ -34,7 +64,7 @@ const Custimized = () => {
                 scrambled it s simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum
               </h4>
-            </p>
+            </div>
           </div>
           <div className="custimized-introduction_imgWithText">
             <img
@@ -105,6 +135,10 @@ const Custimized = () => {
               </h4>
             </div>
           </div>
+        </article>
+
+        <article className="slider-containder">
+          <Slider contents={nodes} title="customized tour reviews"></Slider>
         </article>
       </section>
     </Layout>
