@@ -49,7 +49,7 @@ const ContactUs = () => {
               <div className="contactForm-container_inside">
                 <form className="contact-form">
                   <label className="contact-form_label">
-                    <h4 className="font-h4-small">First Name</h4>
+                    <h4>First Name</h4>
                   </label>
                   <input
                     name="fname"
@@ -59,7 +59,7 @@ const ContactUs = () => {
                     required
                   ></input>
                   <label className="contact-form_label">
-                    <h4 className="font-h4-small">Surname</h4>
+                    <h4>Surname</h4>
                   </label>
                   <input
                     name="sname"
@@ -69,7 +69,7 @@ const ContactUs = () => {
                     required
                   ></input>
                   <label className="contact-form_label">
-                    <h4 className="font-h4-small">Email</h4>
+                    <h4>Email</h4>
                   </label>
                   <input
                     name="email"
@@ -79,7 +79,7 @@ const ContactUs = () => {
                     required
                   ></input>
                   <label className="contact-form_label">
-                    <h4 className="font-h4-small">Contact</h4>
+                    <h4>Contact</h4>
                   </label>
                   <input
                     name="contact"
@@ -89,7 +89,7 @@ const ContactUs = () => {
                     required
                   ></input>
                   <label className="contact-form_label">
-                    <h4 className="font-h4-small">Message</h4>
+                    <h4>Message</h4>
                   </label>
                   <textarea
                     name="message"
@@ -100,7 +100,7 @@ const ContactUs = () => {
                     required
                   ></textarea>
                   <label className="contact-form_label contact-form_label_generator">
-                    <h4 className="font-h4-small">
+                    <h4>
                       Random Number: {Math.floor(Math.random() * 9999) + 1000}
                     </h4>
                   </label>

@@ -6,9 +6,7 @@ import img from "../images/sample.jpg"
 const slider = ({ contents, title }) => {
   return (
     <div>
-      <div className="slider-containder_title">
-        <h2 className="title-style">{title}</h2>
-      </div>
+      <h2 className="title-style slider-title_mb">{title}</h2>
       <Carousel
         breakPoints={[
           { width: 1, itemsToShow: 1 },
