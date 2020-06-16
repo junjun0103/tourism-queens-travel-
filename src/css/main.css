@@ -850,6 +850,24 @@ Cusomaized tour
 
 /*
 ===============
+Theme tour
+===============
+*/
+.preview-container_themeTour {
+  grid-template-rows: minmax(13rem, 20vh) minmax(7rem, 18vh);
+}
+.preview-subTitle {
+  padding: 1rem;
+  grid-column: 1/-1;
+}
+
+.themeTour-container_header {
+  width: 100vw;
+  height: 100vh;
+  background-color: aqua;
+}
+/*
+===============
 Slider
 ===============
 */

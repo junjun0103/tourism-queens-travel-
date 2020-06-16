@@ -142,7 +142,11 @@ const Custimized = ({
         </article>
 
         <article className="customizedSlider-containder">
-          <Slider contents={nodes} title="customized tour reviews"></Slider>
+          <Slider
+            contents={nodes}
+            title="customized tour reviews"
+            sliderStyle="reviews"
+          ></Slider>
         </article>
 
         <article className="customizedForm-containder">

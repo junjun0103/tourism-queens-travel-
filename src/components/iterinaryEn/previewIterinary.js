@@ -23,13 +23,13 @@ const PreviewIterinary = ({ iterinary }) => {
     priceDetail_en,
     departureDay_cn,
     departureDay_en,
-    plans_cn
+    plans_cn,
   } = iterinary
 
   console.log(iterinary)
   return (
     <>
-      <Link to={"/" + slug}>
+      <Link to={"/bestSale/" + slug}>
         <div className="preview-container_bestSale preview-boxShadow">
           <img src={img} alt="img" className="preview-img"></img>
           <h3 className="preview-title">{title_en}</h3>

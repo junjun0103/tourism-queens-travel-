@@ -18,7 +18,7 @@ const PreviewFeedback = ({ feedback }) => {
 
   return (
     <>
-      <Link to={"/" + id}>
+      <Link to={"/reviews/" + id}>
         <div className="preview-container_review">
           <img src={img} alt="img" className="preview-img"></img>
           <h4 className="preview-departureDay">{title_en}</h4>

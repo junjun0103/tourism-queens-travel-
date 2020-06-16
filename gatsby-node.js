@@ -1,104 +1,108 @@
-const urlSlug = require('url-slug');
+const urlSlug = require("url-slug")
 
-exports.createPages = async ({actions, graphql, reporter}) =>{
-    const result = await graphql(`
-        query{
-            allStrapiItinerary {
-              nodes{
-                slug
-              }
-            }
-            allStrapiFeedbacks {
-                nodes {
-                  id
-                }
-            }            
-            allStrapiThemeTour {
-                nodes {
-                slug
-                }
-            }
-            allStrapiTourGuides {
-                nodes {
-                  slug
-                }
-              }
-            allStrapiTouristInformation {
-                nodes {
-                    slug
-                }
-            }
+exports.createPages = async ({ actions, graphql, reporter }) => {
+  const result = await graphql(`
+    query {
+      allStrapiItinerary {
+        nodes {
+          slug
         }
-    `);
-
-    //some error
-    if(result.errors){
-        reporter.panic('Some Problem with the database',result.errors)
+      }
+      allStrapiFeedbacks {
+        nodes {
+          id
+        }
+      }
+      allStrapiThemeTour {
+        nodes {
+          slug
+        }
+      }
+      allStrapiTourGuides {
+        nodes {
+          slug
+        }
+      }
+      allStrapiTouristInformation {
+        nodes {
+          slug
+        }
+      }
     }
+  `)
 
-    //Generate files for iterinary
-    const iterinaries = result.data.allStrapiItinerary.nodes;
+  //some error
+  if (result.errors) {
+    reporter.panic("Some Problem with the database", result.errors)
+  }
 
-    //Generate files for feedbacks
-    const feedbacks = result.data.allStrapiFeedbacks.nodes;
+  //Generate files for iterinary
+  const iterinaries = result.data.allStrapiItinerary.nodes
 
-    //Generate files for theme tours
-    const tours = result.data.allStrapiThemeTour.nodes;
+  //Generate files for feedbacks
+  const feedbacks = result.data.allStrapiFeedbacks.nodes
 
-    //Generate files for Guides tours
-    const guides = result.data.allStrapiTourGuides.nodes;
+  //Generate files for theme tours
+  const tours = result.data.allStrapiThemeTour.nodes
 
-    //Generate files for tourist information
-    const informations = result.data.allStrapiTouristInformation.nodes;
+  //Generate files for Guides tours
+  const guides = result.data.allStrapiTourGuides.nodes
 
-    //create iterinary templates
-    iterinaries.forEach(iterinary => {
-        actions.createPage({
-            path:iterinary.slug,
-            component:require.resolve('./src/components/iterinaryEn/oneIterinary.js'),
-            context:{
-                slug:iterinary.slug
-            }
-        })
-    })
-    //create feedbacks templates
-    feedbacks.forEach(feedback => {
-        actions.createPage({
-            path:feedback.id,
-            component:require.resolve('./src/components/feedbackEn/oneFeedback.js'),
-            context:{
-                id:feedback.id
-            }
-        })
-    })
-   //create  theme tours templates
-   tours.forEach(tour => {
+  //Generate files for tourist information
+  const informations = result.data.allStrapiTouristInformation.nodes
+
+  //create iterinary templates
+  iterinaries.forEach(iterinary => {
     actions.createPage({
-        path:tour.slug,
-        component:require.resolve('./src/components/toursEn/oneTour.js'),
-        context:{
-            slug:tour.slug
-        }
+      path: `/bestSale/${iterinary.slug}/`,
+      component: require.resolve(
+        "./src/components/iterinaryEn/oneIterinary.js"
+      ),
+      context: {
+        slug: iterinary.slug,
+      },
+    })
+  })
+  //create feedbacks templates
+  feedbacks.forEach(feedback => {
+    actions.createPage({
+      path: `/reviews/${feedback.id}/`,
+      component: require.resolve("./src/components/feedbackEn/oneFeedback.js"),
+      context: {
+        id: feedback.id,
+      },
+    })
+  })
+  //create  theme tours templates
+  tours.forEach(tour => {
+    actions.createPage({
+      path: `/themeTour/${tour.slug}/`,
+      component: require.resolve("./src/components/toursEn/oneTour.js"),
+      context: {
+        slug: tour.slug,
+      },
     })
     //create feedbacks Guides tours templates
     guides.forEach(guide => {
-        actions.createPage({
-            path:guide.slug,
-            component:require.resolve('./src/components/guideEn/oneGuide.js'),
-            context:{
-                slug:guide.slug
-            }
-        })
+      actions.createPage({
+        path: `/reviews/${guide.slug}/`,
+        component: require.resolve("./src/components/guideEn/oneGuide.js"),
+        context: {
+          slug: guide.slug,
+        },
+      })
     })
     //create feedbacks Guides tours templates
     informations.forEach(information => {
-        actions.createPage({
-            path:information.slug,
-            component:require.resolve('./src/components/touristinfo/oneTouristInfo.js'),
-            context:{
-                slug:information.slug
-            }
-        })
+      actions.createPage({
+        path: `/touristInformation/${information.slug}/`,
+        component: require.resolve(
+          "./src/components/touristinfo/oneTouristInfo.js"
+        ),
+        context: {
+          slug: information.slug,
+        },
+      })
     })
-})
+  })
 }

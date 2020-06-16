@@ -8,7 +8,7 @@ const PreviewTour = ({ tourinfo }) => {
   return (
     <>
       {
-        <Link to={"/" + slug}>
+        <Link to={"/touristInformation/" + slug}>
           <div className="preview-container_tourInfo">
             <img src={img} alt="img" className="preview-img_tourInfo"></img>
             <h3 className="preview-title_tourInfo">{slug}</h3>

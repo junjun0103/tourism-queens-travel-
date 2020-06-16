@@ -3,7 +3,7 @@ import Carousel from "react-elastic-carousel"
 import { Link } from "gatsby"
 import img from "../images/sample.jpg"
 
-const slider = ({ contents, title }) => {
+const slider = ({ contents, title, sliderStyle }) => {
   return (
     <div>
       <h2 className="title-style slider-title_mb">{title}</h2>
@@ -15,7 +15,7 @@ const slider = ({ contents, title }) => {
         ]}
       >
         {contents.map(content => (
-          <Link to={"/" + content.id}>
+          <Link to={"/" + sliderStyle + "/" + content.id}>
             <div className="preview-container_review slider-height">
               <img src={img} alt="img" className="preview-img"></img>
               <h4 className="preview-departureDay">{content.title_en}</h4>
