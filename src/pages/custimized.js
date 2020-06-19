@@ -191,7 +191,7 @@ const Custimized = ({
                       ></input>
                       <label
                         className="customizedForm-checkbox_label"
-                        for="customizedForm-checkbox"
+                        htmlFor="customizedForm-checkbox"
                       >
                         I have flight tickets
                       </label>

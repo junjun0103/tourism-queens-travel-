@@ -861,25 +861,36 @@ Theme tour
   grid-column: 1/-1;
 }
 
-.themeTour-container__header {
+.themeTour-header__container {
   width: 100%;
-  height: 100vh;
-  background-color: aqua;
 }
-.themeTour-container__header__title {
+@media screen and (min-width: 600px) {
+  .themeTour-header__container {
+    height: 100vh;
+  }
+}
+.themeTour-header__background {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  top: 0;
+  right: 0;
+}
+.themeTour-header__title {
   margin-top: 1rem;
   display: flex;
   width: 5rem;
   float: left;
 }
-.themeTour-container__header__title_back {
+.themeTour-header__title_back {
   display: inline-block;
   background-color: var(--clr-primary-3);
   padding: 1.5rem;
   margin-bottom: 1rem;
   border: none;
 }
-.themeTour-container__header__title_front {
+.themeTour-header__title_front {
   display: inline-block;
   background-color: var(--clr-primary-4);
   padding: 1rem;
@@ -889,14 +900,15 @@ Theme tour
   border: none;
 }
 
-.themeTour-container__header__subtitle {
+.themeTour-header__subtitle {
   margin: 10vh auto;
   width: 60%;
   position: relative;
   text-align: center;
   padding: 0.5rem;
+  text-shadow: 0 0 10px white;
 }
-.themeTour-container__header__subtitle::before {
+.themeTour-header__subtitle::before {
   content: "\201C";
   position: absolute;
   top: 1rem;
@@ -906,7 +918,7 @@ Theme tour
   color: var(--clr-primary-5);
   z-index: 3;
 }
-.themeTour-container__header__subtitle::after {
+.themeTour-header__subtitle::after {
   content: "\201D";
   position: absolute;
   bottom: -3.5rem;
@@ -916,32 +928,92 @@ Theme tour
   color: var(--clr-primary-5);
   z-index: 3;
 }
-.themeTour-container__header__highlightBox {
-  float: right;
+.themeTour-header__highlightBox {
   display: grid;
-  width: 70vw;
-  grid-template-columns: 1fr 0.5fr;
-  margin-right: 2rem;
   border: solid 2px var(--clr-primary-1);
   border-radius: var(--radius);
 }
-.themeTour-container__header__highlightBox__content,
-.themeTour-container__header__highlightBox__map {
+@media screen and (min-width: 600px) {
+  .themeTour-header__highlightBox {
+    float: right;
+    width: 70vw;
+    margin-right: 2rem;
+    grid-template-columns: 1fr 0.5fr;
+  }
+}
+.themeTour-header__highlightBox__content,
+.themeTour-header__highlightBox__map {
   align-self: center;
   justify-self: center;
 }
 
-.themeTour-container__header__highlightBox__content {
+.themeTour-header__highlightBox__content {
   padding: 2rem 2rem;
   color: var(--clr-white);
   text-align: center;
+  text-shadow: 0 0 10px black;
 }
-.themeTour-container__header__highlightBox__map {
+.themeTour-header__highlightBox__map {
   margin: 1rem;
   background-color: blue;
   width: 80%;
   max-width: 16rem;
   height: 16rem;
+}
+
+.themeTour-plan__container {
+  display: grid;
+  grid-template-columns: 50px 50px 1fr;
+}
+.themeTour-plan__days {
+  margin-top: -0.5rem;
+}
+.themeTour-plan__lineAndDot {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.themeTour-plan__dot {
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  justify-self: end;
+  margin-right: -0.45rem;
+  z-index: 3;
+  background-color: black;
+  border-color: black;
+}
+.themeTour-plan__line {
+  border-left: 2.5px solid var(--clr-primary-2);
+}
+.themeTour-plan__route__btn {
+  width: 100%;
+  border: none;
+}
+.themeTour-plan__routeAndIcon {
+  display: flex;
+  padding: 0 1rem;
+}
+.themeTour-plan__icon {
+  font-size: 1.3rem;
+}
+.themeTour-plan__route {
+  margin-left: 0.5rem;
+}
+.themeTour-plan__box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+  margin: 1rem 0;
+}
+.themeTour-plan__stayAndMeals,
+.themeTour-plan__itinerary {
+  grid-column: 1 / span 2;
+  background-color: var(--clr-primary-4);
+  padding: 1rem;
+}
+.photo1,
+.photo2 {
+  width: 100%;
 }
 /*
 ===============
