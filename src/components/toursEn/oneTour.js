@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import Layaout from "../layout"
 import { graphql } from "gatsby"
 import img from "../../images/new-zealand.jpg"
@@ -55,8 +55,9 @@ const OneFeedBack = ({
 }) => {
   //restructure
   const { subTitle_en, title_en, plans_en } = nodes[0]
+  // number of the plans
   const countPlans = plans_en.length
-
+  const [openManager, setOpenManager] = React.useState(false)
   return (
     <Layaout>
       <article className="themeTour-header__container">
@@ -92,8 +93,12 @@ const OneFeedBack = ({
       <section className="section section-center">
         <article>
           {plans_en.map((plan, i) => {
+            // console.log("number:" + i + "+isOpen?" + isOpen)
+            const onClick = () => {
+              setOpenManager(prev => ({ ...prev, [plan.id]: !prev[plan.id] }))
+            }
             return (
-              <div className="themeTour-plan__container">
+              <div className="themeTour-plan__container" key={i}>
                 <h3 className="themeTour-plan__days">day{i + 1}</h3>
                 <div className="themeTour-plan__lineAndDot">
                   <button className="themeTour-plan__dot"></button>
@@ -105,13 +110,20 @@ const OneFeedBack = ({
                   ></div>
                 </div>
                 <div>
-                  <button className="themeTour-plan__route__btn">
+                  <button
+                    className="themeTour-plan__route__btn"
+                    onClick={onClick}
+                  >
                     <div className="themeTour-plan__routeAndIcon">
                       <FaMapMarkerAlt className="themeTour-plan__icon" />
                       <h4 className="themeTour-plan__route">{plan.route}</h4>
                     </div>
                   </button>
-                  <div className="themeTour-plan__box">
+                  <div
+                    className={`${
+                      openManager[plan.id] ? "themeTour-plan__box" : "inactive"
+                    }`}
+                  >
                     <div className="themeTour-plan__stayAndMeals">
                       <h4>{plan.stayAndMeals}</h4>
                     </div>
