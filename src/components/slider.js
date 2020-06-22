@@ -14,19 +14,33 @@ const slider = ({ contents, title, sliderStyle }) => {
           { width: 770, itemsToShow: 3, itemsToScroll: 3 },
         ]}
       >
-        {contents.map(content => (
-          <Link to={"/" + sliderStyle + "/" + content.id}>
-            <div className="preview-container_review slider-height">
-              <img src={img} alt="img" className="preview-img"></img>
-              <h4 className="preview-departureDay">{content.title_en}</h4>
-              <h4 className="preview-subtitle">{content.name_en}</h4>
-              <h4 className="preview-shortDescription">
-                {content.shortDescription_en}
-              </h4>
-              <h4 className="preview-price">{content.date}</h4>
-            </div>
-          </Link>
-        ))}
+        {contents.map(content => {
+          if (sliderStyle === "reviews") {
+            return (
+              <Link to={"/" + sliderStyle + "/" + content.slug}>
+                <div className="preview-container_review slider-height">
+                  <img src={img} alt="img" className="preview-img"></img>
+                  <h4 className="preview-departureDay">{content.title_en}</h4>
+                  <h4 className="preview-subtitle">{content.name_en}</h4>
+                  <h4 className="preview-shortDescription">
+                    {content.shortDescription_en}
+                  </h4>
+                  <h4 className="preview-price">{content.date}</h4>
+                </div>
+              </Link>
+            )
+          } else {
+            return (
+              <Link to={"/" + sliderStyle + "/" + content.slug}>
+                <div className="preview-container_themeTour  slider-height__slider preview-container_themeTour__slider">
+                  <img src={img} alt="img" className="preview-img"></img>
+                  <h3 className="preview-title">{content.title_en}</h3>
+                  <h4 className="preview-subTitle">{content.subTitle_en}</h4>
+                </div>
+              </Link>
+            )
+          }
+        })}
       </Carousel>
     </div>
   )

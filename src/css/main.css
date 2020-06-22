@@ -114,6 +114,9 @@ p {
 .break-word {
   word-break: break-word;
 }
+.clr-primary-4 {
+  color: var(--clr-primary-4);
+}
 
 /*  global classes */
 .btn {
@@ -139,6 +142,11 @@ p {
 .btn-right {
   float: right;
 }
+.btn-center {
+  width: fit-content;
+  display: block;
+  margin: 0 auto;
+}
 .center-btn {
   display: block;
   width: 9rem;
@@ -162,10 +170,17 @@ p {
     width: 95vw;
   }
 }
-.title-style {
+.title-style,
+.title-style__white {
   display: inline-block;
   padding-bottom: 0.3rem;
+}
+.title-style {
   box-shadow: 0px 3px var(--clr-black);
+}
+.title-style__white {
+  color: white;
+  box-shadow: 0px 3px var(--clr-primary-2);
 }
 
 /* preview */
@@ -739,7 +754,10 @@ Cusomaized tour
 .customizedSlider-containder,
 .customizedForm-containder,
 .custimizedProcess_container {
-  margin-top: 7rem;
+  margin-top: 5rem;
+}
+.custimizedProcess_container {
+  margin-top: 2rem;
 }
 
 .customizedForm-title {
@@ -992,6 +1010,7 @@ Theme tour
 .themeTour-plan__route__btn {
   width: 100%;
   border: none;
+  border-radius: var(--radius-small);
 }
 .themeTour-plan__route__box {
   display: flex;
@@ -1027,10 +1046,12 @@ Theme tour
   grid-column: 1 / span 2;
   background-color: var(--clr-primary-4);
   padding: 1rem;
+  border-radius: var(--radius-small);
 }
 .photo1,
 .photo2 {
   width: 100%;
+  border-radius: var(--radius-small);
 }
 
 .themeTour-notice__article {
@@ -1065,6 +1086,7 @@ Theme tour
   min-height: 10rem;
   background-color: var(--clr-primary-4);
   padding: 1rem;
+  border-radius: var(--radius-small);
 }
 /*
 ===============
@@ -1078,4 +1100,79 @@ Slider
 .slider-height {
   margin: 0 0.7rem;
   height: 23rem;
+}
+.slider-height__slider {
+  margin: 0 0.7rem;
+  height: 22rem;
+}
+.preview-container_themeTour__slider {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  margin: 0.5rem;
+}
+/*
+===============
+Index
+===============
+*/
+
+.main-header__container {
+  height: calc(100vh - 15.454px);
+}
+.main-header__background {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  top: 0;
+  right: 0;
+}
+.main-header__logo {
+  position: absolute;
+  width: 30%;
+  min-width: 15rem;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.main-header__bottom__bar {
+  height: 8rem;
+  background-image: url(../images/astronomy.jpg);
+  background-position: center;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+  background-attachment: fixed;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+.main-header__bottom__text {
+  color: white;
+  margin: 0 auto;
+}
+
+.main-slider__containder,
+.main-steps__container,
+.main-aboutUs__containder {
+  height: 100vh;
+}
+
+.main-aboutUs__containder {
+  background-image: url(../images/astronomy.jpg);
+  background-position: center;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+  background-attachment: fixed;
+}
+.main-aboutUs__box {
+  padding: 3rem;
+  margin: 0 auto;
+  padding-top: 20vh;
+  display: grid;
+  grid-template-columns: 1fr 0.4fr;
+  grid-gap: 3rem;
+  max-width: 80rem;
 }

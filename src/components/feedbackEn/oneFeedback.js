@@ -4,8 +4,8 @@ import { graphql } from "gatsby"
 import img from "../../images/sample.jpg"
 
 export const query = graphql`
-  query($id: String!) {
-    allStrapiFeedbacks(filter: { id: { eq: $id } }) {
+  query($slug: String!) {
+    allStrapiFeedbacks(filter: { slug: { eq: $slug } }) {
       nodes {
         content_cn
         content_en
@@ -16,6 +16,7 @@ export const query = graphql`
         title_cn
         title_en
         date
+        slug
       }
     }
   }
@@ -28,6 +29,7 @@ const OneFeedBack = ({
 }) => {
   //restructure
   const {
+    slug,
     content_cn,
     content_en,
     name_cn,

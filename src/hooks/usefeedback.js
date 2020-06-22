@@ -9,6 +9,7 @@ const UseFeedback = () => {
       ) {
         nodes {
           id
+          slug
           customTourFeedback
           title_en
           title_cn
@@ -26,6 +27,7 @@ const UseFeedback = () => {
 
   return result.allStrapiFeedbacks.nodes.map(feedback => ({
     id: feedback.id,
+    slug: feedback.slug,
     customTourFeedback: feedback.customTourFeedback,
     title_en: feedback.title_en,
     title_cn: feedback.title_cn,

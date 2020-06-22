@@ -10,7 +10,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       }
       allStrapiFeedbacks {
         nodes {
-          id
+          slug
         }
       }
       allStrapiThemeTour {
@@ -66,10 +66,10 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   //create feedbacks templates
   feedbacks.forEach(feedback => {
     actions.createPage({
-      path: `/reviews/${feedback.id}/`,
+      path: `/reviews/${feedback.slug}/`,
       component: require.resolve("./src/components/feedbackEn/oneFeedback.js"),
       context: {
-        id: feedback.id,
+        slug: feedback.slug,
       },
     })
   })

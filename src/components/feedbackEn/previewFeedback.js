@@ -5,6 +5,7 @@ import img from "../../images/sample.jpg"
 const PreviewFeedback = ({ feedback }) => {
   const {
     id,
+    slug,
     title_en,
     title_cn,
     name_cn,
@@ -18,7 +19,7 @@ const PreviewFeedback = ({ feedback }) => {
 
   return (
     <>
-      <Link to={"/reviews/" + id}>
+      <Link to={"/reviews/" + slug}>
         <div className="preview-container_review">
           <img src={img} alt="img" className="preview-img"></img>
           <h4 className="preview-departureDay">{title_en}</h4>

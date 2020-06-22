@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import img from "../images/fern.jpg"
 import Slider from "../components/slider"
-import useFeedfback from "../hooks/usefeedback"
+import Customized_5steps from "../components/customized_5steps"
 
 export const query = graphql`
   {
@@ -12,6 +12,7 @@ export const query = graphql`
       sort: { fields: date, order: DESC }
     ) {
       nodes {
+        slug
         customTourFeedback
         id
         shortDescription_en
@@ -84,61 +85,7 @@ const Custimized = ({
         </article>
 
         <article className="custimizedProcess_container">
-          <div className="custimizedProcess_steps">
-            <div className="custimizedProcess_circle">
-              <div className="custimizedProcess_circleInside"></div>
-            </div>
-            <div className="custimizedProcess_text">
-              <h3>1</h3>
-              <h4 className="break-word">
-                Confirm Number, Date, Duration, Special Request
-              </h4>
-            </div>
-          </div>
-          <div className="custimizedProcess_steps">
-            <div className="custimizedProcess_circle">
-              <div className="custimizedProcess_circleInside"></div>
-            </div>
-            <div className="custimizedProcess_text">
-              <h3>2</h3>
-              <h4 className="break-word">Initial Itinerary and Quotation</h4>
-            </div>
-          </div>
-          <div className="custimizedProcess_steps">
-            <div className="custimizedProcess_circle">
-              <div className="custimizedProcess_circleInside"></div>
-            </div>
-            <div className="custimizedProcess_text">
-              <h3>3</h3>
-              <h4 className="break-word">
-                Confirm Itinerary Sign Contract Pay 30% group fee Book Stays
-                Activities Transportation
-              </h4>
-            </div>
-          </div>
-          <div className="custimizedProcess_steps">
-            <div className="custimizedProcess_circle">
-              <div className="custimizedProcess_circleInside"></div>
-            </div>
-            <div className="custimizedProcess_text">
-              <h3>4</h3>
-              <h4 className="break-word">
-                Complete the banlance a month before departure. Receive a Group
-                Notification
-              </h4>
-            </div>
-          </div>
-          <div className="custimizedProcess_steps">
-            <div className="custimizedProcess_circle">
-              <div className="custimizedProcess_circleInside"></div>
-            </div>
-            <div className="custimizedProcess_text">
-              <h3>5</h3>
-              <h4 className="break-word">
-                Explore your holiday with Queen's Travel
-              </h4>
-            </div>
-          </div>
+          <Customized_5steps></Customized_5steps>
         </article>
 
         <article className="customizedSlider-containder">
