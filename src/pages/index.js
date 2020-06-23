@@ -2,11 +2,21 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import { Link } from "gatsby"
+
+import {
+  FaEye,
+  FaUserTie,
+  FaHotjar,
+  FaStar,
+  FaSeedling,
+  FaSmile,
+} from "react-icons/fa"
 import img from "../images/new-zealand.jpg"
 import logo_white from "../images/logo_big_white.png"
+import logo from "../images/logo_bottom.png"
+
 import Slider from "../components/slider"
 import Customized_5steps from "../components/customized_5steps"
-import logo from "../images/logo_bottom.png"
 
 export const query = graphql`
   {
@@ -24,14 +34,37 @@ export const query = graphql`
         title_cn
       }
     }
+    allStrapiFeedbacks(limit: 9, sort: { fields: date, order: DESC }) {
+      nodes {
+        id
+        slug
+        title_cn
+        title_en
+        shortDescription_en
+        shortDescription_cn
+        date
+        name_en
+        name_cn
+        photo {
+          childImageSharp {
+            fluid {
+              src
+            }
+          }
+        }
+      }
+    }
   }
 `
 
 const IndexPage = ({
   data: {
     allStrapiThemeTour: { nodes: themeTourData },
+    allStrapiFeedbacks: { nodes: feedbackData },
   },
 }) => {
+  console.log()
+
   return (
     <Layout>
       <article className="main-header__container">
@@ -44,7 +77,7 @@ const IndexPage = ({
         </h1>
       </article>
 
-      <section className="section-center mt2">
+      <section className="section section-center">
         <article className="main-slider__containder">
           <Slider
             contents={themeTourData}
@@ -96,9 +129,50 @@ const IndexPage = ({
         </Link>
       </article>
 
-      <section>
-        <article></article>
-        <article></article>
+      <section className="section section-center">
+        <article className="main-whyUs__containder">
+          <h2 className="title-style">why us</h2>
+          <div className="main-whyUs__box">
+            <div className="main-whyUs__contents">
+              <FaEye className="main-whyUs__contents__icon" />
+              <h3>Concentrated</h3>
+              <div className="main-whyUs__contents__text">text</div>
+            </div>
+            <div className="main-whyUs__contents">
+              <FaUserTie className="main-whyUs__contents__icon" />
+              <h3>Professional</h3>
+              <div className="main-whyUs__contents__text">text</div>
+            </div>
+            <div className="main-whyUs__contents">
+              <FaHotjar className="main-whyUs__contents__icon" />
+              <h3>Passionate</h3>
+              <div className="main-whyUs__contents__text">text</div>
+            </div>
+            <div className="main-whyUs__contents">
+              <FaStar className="main-whyUs__contents__icon" />
+              <h3>Unique</h3>
+              <div className="main-whyUs__contents__text">text</div>
+            </div>
+            <div className="main-whyUs__contents">
+              <FaSeedling className="main-whyUs__contents__icon" />
+              <h3>Pure</h3>
+              <div className="main-whyUs__contents__text">text</div>
+            </div>
+            <div className="main-whyUs__contents">
+              <FaSmile className="main-whyUs__contents__icon" />
+              <h3>Service</h3>
+              <div className="main-whyUs__contents__text">text</div>
+            </div>
+          </div>
+        </article>
+
+        <article className="main-slider__containder">
+          <Slider
+            contents={feedbackData}
+            title="reviews"
+            sliderStyle="reviews"
+          ></Slider>
+        </article>
       </section>
     </Layout>
   )
