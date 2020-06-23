@@ -18,9 +18,8 @@ const footer = () => {
           129A Qnewa Road,Northcote,Auckland0627,New Zealand
         </h5>
       </div>
-      <div className="footer__awards">
-        <Awards></Awards>
-      </div>
+
+      <Awards styleFor="footer"></Awards>
     </div>
   )
 }

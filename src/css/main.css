@@ -411,17 +411,21 @@ About US
   margin-top: 0.4rem;
   font-size: 1rem;
 }
-.aboutUs-awards_imgs {
+.aboutUs-awards__imgs {
   margin-top: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.aboutUs-awards_img {
+.aboutUs-awards__img {
   max-height: 6rem;
 }
-.aboutUs-awards_img:not(:last-child) {
+.aboutUs-awards__img__small {
+  max-height: 4rem;
+}
+.aboutUs-awards__img:not(:last-child),
+.aboutUs-awards__img__small:not(:last-child) {
   margin-right: 1rem;
 }
 
