@@ -98,7 +98,7 @@ const OneFeedBack = ({
         </div>
       </article>
 
-      <section className="section section-center">
+      <section className="section section-center ">
         <article className="themeTour-plan__article">
           {plans_en.map((plan, i) => {
             const onClick = () => {

@@ -36,27 +36,27 @@ const OneFeedBack = ({
 
   return (
     <Layaout>
-      <section className="section">
-        <div className="section-center ">
+      <section className="section section-center">
+        <div className="tourInfo-one__container">
           <h2 className="title-style">{title_en}</h2>
-          <div className="tourInfo-container">
+          <div className="tourInfo-one__box">
             {information_en.map(item => {
               return (
-                <div className="tourInfo-container_items">
+                <div className="tourInfo-one__items">
                   <p>
                     <h3>{item.subject}</h3>
                   </p>
-                  <p className="tourInfo-container_content">
+                  <p className="tourInfo-one__content">
                     <h4>{item.content}</h4>
                   </p>
                 </div>
               )
             })}
-            <div className="tourInfo-container_items tourInfo-container_items_notice">
+            <div className="tourInfo-one__items tourInfo-one_items__notice">
               <p>
                 <h3>notice from queen's</h3>
               </p>
-              <p className="tourInfo-container_content">
+              <p className="tourInfo-one__content">
                 <h4>{notice_en}</h4>
               </p>
             </div>

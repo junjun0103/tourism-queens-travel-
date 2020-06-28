@@ -5,7 +5,7 @@ import Awards from "../components/awards"
 
 const footer = () => {
   return (
-    <div className="footer__container">
+    <footer className="footer__container">
       <div className="footer__information">
         <FaPhone className="footer__icon" />
         <h5 className="clr-primary-4">+64-9-4800-118</h5>
@@ -20,7 +20,7 @@ const footer = () => {
       </div>
 
       <Awards styleFor="footer"></Awards>
-    </div>
+    </footer>
   )
 }
 

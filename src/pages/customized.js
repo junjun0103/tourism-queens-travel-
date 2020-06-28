@@ -27,7 +27,7 @@ export const query = graphql`
   }
 `
 
-const Custimized = ({
+const Customized = ({
   data: {
     allStrapiFeedbacks: { nodes },
   },
@@ -235,4 +235,4 @@ const Custimized = ({
   )
 }
 
-export default Custimized
+export default Customized

@@ -95,7 +95,7 @@ const IndexPage = ({
           <div className="custimizedProcess_container">
             <Customized_5steps></Customized_5steps>
           </div>
-          <Link to={"/custimized/"} className="btn btn-center">
+          <Link to={"/customized/"} className="btn btn-center">
             go to customized tour page
           </Link>
         </article>
@@ -124,9 +124,11 @@ const IndexPage = ({
           </div>
           <img src={logo} alt="logo" className="aboutUs-logo"></img>
         </div>
-        <Link to={"/aboutUs/"} className="btn btn-center">
-          go to aboutUs page
-        </Link>
+        <div className="btn-aboutUs">
+          <Link to={"/aboutUs/"} className="btn btn-center ">
+            go to aboutUs page
+          </Link>
+        </div>
       </article>
 
       <section className="section section-center">

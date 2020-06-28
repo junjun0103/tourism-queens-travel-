@@ -43,8 +43,8 @@ const OneFeedBack = ({
 
   return (
     <Layaout>
-      <section className="section">
-        <div className="section-center review-container">
+      <section className="section section-center">
+        <div className=" review-container">
           <div className="review-container_items">
             <img src={img} alt="img" className="review-img"></img>
             <div className="review-contents">
