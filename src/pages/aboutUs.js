@@ -12,7 +12,7 @@ const AboutUs = () => {
           <div className="aboutUs-container">
             <div className="aboutUs-content">
               <h2 className="title-style">introduction</h2>
-              <h4 className="aboutUs-content_introduction">
+              <h4 className="aboutUs-content__introduction">
                 Queens Travel is a registered inbound operator that is based in
                 Auckland, New Zealand. We aim to provide a diversified
                 experience to customers, the pursuit for perfection is a spirit
@@ -39,25 +39,25 @@ const AboutUs = () => {
 
           <div className="aboutUs-awards">
             <h4>Our Awards</h4>
-            <ul className="aboutUs-awards_ul">
-              <li className="aboutUs-awards_li">
-                <FaMedal className="aboutUs-awards_icon" />
+            <ul className="aboutUs-awards__ul">
+              <li className="aboutUs-awards__li">
+                <FaMedal className="aboutUs-awards__icon" />
                 <h3>Approved Destination Status</h3>
               </li>
-              <li className="aboutUs-awards_li">
-                <FaMedal className="aboutUs-awards_icon" />
+              <li className="aboutUs-awards__li">
+                <FaMedal className="aboutUs-awards__icon" />
                 <h3>Premier Kiwi Partnership</h3>
               </li>
-              <li className="aboutUs-awards_li">
-                <FaMedal className="aboutUs-awards_icon" />
+              <li className="aboutUs-awards__li">
+                <FaMedal className="aboutUs-awards__icon" />
                 <h3>Tourism Export Council</h3>
               </li>
-              <li className="aboutUs-awards_li">
-                <FaMedal className="aboutUs-awards_icon" />
+              <li className="aboutUs-awards__li">
+                <FaMedal className="aboutUs-awards__icon" />
                 <h3>Tourism Industry Association in New Zealand</h3>
               </li>
-              <li className="aboutUs-awards_li">
-                <FaMedal className="aboutUs-awards_icon" />
+              <li className="aboutUs-awards__li">
+                <FaMedal className="aboutUs-awards__icon" />
                 <h3>Qualmark</h3>
               </li>
             </ul>

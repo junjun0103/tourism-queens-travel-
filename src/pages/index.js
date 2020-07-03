@@ -92,7 +92,7 @@ const IndexPage = ({
           <h3 className="subtitle-style">Iterinary subtitle</h3>
           <h3 className="subtitle-style">Iterinary subtitle</h3>
           <h3 className="subtitle-style">Iterinary subtitle</h3>
-          <div className="custimizedProcess_container">
+          <div className="custimizedProcess-container">
             <Customized_5steps></Customized_5steps>
           </div>
           <Link to={"/customized/"} className="btn btn-center">

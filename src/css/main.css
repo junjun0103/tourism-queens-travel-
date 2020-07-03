@@ -599,7 +599,7 @@ About US
   grid-template-columns: 1fr 0.5fr;
 }
 
-.aboutUs-content_introduction {
+.aboutUs-content__introduction {
   line-height: 1.5rem;
   margin-top: 1rem;
 }
@@ -610,14 +610,14 @@ About US
 .aboutUs-awards {
   margin-top: 5rem;
 }
-.aboutUs-awards_ul {
+.aboutUs-awards__ul {
   margin: 1rem 1.5rem;
 }
-.aboutUs-awards_li {
+.aboutUs-awards__li {
   display: flex;
   line-height: 2rem;
 }
-.aboutUs-awards_icon {
+.aboutUs-awards__icon {
   margin-right: 1rem;
   margin-top: 0.4rem;
   font-size: 1rem;
@@ -633,7 +633,7 @@ About US
   max-height: 6rem;
 }
 .aboutUs-awards__img__small {
-  max-height: 4rem;
+  max-height: 3rem;
 }
 .aboutUs-awards__img:not(:last-child),
 .aboutUs-awards__img__small:not(:last-child) {
@@ -650,13 +650,13 @@ Contact US
   grid-template-columns: repeat(2, 1fr);
   margin-top: 2rem;
 }
-.contactUs-container_info {
+.contactUs-info {
   display: grid;
   grid-template-columns: 0.5fr 1fr;
   grid-gap: 1rem;
   margin: 3rem;
 }
-.contactUs-container_map {
+.contactUs-map {
   background-color: yellow;
 }
 .contactForm-container {
@@ -669,7 +669,7 @@ Contact US
   grid-row: 1/-1;
   z-index: 1;
 }
-.contactForm-container_outside {
+.contactForm-outside {
   border: solid 2px var(--clr-white);
   border-radius: var(--radius-small);
   grid-column: 3/-1;
@@ -678,7 +678,7 @@ Contact US
   align-self: center;
   padding: 0.5rem;
 }
-.contactForm-container_inside {
+.contactForm-inside {
   background-color: var(--clr-primary-7);
   border-radius: var(--radius-small);
 }
@@ -690,30 +690,30 @@ Contact US
 }
 .contact-form:hover {
 }
-.contact-form_label {
+.contact-form__label {
   align-self: center;
 }
-.contact-form_label_generator {
+.contact-form__label__generator {
   grid-column: span 4;
 }
-.contact-form_control {
+.contact-form__control {
   width: 100%;
   padding: 0.75rem 1rem;
   border: none;
   background-color: var(--clr-primary-4);
   border-radius: var(--radius-small);
 }
-.contact-form_control::placeholder {
+.contact-form__control::placeholder {
   font-family: var(--ff-primary);
   color: var(--clr-white);
 }
-.contact-form_input {
+.contact-form__input {
   grid-column: span 2;
 }
-.contact-form_textarea {
+.contact-form__textarea {
   grid-column: span 5;
 }
-.contact-form_btn {
+.contact-form__btn {
   grid-column: 1/-1;
   justify-self: end;
 }
@@ -727,7 +727,7 @@ Tourist Information
   padding: 2rem;
   background-color: var(--clr-primary-7);
 }
-.preview-center_listTourInfo {
+.preview-listTourInfo__center {
   margin-left: 3rem;
   margin-right: 3rem;
   margin-top: 3rem;
@@ -737,12 +737,12 @@ Tourist Information
   grid-column-gap: 2rem;
   grid-row-gap: 3rem;
 }
-.preview-container_tourInfo {
+.preview-tourInfo__container {
   display: grid;
   grid-row-gap: 1em;
   text-align: center;
 }
-.preview-img_tourInfo {
+.preview-tourInfo__img {
   width: 100%;
 }
 
@@ -829,12 +829,12 @@ Guide Team
   }
 }
 
-.previewGuide-contents_iconWithName {
+.previewGuide-contents__iconWithName {
   display: flex;
   align-items: center;
   margin-bottom: 1rem;
 }
-.previewGuide-contents_icon {
+.previewGuide-contents__icon {
   font-size: 1.3rem;
   margin-right: 0.5rem;
 }
@@ -845,18 +845,18 @@ Cusomaized tour
 ===============
 */
 
-.custimized-introduction_container {
+.custimized-introduction__container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-column-gap: 4rem;
   align-items: center;
 }
-.custimized-introduction_imgWithText {
+.custimized-introduction__imgWithText {
   max-width: 35rem;
   justify-self: center;
   display: grid;
 }
-.custimized-introduction_img {
+.custimized-introduction__img {
   z-index: 0;
   width: 100%;
 
@@ -864,11 +864,11 @@ Cusomaized tour
   grid-column: 1/-1;
 }
 @media screen and (min-width: 740px) {
-  .custimized-introduction_img {
+  .custimized-introduction__img {
     min-height: 25rem;
   }
 }
-.custimized-introduction_text {
+.custimized-introduction__text {
   z-index: 2;
   color: var(--clr-white);
   grid-row: 1/-1;
@@ -877,7 +877,7 @@ Cusomaized tour
   justify-self: center;
 }
 
-.custimizedProcess_container::before {
+.custimizedProcess-container::before {
   content: "";
   position: absolute;
   top: 22px;
@@ -887,12 +887,12 @@ Cusomaized tour
   z-index: -1;
 }
 @media screen and (max-width: 1000px) {
-  .custimizedProcess_container::before {
+  .custimizedProcess-container::before {
     display: none;
   }
 }
 
-.custimizedProcess_container {
+.custimizedProcess-container {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   margin: 5rem 0;
@@ -900,17 +900,17 @@ Cusomaized tour
   position: relative;
 }
 @media screen and (max-width: 1000px) {
-  .custimizedProcess_container {
+  .custimizedProcess-container {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 @media screen and (max-width: 610px) {
-  .custimizedProcess_container {
+  .custimizedProcess-container {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 }
 
-.custimizedProcess_steps:hover .custimizedProcess_text {
+.custimizedProcess-steps:hover .custimizedProcess-steps__text {
   background-image: linear-gradient(
     to bottom right,
     var(--clr-primary-1),
@@ -921,10 +921,10 @@ Cusomaized tour
   border: none;
   color: white;
 }
-.custimizedProcess_steps:hover .custimizedProcess_circleInside {
+.custimizedProcess-steps:hover .custimizedProcess-steps__circleInside {
   display: block;
 }
-.custimizedProcess_circle {
+.custimizedProcess-steps__circle {
   border: solid 2px var(--clr-primary-3);
   border-radius: 50%;
   width: 1rem;
@@ -932,7 +932,7 @@ Cusomaized tour
   margin: 1rem auto;
   background-color: var(--clr-primary-3);
 }
-.custimizedProcess_circleInside {
+.custimizedProcess-steps__circleInside {
   border: solid 5px var(--clr-primary-1);
   border-radius: 50%;
   width: 0.6rem;
@@ -940,7 +940,7 @@ Cusomaized tour
   margin: 1px auto;
   display: none;
 }
-.custimizedProcess_text {
+.custimizedProcess-steps__text {
   margin-top: 2rem;
   display: grid;
   border: solid 2px var(--clr-primary-3);
@@ -954,15 +954,15 @@ Cusomaized tour
   transition: var(--transition);
 }
 @media screen and (max-width: 610px) {
-  .custimizedProcess_text {
+  .custimizedProcess-steps__text {
     width: 95%;
     max-width: 15rem;
     margin-bottom: 1rem;
   }
-  .custimizedProcess_circle {
+  .custimizedProcess-steps__circle {
     display: none;
   }
-  .custimizedProcess_circleInside {
+  .custimizedProcess-steps__circleInside {
     display: none;
   }
 }
@@ -973,10 +973,10 @@ Cusomaized tour
 } */
 .customizedSlider-containder,
 .customizedForm-containder,
-.custimizedProcess_container {
+.custimizedProcess-container {
   margin-top: 5rem;
 }
-.custimizedProcess_container {
+.custimizedProcess-container {
   margin-top: 2rem;
 }
 
@@ -985,12 +985,12 @@ Cusomaized tour
   background-color: var(--clr-primary-3);
   line-height: 3rem;
 }
-.customizedForm-containder_outside {
+.customizedForm-outside {
   margin: 3rem 2rem;
   border: solid 2px var(--clr-primary-3);
   border-radius: var(--radius);
 }
-.customizedForm-containder_inside {
+.customizedForm-inside {
   margin: 0.5rem;
   background-color: var(--clr-primary-4);
   border-radius: var(--radius);
@@ -998,27 +998,27 @@ Cusomaized tour
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
 
-.customizedForm-containder_titleBox {
+.customizedForm-titleBox {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.customizedForm-containder_titleHr {
+.customizedForm-titleHr {
   border: 0;
   height: 4px;
   width: 10rem;
   background: var(--clr-primary-3);
 }
-.customizedForm-containder_title {
+.customizedForm-title__inside {
   margin: 0 1.5rem;
 }
 
-.customizedForm-containder_left,
-.customizedForm-containder_right {
+.customizedForm-left,
+.customizedForm-right {
   padding: 2rem;
   justify-self: center;
 }
-.customizedForm-containder_formBox {
+.customizedForm-formBox {
   display: grid;
   grid-template-columns: 0.5fr 1fr;
   margin-top: 1rem;
@@ -1026,7 +1026,7 @@ Cusomaized tour
   grid-row-gap: 1rem;
   grid-column-gap: 0.3rem;
 }
-.customized-form_label {
+.customized-form__label {
   text-align: center;
 }
 
@@ -1039,7 +1039,7 @@ Cusomaized tour
 .mt2 {
   margin-top: 2rem;
 }
-.customizedForm-checkbox_label {
+.customizedForm-checkbox__label {
   margin-left: 0.5rem;
 }
 .active {
@@ -1053,35 +1053,35 @@ Cusomaized tour
   width: 13rem;
   border-radius: var(--radius);
 }
-.customizedForm-checkbox_container {
+.customizedForm-checkbox__container {
   padding-left: 1rem;
 }
 @media screen and (max-width: 600px) {
-  .customizedForm-containder_inside {
+  .customizedForm-inside {
     grid-template-columns: 1fr;
   }
-  .customizedForm-containder_formBox {
+  .customizedForm-formBox {
     grid-template-columns: 1fr;
   }
-  .customizedForm-containder_formBox_label {
+  .customizedForm-formBox__label {
     display: none;
   }
   .customizedForm-input {
     justify-self: center;
     width: 80%;
   }
-  .customizedForm-containder_titleHr {
+  .customizedForm-titleHr {
     width: 4.8rem;
   }
   .textarea-flightSchedule {
     width: 8rem;
   }
-  .customizedForm-checkbox_container {
+  .customizedForm-checkbox__container {
     padding-left: 1.5rem;
   }
 }
 @media screen and (max-width: 400px) {
-  .customizedForm-containder_titleHr {
+  .customizedForm-titleHr {
     width: 3rem;
   }
 }
@@ -1439,9 +1439,18 @@ beyond ipad pro size (for laptop) */
   height: 18rem;
   background-color: var(--clr-primary-6);
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  padding: 5rem;
+  grid-template-columns: 1fr;
+  padding: 3rem;
   justify-items: center;
+}
+@media screen and (min-width: 900px) {
+  .footer__container {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 5rem;
+  }
+  .aboutUs-awards__img__small {
+    max-height: 4rem;
+  }
 }
 .footer__information {
   display: grid;
