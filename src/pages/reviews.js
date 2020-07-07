@@ -5,7 +5,9 @@ import ListFeedBack from "../components/feedbackEn/listFeedback";
 const Review = () => {
   return (
     <>
-      <Layout>
+      <Layout
+        lenguage="EN"
+      >
         <section className="reviews-page">
           <ListFeedBack />
         </section>

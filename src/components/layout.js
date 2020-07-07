@@ -10,7 +10,7 @@ import Header from "./header"
 import { Helmet } from "react-helmet"
 import Footer from "./footer"
 
-const Layout = ({ children }) => {
+const Layout = ({ children,lenguage }) => {
   return (
     <>
       <Helmet>
@@ -37,7 +37,9 @@ const Layout = ({ children }) => {
           rel="stylesheet"
         ></link>
       </Helmet>
-      <Header />
+      <Header 
+        lenguage={lenguage}
+      />
       {children}
       <Footer />
     </>

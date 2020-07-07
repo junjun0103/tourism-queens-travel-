@@ -5,7 +5,9 @@ import ListTour from "../components/toursEn/listTour"
 const ThemeTour = () => {
   return (
     <>
-      <Layout>
+      <Layout
+        lenguage="EN"
+      >
         <section className="themeTour-page">
           <ListTour />
         </section>

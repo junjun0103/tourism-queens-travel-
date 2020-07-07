@@ -5,7 +5,9 @@ import ListGuide from "../components/guideEn/listGuide"
 const GuideTeam = () => {
   return (
     <>
-      <Layout>
+      <Layout
+        lenguage="EN"
+      >
         <section className="guideTeam-page">
           <ListGuide />
         </section>

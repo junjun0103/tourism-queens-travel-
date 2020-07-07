@@ -23,7 +23,9 @@ const ContactUs = () => {
   } = useStaticQuery(query)
   return (
     <>
-      <Layout>
+      <Layout
+        lenguage="EN"
+      >
         <section className="contactUs-page section section-center">
           <h2 className="title-style">contact detail</h2>
           <div className="contactUs-container">

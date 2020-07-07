@@ -1,6 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
-const data = [
+
+//English Header Links//
+const dataEN = [
   {
     id: 1,
     text: "home",
@@ -46,9 +48,76 @@ const data = [
     text: "AboutUs",
     url: "/aboutUs/",
   },
+  {
+    id: 10,
+    text: "Chinese",
+    url: "/index_cn",
+  }
 ]
 
-const tempLinks = data.map(link => {
+//Chinese Header Links//
+const dataCN = [
+  {
+    id: 1,
+    text: "主页",
+    url: "/index_cn",
+  },
+  {
+    id: 2,
+    text: "群星热卖",
+    url: "/bestSale_cn/",
+  },
+  {
+    id: 3,
+    text: "独家主题行程",
+    url: "/themeTour_cn/",
+  },
+  {
+    id: 4,
+    text: "群星定制",
+    url: "/customized_cn/",
+  },
+  {
+    id: 5,
+    text: "群星导游",
+    url: "/guideTeam_cn/",
+  },
+  {
+    id: 6,
+    text: "旅游资讯",
+    url: "/touristInformation_cn/",
+  },
+  {
+    id: 7,
+    text: "客户分享",
+    url: "/reviews_cn/",
+  },
+  {
+    id: 8,
+    text: "在线咨询",
+    url: "/contactUs_cn/",
+  },
+  {
+    id: 9,
+    text: "关于群星",
+    url: "/aboutUs_cn/",
+  },
+  {
+    id: 10,
+    text: "English",
+    url: "/",
+  }
+]
+//english mapping
+const tempLinksEn = dataEN.map(link => {
+  return (
+    <li key={link.id}>
+      <Link to={link.url}>{link.text}</Link>
+    </li>
+  )
+})
+//chinese mapping
+const tempLinksCn = dataCN.map(link => {
   return (
     <li key={link.id}>
       <Link to={link.url}>{link.text}</Link>
@@ -57,10 +126,10 @@ const tempLinks = data.map(link => {
 })
 // I KNOW WE CAN COMBINE IT !!!!!
 
-export default ({ styleClass }) => {
+export default ({ styleClass, lenguage }) => {
   return (
     <ul className={`page-links ${styleClass ? styleClass : ""}`}>
-      {tempLinks}
+      {lenguage === 'EN' ? tempLinksEn : tempLinksCn}
     </ul>
   )
 }

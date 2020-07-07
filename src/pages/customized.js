@@ -37,7 +37,9 @@ const Customized = ({
     setIsChecked(!isChecked)
   }
   return (
-    <Layout>
+    <Layout
+      lenguage="EN"
+    >
       <section className="custimized-page section section-center">
         <article className="custimized-introduction__container">
           <div>

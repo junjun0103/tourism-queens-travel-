@@ -7,7 +7,9 @@ import Awards from "../components/awards"
 const AboutUs = () => {
   return (
     <>
-      <Layout>
+      <Layout
+        lenguage="EN"
+      >
         <section className="aboutUs-page section section-center">
           <div className="aboutUs-container">
             <div className="aboutUs-content">

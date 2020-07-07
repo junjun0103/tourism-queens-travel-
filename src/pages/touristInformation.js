@@ -5,7 +5,9 @@ import ListToursInfo from "../components/touristInfo/listTouristInfo"
 const TouristInformation = () => {
   return (
     <>
-      <Layout>
+      <Layout
+        lenguage="EN"
+      >
         <section className="touristInformation-page">
           <ListToursInfo />
         </section>
