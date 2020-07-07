@@ -16,7 +16,7 @@ import logo_white from "../images/logo_big_white.png"
 import logo from "../images/logo_bottom.png"
 
 import Slider from "../components/slider"
-import Customized_5steps from "../components/customized_5steps"
+import Customized_5steps from "../components/customized/customized_5steps"
 
 export const query = graphql`
   {
@@ -73,12 +73,14 @@ const IndexPage = ({
         <img src={img} className="main-header__background"></img>
         <img src={logo_white} className="main-header__logo"></img>
       </article>
+      {/**Slogan */}
       <article className="main-header__bottom__bar">
         <h1 className="main-header__bottom__text">
           Choose Queen's Travel , explore you'r dream
         </h1>
       </article>
 
+      {/*Theme Tour Carrousel*/}
       <section className="section section-center">
         <article className="main-slider__containder">
           <Slider
@@ -94,6 +96,8 @@ const IndexPage = ({
           <h3 className="subtitle-style">Iterinary subtitle</h3>
           <h3 className="subtitle-style">Iterinary subtitle</h3>
           <h3 className="subtitle-style">Iterinary subtitle</h3>
+
+          {/*5 Steps Information*/}
           <div className="custimizedProcess-container">
             <Customized_5steps></Customized_5steps>
           </div>
@@ -103,6 +107,7 @@ const IndexPage = ({
         </article>
       </section>
 
+      {/*AboutUs Information*/}
       <article className="main-aboutUs__containder">
         <div className="main-aboutUs__box">
           <div>
@@ -133,6 +138,7 @@ const IndexPage = ({
         </div>
       </article>
 
+      {/*Why Us Information*/}
       <section className="section section-center">
         <article className="main-whyUs__containder">
           <h2 className="title-style">why us</h2>
@@ -170,6 +176,7 @@ const IndexPage = ({
           </div>
         </article>
 
+        {/*Reviews Carrousel*/}
         <article className="main-slider__containder">
           <Slider
             contents={feedbackData}
