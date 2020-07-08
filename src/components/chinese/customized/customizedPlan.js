@@ -41,7 +41,7 @@ const CustomizedPlan = () => {
     return ( 
         <article className="customizedForm-containder">
           <h3 className="customizedForm-title">
-            Plan your holiday by 5 Simple Filters
+          开始规划您的假期
           </h3>
           <h1></h1>
           
@@ -58,12 +58,12 @@ const CustomizedPlan = () => {
                     <div className="customizedForm-formBox">
                     {/**Number of People */}
                     <label className="customizedForm-formBox__label">
-                        <h4>Number of people</h4>
+                        <h4>人数</h4>
                     </label>
                     <input
                         className="customizedForm-input"
                         type="number"
-                        placeholder="Number of people"
+                        placeholder="人数"
                         name="people"
                         value={people}
                         onChange={onChange}
@@ -71,12 +71,12 @@ const CustomizedPlan = () => {
                     ></input>
                     {/**DateTime of Tickets */}
                     <label className="customizedForm-formBox__label">
-                        <h4>Departure Date</h4>
+                        <h4>出团日期</h4>
                     </label>
                     <input
                         className="customizedForm-input"
-                        type="datetime-local"
-                        placeholder="Departure Date"
+                        type="text"
+                        placeholder="出团日期"
                         name="departureDate"
                         value={departureDate}
                         onChange={onChange}
@@ -95,24 +95,24 @@ const CustomizedPlan = () => {
                         className="customizedForm-checkbox__label"
                         htmlFor="customizedForm-checkbox"
                         >
-                        I have flight tickets
+                        我已预订旅游机票
                         </label>
                         <textarea
                         className={`customizedForm-input textarea-flightSchedule ${
                             isChecked ? "active" : "inactive"
                         }`}
                         type="text"
-                        placeholder="Flight Schedule"
+                        placeholder="我已预订旅游机票"
                         ></textarea>
                     </div>
                     {/**number of durations days */}
                     <label className="customizedForm-formBox__label">
-                        <h4>Duration (Days)</h4>
+                        <h4>行程天数 (迪亚斯)</h4>
                     </label>
                     <input
                         className="customizedForm-input"
                         type="text"
-                        placeholder="Duration"
+                        placeholder="行程天数"
                         name="duration"
                         onChange={onChange}
                         value={duration}
@@ -120,7 +120,7 @@ const CustomizedPlan = () => {
                     ></input>
                     {/**TextArea of Request */}
                     <label className="customizedForm-formBox__label">
-                        <h4>Special Request</h4>
+                        <h4>特殊要求 例如</h4>
                     </label>
                     <textarea
                         className="customizedForm-input"
@@ -129,11 +129,11 @@ const CustomizedPlan = () => {
                         value={request}
                         onChange={onChange}
                         rows="3"
-                        placeholder="Special Request(Activity,Meal etc)"
+                        placeholder="特殊要求 例如 : 景点 餐食等"
                     ></textarea>
                     {/**Budget */}
                     <label className="customizedForm-formBox__label">
-                        <h4>Budget</h4>
+                        <h4>預算</h4>
                     </label>
                     <input
                         className="customizedForm-input"
@@ -141,7 +141,7 @@ const CustomizedPlan = () => {
                         name="budget"
                         value={budget}
                         onChange={onChange}
-                        placeholder="Budget"
+                        placeholder="預算"
                         required
                     ></input>
                     </div>
@@ -157,12 +157,12 @@ const CustomizedPlan = () => {
                     <div className="customizedForm-formBox">
                     {/**Name */}
                     <label className="customizedForm-formBox__label">
-                        <h4>Name</h4>
+                        <h4>姓名</h4>
                     </label>
                     <input
                         className="customizedForm-input"
                         type="text"
-                        placeholder="Name"
+                        placeholder="姓名"
                         name="name"
                         value={name}
                         onChange={onChange}
@@ -170,7 +170,7 @@ const CustomizedPlan = () => {
                     ></input>
                     {/**Email */}
                     <label className="customizedForm-formBox__label">
-                        <h4>Email</h4>
+                        <h4>电子信箱</h4>
                     </label>
                     <input
                         className="customizedForm-input"
@@ -178,12 +178,12 @@ const CustomizedPlan = () => {
                         name="email"
                         value={email}
                         onChange={onChange}
-                        placeholder="Email"
+                        placeholder="电子信箱"
                         required
                     ></input>
                     {/**Phone */}
                     <label className="customizedForm-formBox__label">
-                        <h4>Phone</h4>
+                        <h4>连络电话</h4>
                     </label>
                     <input
                         className="customizedForm-input"
@@ -191,12 +191,12 @@ const CustomizedPlan = () => {
                         name="phone"
                         value={phone}
                         onChange={onChange}
-                        placeholder="Phone"
+                        placeholder="连络电话"
                         required
                     ></input>
                     {/**Other */}
                     <label className="customizedForm-formBox__label">
-                        <h4>Other</h4>
+                        <h4>其他</h4>
                     </label>
                     <textarea
                         className="customizedForm-input"
@@ -205,10 +205,10 @@ const CustomizedPlan = () => {
                         name="other"
                         value={other}
                         onChange={onChange}
-                        placeholder="Other"
+                        placeholder="其他"
                     ></textarea>
                     <button className="contact-form__btn btn mt2" type="submit">
-                        submit
+                        送出
                     </button>
                     </div>
                 </div>
