@@ -1,11 +1,12 @@
 import React, { useState } from "react"
 import Layaout from "../layout"
 import { graphql } from "gatsby"
-import img from "../../images/new-zealand.jpg"
 import Image from 'gatsby-image';
 import BackgroundImage from 'gatsby-background-image';
 import styled from '@emotion/styled';
-import { FaMapMarkerAlt, FaPlus } from "react-icons/fa"
+import { css } from '@emotion/core';
+import { FaMapMarkerAlt, FaPlus } from "react-icons/fa";
+import useTours from '../../hooks/useTour';
 
 const ImageBackground = styled(BackgroundImage)`
     width: 100vw;
@@ -13,6 +14,16 @@ const ImageBackground = styled(BackgroundImage)`
     top: 0;
     right: 0;
 `
+const Img = styled(Image)`
+    width: 200px;
+    height: 200px;
+
+    @media(min-width:768px){
+      width: 300px;
+      height: 300px;
+    }
+`
+
 const BgDark = styled.main`
     width:100%;
     height: 100%;
@@ -23,10 +34,6 @@ const BgDark = styled.main`
     }
 `;
 
-const Img = styled.img`
-  
-  border-radius: 4px;
-`;
 
 export const query = graphql`
   query($slug: String!) {
@@ -50,14 +57,14 @@ export const query = graphql`
         background_img {
           sharp:childImageSharp {
             fluid(quality: 100){
-              src
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }
         map {
           sharp:childImageSharp {
             fixed {
-              src
+              ...GatsbyImageSharpFixed
             }
           }
         }
@@ -67,16 +74,16 @@ export const query = graphql`
           stayAndMeals
           itinerary
           photo1 {
-            childImageSharp {
+            sharp:childImageSharp {
               fluid {
-                src
+                ...GatsbyImageSharpFluid
               }
             }
           }
           photo2 {
-            childImageSharp {
-              fluid {
-                src
+            sharp:childImageSharp {
+              fluid{
+                ...GatsbyImageSharpFluid
               }
             }
           }
@@ -91,7 +98,7 @@ const OneFeedBack = ({
     allStrapiThemeTour: { nodes },
   },
 }) => {
-  
+  const tours = useTours();
   //restructure
   const {
     background_img,
@@ -108,7 +115,7 @@ const OneFeedBack = ({
   const countPlans = plans_en.length
   const [openManager, setOpenManager] = useState(false)
 
-  console.log(map);
+  console.log(tours);
   return (
     <Layaout>
      
@@ -140,7 +147,10 @@ const OneFeedBack = ({
               </h4>
             </div>
             <div className="themeTour-header__highlightBox__map">
-              <Img src={map.sharp.fixed.src} alt=""/>
+              <img css={css`
+                    border-radius: 4px;
+                `} 
+                src={map.sharp.fixed.src} alt=""/>
             </div>
           </div>        
         </BgDark>
@@ -151,6 +161,7 @@ const OneFeedBack = ({
           {plans_en.map((plan, i) => {
             const onClick = () => {
               setOpenManager(prev => ({ ...prev, [plan.id]: !prev[plan.id] }))
+              
             }
             return (
               <div className="themeTour-plan__container" key={i}>
@@ -192,15 +203,16 @@ const OneFeedBack = ({
                     <div className="themeTour-plan__itinerary">
                       <h4>{plan.itinerary}</h4>
                     </div>
-                    <img src={img} alt="photo1" className="photo1"></img>
-                    <img src={img} alt="photo2" className="photo2"></img>
+                    <Img  fluid={plan.photo1.sharp.fluid} alt="photo1" className="photo1"></Img>
+                    <Img fluid={plan.photo2.sharp.fluid} alt="photo1" className="photo1"></Img>
+                    
                   </div>
                 </div>
               </div>
             )
           })}
         </article>
-
+        <h1>aca</h1>
         <article className="themeTour-notice__article">
           <div className="themeTour-notice__price__box">
             <div className="themeTour-notice__title">
