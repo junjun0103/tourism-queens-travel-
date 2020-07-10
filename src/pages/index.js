@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import { Link } from "gatsby"
+import MainImage from '../components/images/indexMain';
 
 import {
   FaEye,
@@ -11,8 +12,6 @@ import {
   FaSeedling,
   FaSmile,
 } from "react-icons/fa"
-import img from "../images/new-zealand.jpg"
-import logo_white from "../images/logo_big_white.png"
 import logo from "../images/logo_bottom.png"
 
 import Slider from "../components/slider"
@@ -32,6 +31,13 @@ export const query = graphql`
         subTitle_cn
         title_en
         title_cn
+        background_img{
+          sharp: childImageSharp {
+            fluid {
+              src
+            }
+          }
+        }
       }
     }
     allStrapiFeedbacks(limit: 9, sort: { fields: date, order: DESC }) {
@@ -61,18 +67,17 @@ const IndexPage = ({
   data: {
     allStrapiThemeTour: { nodes: themeTourData },
     allStrapiFeedbacks: { nodes: feedbackData },
+
   },
 }) => {
-  console.log()
-
+ 
   return (
     <Layout
       lenguage={'EN'}
-    >
-      <article className="main-header__container">
-        <img src={img} className="main-header__background"></img>
-        <img src={logo_white} className="main-header__logo"></img>
-      </article>
+    > 
+      {/**Bring the main image from image components */}
+      <MainImage />
+      
       {/**Slogan */}
       <article className="main-header__bottom__bar">
         <h1 className="main-header__bottom__text">

@@ -6,6 +6,7 @@ import img from "../images/sample.jpg"
 const slider = ({ contents, title, sliderStyle }) => {
   return (
     <div>
+      
       <h2 className="title-style slider-title_mb">{title}</h2>
       <Carousel
         breakPoints={[
@@ -32,12 +33,12 @@ const slider = ({ contents, title, sliderStyle }) => {
           } else {
             return (
               <Link to={"/" + sliderStyle + "/" + content.slug}>
-                <div className="preview-container_themeTour  slider-height__slider preview-container_themeTour__slider">
-                  <img src={img} alt="img" className="preview-img"></img>
+                <div className="preview-container_themeTour  slider-height__slider preview-container_themeTour__slider">                
+                  <img src={content.background_img.sharp.fluid.src} alt="img" className="preview-img"></img>
                   <h3 className="preview-title">{content.title_en}</h3>
                   <h4 className="preview-subTitle">{content.subTitle_en}</h4>
-                </div>
-              </Link>
+                </div>                
+              </Link>              
             )
           }
         })}

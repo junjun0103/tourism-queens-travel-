@@ -1193,10 +1193,10 @@ Theme tour
 }
 .themeTour-header__highlightBox__map {
   margin: 1rem;
-  background-color: blue;
+  /*background-color: blue;*/
   width: 80%;
   max-width: 16rem;
-  height: 16rem;
+  max-height: 16rem;
 }
 .themeTour-plan__article {
   width: 80%;

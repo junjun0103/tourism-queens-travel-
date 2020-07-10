@@ -2,7 +2,31 @@ import React, { useState } from "react"
 import Layaout from "../layout"
 import { graphql } from "gatsby"
 import img from "../../images/new-zealand.jpg"
+import Image from 'gatsby-image';
+import BackgroundImage from 'gatsby-background-image';
+import styled from '@emotion/styled';
 import { FaMapMarkerAlt, FaPlus } from "react-icons/fa"
+
+const ImageBackground = styled(BackgroundImage)`
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    right: 0;
+`
+const BgDark = styled.main`
+    width:100%;
+    height: 100%;
+    background-image:linear-gradient(to top, rgba(34,49,63,.20),rgba(34,49,63,.20));
+
+    h1{
+      color:white;
+    }
+`;
+
+const Img = styled.img`
+  
+  border-radius: 4px;
+`;
 
 export const query = graphql`
   query($slug: String!) {
@@ -23,6 +47,20 @@ export const query = graphql`
         subTitle_en
         title_cn
         title_en
+        background_img {
+          sharp:childImageSharp {
+            fluid(quality: 100){
+              src
+            }
+          }
+        }
+        map {
+          sharp:childImageSharp {
+            fixed {
+              src
+            }
+          }
+        }
         plans_en {
           id
           route
@@ -53,8 +91,11 @@ const OneFeedBack = ({
     allStrapiThemeTour: { nodes },
   },
 }) => {
+  
   //restructure
   const {
+    background_img,
+    map,
     subTitle_en,
     title_en,
     plans_en,
@@ -65,38 +106,45 @@ const OneFeedBack = ({
   } = nodes[0]
   // number of the plans
   const countPlans = plans_en.length
-  const [openManager, setOpenManager] = React.useState(false)
+  const [openManager, setOpenManager] = useState(false)
+
+  console.log(map);
   return (
     <Layaout>
-      <article className="themeTour-header__container">
-        <img className="themeTour-header__background" src={img} alt="img"></img>
-        <div className="themeTour-header__title">
-          <div className="themeTour-header__title_back"></div>
-          <div className="themeTour-header__title_front">
-            <h3>{title_en} dsadsad dsadsad</h3>
+     
+        <ImageBackground
+            tag="section"
+            fluid={background_img.sharp.fluid}
+        >
+        <BgDark> 
+          <div className="themeTour-header__title">
+            <div className="themeTour-header__title_back"></div>
+            <div className="themeTour-header__title_front">
+              <h3>{title_en} dsadsad dsadsad</h3>
+            </div>
           </div>
-        </div>
-        <br />
-        <div className="themeTour-header__subtitle">
-          <h1>
-            {subTitle_en}dsadsad sadassdadsad sdsadsad dsadsad sadassda
-            sadassdadsad sdsadsad adassdadsad sdsadsad dsadsad sadassda
-            sadassdadsad sdsadsad
-          </h1>
-        </div>
-        <div className="themeTour-header__highlightBox">
-          <div className="themeTour-header__highlightBox__content">
-            <h4>
-              highlight sadsad sadassdadsad sdsadsad dsadsad sadassda
-              sadassdadsad sdsadsad adassdadsad sdsadsad dsadsad sadassda
-              sadassdadsad sdsadsad sadassdadsad sdsadsad dsadsad sadassda
-              sadassdadsad sdsadsad adassdadsad sdsadsad dsadsad sadassda
-              sadassdadsad sdsadsad sadassdadsad sdsadsad dsadsad sadassda
-            </h4>
+          <br />
+          <div className="themeTour-header__subtitle">
+            <h1>
+              {subTitle_en}
+            </h1>
           </div>
-          <div className="themeTour-header__highlightBox__map">map</div>
-        </div>
-      </article>
+          <div className="themeTour-header__highlightBox">
+            <div className="themeTour-header__highlightBox__content">
+              <h4>
+                highlight sadsad sadassdadsad sdsadsad dsadsad sadassda
+                sadassdadsad sdsadsad adassdadsad sdsadsad dsadsad sadassda
+                sadassdadsad sdsadsad sadassdadsad sdsadsad dsadsad sadassda
+                sadassdadsad sdsadsad adassdadsad sdsadsad dsadsad sadassda
+                sadassdadsad sdsadsad sadassdadsad sdsadsad dsadsad sadassda
+              </h4>
+            </div>
+            <div className="themeTour-header__highlightBox__map">
+              <Img src={map.sharp.fixed.src} alt=""/>
+            </div>
+          </div>        
+        </BgDark>
+        </ImageBackground>
 
       <section className="section section-center ">
         <article className="themeTour-plan__article">
