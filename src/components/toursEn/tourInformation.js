@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TourInformation = () => {
+const TourInformation = ({priceDetails,included,excluded,policy}) => {
     return ( 
         <article className="themeTour-notice__article">
           <div className="themeTour-notice__price__box">
@@ -16,7 +16,7 @@ const TourInformation = () => {
               </div>
             </div>
             <div className="themeTour-notice__content">
-              <h4>{priceDetail_en}</h4>
+              <h4>{priceDetails}</h4>
             </div>
           </div>
           <div className="themeTour-notice__included__box">
@@ -32,7 +32,7 @@ const TourInformation = () => {
               </div>
             </div>
             <div className="themeTour-notice__content">
-              <h4>{included_en}</h4>
+              <h4>{included}</h4>
             </div>
           </div>
           <div className="themeTour-notice__excluded__box">
@@ -48,7 +48,7 @@ const TourInformation = () => {
               </div>
             </div>
             <div className="themeTour-notice__content">
-              <h4>{excluded_en}</h4>
+              <h4>{excluded}</h4>
             </div>
           </div>
           <div className="themeTour-notice__important__box">
@@ -80,7 +80,7 @@ const TourInformation = () => {
               </div>
             </div>
             <div className="themeTour-notice__content">
-              <h4>{policy_en}</h4>
+              <h4>{policy}</h4>
             </div>
           </div>
         </article>

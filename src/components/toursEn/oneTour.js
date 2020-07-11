@@ -116,7 +116,8 @@ const OneFeedBack = ({
   const state = useContext(GlobalStateContext);
   
   //declare lenguage variables
-  var countPlans = 0, title = '', subtitle = '', highlight = '',plans = [],priceDetails = '';
+  var countPlans = 0, title = '', subtitle = '', highlight = '',plans = [],
+      priceDetails = '',included = '',excluded = '',policy = '';
 
   //declare global image variables 
   const bgImage = background_img.sharp.fluid, mapImage = map.sharp.fixed.src;
@@ -131,6 +132,9 @@ const OneFeedBack = ({
     countPlans = plans_en.length;
     //information
     priceDetails = priceDetail_en;
+    included = included_en;
+    excluded = excluded_en;
+    policy = policy_en;
   }else{
     //English main Background Image
     title = title_cn;
@@ -139,7 +143,11 @@ const OneFeedBack = ({
     //Chinese plans
     countPlans = plans_cn.length
     plans = plans_cn;
+    //Chinese information
     priceDetails = priceDetail_cn;
+    included = included_cn;
+    excluded = excluded_cn;
+    policy = policy_cn;
   }
   return (
     <Layaout>
@@ -164,7 +172,10 @@ const OneFeedBack = ({
 
         {/**Plans Information */}
         <TourInformation
-
+          priceDetails={priceDetails}
+          included={included}
+          excluded={excluded}
+          policy={policy}
         ></TourInformation>
       </section>
     </Layaout>
