@@ -4,15 +4,15 @@ export const GlobalStateContext = React.createContext()
 export const GlobalDispatchContext = React.createContext()
 
 const initialState = {
-    theme:'EN'
+    lenguage:'EN'
 }
 
 function reducer(state,action){
     switch (action.type) {
-        case 'TOGGLE_THEME':{
+        case 'TOGGLE_LENGUAGE':{
             return{
                 ...state,
-                theme:state.theme === 'EN' ? 'CN' : 'EN'
+                lenguage:state.lenguage === 'EN' ? 'CN' : 'EN'
             }
         }           
     
