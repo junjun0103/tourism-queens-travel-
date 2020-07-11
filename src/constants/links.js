@@ -122,9 +122,9 @@ export default ({ styleClass }) => {
   const state = useContext(GlobalStateContext);
   return (
     <ul className={`page-links ${styleClass ? styleClass : ""}`}>
-      {state.theme === 'EN' ? tempLinksEn : tempLinksCn}
+      {state.lenguage === 'EN' ? tempLinksEn : tempLinksCn}
     <li type="button" onClick={() => {
-      dispatch({type:'TOGGLE_THEME'})
+      dispatch({type:'TOGGLE_LENGUAGE'})
       }}>Lenguage
     </li>
     </ul>

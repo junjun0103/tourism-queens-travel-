@@ -1,8 +1,9 @@
-import React from "react"
+import React,{ useContext } from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import { Link } from "gatsby"
 import MainImage from '../components/images/indexMain';
+import { GlobalStateContext } from '../context/GlobalContextProvider';
 
 import {
   FaEye,
@@ -70,18 +71,16 @@ const IndexPage = ({
 
   },
 }) => {
- 
+  const state = useContext(GlobalStateContext);
   return (
-    <Layout
-      lenguage={'EN'}
-    > 
+    <Layout> 
       {/**Bring the main image from image components */}
       <MainImage />
       
       {/**Slogan */}
       <article className="main-header__bottom__bar">
         <h1 className="main-header__bottom__text">
-          Choose Queen's Travel , explore you'r dream
+          {state.lenguage === 'EN' ? `Choose Queen's Travel , explore you'r dream` : '独一无二的新西兰，与众不同的群星假期'}          
         </h1>
       </article>
 
@@ -94,9 +93,8 @@ const IndexPage = ({
             sliderStyle="themeTour"
           ></Slider>
         </article>
-
         <article className="main-steps__container">
-          <h2 className="title-style">customized tour</h2>
+          <h2 className="title-style">{state.lenguage === 'EN' ? `customized tour` : '群星定制'}</h2>
           <h3 className="subtitle-style">Iterinary subtitle</h3>
           <h3 className="subtitle-style">Iterinary subtitle</h3>
           <h3 className="subtitle-style">Iterinary subtitle</h3>
