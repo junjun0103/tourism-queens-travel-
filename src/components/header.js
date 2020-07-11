@@ -2,7 +2,7 @@ import React from "react"
 import Navegation from "./headerNavegation"
 import Sidebar from "./headerNavegationSideber"
 
-const Header = ({lenguage}) => {
+const Header = ({}) => {
   const [isOpen, setIsOpen] = React.useState(false)
   const toggleSidebar = () => {
     setIsOpen(!isOpen)
@@ -10,8 +10,7 @@ const Header = ({lenguage}) => {
   return (
     <>
       <header>
-        <Navegation toggleSidebar={toggleSidebar} 
-                    lenguage={lenguage}
+        <Navegation toggleSidebar={toggleSidebar}
         />
         <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar}></Sidebar>
       </header>

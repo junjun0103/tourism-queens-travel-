@@ -9,7 +9,7 @@ const Nav = styled(Link)`
   margin-left: 20px;
 `
 
-const HeaderNavegation = ({ toggleSidebar,lenguage }) => {
+const HeaderNavegation = ({ toggleSidebar }) => {
   return (
     <nav className="navbar">
       <div className="nav-center">
@@ -20,7 +20,6 @@ const HeaderNavegation = ({ toggleSidebar,lenguage }) => {
           </button>
         </div>
         <PageLinks styleClass="nav-links"
-          lenguage={lenguage}
         ></PageLinks>
       </div>
     </nav>
