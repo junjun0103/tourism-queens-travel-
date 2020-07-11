@@ -24,7 +24,9 @@ const PreviewFeedback = ({ feedback }) => {
           <img src={img} alt="img" className="preview-img"></img>
           <h4 className="preview-departureDay">{title_en}</h4>
           <h4 className="preview-subtitle">{name_en}</h4>
-          <h4 className="preview-shortDescription">{shortDescription_en}</h4>
+          <h4 className="preview-shortDescription word-break-break-all">
+            {shortDescription_en}
+          </h4>
           <h4 className="preview-price">{date}</h4>
         </div>
       </Link>

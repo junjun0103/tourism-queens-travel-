@@ -12,8 +12,11 @@ const ListTour = () => {
     <>
       <section className="section section-center">
         <h2 className="title-style">Theme Tours</h2>
-        <h3 className="subtitle-style">Iterinary subtitle</h3>
-        <h3 className="subtitle-style">Iterinary subtitle</h3>
+        <br />
+        <br />
+        <h4 className="subtitle-style">
+          Explore your travel dream with our unique tour
+        </h4>
         <div className="preview-center">
           {/**Map for the datas */}
           {tours.map(tour => (

@@ -17,13 +17,18 @@ const ListGuide = ({}) => {
   return (
     <section className="section section-center">
       <h2 className="title-style">Guide Team</h2>
-      <h3 className="subtitle-style">Iterinary subtitle</h3>
-      <h3 className="subtitle-style">Iterinary subtitle</h3>
+      <br />
+      <br />
+      <h4 className="subtitle-style">
+        Let our professional team shows you how amazing New Zealand is
+        <br />
+        Find our guide below and see how they become travel experts
+      </h4>
       {/* english/chinese guide change button */}
       <button onClick={toggleGuide} className="btn btn-right">
         {isChineseGuide
-          ? "find English Speaking Tour guides"
-          : "find Chinese Speaking Tour guides"}
+          ? "find English Speaking guides"
+          : "find Chinese Speaking guides"}
       </button>
       <div className="listGuide-container">
         {isChineseGuide

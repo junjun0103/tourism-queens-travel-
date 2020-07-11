@@ -1,6 +1,6 @@
 import React from "react"
 import img1 from "../images/Qualmark_Quality_Assured.png"
-import img2 from "../images/new_zealand_tourism.png"
+import img2 from "../images/new_zealand_tourism.jpg"
 import img3 from "../images/tourism_export_council.png"
 import img4 from "../images/TIA-Logo-Colour-Full.png"
 

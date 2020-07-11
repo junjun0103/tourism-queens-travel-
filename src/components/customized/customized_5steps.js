@@ -30,8 +30,8 @@ const customized_5steps = () => {
         <div className="custimizedProcess-steps__text">
           <h3>3</h3>
           <h4 className="break-word">
-            Confirm Itinerary Sign Contract Pay 30% group fee Book Stays
-            Activities Transportation
+            •Confirm Itinerary •Sign Contract<br></br>•Pay 30% fee
+            <br></br>•Book Stays Activities Transportation
           </h4>
         </div>
       </div>
@@ -42,8 +42,8 @@ const customized_5steps = () => {
         <div className="custimizedProcess-steps__text">
           <h3>4</h3>
           <h4 className="break-word">
-            Complete the banlance a month before departure. Receive a Group
-            Notification
+            •Complete the banlance a month before departure. •Receive a travel
+            details
           </h4>
         </div>
       </div>

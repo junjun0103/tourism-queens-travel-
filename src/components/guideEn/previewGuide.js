@@ -15,7 +15,7 @@ const PreviewGuide = ({ guide }) => {
             <FaUserTie className="previewGuide-contents__icon"></FaUserTie>
             <h3>{guide.name}</h3>
           </div>
-          <h4>{guide.profile}</h4>
+          <h4 className="text-align-justify">{guide.profile}</h4>
         </div>
       </div>
     </>

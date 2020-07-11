@@ -23,9 +23,7 @@ const ContactUs = () => {
   } = useStaticQuery(query)
   return (
     <>
-      <Layout
-        lenguage="EN"
-      >
+      <Layout lenguage="EN">
         <section className="contactUs-page section section-center">
           <h2 className="title-style">contact detail</h2>
           <div className="contactUs-container">
@@ -114,7 +112,7 @@ const ContactUs = () => {
                     required
                   ></input>
                   <button className="contact-form__btn btn" type="submit">
-                    submit
+                    send
                   </button>
                 </form>
               </div>
