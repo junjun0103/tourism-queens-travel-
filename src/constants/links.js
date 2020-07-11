@@ -59,47 +59,47 @@ const dataCN = [
   {
     id: 1,
     text: "主页",
-    url: "/index_cn",
+    url: "/",
   },
   {
     id: 2,
     text: "群星热卖",
-    url: "/bestSale_cn/",
+    url: "/bestSale",
   },
   {
     id: 3,
     text: "独家主题行程",
-    url: "/themeTour_cn/",
+    url: "/themeTour",
   },
   {
     id: 4,
     text: "群星定制",
-    url: "/customized_cn/",
+    url: "/customized",
   },
   {
     id: 5,
     text: "群星导游",
-    url: "/guideTeam_cn/",
+    url: "/guideTeam",
   },
   {
     id: 6,
     text: "旅游资讯",
-    url: "/touristInformation_cn/",
+    url: "/touristInformation",
   },
   {
     id: 7,
     text: "客户分享",
-    url: "/reviews_cn/",
+    url: "/reviews",
   },
   {
     id: 8,
     text: "在线咨询",
-    url: "/contactUs_cn/",
+    url: "/contactUs",
   },
   {
     id: 9,
     text: "关于群星",
-    url: "/aboutUs_cn/",
+    url: "/aboutUs",
   },
 ]
 //english mapping
