@@ -1,6 +1,9 @@
 import React, { useContext } from "react"
 import { Link } from "gatsby"
-import { GlobalDispatchContext,GlobalStateContext } from '../context/GlobalContextProvider';
+import {
+  GlobalDispatchContext,
+  GlobalStateContext,
+} from "../context/GlobalContextProvider"
 
 //English Header Links//
 const dataEN = [
@@ -48,7 +51,7 @@ const dataEN = [
     id: 9,
     text: "AboutUs",
     url: "/aboutUs/",
-  }
+  },
 ]
 
 //Chinese Header Links//
@@ -97,7 +100,7 @@ const dataCN = [
     id: 9,
     text: "关于群星",
     url: "/aboutUs_cn/",
-  }
+  },
 ]
 //english mapping
 const tempLinksEn = dataEN.map(link => {
@@ -115,18 +118,21 @@ const tempLinksCn = dataCN.map(link => {
     </li>
   )
 })
-// I KNOW WE CAN COMBINE IT !!!!!
 
 export default ({ styleClass }) => {
-  const dispatch = useContext(GlobalDispatchContext);
-  const state = useContext(GlobalStateContext);
+  const dispatch = useContext(GlobalDispatchContext)
+  const state = useContext(GlobalStateContext)
   return (
     <ul className={`page-links ${styleClass ? styleClass : ""}`}>
-      {state.theme === 'EN' ? tempLinksEn : tempLinksCn}
-    <li type="button" onClick={() => {
-      dispatch({type:'TOGGLE_THEME'})
-      }}>Lenguage
-    </li>
+      {state.theme === "EN" ? tempLinksEn : tempLinksCn}
+      <li
+        type="button"
+        onClick={() => {
+          dispatch({ type: "TOGGLE_THEME" })
+        }}
+      >
+        Lenguage
+      </li>
     </ul>
   )
 }
