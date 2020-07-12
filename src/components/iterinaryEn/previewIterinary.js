@@ -33,7 +33,7 @@ const PreviewIterinary = ({ iterinary }) => {
         <div className="preview-container_bestSale preview-boxShadow">
           <img src={img} alt="img" className="preview-img"></img>
           <h3 className="preview-title">{title_en}</h3>
-          <h4 className="preview-departureDay">{departureDay_cn}</h4>
+          <h4 className="preview-departureDay">{departureDay_en}</h4>
           <h4 className="preview-shortDescription">{subTitle_en}</h4>
           <h4 className="preview-price">{price_en}</h4>
         </div>

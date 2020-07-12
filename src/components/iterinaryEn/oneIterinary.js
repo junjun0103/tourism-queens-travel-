@@ -143,8 +143,8 @@ const OneIterinary = ({
                     <div className="themeTour-plan__itinerary">
                       <h4>{plan.itinerary}</h4>
                     </div>
-                    <img src={img} alt="photo1" className="photo1"></img>
-                    <img src={img} alt="photo2" className="photo2"></img>
+                    <img src={img} alt="photo1" className="photo"></img>
+                    <img src={img} alt="photo2" className="photo"></img>
                   </div>
                 </div>
               </div>
