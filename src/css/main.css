@@ -132,7 +132,8 @@ p {
   word-break: break-all;
 }
 /*  global classes */
-.btn {
+.btn,
+.btn-language {
   text-transform: uppercase;
   background: var(--clr-primary-1);
   color: var(--clr-white);
@@ -148,7 +149,14 @@ p {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   border-radius: var(--radius);
 }
-.btn:hover {
+.btn-language {
+  padding: 0.27rem 0.4rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: normal;
+}
+.btn:hover,
+.btn-language:hover {
   color: var(--clr-primary-1);
   background: var(--clr-primary-4);
 }
@@ -193,6 +201,7 @@ p {
 .subtitle-style {
   text-align: justify;
   width: 55%;
+  margin-top: 1.2rem;
 }
 
 /* preview */
@@ -230,9 +239,10 @@ p {
   background-color: rgba(90, 93, 102, 0.7);
   color: var(--clr-white);
   text-align: center;
-  padding-top: 0.4rem;
+  padding-top: 0.5rem;
   height: 2.5rem;
   z-index: 3;
+  font-size: 1.05rem;
 }
 
 /* preview for best sale*/
@@ -298,10 +308,12 @@ Navbar
 .nav-links {
   display: none;
 }
-
-@media screen and (min-width: 868px) {
+.page-links {
+  text-align: center;
+}
+@media screen and (min-width: 920px) {
   .navbar {
-    background-color: rgba(40, 38, 41, 0.5);
+    background-color: rgba(40, 38, 41, 0.8);
   }
   .toggle-btn {
     display: none;
@@ -324,7 +336,7 @@ Navbar
   }
   .nav-links a:hover {
     color: var(--clr-primary-5);
-    box-shadow: 0px 2px var(--clr-primary-6);
+    box-shadow: 0px 3px var(--clr-primary-1);
   }
   .nav-center {
     display: grid;
@@ -333,7 +345,7 @@ Navbar
   }
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1050px) {
   .nav-header img {
     width: 10rem;
   }
@@ -374,7 +386,7 @@ Sidebar
   color: var(--clr-primary-1);
   letter-spacing: var(--spacing);
   margin-bottom: 1rem;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   transition: var(--transition);
   border-radius: var(--radius);
 }
@@ -476,6 +488,7 @@ Sidebar Animation
 Pages
 ===============
 */
+
 .aboutUs-page,
 .bestSale-page,
 .contactUs-page,
@@ -1156,7 +1169,9 @@ Theme tour
 }
 
 .themeTour-header__subtitle {
-  margin: 13vh auto;
+  margin: 0 auto;
+  margin-top: 15vh;
+  margin-bottom: 12vh;
   width: 60%;
   position: relative;
   text-align: center;
@@ -1211,9 +1226,13 @@ Theme tour
 .themeTour-header__highlightBox__map {
   margin: 1rem;
   /*background-color: blue;*/
-  width: 80%;
-  max-width: 16rem;
-  max-height: 16rem;
+  width: 14.5rem;
+  height: 18rem;
+}
+.themeTour-header__highlightBox__map__img {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-small);
 }
 .themeTour-plan__article {
   width: 80%;
@@ -1247,6 +1266,7 @@ Theme tour
   width: 100%;
   border: none;
   border-radius: var(--radius-small);
+  margin-bottom: 0.5rem;
 }
 .themeTour-plan__route__box {
   display: flex;
@@ -1275,7 +1295,8 @@ Theme tour
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 1rem;
-  margin: 1rem 0;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
 }
 .themeTour-plan__stayAndMeals,
 .themeTour-plan__itinerary {
@@ -1284,9 +1305,9 @@ Theme tour
   padding: 1rem;
   border-radius: var(--radius-small);
 }
-.photo1,
-.photo2 {
-  width: 100%;
+
+.photo {
+  width: 100% !important;
   border-radius: var(--radius-small);
 }
 
@@ -1332,7 +1353,7 @@ Slider
 */
 
 .slider-title_mb {
-  margin-bottom: 3.5rem;
+  margin-bottom: 2rem;
 }
 .slider-height {
   margin: 0 0.7rem;

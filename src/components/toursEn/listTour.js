@@ -12,8 +12,6 @@ const ListTour = () => {
     <>
       <section className="section section-center">
         <h2 className="title-style">Theme Tours</h2>
-        <br />
-        <br />
         <h4 className="subtitle-style">
           Explore your travel dream with our unique tour
         </h4>

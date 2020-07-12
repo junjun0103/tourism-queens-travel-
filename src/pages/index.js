@@ -100,8 +100,6 @@ const IndexPage = ({
             ? `customized tour` 
             : "群星定制"}
           </h2>
-          <br />
-          <br />
           <h4 className="subtitle-style">
             Whether you want to go fishing, go hiking in the national park, or
             ride a horse in a middle-earth like valley, or visit a historic
