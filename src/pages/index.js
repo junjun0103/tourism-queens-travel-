@@ -96,7 +96,9 @@ const IndexPage = ({
         </article>
         <article className="main-steps__container">
           <h2 className="title-style">
-            {state.lenguage === "EN" ? `customized tour` : "群星定制"}
+            {state.lenguage === "EN" 
+            ? `customized tour` 
+            : "群星定制"}
           </h2>
           <br />
           <br />
