@@ -126,12 +126,13 @@ export default ({ styleClass }) => {
     <ul className={`page-links ${styleClass ? styleClass : ""}`}>
       {state.lenguage === "EN" ? tempLinksEn : tempLinksCn}
       <li
+        className="btn-language"
         type="button"
         onClick={() => {
           dispatch({ type: "TOGGLE_LENGUAGE" })
         }}
       >
-        Lenguage
+        {state.lenguage === "EN" ? "中文" : "English"}
       </li>
     </ul>
   )

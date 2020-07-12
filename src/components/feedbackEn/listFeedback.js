@@ -13,8 +13,6 @@ const ListFeedBack = ({ contents, title }) => {
     <>
       <section className="section section-center">
         <h2 className="title-style">reviews</h2>
-        <br />
-        <br />
         <h4 className="subtitle-style">Stroies from our clients</h4>
         <div className=" preview-center">
           {/**Map for the datas */}
