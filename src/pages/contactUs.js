@@ -1,7 +1,7 @@
 import React from "react"
 import Image from "gatsby-image"
 import { graphql, useStaticQuery } from "gatsby"
-import Layout from "../components/layout"
+import Layout from "../components/ui/layout"
 
 const query = graphql`
   {
@@ -23,7 +23,7 @@ const ContactUs = () => {
   } = useStaticQuery(query)
   return (
     <>
-      <Layout lenguage="EN">
+      <Layout>
         <section className="contactUs-page section section-center">
           <h2 className="title-style">contact detail</h2>
           <div className="contactUs-container">

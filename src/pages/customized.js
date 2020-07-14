@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { graphql } from "gatsby"
-import Layout from "../components/layout"
+import Layout from "../components/ui/layout"
 import Slider from "../components/slider"
 import Customized_5steps from "../components/customized/customized_5steps"
 import CustomizedInformation from "../components/customized/customizedInformation"
@@ -31,9 +31,7 @@ export const query = graphql`
 const Customized = ({data: {allStrapiFeedbacks: { nodes },},}) => {
   
   return (
-    <Layout
-      lenguage="EN"
-    >
+    <Layout>
       <section className="custimized-page section section-center">
         
         {/*Top and Image Information*/}

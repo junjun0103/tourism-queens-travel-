@@ -1,5 +1,5 @@
 import React from "react"
-import Layout from "../components/layout"
+import Layout from "../components/ui/layout"
 import logo from "../images/logo_bottom.png"
 import { FaMedal } from "react-icons/fa"
 import Awards from "../components/awards"
@@ -7,7 +7,7 @@ import Awards from "../components/awards"
 const AboutUs = () => {
   return (
     <>
-      <Layout lenguage="EN">
+      <Layout>
         <section className="aboutUs-page section section-center">
           <div className="aboutUs-container">
             <div className="aboutUs-content">

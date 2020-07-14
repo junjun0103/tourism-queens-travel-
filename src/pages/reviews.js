@@ -1,13 +1,11 @@
 import React from "react"
-import Layout from "../components/layout"
+import Layout from "../components/ui/layout"
 import ListFeedBack from "../components/feedbackEn/listFeedback";
 
 const Review = () => {
   return (
     <>
-      <Layout
-        lenguage="EN"
-      >
+      <Layout>
         <section className="reviews-page">
           <ListFeedBack />
         </section>

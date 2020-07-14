@@ -1,5 +1,5 @@
 import React from "react"
-import Links from "../constants/links"
+import Links from "../../constants/links"
 import { FaTimes } from "react-icons/fa"
 
 const headerNavegationSideber = ({ isOpen, toggleSidebar }) => {
