@@ -32,7 +32,7 @@ const OneFeedBack = ({
   },
 }) => {
   //restructure
-  const { title_en, information_en, notice_en } = nodes[0]
+  const { title_en, information_en, notice_en, fluid } = nodes[0]
 
   return (
     <Layaout>

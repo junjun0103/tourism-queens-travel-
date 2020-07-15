@@ -16,8 +16,8 @@ const UseTour = () => {
           policy_en
           priceDetail_cn
           priceDetail_en
-          subTitle_cn
-          subTitle_en
+          slogan_cn
+          slogan_en
           title_cn
           title_en
           plans_en {
@@ -57,8 +57,8 @@ const UseTour = () => {
     policy_en: tour.policy_en,
     priceDetail_cn: tour.priceDetail_cn,
     priceDetail_en: tour.priceDetail_en,
-    subTitle_cn: tour.subTitle_cn,
-    subTitle_en: tour.subTitle_en,
+    slogan_cn: tour.slogan_cn,
+    slogan_en: tour.slogan_en,
     title_cn: tour.title_cn,
     title_en: tour.title_en,
     plans_en: tour.plans_en,

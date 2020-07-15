@@ -22,7 +22,7 @@ const ListGuide = ({}) => {
       <h4 className="subtitle-style">
         Let our professional team shows you how amazing New Zealand is
         <br />
-        Find our guide below and see how they become travel experts
+        Find our guides below and see how they become travel experts
       </h4>
       {/* english/chinese guide change button */}
       <button onClick={toggleGuide} className="btn btn-right">

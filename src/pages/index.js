@@ -28,8 +28,8 @@ export const query = graphql`
       nodes {
         id
         slug
-        subTitle_en
-        subTitle_cn
+        slogan_en
+        slogan_cn
         title_en
         title_cn
         background_img {

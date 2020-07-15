@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import img from "../../images/sample.jpg"
+import img from "../../images/airplane.png"
 
 const PreviewTour = ({ tourinfo }) => {
   const { slug } = tourinfo

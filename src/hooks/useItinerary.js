@@ -18,8 +18,8 @@ const UseItinerary = () => {
           policy_en
           title_cn
           title_en
-          subTitle_cn
-          subTitle_en
+          slogan_cn
+          slogan_en
           price_cn
           price_en
           priceDetail_cn
@@ -60,8 +60,8 @@ const UseItinerary = () => {
     policy_en: itinerary.policy_en,
     title_cn: itinerary.title_cn,
     title_en: itinerary.title_en,
-    subTitle_cn: itinerary.subTitle_cn,
-    subTitle_en: itinerary.subTitle_en,
+    slogan_cn: itinerary.slogan_cn,
+    slogan_en: itinerary.slogan_en,
     price_cn: itinerary.price_cn,
     price_en: itinerary.price_en,
     priceDetail_cn: itinerary.priceDetail_cn,

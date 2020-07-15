@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import img from "../../images/sample.jpg"
+import img from "../../images/new-zealand.jpg"
 
 const PreviewIterinary = ({ iterinary }) => {
   const {
@@ -15,8 +15,8 @@ const PreviewIterinary = ({ iterinary }) => {
     policy_en,
     title_cn,
     title_en,
-    subTitle_cn,
-    subTitle_en,
+    slogan_cn,
+    slogan_en,
     price_cn,
     price_en,
     priceDetail_cn,
@@ -34,7 +34,7 @@ const PreviewIterinary = ({ iterinary }) => {
           <img src={img} alt="img" className="preview-img"></img>
           <h3 className="preview-title">{title_en}</h3>
           <h4 className="preview-departureDay">{departureDay_en}</h4>
-          <h4 className="preview-shortDescription">{subTitle_en}</h4>
+          <h4 className="preview-shortDescription">{slogan_en}</h4>
           <h4 className="preview-price">{price_en}</h4>
         </div>
       </Link>

@@ -19,8 +19,8 @@ export const query = graphql`
         policy_en
         priceDetail_cn
         priceDetail_en
-        subTitle_cn
-        subTitle_en
+        slogan_cn
+        slogan_en
         title_cn
         title_en
         plans_en {
@@ -55,7 +55,7 @@ const OneIterinary = ({
 }) => {
   //restructure
   const {
-    subTitle_en,
+    slogan_en,
     title_en,
     plans_en,
     excluded_en,
@@ -78,7 +78,7 @@ const OneIterinary = ({
         <br />
         <div className="themeTour-header__subtitle">
           <h1>
-            {subTitle_en}dsadsad sadassdadsad sdsadsad dsadsad sadassda
+            {slogan_en}dsadsad sadassdadsad sdsadsad dsadsad sadassda
             sadassdadsad sdsadsad adassdadsad sdsadsad dsadsad sadassda
             sadassdadsad sdsadsad
           </h1>

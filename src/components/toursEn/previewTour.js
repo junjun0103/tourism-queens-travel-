@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import img from "../../images/sample.jpg"
+import img from "../../images/new-zealand.jpg"
 
 const PreviewTour = ({ tour }) => {
   const {
@@ -15,8 +15,8 @@ const PreviewTour = ({ tour }) => {
     policy_en,
     priceDetail_cn,
     priceDetail_en,
-    subTitle_cn,
-    subTitle_en,
+    slogan_cn,
+    slogan_en,
     title_cn,
     title_en,
   } = tour
@@ -27,7 +27,7 @@ const PreviewTour = ({ tour }) => {
         <div className="preview-container_themeTour preview-boxShadow">
           <img src={img} alt="img" className="preview-img"></img>
           <h3 className="preview-title">{title_en}</h3>
-          <h4 className="preview-subTitle">{subTitle_en}</h4>
+          <h4 className="preview-subTitle">{slogan_en}</h4>
         </div>
       </Link>
     </>

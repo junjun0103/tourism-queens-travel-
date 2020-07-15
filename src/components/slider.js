@@ -1,7 +1,7 @@
 import React, { useContext } from "react"
 import Carousel from "react-elastic-carousel"
 import { Link } from "gatsby"
-import img from "../images/sample.jpg"
+import img from "../images/review2.jpg"
 import { GlobalStateContext } from "../context/GlobalContextProvider"
 
 const Slider = ({ contents, title, sliderStyle }) => {
@@ -25,19 +25,19 @@ const Slider = ({ contents, title, sliderStyle }) => {
         {contents.map(content => {
           //Declare variable
           var contentTitle = ""
-          var contentSubTitle = ""
+          var contentSlogan = ""
           var contentName = ""
           var contentShortDesc = ""
 
           //Set up varables depending of the lenguage
           if (state.lenguage === "EN") {
             contentTitle = content.title_en
-            contentSubTitle = content.subTitle_en
+            contentSlogan = content.slogan_en
             contentName = content.name_en
             contentShortDesc = content.shortDescription_en
           } else {
             contentTitle = content.title_cn
-            contentSubTitle = content.subTitle_cn
+            contentSlogan = content.slogan_cn
             contentName = content.name_cn
             contentShortDesc = content.shortDescription_cn
           }
@@ -50,7 +50,9 @@ const Slider = ({ contents, title, sliderStyle }) => {
                   <img src={img} alt="img" className="preview-img"></img>
                   <h4 className="preview-departureDay">{contentTitle}</h4>
                   <h4 className="preview-subtitle">{contentName}</h4>
-                  <h4 className="preview-shortDescription">{}</h4>
+                  <h4 className="preview-shortDescription">
+                    {contentShortDesc}
+                  </h4>
                   <h4 className="preview-price">{content.date}</h4>
                 </div>
               </Link>
@@ -67,7 +69,7 @@ const Slider = ({ contents, title, sliderStyle }) => {
                     className="preview-img"
                   ></img>
                   <h3 className="preview-title">{contentTitle}</h3>
-                  <h4 className="preview-subTitle">{contentSubTitle}</h4>
+                  <h4 className="preview-subTitle">{contentSlogan}</h4>
                 </div>
               </Link>
             )

@@ -33,7 +33,7 @@ const BgDark = styled.main`
   }
 `
 
-const HeaderImage = ({ title, subtitle, highlight, bgImage, mapImage }) => {
+const HeaderImage = ({ title, slogan, highlight, bgImage, mapImage }) => {
   return (
     <ImageBackground tag="section" fluid={bgImage}>
       <BgDark>
@@ -45,7 +45,7 @@ const HeaderImage = ({ title, subtitle, highlight, bgImage, mapImage }) => {
         </div>
         <br />
         <div className="themeTour-header__subtitle">
-          <h1>{subtitle}</h1>
+          <h1>{slogan}</h1>
         </div>
         <div className="themeTour-header__highlightBox">
           <div className="themeTour-header__highlightBox__content">
