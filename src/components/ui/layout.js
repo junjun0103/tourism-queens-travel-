@@ -9,6 +9,14 @@ import React from "react"
 import Header from "./header"
 import { Helmet } from "react-helmet"
 import Footer from "./footer"
+import posed from 'react-pose';
+import { TransitionState } from "gatsby-plugin-transition-link";
+
+//incoming transition
+export const Fade = posed.div({
+  hidden: { opacity: 0 },
+  visible: { opacity: 1 },
+})
 
 const Layout = ({ children }) => {
   return (
@@ -40,7 +48,18 @@ const Layout = ({ children }) => {
       </Helmet>
       <Header
       />
-      {children}
+      <TransitionState>
+        {({ transitionStatus }) => (
+          <Fade
+              pose={
+                ['entering', 'entered'].includes(transitionStatus)
+                ? 'visible'
+                : 'hidden'
+              }>
+              {children}
+          </Fade>
+        )}
+      </TransitionState>
       <Footer />
     </>
   )

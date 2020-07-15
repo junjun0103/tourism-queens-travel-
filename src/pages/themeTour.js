@@ -1,13 +1,11 @@
 import React from "react"
-import Layout from "../components/layout"
+import Layout from "../components/ui/layout"
 import ListTour from "../components/toursEn/listTour"
 
 const ThemeTour = () => {
   return (
     <>
-      <Layout
-        lenguage="EN"
-      >
+      <Layout>
         <section className="themeTour-page">
           <ListTour />
         </section>

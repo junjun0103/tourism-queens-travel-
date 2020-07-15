@@ -1,5 +1,6 @@
-import React, { useContext } from "react"
-import { Link } from "gatsby"
+import React, { useContext } from "react";
+import { Link } from "gatsby";
+import TransitionLink from "gatsby-plugin-transition-link";
 import {
   GlobalDispatchContext,
   GlobalStateContext,
@@ -106,7 +107,11 @@ const dataCN = [
 const tempLinksEn = dataEN.map(link => {
   return (
     <li key={link.id}>
-      <Link to={link.url}>{link.text}</Link>
+      <TransitionLink 
+        exit={{ length: 0.5 }}
+        entry={{ delay: 0.5 }} 
+        to={link.url}>{link.text}
+      </TransitionLink>
     </li>
   )
 })

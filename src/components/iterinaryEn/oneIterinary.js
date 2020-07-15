@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import Layaout from "../layout"
+import Layaout from "../ui/layout"
 import { graphql } from "gatsby"
 import img from "../../images/new-zealand.jpg"
 import { FaMapMarkerAlt, FaPlus } from "react-icons/fa"

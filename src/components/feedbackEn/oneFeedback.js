@@ -1,5 +1,5 @@
 import React from "react"
-import Layaout from "../layout"
+import Layaout from "../ui/layout"
 import { graphql } from "gatsby"
 import img from "../../images/sample.jpg"
 

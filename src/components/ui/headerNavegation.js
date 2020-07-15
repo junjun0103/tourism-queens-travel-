@@ -2,8 +2,8 @@ import React from "react"
 import { Link } from "gatsby"
 import styled from "@emotion/styled"
 import { FaAlignRight } from "react-icons/fa"
-import logo from "../images/top_logo_v_word.png"
-import PageLinks from "../constants/links"
+import logo from "../../images/top_logo_v_word.png"
+import PageLinks from "../../constants/links"
 
 const Nav = styled(Link)`
   margin-left: 20px;

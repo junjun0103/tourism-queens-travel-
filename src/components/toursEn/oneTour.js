@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react"
-import Layaout from "../layout"
+import Layaout from "../ui/layout"
 import { graphql } from "gatsby"
 import { GlobalStateContext } from "../../context/GlobalContextProvider"
 import HeaderImage from "./headerImageTour"
