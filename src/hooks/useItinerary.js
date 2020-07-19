@@ -3,7 +3,10 @@ import { graphql, useStaticQuery } from "gatsby"
 const UseItinerary = () => {
   const result = useStaticQuery(graphql`
     query {
-      allStrapiItinerary {
+      allStrapiItinerary(
+        filter: { active: { eq: true } }
+        sort: { fields: id, order: DESC }
+      ) {
         nodes {
           slug
           id
@@ -26,6 +29,13 @@ const UseItinerary = () => {
           priceDetail_en
           departureDay_cn
           departureDay_en
+          background_img {
+            sharp: childImageSharp {
+              fluid {
+                src
+              }
+            }
+          }
           plans_cn {
             photo1 {
               childImageSharp {
@@ -69,6 +79,7 @@ const UseItinerary = () => {
     departureDay_cn: itinerary.departureDay_cn,
     departureDay_en: itinerary.departureDay_en,
     plans_cn: itinerary.plans_cn,
+    background_img: itinerary.background_img,
   }))
 }
 

@@ -24,6 +24,7 @@ const PreviewIterinary = ({ iterinary }) => {
     departureDay_cn,
     departureDay_en,
     plans_cn,
+    background_img,
   } = iterinary
 
   console.log(iterinary)
@@ -31,7 +32,11 @@ const PreviewIterinary = ({ iterinary }) => {
     <>
       <Link to={"/bestSale/" + slug}>
         <div className="preview-container_bestSale preview-boxShadow">
-          <img src={img} alt="img" className="preview-img"></img>
+          <img
+            src={background_img.sharp.fluid.src}
+            alt="img"
+            className="preview-img"
+          ></img>
           <h3 className="preview-title">{title_en}</h3>
           <h4 className="preview-departureDay">{departureDay_en}</h4>
           <h4 className="preview-shortDescription">{slogan_en}</h4>

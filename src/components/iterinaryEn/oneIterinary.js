@@ -1,8 +1,10 @@
-import React, { useState } from "react"
+import React, { useContext } from "react"
 import Layaout from "../ui/layout"
 import { graphql } from "gatsby"
-import img from "../../images/new-zealand.jpg"
-import { FaMapMarkerAlt, FaPlus } from "react-icons/fa"
+import { GlobalStateContext } from "../../context/GlobalContextProvider"
+import HeaderImage from "../ui/headerImageTour"
+import TourPlans from "../ui/tourPlans"
+import TourInformation from "../ui/tourInformation"
 
 export const query = graphql`
   query($slug: String!) {
@@ -23,22 +25,56 @@ export const query = graphql`
         slogan_en
         title_cn
         title_en
+        background_img {
+          sharp: childImageSharp {
+            fluid(quality: 100) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
+        map {
+          sharp: childImageSharp {
+            fixed {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
         plans_en {
           id
           route
           stayAndMeals
           itinerary
           photo1 {
-            childImageSharp {
+            sharp: childImageSharp {
               fluid {
-                src
+                ...GatsbyImageSharpFluid
               }
             }
           }
           photo2 {
-            childImageSharp {
+            sharp: childImageSharp {
               fluid {
-                src
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+        plans_cn {
+          id
+          route
+          stayAndMeals
+          itinerary
+          photo1 {
+            sharp: childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          photo2 {
+            sharp: childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid
               }
             }
           }
@@ -55,185 +91,94 @@ const OneIterinary = ({
 }) => {
   //restructure
   const {
+    background_img,
+    map,
     slogan_en,
+    slogan_cn,
     title_en,
+    title_cn,
+    highlight_cn,
+    highlight_en,
     plans_en,
+    plans_cn,
     excluded_en,
+    excluded_cn,
     included_en,
+    included_cn,
     policy_en,
+    policy_cn,
     priceDetail_en,
+    priceDetail_cn,
   } = nodes[0]
-  const countPlans = plans_en.length
-  const [openManager, setOpenManager] = React.useState(false)
+  const state = useContext(GlobalStateContext)
+
+  //declare lenguage variables
+  var countPlans = 0,
+    title = "",
+    slogan = "",
+    highlight = "",
+    plans = [],
+    priceDetails = "",
+    included = "",
+    excluded = "",
+    policy = ""
+
+  //declare global image variables
+  const bgImage = background_img.sharp.fluid,
+    mapImage = map.sharp.fixed.src
+
+  if (state.lenguage === "EN") {
+    //main Background Image
+    title = title_en
+    slogan = slogan_en
+    highlight = highlight_en
+    //plans
+    plans = plans_en
+    countPlans = plans_en.length
+    //information
+    priceDetails = priceDetail_en
+    included = included_en
+    excluded = excluded_en
+    policy = policy_en
+  } else {
+    //English main Background Image
+    title = title_cn
+    slogan = slogan_cn
+    highlight = highlight_cn
+    //Chinese plans
+    countPlans = plans_cn.length
+    plans = plans_cn
+    //Chinese information
+    priceDetails = priceDetail_cn
+    included = included_cn
+    excluded = excluded_cn
+    policy = policy_cn
+  }
+
   return (
     <Layaout>
-      <article className="themeTour-header__container">
-        <img className="themeTour-header__background" src={img} alt="img"></img>
-        <div className="themeTour-header__title">
-          <div className="themeTour-header__title_back"></div>
-          <div className="themeTour-header__title_front">
-            <h3>{title_en} dsadsad dsadsad</h3>
-          </div>
-        </div>
-        <br />
-        <div className="themeTour-header__subtitle">
-          <h1>
-            {slogan_en}dsadsad sadassdadsad sdsadsad dsadsad sadassda
-            sadassdadsad sdsadsad adassdadsad sdsadsad dsadsad sadassda
-            sadassdadsad sdsadsad
-          </h1>
-        </div>
-        <div className="themeTour-header__highlightBox">
-          <div className="themeTour-header__highlightBox__content">
-            <h4>
-              highlight sadsad sadassdadsad sdsadsad dsadsad sadassda
-              sadassdadsad sdsadsad adassdadsad sdsadsad dsadsad sadassda
-              sadassdadsad sdsadsad sadassdadsad sdsadsad dsadsad sadassda
-              sadassdadsad sdsadsad adassdadsad sdsadsad dsadsad sadassda
-              sadassdadsad sdsadsad sadassdadsad sdsadsad dsadsad sadassda
-            </h4>
-          </div>
-          <div className="themeTour-header__highlightBox__map">map</div>
-        </div>
-      </article>
+      {/** Main Background Image*/}
+      <HeaderImage
+        title={title}
+        slogan={slogan}
+        highlight={highlight}
+        bgImage={bgImage}
+        mapImage={mapImage}
+      >
+        {" "}
+      </HeaderImage>
 
       <section className="section section-center">
-        <article className="themeTour-plan__article">
-          {plans_en.map((plan, i) => {
-            const onClick = () => {
-              setOpenManager(prev => ({ ...prev, [plan.id]: !prev[plan.id] }))
-            }
-            return (
-              <div className="themeTour-plan__container" key={i}>
-                <h3 className="themeTour-plan__days">day{i + 1}</h3>
-                <div className="themeTour-plan__lineAndDot">
-                  <button className="themeTour-plan__dot"></button>
-                  {/* if the plan is the last item,the line wont show up. */}
-                  <div
-                    className={`${
-                      countPlans === i + 1 ? "" : "themeTour-plan__line"
-                    }`}
-                  ></div>
-                </div>
-                <div>
-                  <button
-                    className="themeTour-plan__route__btn"
-                    onClick={onClick}
-                  >
-                    <div className="themeTour-plan__route__box">
-                      <div className="themeTour-plan__routeAndIcon">
-                        <FaMapMarkerAlt className="themeTour-plan__icon" />
-                        <h4 className="themeTour-plan__route">{plan.route}</h4>
-                      </div>
-                      <FaPlus
-                        className={`themeTour-plan__icon ${
-                          openManager[plan.id] ? "xIcon" : "plusIcon"
-                        }`}
-                      />
-                    </div>
-                  </button>
-                  <div
-                    className={`${
-                      openManager[plan.id] ? "themeTour-plan__box" : "inactive"
-                    }`}
-                  >
-                    <div className="themeTour-plan__stayAndMeals">
-                      <h4>{plan.stayAndMeals}</h4>
-                    </div>
-                    <div className="themeTour-plan__itinerary">
-                      <h4>{plan.itinerary}</h4>
-                    </div>
-                    <img src={img} alt="photo1" className="photo"></img>
-                    <img src={img} alt="photo2" className="photo"></img>
-                  </div>
-                </div>
-              </div>
-            )
-          })}
-        </article>
+        {/**List Plans*/}
+        <TourPlans plans={plans} countPlans={countPlans}></TourPlans>
 
-        <article className="themeTour-notice__article">
-          <div className="themeTour-notice__price__box">
-            <div className="themeTour-notice__title">
-              <div className="themeTour-notice__title__lines">
-                <div className="themeTour-notice__title__lines__top"></div>
-                <div className="themeTour-notice__title__lines__bottom"></div>
-              </div>
-              <h3>Price</h3>
-              <div className="themeTour-notice__title__lines">
-                <div className="themeTour-notice__title__lines__top"></div>
-                <div className="themeTour-notice__title__lines__bottom"></div>
-              </div>
-            </div>
-            <div className="themeTour-notice__content">
-              <h4>{priceDetail_en}</h4>
-            </div>
-          </div>
-          <div className="themeTour-notice__included__box">
-            <div className="themeTour-notice__title">
-              <div className="themeTour-notice__title__lines">
-                <div className="themeTour-notice__title__lines__top"></div>
-                <div className="themeTour-notice__title__lines__bottom"></div>
-              </div>
-              <h3>Included</h3>
-              <div className="themeTour-notice__title__lines">
-                <div className="themeTour-notice__title__lines__top"></div>
-                <div className="themeTour-notice__title__lines__bottom"></div>
-              </div>
-            </div>
-            <div className="themeTour-notice__content">
-              <h4>{included_en}</h4>
-            </div>
-          </div>
-          <div className="themeTour-notice__excluded__box">
-            <div className="themeTour-notice__title">
-              <div className="themeTour-notice__title__lines">
-                <div className="themeTour-notice__title__lines__top"></div>
-                <div className="themeTour-notice__title__lines__bottom"></div>
-              </div>
-              <h3>Excluded</h3>
-              <div className="themeTour-notice__title__lines">
-                <div className="themeTour-notice__title__lines__top"></div>
-                <div className="themeTour-notice__title__lines__bottom"></div>
-              </div>
-            </div>
-            <div className="themeTour-notice__content">
-              <h4>{excluded_en}</h4>
-            </div>
-          </div>
-          <div className="themeTour-notice__important__box">
-            <div className="themeTour-notice__title">
-              <div className="themeTour-notice__title__lines">
-                <div className="themeTour-notice__title__lines__top"></div>
-                <div className="themeTour-notice__title__lines__bottom"></div>
-              </div>
-              <h3>Notice</h3>
-              <div className="themeTour-notice__title__lines">
-                <div className="themeTour-notice__title__lines__top"></div>
-                <div className="themeTour-notice__title__lines__bottom"></div>
-              </div>
-            </div>
-            <div className="themeTour-notice__content">
-              <h4>content</h4>
-            </div>
-          </div>
-          <div className="themeTour-notice__policy__box">
-            <div className="themeTour-notice__title">
-              <div className="themeTour-notice__title__lines">
-                <div className="themeTour-notice__title__lines__top"></div>
-                <div className="themeTour-notice__title__lines__bottom"></div>
-              </div>
-              <h3>Policy</h3>
-              <div className="themeTour-notice__title__lines">
-                <div className="themeTour-notice__title__lines__top"></div>
-                <div className="themeTour-notice__title__lines__bottom"></div>
-              </div>
-            </div>
-            <div className="themeTour-notice__content">
-              <h4>{policy_en}</h4>
-            </div>
-          </div>
-        </article>
+        {/**Plans Information */}
+        <TourInformation
+          priceDetails={priceDetails}
+          included={included}
+          excluded={excluded}
+          policy={policy}
+        ></TourInformation>
       </section>
     </Layaout>
   )

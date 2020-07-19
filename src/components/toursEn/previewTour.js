@@ -19,13 +19,18 @@ const PreviewTour = ({ tour }) => {
     slogan_en,
     title_cn,
     title_en,
+    background_img,
   } = tour
 
   return (
     <>
       <Link to={"/themeTour/" + slug}>
         <div className="preview-container_themeTour preview-boxShadow">
-          <img src={img} alt="img" className="preview-img"></img>
+          <img
+            src={background_img.sharp.fluid.src}
+            alt="img"
+            className="preview-img"
+          ></img>
           <h3 className="preview-title">{title_en}</h3>
           <h4 className="preview-subTitle">{slogan_en}</h4>
         </div>

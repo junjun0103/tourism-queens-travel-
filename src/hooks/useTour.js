@@ -3,7 +3,10 @@ import { graphql, useStaticQuery } from "gatsby"
 const UseTour = () => {
   const result = useStaticQuery(graphql`
     query {
-      allStrapiThemeTour {
+      allStrapiThemeTour(
+        filter: { active: { eq: true } }
+        sort: { fields: id, order: DESC }
+      ) {
         nodes {
           excluded_cn
           excluded_en
@@ -20,6 +23,13 @@ const UseTour = () => {
           slogan_en
           title_cn
           title_en
+          background_img {
+            sharp: childImageSharp {
+              fluid {
+                src
+              }
+            }
+          }
           plans_en {
             id
             route
@@ -62,6 +72,7 @@ const UseTour = () => {
     title_cn: tour.title_cn,
     title_en: tour.title_en,
     plans_en: tour.plans_en,
+    background_img: tour.background_img,
   }))
 }
 

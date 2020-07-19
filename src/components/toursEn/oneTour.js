@@ -2,9 +2,9 @@ import React, { useState, useContext } from "react"
 import Layaout from "../ui/layout"
 import { graphql } from "gatsby"
 import { GlobalStateContext } from "../../context/GlobalContextProvider"
-import HeaderImage from "./headerImageTour"
-import TourPlans from "./tourPlans"
-import TourInformation from "./tourInformation"
+import HeaderImage from "../ui/headerImageTour"
+import TourPlans from "../ui/tourPlans"
+import TourInformation from "../ui/tourInformation"
 
 export const query = graphql`
   query($slug: String!) {

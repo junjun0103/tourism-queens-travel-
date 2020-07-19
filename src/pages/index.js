@@ -2,10 +2,8 @@ import React, { useContext } from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/ui/layout"
 import MainImage from "../components/home/mainImage"
-import Slider from "../components/slider"
-import CustomizeTour from '../components/home/customizeTour'
-import AboutUs from '../components/home/aboutUs'
-import WhyUs from '../components/home/whyUs'
+import Slider from "../components/slider"import AboutUs from "../components/home/aboutUs"
+import WhyUs from "../components/home/whyUs"
 import { GlobalStateContext } from "../context/GlobalContextProvider"
 
 export const query = graphql`
@@ -43,7 +41,7 @@ export const query = graphql`
         name_en
         name_cn
         photo {
-          childImageSharp {
+          sharp: childImageSharp {
             fluid {
               src
             }
@@ -89,7 +87,7 @@ const IndexPage = ({
 
       {/*AboutUs Information*/}
       <AboutUs />
-      
+
       <section className="section section-center">
         {/*Why Us Information*/}
         <WhyUs />
