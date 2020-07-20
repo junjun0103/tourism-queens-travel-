@@ -831,8 +831,8 @@ Guide Team
 .previewGuide-img {
   grid-column: 1 / span 4;
   width: 60%;
+  height: 17rem;
   min-width: 13rem;
-  max-height: 17rem;
   border: solid 5px var(--clr-primary-1);
   border-radius: 50%;
 }

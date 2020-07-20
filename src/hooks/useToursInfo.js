@@ -11,6 +11,13 @@ const UseTour = () => {
           title_cn
           notice_cn
           notice_en
+          icon {
+            sharp: childImageSharp {
+              fluid {
+                src
+              }
+            }
+          }
           information_cn {
             content
             id
@@ -35,6 +42,7 @@ const UseTour = () => {
     notice_en: tourinfo.notice_en,
     information_cn: tourinfo.information_cn,
     information_en: tourinfo.information_en,
+    icon: tourinfo.icon,
   }))
 }
 

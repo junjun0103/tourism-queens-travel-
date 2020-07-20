@@ -10,7 +10,11 @@ const PreviewTour = ({ tourinfo }) => {
       {
         <Link to={"/touristInformation/" + slug}>
           <div className="preview-tourInfo__container">
-            <img src={img} alt="img" className="preview-tourInfo__img"></img>
+            <img
+              src={tourinfo.icon.sharp.fluid.src}
+              alt="img"
+              className="preview-tourInfo__img"
+            ></img>
             <h3 className="preview-tourInfo__title">{slug}</h3>
           </div>
         </Link>
