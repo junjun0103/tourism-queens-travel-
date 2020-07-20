@@ -5,7 +5,7 @@ module.exports = {
     author: `@gatsbyjs`,
   },
   plugins: [
-    'gatsby-plugin-emotion',
+    "gatsby-plugin-emotion",
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-transition-link`,
     {
@@ -22,8 +22,14 @@ module.exports = {
       options: {
         apiURL: `http://localhost:1337`,
         queryLimit: 1000,
-        contentTypes: [`Itinerary`,'Feedbacks','Theme-Tour','Tour-Guides','Tourist-Information']
-      }
+        contentTypes: [
+          `Itinerary`,
+          "Feedbacks",
+          "Theme-Tour",
+          "Tour-Guides",
+          "Tourist-Information",
+        ],
+      },
     },
     {
       resolve: `gatsby-plugin-manifest`,
@@ -35,6 +41,12 @@ module.exports = {
         theme_color: `#663399`,
         display: `minimal-ui`,
         //icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: "gatsby-plugin-react-leaflet",
+      options: {
+        linkStyles: true, // (default: true) Enable/disable loading stylesheets via CDN
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

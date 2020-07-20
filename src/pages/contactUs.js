@@ -3,6 +3,25 @@ import Image from "gatsby-image"
 import { graphql, useStaticQuery } from "gatsby"
 import Layout from "../components/ui/layout"
 
+import { Map, TileLayer, Marker, Popup } from "react-leaflet"
+import L from "leaflet"
+
+const DEFAULT_LAN = 174.73632
+const DEFAULT_LAT = -36.80985
+const DEFAULT_ZOOM = 17
+
+const iconPerson = new L.Icon({
+  iconUrl: require("../images/map_pin.png"),
+  iconRetinaUrl: require("../images/map_pin.png"),
+  iconAnchor: null,
+  popupAnchor: null,
+  shadowUrl: null,
+  shadowSize: null,
+  shadowAnchor: null,
+  iconSize: new L.Point(220, 90),
+  className: "leaflet-div-icon",
+})
+
 const query = graphql`
   {
     file(relativePath: { eq: "plant.jpg" }) {
@@ -41,7 +60,18 @@ const ContactUs = () => {
               <h4>Address :</h4>
               <h4>129A Onewa Road, Northcote, Auckland 0627, New Zealand</h4>
             </div>
-            <div className="contactUs-map">map</div>
+            <div className="contactUs-map">
+              <Map center={[DEFAULT_LAT, DEFAULT_LAN]} zoom={DEFAULT_ZOOM}>
+                <TileLayer
+                  attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+                  url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                ></TileLayer>
+
+                <Marker position={[DEFAULT_LAT, DEFAULT_LAN]} icon={iconPerson}>
+                  <Popup>Queen's Travel</Popup>
+                </Marker>
+              </Map>
+            </div>
           </div>
           <div className="contactForm-container">
             <Image fluid={fluid} className="contactForm-img"></Image>

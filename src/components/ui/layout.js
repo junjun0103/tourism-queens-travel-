@@ -9,8 +9,8 @@ import React from "react"
 import Header from "./header"
 import { Helmet } from "react-helmet"
 import Footer from "./footer"
-import posed from 'react-pose';
-import { TransitionState } from "gatsby-plugin-transition-link";
+import posed from "react-pose"
+import { TransitionState } from "gatsby-plugin-transition-link"
 
 //incoming transition
 export const Fade = posed.div({
@@ -21,7 +21,6 @@ export const Fade = posed.div({
 const Layout = ({ children }) => {
   return (
     <>
-    
       <Helmet>
         <title>Queen Tourism</title>
         <meta name="description" content="Queen Tourism Description" />
@@ -45,18 +44,22 @@ const Layout = ({ children }) => {
           href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;500;700&family=ZCOOL+XiaoWei&display=swap"
           rel="stylesheet"
         ></link>
+        <link
+          rel="stylesheet"
+          href="//unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+        />
       </Helmet>
-      <Header
-      />
+      <Header />
       <TransitionState>
         {({ transitionStatus }) => (
           <Fade
-              pose={
-                ['entering', 'entered'].includes(transitionStatus)
-                ? 'visible'
-                : 'hidden'
-              }>
-              {children}
+            pose={
+              ["entering", "entered"].includes(transitionStatus)
+                ? "visible"
+                : "hidden"
+            }
+          >
+            {children}
           </Fade>
         )}
       </TransitionState>
