@@ -15,13 +15,18 @@ const PreviewFeedback = ({ feedback }) => {
     shortDescription_cn,
     shortDescription_en,
     date,
+    photo,
   } = feedback
 
   return (
     <>
       <Link to={"/reviews/" + slug}>
         <div className="preview-container_review">
-          <img src={img} alt="img" className="preview-img"></img>
+          <img
+            src={photo.sharp.fluid.src}
+            alt="img"
+            className="preview-img"
+          ></img>
           <h4 className="preview-departureDay">{title_en}</h4>
           <h4 className="preview-subtitle">{name_en}</h4>
           <h4 className="preview-shortDescription word-break-break-all">

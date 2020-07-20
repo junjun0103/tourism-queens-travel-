@@ -17,6 +17,13 @@ export const query = graphql`
         title_en
         date
         slug
+        photo {
+          sharp: childImageSharp {
+            fluid {
+              src
+            }
+          }
+        }
       }
     }
   }
@@ -39,6 +46,7 @@ const OneFeedBack = ({
     title_cn,
     title_en,
     date,
+    photo,
   } = nodes[0]
 
   return (
@@ -46,7 +54,11 @@ const OneFeedBack = ({
       <section className="section section-center">
         <div className=" review-container">
           <div className="review-container_items">
-            <img src={img} alt="img" className="review-img"></img>
+            <img
+              src={photo.sharp.fluid.src}
+              alt="img"
+              className="review-img"
+            ></img>
             <div className="review-contents">
               <h2>{title_en}</h2>
               <h3 className="review-contents_nameDate">

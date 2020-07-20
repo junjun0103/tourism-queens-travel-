@@ -20,6 +20,13 @@ const UseFeedback = () => {
           shortDescription_cn
           shortDescription_en
           date
+          photo {
+            sharp: childImageSharp {
+              fluid {
+                src
+              }
+            }
+          }
         }
       }
     }
@@ -38,6 +45,7 @@ const UseFeedback = () => {
     shortDescription_cn: feedback.shortDescription_cn,
     shortDescription_en: feedback.shortDescription_en,
     date: feedback.date,
+    photo: feedback.photo,
   }))
 }
 

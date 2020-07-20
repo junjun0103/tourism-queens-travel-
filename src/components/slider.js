@@ -47,7 +47,11 @@ const Slider = ({ contents, title, sliderStyle }) => {
             return (
               <Link to={"/" + sliderStyle + "/" + content.slug}>
                 <div className="preview-container_review slider-height">
-                  <img src={img} alt="img" className="preview-img"></img>
+                  <img
+                    src={content.photo.sharp.fluid.src}
+                    alt="img"
+                    className="preview-img"
+                  ></img>
                   <h4 className="preview-departureDay">{contentTitle}</h4>
                   <h4 className="preview-subtitle">{contentName}</h4>
                   <h4 className="preview-shortDescription">

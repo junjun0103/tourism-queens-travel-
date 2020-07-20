@@ -23,17 +23,26 @@ export const query = graphql`
         name_cn
         name_en
         date
+        photo {
+          sharp: childImageSharp {
+            fluid {
+              src
+            }
+          }
+        }
       }
     }
   }
 `
 
-const Customized = ({data: {allStrapiFeedbacks: { nodes },},}) => {
-  
+const Customized = ({
+  data: {
+    allStrapiFeedbacks: { nodes },
+  },
+}) => {
   return (
     <Layout>
       <section className="custimized-page section section-center">
-        
         {/*Top and Image Information*/}
         <CustomizedInformation></CustomizedInformation>
 
@@ -53,7 +62,6 @@ const Customized = ({data: {allStrapiFeedbacks: { nodes },},}) => {
 
         {/**Customized Form Plan*/}
         <CustomizedPlan></CustomizedPlan>
-
       </section>
     </Layout>
   )
