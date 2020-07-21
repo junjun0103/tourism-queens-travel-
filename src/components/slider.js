@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import { GlobalStateContext } from "../context/GlobalContextProvider"
 
 const Slider = ({ contents, title, sliderStyle }) => {
-  const state = useContext(GlobalStateContext)
+  const state = useContext(GlobalStateContext) || { lenguage: "EN" }
 
   return (
     <div>

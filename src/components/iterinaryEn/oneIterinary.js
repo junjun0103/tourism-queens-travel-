@@ -110,7 +110,7 @@ const OneIterinary = ({
     priceDetail_en,
     priceDetail_cn,
   } = nodes[0]
-  const state = useContext(GlobalStateContext)
+  const state = useContext(GlobalStateContext) || { lenguage: "EN" }
 
   //declare lenguage variables
   var countPlans = 0,

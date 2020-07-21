@@ -1,6 +1,6 @@
-import React, { useContext } from "react";
-import { Link } from "gatsby";
-import TransitionLink from "gatsby-plugin-transition-link";
+import React, { useContext } from "react"
+import { Link } from "gatsby"
+import TransitionLink from "gatsby-plugin-transition-link"
 import {
   GlobalDispatchContext,
   GlobalStateContext,
@@ -107,10 +107,12 @@ const dataCN = [
 const tempLinksEn = dataEN.map(link => {
   return (
     <li key={link.id}>
-      <TransitionLink 
+      <TransitionLink
         exit={{ length: 0.5 }}
-        entry={{ delay: 0.5 }} 
-        to={link.url}>{link.text}
+        entry={{ delay: 0.5 }}
+        to={link.url}
+      >
+        {link.text}
       </TransitionLink>
     </li>
   )
@@ -126,7 +128,7 @@ const tempLinksCn = dataCN.map(link => {
 
 export default ({ styleClass }) => {
   const dispatch = useContext(GlobalDispatchContext)
-  const state = useContext(GlobalStateContext)
+  const state = useContext(GlobalStateContext) || { lenguage: "EN" }
   return (
     <ul className={`page-links ${styleClass ? styleClass : ""}`}>
       {state.lenguage === "EN" ? tempLinksEn : tempLinksCn}

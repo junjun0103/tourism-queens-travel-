@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import { GlobalStateContext } from "../../context/GlobalContextProvider"
 
 const CustomizeTour = () => {
-  const state = useContext(GlobalStateContext)
+  const state = useContext(GlobalStateContext) || { lenguage: "EN" }
   return (
     <>
       {/**Customize tour of Home */}

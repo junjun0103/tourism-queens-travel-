@@ -59,7 +59,7 @@ const IndexPage = ({
     allStrapiFeedbacks: { nodes: feedbackData },
   },
 }) => {
-  const state = useContext(GlobalStateContext)
+  const state = useContext(GlobalStateContext) || { lenguage: "EN" }
   return (
     <Layout>
       {/**main image */}
