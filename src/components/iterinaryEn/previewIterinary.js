@@ -1,6 +1,5 @@
 import React from "react"
 import { Link } from "gatsby"
-import img from "../../images/new-zealand.jpg"
 
 const PreviewIterinary = ({ iterinary }) => {
   const {

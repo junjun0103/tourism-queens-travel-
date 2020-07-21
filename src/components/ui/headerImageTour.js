@@ -1,22 +1,12 @@
 import React from "react"
 import BackgroundImage from "gatsby-background-image"
 import styled from "@emotion/styled"
-import { css } from "@emotion/core"
 
 const ImageBackground = styled(BackgroundImage)`
   width: 100vw;
   height: 100vh;
   top: 0;
   right: 0;
-`
-const Img = styled(Image)`
-  width: 200px;
-  height: 200px;
-
-  @media (min-width: 768px) {
-    width: 300px;
-    height: 300px;
-  }
 `
 
 const BgDark = styled.main`

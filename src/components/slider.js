@@ -1,7 +1,6 @@
 import React, { useContext } from "react"
 import Carousel from "react-elastic-carousel"
 import { Link } from "gatsby"
-import img from "../images/review2.jpg"
 import { GlobalStateContext } from "../context/GlobalContextProvider"
 
 const Slider = ({ contents, title, sliderStyle }) => {

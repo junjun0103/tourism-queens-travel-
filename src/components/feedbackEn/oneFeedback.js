@@ -1,7 +1,6 @@
 import React from "react"
 import Layaout from "../ui/layout"
 import { graphql } from "gatsby"
-import img from "../../images/sample.jpg"
 
 export const query = graphql`
   query($slug: String!) {
