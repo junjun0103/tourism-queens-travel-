@@ -10,17 +10,22 @@ const DEFAULT_LAN = 174.73632
 const DEFAULT_LAT = -36.80985
 const DEFAULT_ZOOM = 17
 
-const iconPerson = new L.Icon({
-  iconUrl: require("../images/map_pin.png"),
-  iconRetinaUrl: require("../images/map_pin.png"),
-  iconAnchor: null,
-  popupAnchor: null,
-  shadowUrl: null,
-  shadowSize: null,
-  shadowAnchor: null,
-  iconSize: new L.Point(220, 90),
-  className: "leaflet-div-icon",
-})
+const markerIcon = () => {
+  if (typeof window !== "undefined") {
+    return new L.Icon({
+      iconUrl: require("../images/map_pin.png"),
+      iconRetinaUrl: require("../images/map_pin.png"),
+      iconAnchor: null,
+      popupAnchor: null,
+      shadowUrl: null,
+      shadowSize: null,
+      shadowAnchor: null,
+      iconSize: new L.Point(220, 90),
+      className: "leaflet-div-icon",
+    })
+  }
+  return null
+}
 
 const query = graphql`
   {
@@ -67,7 +72,10 @@ const ContactUs = () => {
                   url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 ></TileLayer>
 
-                <Marker position={[DEFAULT_LAT, DEFAULT_LAN]} icon={iconPerson}>
+                <Marker
+                  position={[DEFAULT_LAT, DEFAULT_LAN]}
+                  icon={!!markerIcon ? markerIcon : null}
+                >
                   <Popup>Queen's Travel</Popup>
                 </Marker>
               </Map>
