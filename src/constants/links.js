@@ -111,6 +111,7 @@ const tempLinksEn = dataEN.map(link => {
         exit={{ length: 0.5 }}
         entry={{ delay: 0.5 }}
         to={link.url}
+        activeClassName={"link_avtive"}
       >
         {link.text}
       </TransitionLink>

@@ -27,7 +27,7 @@ Variables
   --clr-primary-4: #d2dce2;
   --clr-primary-5: #282629;
   --clr-primary-6: #282828; /* content color */
-  --clr-primary-7: #efefef;
+  --clr-primary-7: #efefef; /* 239, 239, 239 */
   --clr-red-dark: hsl(360, 67%, 44%);
   /* etc */
   --transition: all 0.3s linear;
@@ -353,6 +353,9 @@ Navbar
 }
 .page-links {
   text-align: center;
+}
+.link_avtive {
+  box-shadow: 0px 3px var(--clr-primary-1);
 }
 @media screen and (min-width: 920px) {
   .navbar {
@@ -753,9 +756,23 @@ Contact US
   grid-gap: 1rem;
   margin: 3rem;
 }
-.contactUs-map {
-  background-color: yellow;
+@media screen and (max-width: 900px) {
+  .contactUs-container {
+    margin-top: 1.5rem;
+  }
+  .contactUs-info {
+    grid-gap: 0.5rem;
+    margin: 1rem;
+    grid-template-columns: 0.3fr 1fr;
+  }
 }
+@media screen and (max-width: 650px) {
+  .contactUs-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+
 .contactForm-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -775,6 +792,7 @@ Contact US
   align-self: center;
   padding: 0.5rem;
 }
+
 .contactForm-inside {
   background-color: var(--clr-primary-7);
   border-radius: var(--radius-small);
@@ -824,6 +842,33 @@ Contact US
   border: none !important;
   background-color: rgba(255, 255, 255, 0.1) !important;
 }
+
+@media screen and (max-width: 950px) {
+  .contactForm-outside {
+    grid-column: 2/-1;
+  }
+  .contact-form {
+    grid-column-gap: 0.8rem;
+    grid-row-gap: 1.3rem;
+  }
+}
+@media screen and (max-width: 650px) {
+  .contactForm-outside {
+    grid-column: 1/-1;
+  }
+  .contactForm-inside {
+    background-color: rgba(239, 239, 239, 0.5);
+    border-radius: var(--radius-small);
+  }
+  .contactForm-img {
+    grid-column: 1/-1;
+  }
+  .contact-form {
+    grid-column-gap: 0.8rem;
+    grid-row-gap: 1rem;
+  }
+}
+
 /*
 =============== 
 Tourist Information
