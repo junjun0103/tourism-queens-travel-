@@ -53,6 +53,7 @@ Global Styles
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: var(--ff-secondary);
   background: var(--clr-white);
@@ -112,7 +113,39 @@ p {
   margin-bottom: 1.25rem;
   color: var(--clr-grey-3);
 }
-
+@media screen and (max-width: 800px) {
+  h1,
+  h2 {
+    margin-bottom: 0.5rem;
+  }
+  h1 {
+    /* 36pt/11.9 = 3rem */
+    font-size: 2.5rem;
+  }
+  h2 {
+    /* 22pt/11.9 = 1.84rem */
+    font-size: 1.44rem;
+  }
+  h3 {
+    /* 16pt/11.9 = 1.34rem */
+    font-size: 1.14rem;
+  }
+  h4 {
+    /* 13pt/11.9 = 1.34rem */
+    font-size: 0.92rem;
+    line-height: 1.2rem;
+  }
+  h5 {
+    /* 11pt/11.9 = 0.92rem */
+    font-size: 0.82rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  h1 {
+    /* 36pt/11.9 = 3rem */
+    font-size: 1.8rem !important;
+  }
+}
 .break-word {
   word-break: break-word;
 }
@@ -182,6 +215,7 @@ p {
 
 /* section */ /* title */
 .section {
+  padding: 2rem 1rem;
 }
 
 .section-center {
@@ -206,7 +240,11 @@ p {
   width: 55%;
   margin-top: 1.2rem;
 }
-
+@media screen and (max-width: 880px) {
+  .subtitle-style {
+    width: 100%;
+  }
+}
 /* preview */
 .preview-center {
   margin-top: 1.5rem;
@@ -632,7 +670,6 @@ About US
   grid-column-gap: 3rem;
   grid-template-columns: 1fr 0.5fr;
 }
-
 .aboutUs-content__introduction {
   line-height: 1.5rem;
   margin-top: 1rem;
@@ -640,6 +677,7 @@ About US
 .aboutUs-logo {
   justify-self: center;
   align-self: center;
+  width: 100%;
 }
 .aboutUs-awards {
   margin: 5rem 0;
@@ -674,6 +712,31 @@ About US
   margin-right: 1rem;
 }
 
+@media screen and (max-width: 900px) {
+  .aboutUs-container {
+    grid-template-columns: 1fr 0.3fr;
+  }
+  .aboutUs-awards {
+    margin: 3rem 0;
+  }
+  .aboutUs-awards__img {
+    max-height: 5rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .aboutUs-container {
+    grid-template-columns: 1fr;
+  }
+  .aboutUs-logo {
+    display: none;
+  }
+  .aboutUs-awards {
+    margin: 2rem 0;
+  }
+  .aboutUs-awards__img {
+    max-height: 3rem;
+  }
+}
 /*
 =============== 
 Contact US
@@ -950,7 +1013,7 @@ Cusomaized tour
 }
 @media screen and (max-width: 610px) {
   .custimizedProcess-container {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -1425,6 +1488,22 @@ Index
   margin: 0 auto;
 }
 
+.main-slider__containder,
+.main-steps__container,
+.main-aboutUs__containder,
+.main-whyUs__containder {
+  padding: 1rem 0;
+}
+/* 1024 : ipad pro size 
+beyond ipad pro size (for laptop) */
+@media screen and (min-width: 500px) {
+  .main-slider__containder,
+  .main-steps__container,
+  .main-aboutUs__containder,
+  .main-whyUs__containder {
+    padding: 2rem 0;
+  }
+}
 /* 1024 : ipad pro size 
 beyond ipad pro size (for laptop) */
 @media screen and (min-width: 1025px) {
@@ -1432,7 +1511,6 @@ beyond ipad pro size (for laptop) */
   .main-steps__container,
   .main-aboutUs__containder,
   .main-whyUs__containder {
-    padding: 3rem 0;
     height: 100vh;
   }
 }
@@ -1450,6 +1528,12 @@ beyond ipad pro size (for laptop) */
   background-size: contain;
   background-attachment: fixed;
 }
+@media screen and (max-width: 480px) {
+  .main-aboutUs__containder {
+    background-image: none;
+    background-color: var(--clr-primary-3);
+  }
+}
 .main-aboutUs__box {
   padding: 0 3rem;
   padding-top: 3rem;
@@ -1459,13 +1543,26 @@ beyond ipad pro size (for laptop) */
   grid-gap: 3rem;
   max-width: 80rem;
 }
+@media screen and (min-width: 1025px) {
+  .main-aboutUs__box {
+    padding-top: 10vh;
+  }
+}
 .btn-aboutUs {
   padding-top: 1rem;
   padding-bottom: 3rem;
 }
-@media screen and (min-width: 1025px) {
+.main-aboutUs__logo {
+  justify-self: center;
+  align-self: center;
+  width: 100%;
+}
+@media screen and (max-width: 700px) {
   .main-aboutUs__box {
-    padding-top: 10vh;
+    grid-template-columns: 1fr;
+  }
+  .main-aboutUs__logo {
+    display: none;
   }
 }
 
@@ -1494,7 +1591,30 @@ beyond ipad pro size (for laptop) */
   -ms-clip-path: polygon(0% 0%, 100% 0, 100% 72%, 50% 100%, 0 72%);
   height: 15rem;
 }
-
+@media screen and (max-width: 880px) {
+  .main-whyUs__box {
+    grid-template-columns: repeat(3, 0.8fr);
+    margin-top: 2rem;
+    grid-gap: 1.5rem;
+  }
+  .main-whyUs__contents__text {
+    width: 80%;
+    height: 13rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .main-whyUs__box {
+    grid-template-columns: repeat(2, 0.8fr);
+    margin-top: 2rem;
+    grid-gap: 1.5rem;
+  }
+  .main-whyUs__contents__icon {
+    font-size: 2.3rem;
+  }
+  .main-whyUs__contents__text {
+    height: 12rem;
+  }
+}
 /*
 ===============
 Modal
