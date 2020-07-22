@@ -1,6 +1,7 @@
 import React from "react"
 import Layaout from "../ui/layout"
 import { graphql } from "gatsby"
+import Modal from "../ui/modal"
 
 export const query = graphql`
   query($slug: String!) {
@@ -48,12 +49,19 @@ const OneFeedBack = ({
     photo,
   } = nodes[0]
 
+  // modal Ref
+  const modalRef = React.useRef()
+  // modal open function
+  const openModal = () => {
+    modalRef.current.openModal()
+  }
   return (
     <Layaout>
       <section className="section section-center">
         <div className=" review-container">
           <div className="review-container_items">
             <img
+              onClick={openModal}
               src={photo.sharp.fluid.src}
               alt="img"
               className="review-img"
@@ -68,6 +76,10 @@ const OneFeedBack = ({
             </div>
           </div>
         </div>
+        {/* modal component */}
+        <Modal ref={modalRef}>
+          <img className="modalImg" src={photo.sharp.fluid.src} alt="photo" />
+        </Modal>
       </section>
     </Layaout>
   )

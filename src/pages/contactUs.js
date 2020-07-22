@@ -6,26 +6,26 @@ import Layout from "../components/ui/layout"
 import { Map, TileLayer, Marker, Popup } from "react-leaflet"
 import L from "leaflet"
 
-const DEFAULT_LAN = 174.73632
-const DEFAULT_LAT = -36.80985
+const DEFAULT_LAN = 174.7364
+const DEFAULT_LAT = -36.8102
 const DEFAULT_ZOOM = 17
 
-const markerIcon = () => {
-  if (typeof window !== "undefined") {
-    return new L.Icon({
-      iconUrl: require("../images/map_pin.png"),
-      iconRetinaUrl: require("../images/map_pin.png"),
-      iconAnchor: null,
-      popupAnchor: null,
-      shadowUrl: null,
-      shadowSize: null,
-      shadowAnchor: null,
-      iconSize: new L.Point(220, 90),
-      className: "leaflet-div-icon",
-    })
-  }
-  return null
-}
+// const markerIcon = () => {
+//   if (typeof window !== "undefined") {
+//     return new L.Icon({
+//       iconUrl: require("../images/map_pin.png"),
+//       iconRetinaUrl: require("../images/map_pin.png"),
+//       iconAnchor: null,
+//       popupAnchor: null,
+//       shadowUrl: null,
+//       shadowSize: null,
+//       shadowAnchor: null,
+//       iconSize: new L.Point(220, 90),
+//       className: "leaflet-div-icon",
+//     })
+//   }
+//   return null
+// }
 
 const query = graphql`
   {
@@ -74,7 +74,7 @@ const ContactUs = () => {
 
                 <Marker
                   position={[DEFAULT_LAT, DEFAULT_LAN]}
-                  icon={!!markerIcon ? markerIcon : null}
+                  // icon={!!markerIcon ? markerIcon : null}
                 >
                   <Popup>Queen's Travel</Popup>
                 </Marker>

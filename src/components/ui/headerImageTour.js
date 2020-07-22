@@ -1,6 +1,7 @@
 import React from "react"
 import BackgroundImage from "gatsby-background-image"
 import styled from "@emotion/styled"
+import Modal from "./modal"
 
 const ImageBackground = styled(BackgroundImage)`
   width: 100vw;
@@ -24,6 +25,12 @@ const BgDark = styled.main`
 `
 
 const HeaderImage = ({ title, slogan, highlight, bgImage, mapImage }) => {
+  // modal Ref
+  const modalRef = React.useRef()
+  // modal open function
+  const openModal = () => {
+    modalRef.current.openModal()
+  }
   return (
     <ImageBackground tag="section" fluid={bgImage}>
       <BgDark>
@@ -43,13 +50,19 @@ const HeaderImage = ({ title, slogan, highlight, bgImage, mapImage }) => {
           </div>
           <div className="themeTour-header__highlightBox__map">
             <img
+              onClick={openModal}
               className="themeTour-header__highlightBox__map__img"
               src={mapImage}
-              alt=""
+              alt="mapImage"
             />
           </div>
         </div>
       </BgDark>
+
+      {/* modal component */}
+      <Modal ref={modalRef}>
+        <img className="modalImg" src={mapImage} alt="mapImage" />
+      </Modal>
     </ImageBackground>
   )
 }
