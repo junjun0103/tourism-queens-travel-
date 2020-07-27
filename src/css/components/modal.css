@@ -1,0 +1,35 @@
+/*
+===============
+Modal
+===============
+*/
+.modal-wrapper {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: fit-content;
+  max-height: 80%;
+  max-width: 90%;
+  z-index: 201;
+}
+.modalImg {
+  border-radius: var(--radius-small);
+}

@@ -2,6 +2,7 @@ import React from "react"
 import { FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa"
 import { AiFillPrinter } from "react-icons/ai"
 import Awards from "../../components/awards"
+import "../../css/components/footer.css"
 
 const footer = () => {
   return (

@@ -3,6 +3,7 @@ import Layout from "../components/ui/layout"
 import logo from "../images/logo_bottom.png"
 import { FaMedal } from "react-icons/fa"
 import Awards from "../components/awards"
+import "../css/pages/aboutUs.css"
 
 const AboutUs = () => {
   return (

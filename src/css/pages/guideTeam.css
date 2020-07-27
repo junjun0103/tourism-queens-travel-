@@ -1,0 +1,63 @@
+/*
+===============
+Guide Team
+===============
+*/
+.listGuide-container {
+  margin-top: 5rem;
+  width: 90%;
+  margin: 5rem auto;
+}
+.previewGuide-container {
+  display: grid;
+  margin-top: 5rem;
+  justify-items: center;
+  align-items: center;
+}
+.previewGuide-img {
+  grid-column: 1 / span 4;
+  width: 60%;
+  height: 17rem;
+  min-width: 13rem;
+  border: solid 5px var(--clr-primary-1);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.previewGuide-contents {
+  grid-column: 5 / -1;
+}
+@media screen and (min-width: 700px) {
+  .previewGuide-container {
+    grid-template-columns: repeat(12, 1fr);
+    margin-top: 6rem;
+    grid-gap: 3.5rem;
+  }
+  .previewGuide-img {
+    grid-column: 1 / span 4;
+    width: 90%;
+    min-width: 13rem;
+    max-height: 17rem;
+  }
+  .previewGuide-contents {
+    grid-column: 5 / -1;
+  }
+  .previewGuide-container:nth-of-type(even) .previewGuide-img {
+    grid-column: 9 / -1;
+    grid-row: 1 / 1;
+  }
+  .previewGuide-container:nth-of-type(even) .previewGuide-contents {
+    grid-column: 1 / span 8;
+    grid-row: 1 / 1;
+    text-align: left;
+  }
+}
+
+.previewGuide-contents__iconWithName {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.previewGuide-contents__icon {
+  font-size: 1.3rem;
+  margin-right: 0.5rem;
+}

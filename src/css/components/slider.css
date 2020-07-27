@@ -1,0 +1,21 @@
+/*
+===============
+Slider
+===============
+*/
+
+.slider-title_mb {
+    margin-bottom: 2rem;
+  }
+  .slider-height {
+    margin: 0 0.7rem;
+    height: 23rem;
+  }
+  .slider-height__slider {
+    margin: 0 0.7rem;
+    height: 22rem;
+  }
+  .preview-container_themeTour__slider {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    margin: 0.5rem;
+  }
