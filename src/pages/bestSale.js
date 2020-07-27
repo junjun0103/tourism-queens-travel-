@@ -7,7 +7,7 @@ const BestSale = () => {
   return (
     <>
       <Layout>
-        <section className="bestSale-page">
+        <section className="bestSale-page section section-center">
           <ListIterinary />
         </section>
       </Layout>

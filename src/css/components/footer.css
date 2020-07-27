@@ -12,15 +12,6 @@ Footer
   padding: 3rem;
   justify-items: center;
 }
-@media screen and (min-width: 900px) {
-  .footer__container {
-    grid-template-columns: repeat(2, 1fr);
-    padding: 5rem;
-  }
-  .aboutUs-awards__img__small {
-    max-height: 4rem;
-  }
-}
 .footer__information {
   display: grid;
   grid-template-columns: 0.07fr 1fr;
@@ -31,6 +22,10 @@ Footer
   font-size: 1.2rem;
   color: var(--clr-primary-4);
 }
-.footer__awards {
-  width: 80%;
+
+@media screen and (min-width: 900px) {
+  .footer__container {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 5rem;
+  }
 }

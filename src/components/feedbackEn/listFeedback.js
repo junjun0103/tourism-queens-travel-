@@ -11,7 +11,6 @@ const ListFeedBack = ({ contents, title }) => {
 
   return (
     <>
-      <section className="section section-center">
         <h2 className="title-style">reviews</h2>
         <h4 className="subtitle-style">Stroies from our clients</h4>
         <div className=" preview-center">
@@ -20,7 +19,6 @@ const ListFeedBack = ({ contents, title }) => {
             <Previewfeedback key={feedbacks.id} feedback={feedback} />
           ))}
         </div>
-      </section>
     </>
   )
 }

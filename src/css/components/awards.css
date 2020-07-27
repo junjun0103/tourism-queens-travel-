@@ -1,0 +1,61 @@
+.aboutUs-awards {
+  margin: 5rem 0;
+}
+.aboutUs-awards__ul {
+  margin: 1rem 1.5rem;
+}
+.aboutUs-awards__li {
+  display: flex;
+  line-height: 2rem;
+}
+.aboutUs-awards__icon {
+  margin-right: 1rem;
+  margin-top: 0.4rem;
+  font-size: 1rem;
+}
+.aboutUs-awards__imgs {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutUs-awards__img {
+  max-height: 6rem;
+}
+.aboutUs-awards__img__small {
+  max-height: 3rem;
+}
+.aboutUs-awards__img:not(:last-child),
+.aboutUs-awards__img__small:not(:last-child) {
+  margin-right: 1rem;
+}
+
+@media screen and (max-width: 900px) {
+  .aboutUs-awards {
+    margin: 3rem 0;
+  }
+  .aboutUs-awards__img {
+    max-height: 5rem;
+  }
+}
+@media screen and (max-width: 700px) {
+  .aboutUs-awards {
+    margin: 2rem 0;
+  }
+  .aboutUs-awards__img {
+    max-height: 3rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  .aboutUs-awards__img {
+    max-height: 2.4rem;
+  }
+  .aboutUs-awards__img__small {
+    max-height: 2.2rem;
+  }
+  .aboutUs-awards__img:not(:last-child),
+  .aboutUs-awards__img__small:not(:last-child) {
+    margin-right: 0.5rem;
+  }
+}

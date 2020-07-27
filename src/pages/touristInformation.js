@@ -7,7 +7,7 @@ const TouristInformation = () => {
   return (
     <>
       <Layout>
-        <section className="touristInformation-page">
+        <section className="touristInformation-page section ">
           <ListToursInfo />
         </section>
       </Layout>

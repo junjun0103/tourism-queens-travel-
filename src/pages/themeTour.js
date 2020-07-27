@@ -7,7 +7,7 @@ const ThemeTour = () => {
   return (
     <>
       <Layout>
-        <section className="themeTour-page">
+        <section className="themeTour-page section section-center">
           <ListTour />
         </section>
       </Layout>

@@ -7,7 +7,7 @@ const Review = () => {
   return (
     <>
       <Layout>
-        <section className="reviews-page">
+        <section className="reviews-page section section-center">
           <ListFeedBack />
         </section>
       </Layout>
