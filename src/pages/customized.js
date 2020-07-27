@@ -45,12 +45,11 @@ const Customized = ({
     <Layout>
       <section className="custimized-page section section-center">
         {/*Top and Image Information*/}
-        <CustomizedInformation></CustomizedInformation>
+        <CustomizedInformation />
 
         {/*5 Steps Information*/}
-        <article className="custimizedProcess-container">
-          <Customized_5steps></Customized_5steps>
-        </article>
+
+        <Customized_5steps />
 
         {/*Customized Reviews Carrousel*/}
         <article className="customizedSlider-containder">
@@ -62,7 +61,7 @@ const Customized = ({
         </article>
 
         {/**Customized Form Plan*/}
-        <CustomizedPlan></CustomizedPlan>
+        <CustomizedPlan />
       </section>
     </Layout>
   )
