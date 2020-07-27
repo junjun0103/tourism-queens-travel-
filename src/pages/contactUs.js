@@ -1,6 +1,7 @@
 import React from "react"
 import ContactUsForm from "../components/ui/contactUsForm"
 import Layout from "../components/ui/layout"
+import "../css/pages/contactUs.css"
 
 import { Map, TileLayer, Marker, Popup } from "react-leaflet"
 import L from "leaflet"

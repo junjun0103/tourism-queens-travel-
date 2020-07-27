@@ -5,6 +5,7 @@ import Slider from "../components/slider"
 import Customized_5steps from "../components/customized/customized_5steps"
 import CustomizedInformation from "../components/customized/customizedInformation"
 import CustomizedPlan from "../components/customized/customizedPlan"
+import "../css/pages/customized.css"
 
 export const query = graphql`
   {

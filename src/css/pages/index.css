@@ -1,0 +1,170 @@
+/*
+===============
+Index
+===============
+*/
+
+.main-header__container {
+  height: 100vh;
+}
+.main-header__background {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  top: 0;
+  right: 0;
+}
+.main-header__logo {
+  position: absolute;
+  width: 25%;
+  min-width: 15rem;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.main-header__bottom__bar {
+  height: 8rem;
+  background-image: url(../../images/astronomy.jpg);
+  background-position: center;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+  background-attachment: fixed;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+.main-header__bottom__text {
+  color: white;
+  margin: 0 auto;
+}
+
+.main-slider__containder,
+.main-steps__container,
+.main-aboutUs__containder,
+.main-whyUs__containder {
+  padding: 1rem 0;
+}
+/* 1024 : ipad pro size 
+  beyond ipad pro size (for laptop) */
+@media screen and (min-width: 500px) {
+  .main-slider__containder,
+  .main-steps__container,
+  .main-aboutUs__containder,
+  .main-whyUs__containder {
+    padding: 2rem 0;
+  }
+}
+/* 1024 : ipad pro size 
+  beyond ipad pro size (for laptop) */
+@media screen and (min-width: 1025px) {
+  .main-slider__containder,
+  .main-steps__container,
+  .main-aboutUs__containder,
+  .main-whyUs__containder {
+    height: 100vh;
+  }
+}
+.main-btn__customized {
+  margin-top: -2rem;
+  margin-bottom: 2rem;
+}
+
+.main-aboutUs__containder {
+  background-image: url(../../images/astronomy.jpg);
+  background-position: center;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+  background-attachment: fixed;
+}
+@media screen and (max-width: 480px) {
+  .main-aboutUs__containder {
+    background-image: none;
+    background-color: var(--clr-primary-3);
+  }
+}
+.main-aboutUs__box {
+  padding: 0 3rem;
+  padding-top: 3rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.9fr 0.4fr;
+  grid-gap: 3rem;
+  max-width: 80rem;
+}
+@media screen and (min-width: 1025px) {
+  .main-aboutUs__box {
+    padding-top: 10vh;
+  }
+}
+.btn-aboutUs {
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+}
+.main-aboutUs__logo {
+  justify-self: center;
+  align-self: center;
+  width: 100%;
+}
+@media screen and (max-width: 700px) {
+  .main-aboutUs__box {
+    grid-template-columns: 1fr;
+  }
+  .main-aboutUs__logo {
+    display: none;
+  }
+}
+
+.main-whyUs__box {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  margin-top: 3rem;
+  grid-gap: 1.5rem;
+}
+.main-whyUs__contents {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+  justify-items: center;
+}
+.main-whyUs__contents__icon {
+  font-size: 3rem;
+}
+.main-whyUs__contents__text {
+  background-color: var(--clr-primary-1);
+  width: 90%;
+  padding: 1.5rem;
+  clip-path: polygon(0% 0%, 100% 0, 100% 72%, 50% 100%, 0 72%);
+  -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 72%, 50% 100%, 0 72%);
+  -o-clip-path: polygon(0% 0%, 100% 0, 100% 72%, 50% 100%, 0 72%);
+  -ms-clip-path: polygon(0% 0%, 100% 0, 100% 72%, 50% 100%, 0 72%);
+  height: 15rem;
+}
+@media screen and (max-width: 880px) {
+  .main-whyUs__box {
+    grid-template-columns: repeat(3, 0.8fr);
+    margin-top: 2rem;
+    grid-gap: 1.5rem;
+  }
+  .main-whyUs__contents__text {
+    width: 80%;
+    height: 13rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .main-whyUs__box {
+    grid-template-columns: repeat(2, 0.8fr);
+    margin-top: 2rem;
+    grid-gap: 1.5rem;
+  }
+  .main-whyUs__contents__icon {
+    font-size: 2.3rem;
+  }
+  .main-whyUs__contents__text {
+    height: 12rem;
+  }
+}

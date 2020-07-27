@@ -1,0 +1,8 @@
+/*
+=============== 
+Iterinary
+===============
+*/
+.preview-container_bestSale {
+  grid-template-rows: minmax(13rem, 20vh) 2rem minmax(2rem, 5rem) 1.5rem;
+}

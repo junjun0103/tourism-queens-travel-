@@ -1,6 +1,7 @@
 import React from "react"
 import Layout from "../components/ui/layout"
-import ListFeedBack from "../components/feedbackEn/listFeedback";
+import ListFeedBack from "../components/feedbackEn/listFeedback"
+import "../css/pages/reviews.css"
 
 const Review = () => {
   return (

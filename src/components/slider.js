@@ -2,6 +2,7 @@ import React, { useContext } from "react"
 import Carousel from "react-elastic-carousel"
 import { Link } from "gatsby"
 import { GlobalStateContext } from "../context/GlobalContextProvider"
+import "../css/components/slider.css"
 
 const Slider = ({ contents, title, sliderStyle }) => {
   const state = useContext(GlobalStateContext) || { lenguage: "EN" }

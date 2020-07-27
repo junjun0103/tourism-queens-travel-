@@ -8,6 +8,7 @@ import CustomizeTour from "../components/home/customizeTour"
 import AboutUs from "../components/home/aboutUs"
 import WhyUs from "../components/home/whyUs"
 import { GlobalStateContext } from "../context/GlobalContextProvider"
+import "../css/pages/index.css"
 
 export const query = graphql`
   {
