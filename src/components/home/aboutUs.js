@@ -6,11 +6,11 @@ const AboutUs = () => {
   return (
     <article className="main-aboutUs__containder">
       <div className="main-aboutUs__box">
-        <div>
+        <div className="main-aboutUs__contents">
           <h2 className="title-style__white">about us</h2>
           <br />
           <br />
-          <h4 className="clr-primary-4 text-align-justify ">
+          <h4 className="clr-primary-4 text-align-justify clr__white">
             Queens Travel is a registered inbound operator that is based in
             Auckland, New Zealand. We aim to provide a diversified experience to
             customers, the pursuit for perfection is a spirit for the company.

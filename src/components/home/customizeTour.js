@@ -25,9 +25,8 @@ const CustomizeTour = () => {
           self-driving and so on, just hand everything over to us!
         </h4>
         {/*5 Steps Information*/}
-        <div className="custimizedProcess-container">
-          <Customized_5steps />
-        </div>
+
+        <Customized_5steps />
       </article>
       {/**Button to Customize Page */}
       <div className="main-btn__customized">

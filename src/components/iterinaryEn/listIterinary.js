@@ -11,19 +11,17 @@ const ListIterinary = () => {
 
   return (
     <>
-      <section className="section section-center">
-        <h2 className="title-style">best sale</h2>
-        <h4 className="subtitle-style">
-          Have your own departure date for below tours if there are over 8
-          people in your group
-        </h4>
-        <div className="preview-center">
-          {/**Map for the datas */}
-          {iterinaries.map(iterinary => (
-            <PreviewIterinary key={iterinary.id} iterinary={iterinary} />
-          ))}
-        </div>
-      </section>
+      <h2 className="title-style">best sale</h2>
+      <h4 className="subtitle-style">
+        Have your own departure date for below tours if there are over 8 people
+        in your group
+      </h4>
+      <div className="preview-center">
+        {/**Map for the datas */}
+        {iterinaries.map(iterinary => (
+          <PreviewIterinary key={iterinary.id} iterinary={iterinary} />
+        ))}
+      </div>
     </>
   )
 }

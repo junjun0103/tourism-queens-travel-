@@ -15,7 +15,7 @@ const ListGuide = ({}) => {
   const [guides] = useState(result)
 
   return (
-    <section className="section section-center">
+    <>
       <h2 className="title-style">Guide Team</h2>
       <br />
       <br />
@@ -49,7 +49,7 @@ const ListGuide = ({}) => {
               }
             })}
       </div>
-    </section>
+    </>
   )
 }
 

@@ -7,7 +7,7 @@ const GuideTeam = () => {
   return (
     <>
       <Layout lenguage="EN">
-        <section className="guideTeam-page">
+        <section className="guideTeam-page section section-center">
           <ListGuide />
         </section>
       </Layout>

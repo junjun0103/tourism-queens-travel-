@@ -42,11 +42,34 @@ Tourist Information
   align-items: center;
   padding: 3rem;
 }
+@media screen and (max-width: 800px) {
+  .preview-listTourInfo__center {
+    margin-top: 2rem;
+    margin-left: 0;
+    margin-right: 0;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 2rem;
+    grid-row-gap: 1rem;
+  }
+}
 @media screen and (max-width: 600px) {
   .tourInfo-one__items {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 0.5rem;
     padding: 2rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  .preview-listTourInfo__center {
+    margin-top: 2rem;
+    margin-left: 0;
+    margin-right: 0;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
+  }
+  .preview-tourInfo__img {
+    width: 2.8rem;
   }
 }
 .tourInfo-container__subject {

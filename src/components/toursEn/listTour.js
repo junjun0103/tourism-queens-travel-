@@ -10,18 +10,16 @@ const ListTour = () => {
   const [tours] = useState(result)
   return (
     <>
-      <section className="section section-center">
-        <h2 className="title-style">Theme Tours</h2>
-        <h4 className="subtitle-style">
-          Explore your travel dream with our unique tour
-        </h4>
-        <div className="preview-center">
-          {/**Map for the datas */}
-          {tours.map(tour => (
-            <PreviewTour key={tour.slug} tour={tour} />
-          ))}
-        </div>
-      </section>
+      <h2 className="title-style">Theme Tours</h2>
+      <h4 className="subtitle-style">
+        Explore your travel dream with our unique tour
+      </h4>
+      <div className="preview-center">
+        {/**Map for the datas */}
+        {tours.map(tour => (
+          <PreviewTour key={tour.slug} tour={tour} />
+        ))}
+      </div>
     </>
   )
 }
