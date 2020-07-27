@@ -1,8 +1,33 @@
-import React from "react"
+import React,{useEffect,useRef,useState} from "react"
 
-const customized_5steps = () => {
+
+function useOnScreen(options){
+  const ref = useRef(null);
+  const [visible,setVisible] = useState(false);
+
+  useEffect(() => {
+      const observer = new IntersectionObserver(([entry]) =>{
+          setVisible(entry.isIntersecting);
+      },options);
+
+      if(ref.current){
+          observer.observe(ref.current);
+      }
+
+      return() =>{
+          if(ref.current){
+              observer.unobserve(ref.current);
+          }
+      };
+  },[ref,options]);
+
+  return [ref,visible];
+}
+
+const Customized_5steps = () => {
+  const [ref,visible] = useOnScreen({rootMargin:"-300px"});
   return (
-    <>
+    <div>
       <div className="custimizedProcess-steps">
         <div className="custimizedProcess-steps__circle">
           <div className="custimizedProcess-steps__circleInside"></div>
@@ -58,8 +83,8 @@ const customized_5steps = () => {
           </h4>
         </div>
       </div>
-    </>
+    </div>
   )
 }
 
-export default customized_5steps
+export default Customized_5steps

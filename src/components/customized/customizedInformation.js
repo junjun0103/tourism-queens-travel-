@@ -1,5 +1,7 @@
 import React from "react"
-import img from "../../images/fern.jpg"
+import img from "../../images/fern.jpg";
+
+
 
 const CustomizedInformation = () => {
   return (
@@ -7,7 +9,6 @@ const CustomizedInformation = () => {
       <div>
         {/**Left Side Customized Information*/}
         <h2 className="title-style">customized tour</h2>
-
         <div className="custimized-introduction__content">
           <br />
           <h4 className="text-align-justify">

@@ -26,7 +26,7 @@ const CustomizeTour = () => {
         </h4>
         {/*5 Steps Information*/}
         <div className="custimizedProcess-container">
-          <Customized_5steps></Customized_5steps>
+          <Customized_5steps />
         </div>
       </article>
       {/**Button to Customize Page */}
