@@ -25,7 +25,7 @@ Index
 }
 .main-header__bottom__bar {
   height: 8rem;
-  background-image: url(../images/astronomy.jpg);
+  background-image: url(../../images/astronomy.jpg);
   background-position: center;
   -webkit-background-size: contain;
   -moz-background-size: contain;
@@ -73,7 +73,7 @@ Index
 }
 
 .main-aboutUs__containder {
-  background-image: url(../images/astronomy.jpg);
+  background-image: url(../../images/astronomy.jpg);
   background-position: center;
   -webkit-background-size: contain;
   -moz-background-size: contain;

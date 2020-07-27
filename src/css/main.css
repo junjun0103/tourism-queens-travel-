@@ -253,6 +253,7 @@ p {
 .preview-container_review {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  background-color: white;
 }
 .preview-container_review {
   background-color: var(--clr-primary-4);
