@@ -4,7 +4,7 @@ Cusomaized tour
 ===============
 */
 
-*
+/*
 //////////// customized introduction /////////////
 */
 .custimized-introduction__container {
@@ -23,6 +23,7 @@ Cusomaized tour
   width: 100%;
   grid-row: 1/-1;
   grid-column: 1/-1;
+  margin-top: 1rem;
 }
 @media screen and (min-width: 740px) {
   .custimized-introduction__img {
