@@ -25,7 +25,7 @@ const ListGuide = ({}) => {
         Find our guides below and see how they become travel experts
       </h4>
       {/* english/chinese guide change button */}
-      <button onClick={toggleGuide} className="btn btn-right">
+      <button onClick={toggleGuide} className="btn btn-right mt-1 mr-2">
         {isChineseGuide
           ? "find English Speaking guides"
           : "find Chinese Speaking guides"}
