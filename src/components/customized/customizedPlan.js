@@ -215,8 +215,8 @@ const CustomizedPlan = () => {
                   onChange={onChange}
                   placeholder="Other"
                 ></textarea>
-                <button className="contact-form__btn btn mt2" type="submit">
-                  submit
+                <button className="contact-form__btn btn btn_mt2" type="submit">
+                  send
                 </button>
               </div>
             </div>

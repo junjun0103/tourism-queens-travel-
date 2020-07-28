@@ -4,242 +4,263 @@ Cusomaized tour
 ===============
 */
 
+/*
+//////////// customized introduction /////////////
+*/
 .custimized-introduction__container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-column-gap: 4rem;
-    align-items: center;
-  }
-  .custimized-introduction__imgWithText {
-    max-width: 35rem;
-    justify-self: center;
-    display: grid;
-  }
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-column-gap: 4rem;
+  align-items: center;
+}
+.custimized-introduction__imgWithText {
+  max-width: 35rem;
+  justify-self: center;
+  display: grid;
+}
+.custimized-introduction__img {
+  z-index: 0;
+  width: 100%;
+  grid-row: 1/-1;
+  grid-column: 1/-1;
+  margin-top: 1rem;
+}
+@media screen and (min-width: 740px) {
   .custimized-introduction__img {
-    z-index: 0;
-    width: 100%;
-    grid-row: 1/-1;
-    grid-column: 1/-1;
+    min-height: 25rem;
   }
-  @media screen and (min-width: 740px) {
-    .custimized-introduction__img {
-      min-height: 25rem;
-    }
-  }
-  .custimized-introduction__text {
-    z-index: 2;
-    color: var(--clr-white);
-    grid-row: 1/-1;
-    grid-column: 1/-1;
-    align-self: center;
-    justify-self: center;
-  }
-  
+}
+.custimized-introduction__text {
+  z-index: 2;
+  color: var(--clr-white);
+  grid-row: 1/-1;
+  grid-column: 1/-1;
+  align-self: center;
+  justify-self: center;
+}
+
+/*
+//////////// customized 5 steps /////////////
+*/
+.custimizedProcess-container::before {
+  content: "";
+  position: absolute;
+  top: 22px;
+  width: 76vw;
+  max-width: 944px;
+  border-bottom: solid 3px var(--clr-primary-3);
+  z-index: -1;
+}
+@media screen and (max-width: 1000px) {
   .custimizedProcess-container::before {
-    content: "";
-    position: absolute;
-    top: 22px;
-    width: 76vw;
-    max-width: 944px;
-    border-bottom: solid 3px var(--clr-primary-3);
-    z-index: -1;
-  }
-  @media screen and (max-width: 1000px) {
-    .custimizedProcess-container::before {
-      display: none;
-    }
-  }
-  
-  .custimizedProcess-container {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    margin: 5rem 0;
-    justify-items: center;
-    position: relative;
-  }
-  @media screen and (max-width: 1000px) {
-    .custimizedProcess-container {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-  @media screen and (max-width: 610px) {
-    .custimizedProcess-container {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  
-  .custimizedProcess-steps:hover .custimizedProcess-steps__text {
-    background-image: linear-gradient(
-      to bottom right,
-      var(--clr-primary-1),
-      var(--clr-primary-3)
-    );
-    box-shadow: var(--dark-shadow);
-    transform: scale(1.01);
-    border: none;
-    color: white;
-  }
-  .custimizedProcess-steps:hover .custimizedProcess-steps__circleInside {
-    display: block;
-  }
-  .custimizedProcess-steps__circle {
-    border: solid 2px var(--clr-primary-3);
-    border-radius: 50%;
-    width: 1rem;
-    height: 1rem;
-    margin: 1rem auto;
-    background-color: var(--clr-primary-3);
-  }
-  .custimizedProcess-steps__circleInside {
-    border: solid 5px var(--clr-primary-1);
-    border-radius: 50%;
-    width: 0.6rem;
-    height: 0.6rem;
-    margin: 1px auto;
     display: none;
   }
+}
+
+.custimizedProcess-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin: 5rem 0;
+  justify-items: center;
+  position: relative;
+}
+@media screen and (max-width: 1000px) {
+  .custimizedProcess-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 610px) {
+  .custimizedProcess-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.custimizedProcess-steps:hover .custimizedProcess-steps__text {
+  background-image: linear-gradient(
+    to bottom right,
+    var(--clr-primary-1),
+    var(--clr-primary-3)
+  );
+  box-shadow: var(--dark-shadow);
+  transform: scale(1.01);
+  border: none;
+  color: white;
+}
+.custimizedProcess-steps:hover .custimizedProcess-steps__circleInside {
+  display: block;
+}
+.custimizedProcess-steps__circle {
+  border: solid 2px var(--clr-primary-3);
+  border-radius: 50%;
+  width: 1rem;
+  height: 1rem;
+  margin: 1rem auto;
+  background-color: var(--clr-primary-3);
+}
+.custimizedProcess-steps__circleInside {
+  border: solid 5px var(--clr-primary-1);
+  border-radius: 50%;
+  width: 0.6rem;
+  height: 0.6rem;
+  margin: 1px auto;
+  display: none;
+}
+.custimizedProcess-steps__text {
+  margin-top: 2rem;
+  display: grid;
+  border: solid 2px var(--clr-primary-3);
+  border-radius: var(--radius-small);
+  width: 11rem;
+  height: 13rem;
+  padding: 1rem;
+  text-align: center;
+  line-height: 1.4rem;
+  box-shadow: var(--light-shadow);
+  transition: var(--transition);
+}
+@media screen and (max-width: 610px) {
   .custimizedProcess-steps__text {
-    margin-top: 2rem;
-    display: grid;
-    border: solid 2px var(--clr-primary-3);
-    border-radius: var(--radius-small);
-    width: 11rem;
-    height: 13rem;
-    padding: 1rem;
-    text-align: center;
-    line-height: 1.4rem;
-    box-shadow: var(--light-shadow);
-    transition: var(--transition);
+    width: 95%;
+    max-width: 15rem;
+    margin-bottom: 1rem;
   }
-  @media screen and (max-width: 610px) {
-    .custimizedProcess-steps__text {
-      width: 95%;
-      max-width: 15rem;
-      margin-bottom: 1rem;
-    }
-    .custimizedProcess-steps__circle {
-      display: none;
-    }
-    .custimizedProcess-steps__circleInside {
-      display: none;
-    }
+  .custimizedProcess-steps__circle {
+    display: none;
   }
-  /* @media screen and (max-width: 700px) {
+  .custimizedProcess-steps__circleInside {
+    display: none;
+  }
+}
+/* @media screen and (max-width: 700px) {
     .custimized-process_btn {
       display: none;
     }
   } */
-  .customizedSlider-containder,
-  .customizedForm-containder,
-  .custimizedProcess-container {
-    margin-top: 5rem;
-  }
-  .custimizedProcess-container {
-    margin-top: 2rem;
-  }
-  
-  .customizedForm-title {
-    text-align: center;
-    background-color: var(--clr-primary-3);
-    line-height: 3rem;
-  }
-  .customizedForm-outside {
-    margin: 3rem 2rem;
-    border: solid 2px var(--clr-primary-3);
-    border-radius: var(--radius);
-  }
+.customizedSlider-containder,
+.customizedForm-containder,
+.custimizedProcess-container {
+  margin-top: 5rem;
+}
+.custimizedProcess-container {
+  margin-top: 2rem;
+}
+
+/*
+//////////// customized form /////////////
+*/
+
+.customizedForm-title {
+  text-align: center;
+  background-color: var(--clr-primary-3);
+  line-height: 3rem;
+}
+.customizedForm-outside {
+  margin: 3rem 2rem;
+  border: solid 2px var(--clr-primary-3);
+  border-radius: var(--radius);
+}
+.customizedForm-inside {
+  margin: 0.5rem;
+  background-color: var(--clr-primary-4);
+  border-radius: var(--radius);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+.customizedForm-titleBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.customizedForm-titleHr {
+  border: 0;
+  height: 4px;
+  width: 90%;
+  background: var(--clr-primary-3);
+}
+.customizedForm-title__inside {
+  margin: 0 1.5rem;
+}
+
+.customizedForm-left,
+.customizedForm-right {
+  padding: 2rem;
+  justify-self: center;
+  width: 100%;
+}
+.customizedForm-formBox {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  margin-top: 1rem;
+  align-items: center;
+  grid-row-gap: 1rem;
+  grid-column-gap: 0.3rem;
+}
+.customizedForm-formBox__label {
+  text-align: center;
+}
+
+.customizedForm-input {
+  border: none;
+  padding: 0.5rem;
+  font-family: var(--ff-secondary);
+  font-weight: 300;
+}
+.btn_mt2 {
+  margin-top: 2rem;
+}
+.customizedForm-checkbox__label {
+  margin-left: 0.5rem;
+}
+.active {
+  display: block;
+}
+.inactive {
+  display: none;
+}
+.textarea-flightSchedule {
+  margin-top: 0.3rem;
+  width: 80%;
+  border-radius: var(--radius);
+}
+.customizedForm-checkbox__container {
+  padding-left: 1rem;
+}
+
+@media screen and (max-width: 600px) {
   .customizedForm-inside {
-    margin: 0.5rem;
-    background-color: var(--clr-primary-4);
-    border-radius: var(--radius);
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  }
-  
-  .customizedForm-titleBox {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .customizedForm-titleHr {
-    border: 0;
-    height: 4px;
-    width: 10rem;
-    background: var(--clr-primary-3);
-  }
-  .customizedForm-title__inside {
-    margin: 0 1.5rem;
-  }
-  
-  .customizedForm-left,
-  .customizedForm-right {
-    padding: 2rem;
-    justify-self: center;
+    grid-template-columns: 1fr;
   }
   .customizedForm-formBox {
-    display: grid;
-    grid-template-columns: 0.5fr 1fr;
-    margin-top: 1rem;
-    align-items: center;
-    grid-row-gap: 1rem;
-    grid-column-gap: 0.3rem;
+    grid-template-columns: 1fr;
   }
-  .customized-form__label {
-    text-align: center;
-  }
-  
-  .customizedForm-input {
-    border: none;
-    padding: 0.5rem;
-    font-family: var(--ff-secondary);
-    font-weight: 300;
-  }
-  .mt2 {
-    margin-top: 2rem;
-  }
-  .customizedForm-checkbox__label {
-    margin-left: 0.5rem;
-  }
-  .active {
-    display: block;
-  }
-  .inactive {
+  .customizedForm-formBox__label {
     display: none;
   }
-  .textarea-flightSchedule {
-    margin-top: 0.3rem;
-    width: 13rem;
-    border-radius: var(--radius);
+  .customizedForm-input {
+    justify-self: center;
+    width: 80%;
   }
   .customizedForm-checkbox__container {
-    padding-left: 1rem;
+    padding-left: 2rem;
   }
-  @media screen and (max-width: 600px) {
-    .customizedForm-inside {
-      grid-template-columns: 1fr;
-    }
-    .customizedForm-formBox {
-      grid-template-columns: 1fr;
-    }
-    .customizedForm-formBox__label {
-      display: none;
-    }
-    .customizedForm-input {
-      justify-self: center;
-      width: 80%;
-    }
-    .customizedForm-titleHr {
-      width: 4.8rem;
-    }
-    .textarea-flightSchedule {
-      width: 8rem;
-    }
-    .customizedForm-checkbox__container {
-      padding-left: 1.5rem;
-    }
+}
+@media screen and (max-width: 480px) {
+  .customizedForm-outside {
+    margin: 0 0;
+    margin-top: 1rem;
   }
-  @media screen and (max-width: 400px) {
-    .customizedForm-titleHr {
-      width: 3rem;
-    }
+  .customizedForm-title__inside {
+    margin: 0 0.5rem;
   }
+  .contact-form__btn {
+    justify-self: center;
+  }
+  .btn_mt2 {
+    margin-top: 0;
+  }
+  .customizedForm-left,
+  .customizedForm-right {
+    padding: 1rem 0.5rem;
+  }
+}
