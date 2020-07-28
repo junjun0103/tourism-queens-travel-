@@ -28,7 +28,10 @@ const Customized_5steps = () => {
   const [ref,visible] = useOnScreen({rootMargin:"-300px"});
   return (
     <>
-      <div className="custimizedProcess-container">
+      <div 
+        ref={ref}
+        className={`custimizedProcess-container ${visible ? "nuevo" : "siempre"}`}
+      >
         <div className="custimizedProcess-steps">
           <div className="custimizedProcess-steps__circle">
             <div className="custimizedProcess-steps__circleInside"></div>
