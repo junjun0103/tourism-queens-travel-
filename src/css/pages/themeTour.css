@@ -3,6 +3,9 @@
 Theme tour
 ===============
 */
+/*
+///////////// preview /////////
+*/
 .preview-container_themeTour {
   grid-template-rows: minmax(13rem, 20vh) minmax(7rem, 18vh);
 }
@@ -10,7 +13,9 @@ Theme tour
   padding: 1rem;
   grid-column: 1/-1;
 }
-
+/*
+///////////// header /////////
+*/
 .themeTour-header__container {
   width: 100%;
 }
@@ -117,6 +122,10 @@ Theme tour
   border-radius: var(--radius-small);
   cursor: pointer;
 }
+
+/*
+///////////// plan /////////
+*/
 .themeTour-plan__article {
   width: 80%;
   margin: 5rem auto;
@@ -194,6 +203,9 @@ Theme tour
   border-radius: var(--radius-small);
 }
 
+/*
+///////////// information /////////
+*/
 .themeTour-notice__article {
   width: 80%;
   margin: 3rem auto;
@@ -228,4 +240,90 @@ Theme tour
   background-color: var(--clr-primary-4);
   padding: 1rem;
   border-radius: var(--radius-small);
+}
+
+/*
+///////////// responsive design /////////
+*/
+@media screen and (max-width: 800px) {
+  .themeTour-header__highlightBox__map {
+    width: 12.5rem;
+    height: 16rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  /*
+  //////////////header ////////////
+  */
+  .themeTour-header__title {
+    margin-top: 6rem;
+    display: flex;
+    width: 5rem;
+    float: left;
+  }
+  .themeTour-header__title_back {
+    margin-bottom: 0.5rem;
+  }
+  .themeTour-header__title_front {
+    padding: 0.7rem;
+    margin-top: 0.3rem;
+    margin-left: -2.3rem;
+  }
+  .themeTour-header__subtitle {
+    width: 55%;
+    padding: 0.5rem;
+  }
+  .themeTour-header__subtitle::before {
+    font-size: 3rem;
+    left: -2.5rem;
+  }
+  .themeTour-header__subtitle::after {
+    font-size: 3rem;
+  }
+  .themeTour-header__highlightBox__map {
+    margin: 0.5rem;
+    width: 10.5rem;
+    height: 14rem;
+  }
+  @media screen and (max-width: 400px) {
+    .themeTour-header__highlightBox__map {
+      width: 8rem;
+      height: 12rem;
+    }
+  }
+  /*
+  //////////////plans ////////////
+  */
+  .themeTour-plan__article {
+    width: 100%;
+    margin: 2rem auto;
+  }
+  .themeTour-plan__container {
+    grid-template-columns: 30px 30px 1fr;
+  }
+  .themeTour-plan__box {
+    grid-gap: 0.5rem;
+    margin-top: 0.2rem;
+    margin-bottom: 1.5rem;
+  }
+  .themeTour-plan__dot {
+    width: 0.6rem;
+    height: 0.6rem;
+    margin-right: -0.4rem;
+  }
+  .photo {
+    grid-column: 1/-1;
+  }
+  /*
+  //////////////information ////////////
+  */
+  .themeTour-notice__included__box,
+  .themeTour-notice__excluded__box {
+    grid-column: 1 / span 2;
+  }
+  .themeTour-notice__article {
+    width: 100%;
+    margin: 1rem auto;
+    grid-gap: 1rem 0;
+  }
 }

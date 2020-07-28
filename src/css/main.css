@@ -122,7 +122,7 @@ p {
   }
   h3 {
     /* 16pt/11.9 = 1.34rem */
-    font-size: 1.14rem;
+    font-size: 1.1rem;
   }
   h4 {
     /* 13pt/11.9 = 1.34rem */
@@ -136,8 +136,10 @@ p {
 }
 @media screen and (max-width: 500px) {
   h1 {
-    /* 36pt/11.9 = 3rem */
     font-size: 1.8rem !important;
+  }
+  h3 {
+    font-size: 1rem;
   }
 }
 .break-word {
@@ -208,6 +210,9 @@ p {
 }
 
 /* section */ /* title */
+.mt-2 {
+  margin-top: 2rem !important;
+}
 .section {
   padding: 2rem 1rem;
 }

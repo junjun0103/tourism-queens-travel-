@@ -2,7 +2,7 @@ import React, { useContext } from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/ui/layout"
 import MainImage from "../components/home/mainImage"
-import ThemeTour from '../components/home/PreviewThemetour'
+import ThemeTour from "../components/home/PreviewThemetour"
 import Slider from "../components/slider"
 import CustomizeTour from "../components/home/customizeTour"
 import AboutUs from "../components/home/aboutUs"
@@ -61,7 +61,7 @@ const IndexPage = ({
     allStrapiFeedbacks: { nodes: feedbackData },
   },
 }) => {
-  const state = useContext(GlobalStateContext) || { lenguage: "EN" };
+  const state = useContext(GlobalStateContext) || { lenguage: "EN" }
   return (
     <Layout>
       {/**main image */}
@@ -75,12 +75,17 @@ const IndexPage = ({
             : "独一无二的新西兰，与众不同的群星假期"}
         </h1>
       </article>
-    
-      <ThemeTour         
-        contents={themeTourData}
-      />
+
+      <section className="section section-center mt-2">
+        <h2 className="title-style test">theme tours</h2>
+        <h4 className="subtitle-style ">
+          Explore your travel dream with our unique tour
+        </h4>
+      </section>
+      <ThemeTour contents={themeTourData} />
       <section className="section section-center">
-        {/*Theme Tour Carrousel*/}
+        {/*Theme Tour Carrousel
+        
         <article className="main-slider__containder">
           <Slider
             contents={themeTourData}
@@ -88,6 +93,9 @@ const IndexPage = ({
             sliderStyle="themeTour"
           />
         </article>
+        
+        */}
+
         {/*Customize Tour*/}
         <CustomizeTour />
       </section>
