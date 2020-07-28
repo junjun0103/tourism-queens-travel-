@@ -66,7 +66,7 @@ const IndexPage = ({
     <Layout>
       {/**main image */}
       <MainImage />
-
+ 
       {/**Slogan */}
       <article className="main-header__bottom__bar">
         <h1 className="main-header__bottom__text">

@@ -339,3 +339,64 @@ Pages
   color: var(--clr-primary-1);
   margin-bottom: 2rem;
 }
+.nuevo div{
+  opacity: 0;
+  animation: animate 1s linear forwards;
+}
+@keyframes animate {
+  0%{
+      opacity: 0;
+      transform: rotateY(90deg);
+  }
+  100%{
+      opacity: 1;
+      transform: rotateY(0deg);
+  }
+}
+.nuevo div:nth-child(1){
+  animation-delay: 0.1s;
+  color: blue;
+}
+.nuevo div:nth-child(2){
+  animation-delay: 0.4s;
+}
+.nuevo div:nth-child(3){
+  animation-delay: 0.8s;
+}
+.nuevo div:nth-child(4){
+  animation-delay: 1.2s;
+}
+.nuevo div:nth-child(5){
+  animation-delay: 1.4s;
+}
+/*******/
+.siempre div{
+  opacity: 1;
+  animation: animateOut 1s linear forwards;
+}
+@keyframes animateOut {
+  0%{
+      opacity: 1;
+      transform: rotateY(0deg);
+  }
+  100%{
+      opacity: 0;
+      transform: rotateY(90deg);
+  }
+}
+.siempre div:nth-child(5){
+  animation-delay: 0.1s;
+  color: blue;
+}
+.siempre div:nth-child(4){
+  animation-delay: 0.2s;
+}
+.siempre div:nth-child(3){
+  animation-delay: 0.3s;
+}
+.siempre div:nth-child(2){
+  animation-delay: 0.5s;
+}
+.siempre div:nth-child(1){
+  animation-delay: 0.6s;
+}
