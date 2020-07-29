@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/ui/layout"
 import MainImage from "../components/home/mainImage"
 import ThemeTour from "../components/home/PreviewThemetour"
+import PreviewReview from '../components/home/PreviewReviews'
 import Slider from "../components/slider"
 import CustomizeTour from "../components/home/customizeTour"
 import AboutUs from "../components/home/aboutUs"
@@ -106,15 +107,17 @@ const IndexPage = ({
       <section className="section section-center">
         {/*Why Us Information*/}
         <WhyUs />
-        {/*Reviews Carrousel*/}
+        {/*Reviews Carrousel}
         <article className="main-slider__containder">
           <Slider
             contents={feedbackData}
             title="reviews"
             sliderStyle="reviews"
           />
-        </article>
+        </article>{*/}
       </section>
+      
+      <PreviewReview contents={feedbackData} />
     </Layout>
   )
 }

@@ -43,6 +43,7 @@ const Item = styled.div`
     height: 100%;
     background-position: center;
     background-size: cover;
+    transition: all 2s ease-in-out;
   }
 
   .content {
@@ -55,6 +56,7 @@ const Item = styled.div`
     background-color: rgba(90, 93, 102, 0.7);
     opacity: 0.7;
     position: absolute;
+    transition: all 0.5s ease-in-out;
 
     .title {
       font-weight: bold;
