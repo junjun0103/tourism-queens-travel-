@@ -130,17 +130,26 @@ const tempLinksCn = dataCN.map(link => {
 export default ({ styleClass }) => {
   const dispatch = useContext(GlobalDispatchContext)
   const state = useContext(GlobalStateContext) || { lenguage: "EN" }
+
+  const _handleChange = event => {
+    dispatch({ type: event.target.value })
+  }
+
   return (
     <ul className={`page-links ${styleClass ? styleClass : ""}`}>
       {state.lenguage === "EN" ? tempLinksEn : tempLinksCn}
       <li
-        className="btn-language"
-        type="button"
-        onClick={() => {
-          dispatch({ type: "TOGGLE_LENGUAGE" })
-        }}
+      // className="btn-language"
+      // type="button"
+      // onClick={() => {
+      //   dispatch({ type: "TOGGLE_LENGUAGE" })
+      // }}
       >
-        {state.lenguage === "EN" ? "中文" : "English"}
+        <select name="lenguage" id="lenguage" onChange={_handleChange}>
+          <option>Language</option>
+          <option value="EN">English</option>
+          <option value="CN">中文</option>
+        </select>
       </li>
     </ul>
   )
