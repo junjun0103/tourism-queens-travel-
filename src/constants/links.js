@@ -132,7 +132,10 @@ export default ({ styleClass }) => {
   const state = useContext(GlobalStateContext) || { lenguage: "EN" }
 
   const _handleChange = event => {
-    dispatch({ type: event.target.value })
+    console.log(event.target.value)
+    if (event.target.value !== "null") {
+      dispatch({ type: event.target.value })
+    }
   }
 
   return (
@@ -146,7 +149,7 @@ export default ({ styleClass }) => {
       // }}
       >
         <select name="lenguage" id="lenguage" onChange={_handleChange}>
-          <option>Language</option>
+          <option value="null">Language</option>
           <option value="EN">English</option>
           <option value="CN">中文</option>
         </select>
