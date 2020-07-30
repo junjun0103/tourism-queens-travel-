@@ -63,6 +63,9 @@ const IndexPage = ({
   },
 }) => {
   const state = useContext(GlobalStateContext) || { lenguage: "EN" }
+
+  console.log("aca");
+  console.log(themeTourData);
   return (
     <Layout>
       {/**main image */}
@@ -78,7 +81,7 @@ const IndexPage = ({
       </article>
 
       <section className="section section-center mt-2">
-        <h2 className="title-style test">theme tours</h2>
+        <h2 className="title-style test">theme tourss</h2>
         <h4 className="subtitle-style ">
           Explore your travel dream with our unique tour
         </h4>
