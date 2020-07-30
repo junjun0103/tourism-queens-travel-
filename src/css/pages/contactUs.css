@@ -126,3 +126,19 @@ Contact US
     grid-row-gap: 1rem;
   }
 }
+@media screen and (max-width: 480px) {
+  .contact-form {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .contact-form__textarea {
+    grid-column: span 4;
+  }
+  .contact-form__label__generator {
+    grid-column: span 2;
+    align-self: center;
+    text-align: center;
+  }
+  .contact-form__label {
+    display: none;
+  }
+}

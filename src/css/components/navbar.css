@@ -80,6 +80,12 @@ Navbar
     align-items: center;
   }
 }
+.custom-select {
+  font-family: var(--ff-primary);
+  color: var(--clr-primary-1);
+  border-radius: var(--radius-small);
+  margin-top: -0.2rem;
+}
 
 @media screen and (min-width: 1050px) {
   .nav-header img {

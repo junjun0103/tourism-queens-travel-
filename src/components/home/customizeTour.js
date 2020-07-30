@@ -27,13 +27,13 @@ const CustomizeTour = () => {
         {/*5 Steps Information*/}
 
         <Customized_5steps />
+        {/**Button to Customize Page */}
+        <div className="main-btn__customized">
+          <Link to={"/customized/"} className="btn btn-center">
+            customize your tour
+          </Link>
+        </div>
       </article>
-      {/**Button to Customize Page */}
-      <div className="main-btn__customized">
-        <Link to={"/customized/"} className="btn btn-center">
-          customize your tour
-        </Link>
-      </div>
     </>
   )
 }

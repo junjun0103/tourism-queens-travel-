@@ -148,7 +148,12 @@ export default ({ styleClass }) => {
       //   dispatch({ type: "TOGGLE_LENGUAGE" })
       // }}
       >
-        <select name="lenguage" id="lenguage" onChange={_handleChange}>
+        <select
+          class="custom-select"
+          name="lenguage"
+          id="lenguage"
+          onChange={_handleChange}
+        >
           <option value="null">Language</option>
           <option value="EN">English</option>
           <option value="CN">中文</option>

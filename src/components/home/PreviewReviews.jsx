@@ -19,29 +19,22 @@ const Directory = styled.div`
   justify-content: space-between;
 `
 
-
 const PreviewReview = ({ contents }) => {
-
   return (
-    <>        
+    <>
       <section className="section section-center">
         <h2 className="title-style test">Reviews</h2>
-        <h4 className="subtitle-style ">
-          Stroies from our clients
-        </h4>
+        <h4 className="subtitle-style ">Stroies from our clients</h4>
       </section>
-        <DivReview>
+      <DivReview>
         <Directory>
-            {contents
+          {contents
             .filter((content, idx) => idx < 4)
             .map(({ id, ...otherProps }) => (
-                <Review 
-                    key={id}  
-                    {...otherProps}
-                />
+              <Review key={id} {...otherProps} />
             ))}
         </Directory>
-        </DivReview>
+      </DivReview>
     </>
   )
 }

@@ -22,8 +22,7 @@ Guide Team
 .previewGuide-img {
   grid-column: 1 / span 4;
   height: 17rem;
-  width: 60%;
-  min-width: 17rem !important;
+  min-width: 17rem;
   border: solid 5px var(--clr-primary-1);
   border-radius: 50%;
   cursor: pointer;
@@ -34,7 +33,7 @@ Guide Team
 @media screen and (max-width: 800px) {
   .previewGuide-img {
     height: 15.5rem;
-    min-width: 15.5rem !important;
+    min-width: 15.5rem;
   }
 }
 @media screen and (max-width: 700px) {
@@ -43,6 +42,7 @@ Guide Team
   }
   .previewGuide-img {
     height: 14rem;
+    min-width: 14rem;
     max-width: 14rem;
   }
 }
@@ -55,8 +55,6 @@ Guide Team
   .previewGuide-img {
     grid-column: 1 / span 4;
     width: 90%;
-    min-width: 13rem;
-    max-height: 17rem;
   }
   .previewGuide-contents {
     grid-column: 5 / -1;

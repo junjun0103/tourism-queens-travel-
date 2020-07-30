@@ -17,7 +17,9 @@ Review (Feedback)
 }
 @media screen and (max-width: 600px) {
   .review-container {
-    width: 80vw;
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+    width: 90vw;
   }
 }
 .review-container::before {
@@ -33,7 +35,7 @@ Review (Feedback)
 @media screen and (max-width: 600px) {
   .review-container::before {
     left: -1rem;
-    top: 1rem;
+    top: 0.5rem;
     font-size: 5rem;
   }
 }
@@ -62,6 +64,7 @@ Review (Feedback)
 @media screen and (max-width: 600px) {
   .review-container_items {
     padding-left: 1rem;
+    margin: 2rem 0;
     grid-template-columns: 1fr;
   }
 }

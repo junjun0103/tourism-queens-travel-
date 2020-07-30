@@ -43,7 +43,7 @@ const ContactUsForm = () => {
               <input
                 name="sname"
                 type="text"
-                placeholder="sur name"
+                placeholder="surname"
                 className="contact-form__input contact-form__control"
                 required
               ></input>
@@ -78,7 +78,7 @@ const ContactUsForm = () => {
                 className="contact-form__textarea contact-form__control"
                 required
               ></textarea>
-              <label className="contact-form__label contact-form__label__generator">
+              <label className="contact-form__label__generator">
                 <h4>
                   Random Number: {Math.floor(Math.random() * 9999) + 1000}
                 </h4>

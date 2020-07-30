@@ -47,7 +47,7 @@
     max-height: 3rem;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 420px) {
   .aboutUs-awards__img {
     max-height: 2.4rem;
   }

@@ -43,8 +43,7 @@ Index
 
 .main-slider__containder,
 .main-steps__container,
-.main-aboutUs__containder,
-.main-whyUs__containder {
+.main-aboutUs__containder {
   padding: 1rem 0;
 }
 /* 1024 : ipad pro size 
@@ -59,14 +58,7 @@ Index
 }
 /* 1024 : ipad pro size 
   beyond ipad pro size (for laptop) */
-@media screen and (min-width: 1025px) {
-  .main-slider__containder,
-  .main-steps__container,
-  .main-aboutUs__containder,
-  .main-whyUs__containder {
-    height: 100vh;
-  }
-}
+
 .main-btn__customized {
   margin-top: -2rem;
   margin-bottom: 2rem;

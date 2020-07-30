@@ -10,7 +10,7 @@ const Item = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 7.5px 15px;
+  margin: 0 2.5px 5px;
   overflow: hidden;
 
   &:hover {
@@ -31,11 +31,11 @@ const Item = styled.div`
   }
 
   &:first-child {
-    margin-right: 7.5px;
+    margin-right: 2.5px;
   }
 
   &:last-child {
-    margin-left: 7.5px;
+    margin-left: 2.5px;
   }
 
   .background-image {
