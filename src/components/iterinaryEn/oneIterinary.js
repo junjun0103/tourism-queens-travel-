@@ -8,7 +8,7 @@ import TourInformation from "../ui/tourInformation"
 
 export const query = graphql`
   query($slug: String!) {
-    allStrapiItinerary(filter: { slug: { eq: $slug } }) {
+    allStrapiBestSales(filter: { slug: { eq: $slug } }) {
       nodes {
         excluded_cn
         excluded_en
@@ -86,7 +86,7 @@ export const query = graphql`
 
 const OneIterinary = ({
   data: {
-    allStrapiItinerary: { nodes },
+    allStrapiBestSales: { nodes },
   },
 }) => {
   //restructure
