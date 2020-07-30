@@ -96,7 +96,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     informations.forEach(information => {
       actions.createPage({
         path: `/touristInformation/${information.slug}/`,
-        component: require.resolve("./src/components/touristinfo/oneTouristInfo.js"),
+        component: require.resolve("./src/components/guideEn/test.js"),
         context: {
           slug: information.slug,
         },
