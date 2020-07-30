@@ -13,6 +13,7 @@ const TourTheme = styled.div`
   .test {
     align-self: flex-start;
   }
+  
 `
 const Directory = styled.div`
   width: 100%;

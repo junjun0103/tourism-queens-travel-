@@ -21,6 +21,11 @@ const Item = styled.div`
   overflow: hidden;
   cursor: pointer;
 
+  @media(max-width:768px){
+    width:90%;
+    height: 300px;
+  }
+
   .content {
     height: 45%;
     width: 100%;
@@ -32,15 +37,21 @@ const Item = styled.div`
     opacity: 0.7;
     position: absolute;
     transition: all 0.5s ease-in-out;
+    
+    @media(max-width:768px){
+      width:100%;
+      height: 300px;
+    }
 
     .title {
       font-weight: bold;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
       font-size: 28px;
       color: white;
     }
 
     .subtitle {
+      margin-top:10px;
       font-weight: lighter;
       font-size: 16px;
       color: white;
@@ -57,7 +68,10 @@ const Item = styled.div`
     }
   }
   .hoverOut {
-    margin-bottom: -95px !important;
+    @media(min-width:768px){
+      margin-bottom: -110px !important;
+    }
+    
   }
 `
 
@@ -87,7 +101,7 @@ const ThemeTour = ({
         >
           <Link
             to={"/reviews/" + slug}
-            className={`content ${reviewHover ? "hoverin" : "hoverOut"}`}
+            className={`content ${reviewHover ? "" : "hoverOut"}`}
           >
             <h3 className="title">{title_en}</h3>
             <h4 className="subtitle">{name_en}</h4>
