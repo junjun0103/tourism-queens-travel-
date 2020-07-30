@@ -20,15 +20,19 @@ module.exports = {
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: `http://localhost:1337`,
+        apiURL: `http://128.199.125.141:1337`,
         queryLimit: 1000,
         contentTypes: [
-          `Itinerary`,
+          `best-sales`,
           "Feedbacks",
           "Theme-Tour",
           "Tour-Guides",
           "Tourist-Information",
         ],
+        loginData: {
+          identifier: "carlos",
+          password: "123456",
+        },
       },
     },
     {

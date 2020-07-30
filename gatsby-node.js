@@ -3,7 +3,7 @@ const urlSlug = require("url-slug")
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const result = await graphql(`
     query {
-      allStrapiItinerary {
+      allStrapiBestSales {
         nodes {
           slug
         }
@@ -37,7 +37,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   }
 
   //Generate files for iterinary
-  const iterinaries = result.data.allStrapiItinerary.nodes
+  const iterinaries = result.data.allStrapiBestSales.nodes
 
   //Generate files for feedbacks
   const feedbacks = result.data.allStrapiFeedbacks.nodes
@@ -96,9 +96,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     informations.forEach(information => {
       actions.createPage({
         path: `/touristInformation/${information.slug}/`,
-        component: require.resolve(
-          "./src/components/touristinfo/oneTouristInfo.js"
-        ),
+        component: require.resolve("./src/components/guideEn/test.js"),
         context: {
           slug: information.slug,
         },

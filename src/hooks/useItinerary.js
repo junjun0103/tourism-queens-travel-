@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from "gatsby"
 const UseItinerary = () => {
   const result = useStaticQuery(graphql`
     query {
-      allStrapiItinerary(
+      allStrapiBestSales(
         filter: { active: { eq: true } }
         sort: { fields: id, order: DESC }
       ) {
@@ -57,7 +57,7 @@ const UseItinerary = () => {
     }
   `)
 
-  return result.allStrapiItinerary.nodes.map(itinerary => ({
+  return result.allStrapiBestSales.nodes.map(itinerary => ({
     id: itinerary.id,
     slug: itinerary.slug,
     included_cn: itinerary.included_cn,

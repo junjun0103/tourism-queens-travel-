@@ -8,7 +8,7 @@
 import React from "react"
 import Header from "./header"
 import { Helmet } from "react-helmet"
-import Footer from "./footer"
+import Footer from "./Footer"
 import posed from "react-pose"
 import { TransitionState } from "gatsby-plugin-transition-link"
 
