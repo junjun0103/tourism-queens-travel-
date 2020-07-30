@@ -26,7 +26,7 @@ export const query = graphql`
   }
 `
 
-const OneFeedBack = ({
+const OneTouristInfo = ({
   data: {
     allStrapiTouristInformation: { nodes },
   },
@@ -67,4 +67,4 @@ const OneFeedBack = ({
   )
 }
 
-export default OneFeedBack
+export default OneTouristInfo
