@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/ui/layout"
 import MainImage from "../components/home/mainImage"
 import ThemeTour from "../components/home/PreviewThemetour"
-import PreviewReview from '../components/home/PreviewReviews'
+import PreviewReview from "../components/home/PreviewReviews"
 import Slider from "../components/slider"
 import CustomizeTour from "../components/home/customizeTour"
 import AboutUs from "../components/home/aboutUs"
@@ -64,24 +64,24 @@ const IndexPage = ({
 }) => {
   const state = useContext(GlobalStateContext) || { lenguage: "EN" }
 
-  console.log("aca");
-  console.log(themeTourData);
+  console.log("aca")
+  console.log(themeTourData)
   return (
     <Layout>
       {/**main image */}
       <MainImage />
- 
+
       {/**Slogan */}
       <article className="main-header__bottom__bar">
         <h1 className="main-header__bottom__text">
           {state.lenguage === "EN"
-            ? `Choose Queen's Travel , explore your dream`
+            ? `Choose Queen's Travel, explore your dream`
             : "独一无二的新西兰，与众不同的群星假期"}
         </h1>
       </article>
 
       <section className="section section-center mt-2">
-        <h2 className="title-style test">theme tourss</h2>
+        <h2 className="title-style test">theme tours</h2>
         <h4 className="subtitle-style ">
           Explore your travel dream with our unique tour
         </h4>
@@ -119,7 +119,7 @@ const IndexPage = ({
           />
         </article>{*/}
       </section>
-      
+
       <PreviewReview contents={feedbackData} />
     </Layout>
   )

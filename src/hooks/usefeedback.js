@@ -3,10 +3,7 @@ import { graphql, useStaticQuery } from "gatsby"
 const UseFeedback = () => {
   const result = useStaticQuery(graphql`
     query {
-      allStrapiFeedbacks(
-        filter: { customTourFeedback: { eq: true } }
-        sort: { fields: date, order: DESC }
-      ) {
+      allStrapiFeedbacks(sort: { fields: date, order: DESC }) {
         nodes {
           id
           slug

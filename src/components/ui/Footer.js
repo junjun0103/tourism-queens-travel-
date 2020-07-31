@@ -16,7 +16,7 @@ const footer = () => {
         <h5 className="clr-primary-4">inbound@queenstravel.com</h5>
         <FaMapMarkerAlt className="footer__icon" />
         <h5 className="clr-primary-4">
-          129A Onewa Road,Northcote,Auckland0627,NewZealand
+          129A Onewa Road, Northcote, Auckland 0627, NewZealand
         </h5>
       </div>
 

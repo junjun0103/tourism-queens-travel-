@@ -75,7 +75,7 @@ h2 {
 }
 h1 {
   /* 36pt/11.9 = 3rem */
-  font-size: 3rem;
+  font-size: 2.8rem !important;
   font-family: var(--ff-slogan);
   font-weight: 700;
 }
@@ -114,7 +114,7 @@ p {
   }
   h1 {
     /* 36pt/11.9 = 3rem */
-    font-size: 2.5rem;
+    font-size: 2rem !important;
   }
   h2 {
     /* 22pt/11.9 = 1.84rem */
@@ -135,11 +135,47 @@ p {
   }
 }
 @media screen and (max-width: 500px) {
+  h1,
+  h2 {
+    margin-bottom: 0.2rem;
+  }
   h1 {
-    font-size: 1.8rem !important;
+    font-size: 1.4rem !important;
+  }
+  h2 {
+    font-size: 1.2rem;
   }
   h3 {
     font-size: 1rem;
+  }
+  h4 {
+    font-size: 0.82rem;
+    line-height: 1rem;
+  }
+  h5 {
+    font-size: 0.72rem;
+  }
+}
+@media screen and (max-width: 350px) {
+  h1,
+  h2 {
+    margin-bottom: 0rem;
+  }
+  h1 {
+    font-size: 1.2rem !important;
+  }
+  h2 {
+    font-size: 1rem;
+  }
+  h3 {
+    font-size: 0.9rem;
+  }
+  h4 {
+    font-size: 0.8rem;
+    line-height: 0.8rem;
+  }
+  h5 {
+    font-size: 0.7rem;
   }
 }
 .break-word {
@@ -344,64 +380,64 @@ Pages
   color: var(--clr-primary-1);
   margin-bottom: 2rem;
 }
-.nuevo div{
+.nuevo div {
   opacity: 0;
   animation: animate 1s linear forwards;
 }
 @keyframes animate {
-  0%{
-      opacity: 0;
-      transform: rotateY(90deg);
+  0% {
+    opacity: 0;
+    transform: rotateY(90deg);
   }
-  100%{
-      opacity: 1;
-      transform: rotateY(0deg);
+  100% {
+    opacity: 1;
+    transform: rotateY(0deg);
   }
 }
-.nuevo div:nth-child(1){
+.nuevo div:nth-child(1) {
   animation-delay: 0.1s;
   color: blue;
 }
-.nuevo div:nth-child(2){
+.nuevo div:nth-child(2) {
   animation-delay: 0.4s;
 }
-.nuevo div:nth-child(3){
+.nuevo div:nth-child(3) {
   animation-delay: 0.8s;
 }
-.nuevo div:nth-child(4){
+.nuevo div:nth-child(4) {
   animation-delay: 1.2s;
 }
-.nuevo div:nth-child(5){
+.nuevo div:nth-child(5) {
   animation-delay: 1.4s;
 }
 /*******/
-.siempre div{
+.siempre div {
   opacity: 1;
   animation: animateOut 1s linear forwards;
 }
 @keyframes animateOut {
-  0%{
-      opacity: 1;
-      transform: rotateY(0deg);
+  0% {
+    opacity: 1;
+    transform: rotateY(0deg);
   }
-  100%{
-      opacity: 0;
-      transform: rotateY(90deg);
+  100% {
+    opacity: 0;
+    transform: rotateY(90deg);
   }
 }
-.siempre div:nth-child(5){
+.siempre div:nth-child(5) {
   animation-delay: 0.1s;
   color: blue;
 }
-.siempre div:nth-child(4){
+.siempre div:nth-child(4) {
   animation-delay: 0.2s;
 }
-.siempre div:nth-child(3){
+.siempre div:nth-child(3) {
   animation-delay: 0.3s;
 }
-.siempre div:nth-child(2){
+.siempre div:nth-child(2) {
   animation-delay: 0.5s;
 }
-.siempre div:nth-child(1){
+.siempre div:nth-child(1) {
   animation-delay: 0.6s;
 }
