@@ -13,6 +13,11 @@ const Item = styled.div`
   margin: 0 2.5px 5px;
   overflow: hidden;
 
+  @media(max-width:768px){
+    width:90%;
+    height: 300px;
+  }
+
   &:hover {
     cursor: pointer;
 
