@@ -1,8 +1,6 @@
 import React from "react"
 import styled from "@emotion/styled"
 import ThemeTour from "./ThemeTour"
-import { Link } from "gatsby"
-import { func } from "prop-types"
 
 const TourTheme = styled.div`
   display: flex;

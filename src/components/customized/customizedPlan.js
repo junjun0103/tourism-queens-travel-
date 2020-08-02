@@ -1,4 +1,6 @@
 import React, { useState } from "react"
+import axios from 'axios';
+import Swal from 'sweetalert2'
 
 const CustomizedPlan = () => {
   ////////////////////states//////////////////
@@ -16,7 +18,7 @@ const CustomizedPlan = () => {
     name: null,
     email: null,
     phone: null,
-    other: null,
+    other: null
   })
 
   //extract values
@@ -47,6 +49,40 @@ const CustomizedPlan = () => {
     })
   }
 
+  //function to send an email
+  const sendemail = async holiday =>{
+    Swal.fire({
+      title: 'Thank Yoy',
+      text: 'We will contact you ASP',
+      icon: 'success',
+      confirmButtonText: 'Ok'
+    });
+
+    //call axios
+    await axios.post('http://emails.ariza.ml/api/customized-email',holiday);
+
+    //clean holiday
+    setHoliday({
+      people: '',
+      departureDate: '',
+      duration: '',
+      request: '',
+      budget: '',
+      name: '',
+      email: '',
+      phone: '',
+      other: ''
+    });
+  } 
+
+  //function to submit the form
+  const formSubmit = e => {
+    e.preventDefault();
+
+    //call axios function
+    sendemail(holiday);
+  }
+
   return (
     <article className="customizedForm-containder">
       <h3 className="customizedForm-title">
@@ -54,7 +90,9 @@ const CustomizedPlan = () => {
       </h3>
 
       <div className="customizedForm-outside">
-        <form>
+        <form
+          onSubmit={formSubmit}
+        >
           <div className="customizedForm-inside">
             {/**Left Form Side */}
             <div className="customizedForm-left">
