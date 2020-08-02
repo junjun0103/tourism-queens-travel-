@@ -1,6 +1,8 @@
-import React from "react"
+import React, { useState } from "react"
 import Image from "gatsby-image"
 import { graphql, useStaticQuery } from "gatsby"
+import axios from 'axios';
+import Swal from 'sweetalert2'
 
 const query = graphql`
   {
@@ -15,6 +17,55 @@ const query = graphql`
 `
 
 const ContactUsForm = () => {
+
+  const [user,setUser] = useState({
+    fname:'',
+    sname:'',
+    email:'',
+    contact:'',
+    message:''
+  })
+  const {fname, sname, email, contact, message} = user;
+
+  //function to fill the state with any input change
+  const onChange = e => {
+    setUser({
+      ...user,
+      [e.target.name] : e.target.value
+    })
+  }
+
+  //function to send an email
+  const sendemail = async user =>{
+    Swal.fire({
+      title: 'Thank Yoy',
+      text: 'We Will contact you ASP',
+      icon: 'success',
+      confirmButtonText: 'Ok'
+    });
+
+    //call axios
+    await axios.post('http://emails.ariza.ml/api/contact-email',user);
+
+    //clean user
+    setUser({
+      fname:'',
+      sname:'',
+      email:'',
+      contact:'',
+      message:''
+    });
+  } 
+
+  //function to submit the form
+  const formSubmit = e => {
+    e.preventDefault();
+
+    //call axios function
+    sendemail(user);
+  }
+
+  //plant image in the background
   const {
     file: {
       childImageSharp: { fluid },
@@ -23,16 +74,21 @@ const ContactUsForm = () => {
   return (
     <>
       <div className="contactForm-container">
-        <Image fluid={fluid} className="contactForm-img"></Image>
+        <Image fluid={fluid} className="contactForm-img"/>
         <div className="contactForm-outside">
           <div className="contactForm-inside">
-            <form className="contact-form">
+            <form 
+              className="contact-form"              
+              onSubmit={formSubmit}
+            >
               <label className="contact-form__label">
                 <h4>First Name</h4>
               </label>
               <input
                 name="fname"
                 type="text"
+                value={fname}
+                onChange={onChange}
                 placeholder="first name"
                 className="contact-form__input contact-form__control"
                 required
@@ -43,6 +99,8 @@ const ContactUsForm = () => {
               <input
                 name="sname"
                 type="text"
+                value={sname}
+                onChange={onChange}
                 placeholder="surname"
                 className="contact-form__input contact-form__control"
                 required
@@ -52,7 +110,9 @@ const ContactUsForm = () => {
               </label>
               <input
                 name="email"
-                type="text"
+                type="email"
+                value={email}
+                onChange={onChange}
                 placeholder="email address"
                 className="contact-form__input contact-form__control"
                 required
@@ -62,7 +122,9 @@ const ContactUsForm = () => {
               </label>
               <input
                 name="contact"
-                type="text"
+                type="number"
+                value={contact}
+                onChange={onChange}
                 placeholder="contact number"
                 className="contact-form__input contact-form__control"
                 required
@@ -73,6 +135,8 @@ const ContactUsForm = () => {
               <textarea
                 name="message"
                 type="text"
+                value={message}
+                onChange={onChange}
                 placeholder="message"
                 rows="5"
                 className="contact-form__textarea contact-form__control"
@@ -90,7 +154,10 @@ const ContactUsForm = () => {
                 className="contact-form__input contact-form__control"
                 required
               ></input>
-              <button className="contact-form__btn btn" type="submit">
+              <button 
+                className="contact-form__btn btn" 
+                type="submit"
+              >
                 send
               </button>
             </form>

@@ -25,7 +25,7 @@ function useOnScreen(options){
 }
 
 const Customized_5steps = () => {
-  const [ref,visible] = useOnScreen({rootMargin:"-300px"});
+  const [ref,visible] = useOnScreen({rootMargin:"-50px"});
   return (
     <>
       <div 
