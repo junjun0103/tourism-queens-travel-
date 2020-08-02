@@ -7,7 +7,12 @@ Theme tour
 ///////////// preview /////////
 */
 .preview-container_themeTour {
-  grid-template-rows: minmax(13rem, 20vh) minmax(7rem, 18vh);
+  grid-template-rows: minmax(13rem, 20vh) 7rem;
+}
+@media screen and (max-width: 650px) {
+  .preview-container_themeTour {
+    grid-template-rows: minmax(13rem, 20vh) 5rem;
+  }
 }
 .preview-subTitle {
   padding: 1rem;
@@ -93,7 +98,7 @@ Theme tour
   right: 0;
   bottom: 0;
   margin: 0 0.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 @media screen and (min-width: 700px) {
   .themeTour-header__highlightBox {

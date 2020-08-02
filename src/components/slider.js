@@ -16,10 +16,13 @@ const Slider = ({ contents, title, sliderStyle }) => {
           : "Stroies from our clients"}
       </h4>
       <Carousel
+        enableMouseSwipe={true}
+        enableSwipe={true}
+        showArrows={false}
         breakPoints={[
           { width: 1, itemsToShow: 1 },
-          { width: 480, itemsToShow: 2, itemsToScroll: 2 },
-          { width: 770, itemsToShow: 3, itemsToScroll: 3 },
+          { width: 500, itemsToShow: 2, itemsToScroll: 2 },
+          { width: 860, itemsToShow: 3, itemsToScroll: 3 },
         ]}
       >
         {contents.map(content => {
@@ -45,28 +48,33 @@ const Slider = ({ contents, title, sliderStyle }) => {
           //Carrousel for reviews
           if (sliderStyle === "reviews") {
             return (
-              <Link to={"/" + sliderStyle + "/" + content.slug}>
-                <div className="preview-container_review slider-height">
-                  <img
-                    src={content.photo.sharp.fluid.src}
-                    alt="img"
-                    className="preview-img"
-                  ></img>
-                  <h4 className="preview-departureDay">{contentTitle}</h4>
-                  <h4 className="preview-subtitle">{contentName}</h4>
-                  <h4 className="preview-shortDescription">
-                    {contentShortDesc}
-                  </h4>
-                  <h4 className="preview-price">{content.date}</h4>
-                </div>
-              </Link>
+              <div className="preview-container_review slider-height">
+                <img
+                  src={content.photo.sharp.fluid.src}
+                  alt="img"
+                  className="preview-img"
+                ></img>
+
+                <h4 className="preview-departureDay">{contentTitle}</h4>
+                <h4 className="preview-subtitle">{contentName}</h4>
+                <h4 className="preview-shortDescription">{contentShortDesc}</h4>
+
+                <Link
+                  className="preview-price"
+                  to={"/" + sliderStyle + "/" + content.slug}
+                >
+                  <h5>
+                    Read More<span className="test1">{content.date}</span>
+                  </h5>
+                </Link>
+              </div>
             )
           }
           //Carrousel for ThemeTour
           else {
             return (
               <Link to={"/" + sliderStyle + "/" + content.slug}>
-                <div className="preview-container_themeTour  slider-height__slider preview-container_themeTour__slider">
+                <div className="preview-container_themeTour  slider-height preview-container_themeTour__slider">
                   <img
                     src={content.background_img.sharp.fluid.src}
                     alt="img"

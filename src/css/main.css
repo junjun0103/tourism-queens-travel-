@@ -290,13 +290,14 @@ p {
   grid-gap: 2.5rem;
 }
 .preview-container_bestSale,
-.preview-container_themeTour,
-.preview-container_review {
+.preview-container_themeTour {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   background-color: white;
 }
 .preview-container_review {
+  display: grid;
+  grid-template-columns: 1fr;
   background-color: var(--clr-primary-4);
 }
 .preview-boxShadow {
