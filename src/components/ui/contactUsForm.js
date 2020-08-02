@@ -39,7 +39,7 @@ const ContactUsForm = () => {
   const sendemail = async user =>{
     Swal.fire({
       title: 'Thank Yoy',
-      text: 'We will contact you ASP',
+      text: 'We Will contact you ASP',
       icon: 'success',
       confirmButtonText: 'Ok'
     });
