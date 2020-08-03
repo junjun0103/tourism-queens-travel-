@@ -1,7 +1,5 @@
 import React from "react"
-import img from "../../images/fern.jpg";
-
-
+import img from "../../images/fern.jpg"
 
 const CustomizedInformation = () => {
   return (
@@ -36,9 +34,13 @@ const CustomizedInformation = () => {
         </div>
       </div>
       {/**Finished Left Side Customized Information*/}
-      <div className="custimized-introduction__imgWithText">
+      <div className="custimized-introduction__imgWithText ">
         {/*Right Side Image div with text*/}
-        <img src={img} alt="img" className="custimized-introduction__img"></img>
+        <img
+          src={img}
+          alt="img"
+          className="custimized-introduction__img "
+        ></img>
         <h2 className="custimized-introduction__text">
           Let us help you plan <br />
           <br /> your perfect holiday
@@ -48,5 +50,4 @@ const CustomizedInformation = () => {
     </article>
   )
 }
-
 export default CustomizedInformation

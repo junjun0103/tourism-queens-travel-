@@ -49,7 +49,11 @@ const ContactUs = () => {
               <h4>129A Onewa Road, Northcote, Auckland 0627, New Zealand</h4>
             </div>
             <div className="contactUs-map">
-              <Map center={[DEFAULT_LAT, DEFAULT_LAN]} zoom={DEFAULT_ZOOM}>
+              <Map
+                center={[DEFAULT_LAT, DEFAULT_LAN]}
+                zoom={DEFAULT_ZOOM}
+                className="indexOrder"
+              >
                 <TileLayer
                   attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                   url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

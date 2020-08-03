@@ -397,7 +397,6 @@ Pages
 }
 .nuevo div:nth-child(1) {
   animation-delay: 0.1s;
-  color: blue;
 }
 .nuevo div:nth-child(2) {
   animation-delay: 0.2s;
@@ -428,7 +427,6 @@ Pages
 }
 .siempre div:nth-child(5) {
   animation-delay: 0.1s;
-  color: blue;
 }
 .siempre div:nth-child(4) {
   animation-delay: 0.2s;
