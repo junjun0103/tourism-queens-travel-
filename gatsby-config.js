@@ -20,7 +20,7 @@ module.exports = {
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: `xxxxxxxxxxx`,
+        apiURL: `http://128.199.125.141:1337`,
         queryLimit: 1000,
         contentTypes: [
           `best-sales`,
@@ -30,8 +30,8 @@ module.exports = {
           "Tourist-Information",
         ],
         loginData: {
-          identifier: "xxxxxx",
-          password: "xxxxxx",
+          identifier: "carlos",
+          password: "123456",
         },
       },
     },
