@@ -2,6 +2,7 @@ import React from "react"
 import ContactUsForm from "../components/ui/contactUsForm"
 import Layout from "../components/ui/layout"
 import "../css/pages/contactUs.css"
+import Title from "../components/ui/title"
 
 import { Map, TileLayer, Marker, Popup } from "react-leaflet"
 import L from "leaflet"
@@ -32,7 +33,7 @@ const ContactUs = () => {
     <>
       <Layout>
         <section className="contactUs-page section section-center">
-          <h2 className="title-style">contact detail</h2>
+          <Title titleEn="contact detail" titleCn="在线咨询"></Title>
           <div className="contactUs-container">
             <div className="contactUs-info">
               <h4>Contact :</h4>

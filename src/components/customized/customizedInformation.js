@@ -1,12 +1,13 @@
 import React from "react"
 import img from "../../images/fern.jpg"
+import Title from "../ui/title"
 
 const CustomizedInformation = () => {
   return (
     <article className="custimized-introduction__container">
       <div>
         {/**Left Side Customized Information*/}
-        <h2 className="title-style">customized tour</h2>
+        <Title titleEn="customized tour" titleCn="群星定制"></Title>
         <div className="custimized-introduction__content">
           <br />
           <h4 className="text-align-justify">
