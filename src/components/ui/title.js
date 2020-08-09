@@ -3,7 +3,6 @@ import { GlobalStateContext } from "../../context/GlobalContextProvider"
 
 const Title = ({ titleEn, titleCn, subTitle, style = "subtitle-style" }) => {
   const state = useContext(GlobalStateContext) || { lenguage: "EN" }
-  console.log(state.lenguage + ":::::")
   if (subTitle) {
     return (
       <div>
