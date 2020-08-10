@@ -1,7 +1,8 @@
-import React from "react"
+import React, { useContext } from "react"
 import Layaout from "../ui/layout"
 import { graphql } from "gatsby"
 import Modal from "../ui/modal"
+import { GlobalStateContext } from "../../context/GlobalContextProvider"
 
 export const query = graphql`
   query($slug: String!) {
@@ -36,18 +37,32 @@ const OneFeedBack = ({
 }) => {
   //restructure
   const {
-    slug,
     content_cn,
     content_en,
     name_cn,
     name_en,
-    shortDescription_cn,
-    shortDescription_en,
     title_cn,
     title_en,
     date,
     photo,
   } = nodes[0]
+
+  // language state
+  const state = useContext(GlobalStateContext) || { lenguage: "EN" }
+  //declare lenguage variables
+  let title = "",
+    name = "",
+    content = ""
+
+  if (state.lenguage === "EN") {
+    title = title_en
+    name = name_en
+    content = content_en
+  } else {
+    title = title_cn
+    name = name_cn
+    content = content_cn
+  }
 
   // modal Ref
   const modalRef = React.useRef()
@@ -67,12 +82,28 @@ const OneFeedBack = ({
               className="review-img"
             ></img>
             <div className="review-contents">
-              <h2>{title_en}</h2>
-              <h3 className="review-contents_nameDate">
-                {name_en}&nbsp;
+              <h2
+                className={`${
+                  state.lenguage === "CN" ? "cn-font__noto_bold" : ""
+                }`}
+              >
+                {title}
+              </h2>
+              <h3
+                className={`review-contents_nameDate ${
+                  state.lenguage === "CN" ? "cn-font__noto_bold" : ""
+                }`}
+              >
+                {name}&nbsp;
                 {date}
               </h3>
-              <p className="review-contents_content">{content_en}</p>
+              <p
+                className={`review-contents_content ${
+                  state.lenguage === "CN" ? "cn-font__noto_medium" : ""
+                }`}
+              >
+                {content}
+              </p>
             </div>
           </div>
         </div>

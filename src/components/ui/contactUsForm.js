@@ -192,7 +192,7 @@ const ContactUsForm = () => {
                 required
               ></input>
               <button className="contact-form__btn btn" type="submit">
-                {state.lenguage === "EN" ? "send" : "titleCn"}
+                {state.lenguage === "EN" ? "send" : "送出"}
               </button>
             </form>
           </div>

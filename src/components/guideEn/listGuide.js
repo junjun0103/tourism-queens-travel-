@@ -1,9 +1,12 @@
-import React, { useState } from "react"
+import React, { useState, useContext } from "react"
 import PreviewGuide from "./previewGuide"
 import useGuide from "../../hooks/useGuide"
 import Title from "../ui/title"
-
+import { GlobalStateContext } from "../../context/GlobalContextProvider"
 const ListGuide = ({}) => {
+  //language state
+  const state = useContext(GlobalStateContext) || { lenguage: "EN" }
+
   // "isChineseGuide = false" means show english speaking tour guides
   const [isChineseGuide, setIsChineseGuide] = React.useState(false)
   const toggleGuide = () => {
@@ -34,8 +37,12 @@ const ListGuide = ({}) => {
       {/* english/chinese guide change button */}
       <button onClick={toggleGuide} className="btn btn-right mt-1 mr-2">
         {isChineseGuide
-          ? "find English Speaking guides"
-          : "find Chinese Speaking guides"}
+          ? state.lenguage === "EN"
+            ? "Find English Speaking guides"
+            : "查看英文导游"
+          : state.lenguage === "EN"
+          ? "Find Chinese Speaking guides"
+          : "查看中文导游"}
       </button>
       <div className="listGuide-container">
         {isChineseGuide
@@ -44,7 +51,9 @@ const ListGuide = ({}) => {
                 {
                   /* show chinese guides */
                 }
-                return <PreviewGuide key={guide.slug} guide={guide} />
+                return (
+                  <PreviewGuide key={guide.slug} guide={guide} language="CN" />
+                )
               }
             })
           : guides.map(guide => {

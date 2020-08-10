@@ -3,6 +3,7 @@ import { GlobalStateContext } from "../../context/GlobalContextProvider"
 
 const Title = ({ titleEn, titleCn, subTitle, style = "subtitle-style" }) => {
   const state = useContext(GlobalStateContext) || { lenguage: "EN" }
+  //if it is a subtitle, then show return this
   if (subTitle) {
     return (
       <div>
@@ -17,7 +18,9 @@ const Title = ({ titleEn, titleCn, subTitle, style = "subtitle-style" }) => {
         </h4>
       </div>
     )
-  } else {
+  }
+  //if it is a title, then show return this
+  else {
     return (
       <div>
         {/* "CN" has a different font style */}
