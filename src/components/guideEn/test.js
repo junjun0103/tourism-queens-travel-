@@ -1,66 +1,117 @@
-import React from 'react';
-import Layaout from '../ui/layout';
-import {graphql} from 'gatsby';
+import React, { useContext } from "react"
+import Layaout from "../ui/layout"
+import { graphql } from "gatsby"
+import { GlobalStateContext } from "../../context/GlobalContextProvider"
+import LanguageConverter from "../../components/ui/languageConverter"
 
 export const query = graphql`
-    query($slug:String!){
-        allStrapiTouristInformation(filter:{slug:{eq:$slug}}){
-            nodes {
-                slug
-                title_cn
-                title_en
-                notice_cn
-                notice_en
-                information_cn {
-                  content
-                  id
-                  subject
-                }
-                information_en {
-                  content
-                  id
-                  subject
-                }
-            }
+  query($slug: String!) {
+    allStrapiTouristInformation(filter: { slug: { eq: $slug } }) {
+      nodes {
+        slug
+        title_cn
+        title_en
+        notice_cn
+        notice_en
+        information_cn {
+          content
+          id
+          subject
         }
+        information_en {
+          content
+          id
+          subject
+        }
+      }
     }
-    `;
+  }
+`
 
-const OneFeedBack = ({data:{allStrapiTouristInformation:{nodes}}}) => {
-    //restructure
-    const {title_en, information_en, notice_en} = nodes[0];
+const OneFeedBack = ({
+  data: {
+    allStrapiTouristInformation: { nodes },
+  },
+}) => {
+  const state = useContext(GlobalStateContext) || { lenguage: "EN" }
 
-    return (        
-        <Layaout>
-           <section className="section section-center">
-            <div className="tourInfo-one__container">
-            <h2 className="title-style">{title_en}</h2>
-            <div className="tourInfo-one__box">
-                {information_en.map(item => {
-                return (
-                    <div className="tourInfo-one__items">
-                    <p>
-                        <h3>{item.subject}</h3>
-                    </p>
-                    <p className="tourInfo-one__content">
-                        <h4>{item.content}</h4>
-                    </p>
-                    </div>
-                )
-                })}
-                <div className="tourInfo-one__items tourInfo-one_items__notice">
-                <p>
-                    <h3>notice from queen's</h3>
-                </p>
-                <p className="tourInfo-one__content">
-                    <h4>{notice_en}</h4>
-                </p>
+  //restructure
+  const {
+    title_en,
+    information_en,
+    notice_en,
+    title_cn,
+    information_cn,
+    notice_cn,
+  } = nodes[0]
+
+  //declare lenguage variables
+  var title = "",
+    information = "",
+    notice = ""
+
+  if (state.lenguage === "EN") {
+    title = title_en
+    information = information_en
+    notice = notice_en
+  } else {
+    title = title_cn
+    information = information_cn
+    notice = notice_cn
+  }
+
+  return (
+    <Layaout>
+      <section className="section section-center">
+        <div className="tourInfo-one__container">
+          <h2
+            className={`title-style ${
+              state.lenguage === "CN" ? "cn-font__noto_bold" : ""
+            }`}
+          >
+            {title}
+          </h2>
+          <div className="tourInfo-one__box">
+            {information.map(item => {
+              return (
+                <div className="tourInfo-one__items">
+                  <h3
+                    className={`${
+                      state.lenguage === "CN" ? "cn-font__noto_bold" : ""
+                    }`}
+                  >
+                    {item.subject}
+                  </h3>
+                  <h4
+                    className={`${
+                      state.lenguage === "CN" ? "cn-font__noto_medium" : ""
+                    }`}
+                  >
+                    {item.content}
+                  </h4>
                 </div>
+              )
+            })}
+            <div className="tourInfo-one__items tourInfo-one_items__notice">
+              <LanguageConverter
+                tag="h3"
+                styleCn="cn-font__noto_medium"
+                valueEn="notice from queen's"
+                valueCn="群星温馨提示"
+              ></LanguageConverter>
+              <h4
+                className={`tourInfo-one__content ${
+                  state.lenguage === "CN" ? "cn-font__noto_medium" : ""
+                }`}
+              >
+                {notice}
+              </h4>
             </div>
-            </div>
-        </section>
-        </Layaout>        
-     );
+          </div>
+        </div>
+      </section>
+    </Layaout>
+  )
 }
- 
-export default OneFeedBack;
+
+export default OneFeedBack

@@ -82,9 +82,11 @@ Navbar
 }
 .custom-select {
   font-family: var(--ff-primary);
-  color: var(--clr-primary-1);
+  color: black;
   border-radius: var(--radius-small);
   margin-top: -0.2rem;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 1050px) {

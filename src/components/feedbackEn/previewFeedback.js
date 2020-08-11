@@ -1,9 +1,11 @@
-import React from "react"
+import React, { useContext } from "react"
 import { Link } from "gatsby"
+import { GlobalStateContext } from "../../context/GlobalContextProvider"
 
 const PreviewFeedback = ({ feedback }) => {
+  const state = useContext(GlobalStateContext) || { lenguage: "EN" }
+
   const {
-    id,
     slug,
     title_en,
     title_cn,
@@ -17,6 +19,24 @@ const PreviewFeedback = ({ feedback }) => {
     photo,
   } = feedback
 
+  //declare lenguage variables
+  let title = "",
+    name = "",
+    content = "",
+    shortDescription = ""
+
+  if (state.lenguage === "EN") {
+    title = title_en
+    name = name_en
+    content = content_en
+    shortDescription = shortDescription_en
+  } else {
+    title = title_cn
+    name = name_cn
+    content = content_cn
+    shortDescription = shortDescription_cn
+  }
+
   return (
     <>
       <Link to={"/reviews/" + slug}>
@@ -26,10 +46,26 @@ const PreviewFeedback = ({ feedback }) => {
             alt="img"
             className="preview-img"
           ></img>
-          <h4 className="preview-departureDay">{title_en}</h4>
-          <h4 className="preview-subtitle">{name_en}</h4>
-          <h4 className="preview-shortDescription word-break-break-all">
-            {shortDescription_en}
+          <h4
+            className={`preview-departureDay ${
+              state.lenguage === "CN" ? "cn-font__noto_medium" : ""
+            }`}
+          >
+            {title}
+          </h4>
+          <h4
+            className={`preview-subtitle ${
+              state.lenguage === "CN" ? "cn-font__noto_medium" : ""
+            }`}
+          >
+            {name}
+          </h4>
+          <h4
+            className={`preview-shortDescription word-break-break-all ${
+              state.lenguage === "CN" ? "cn-font__noto_light" : ""
+            }`}
+          >
+            {shortDescription}
           </h4>
           <h4 className="preview-price">{date}</h4>
         </div>

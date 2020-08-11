@@ -1,7 +1,10 @@
-import React from "react"
+import React, { useContext } from "react"
+import { GlobalStateContext } from "../../context/GlobalContextProvider"
 import { Link } from "gatsby"
 
 const PreviewIterinary = ({ iterinary }) => {
+  // language state
+  const state = useContext(GlobalStateContext) || { lenguage: "EN" }
   const {
     slug,
     included_cn,
@@ -26,7 +29,24 @@ const PreviewIterinary = ({ iterinary }) => {
     background_img,
   } = iterinary
 
-  console.log(iterinary)
+  //declare lenguage variables
+  let title = "",
+    slogan = "",
+    price = "",
+    departureDay = ""
+
+  if (state.lenguage === "EN") {
+    title = title_en
+    slogan = slogan_en
+    price = price_en
+    departureDay = departureDay_en
+  } else {
+    title = title_cn
+    slogan = slogan_cn
+    price = price_cn
+    departureDay = departureDay_cn
+  }
+
   return (
     <>
       <Link to={"/bestSale/" + slug}>
@@ -36,10 +56,34 @@ const PreviewIterinary = ({ iterinary }) => {
             alt="img"
             className="preview-img"
           ></img>
-          <h3 className="preview-title">{title_en}</h3>
-          <h4 className="preview-departureDay">{departureDay_en}</h4>
-          <h4 className="preview-shortDescription">{slogan_en}</h4>
-          <h4 className="preview-price">{price_en}</h4>
+          <h3
+            className={`preview-title ${
+              state.lenguage === "CN" ? "cn-font__noto_bold" : ""
+            }`}
+          >
+            {title}
+          </h3>
+          <h4
+            className={`preview-departureDay ${
+              state.lenguage === "CN" ? "cn-font__noto_medium" : ""
+            }`}
+          >
+            {departureDay}
+          </h4>
+          <h4
+            className={`preview-shortDescription ${
+              state.lenguage === "CN" ? "cn-font__noto_medium" : ""
+            }`}
+          >
+            {slogan}
+          </h4>
+          <h4
+            className={`preview-price ${
+              state.lenguage === "CN" ? "cn-font__noto_medium" : ""
+            }`}
+          >
+            {price}
+          </h4>
         </div>
       </Link>
     </>

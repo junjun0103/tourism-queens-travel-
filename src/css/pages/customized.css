@@ -175,7 +175,7 @@ Cusomaized tour
 .customizedForm-titleHr {
   border: 0;
   height: 4px;
-  width: 90%;
+  width: 40%;
   background: var(--clr-primary-3);
 }
 .customizedForm-title__inside {

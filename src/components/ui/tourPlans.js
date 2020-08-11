@@ -1,7 +1,8 @@
-import React, { useState } from "react"
+import React, { useState, useContext } from "react"
 import Image from "gatsby-image"
 import styled from "@emotion/styled"
 import { FaMapMarkerAlt, FaPlus } from "react-icons/fa"
+import { GlobalStateContext } from "../../context/GlobalContextProvider"
 
 const Img = styled(Image)`
   width: 200px;
@@ -14,6 +15,9 @@ const Img = styled(Image)`
 `
 
 const TourPlans = ({ plans, countPlans }) => {
+  //language state
+  const state = useContext(GlobalStateContext) || { lenguage: "EN" }
+
   //state for open the plan
   const [openManager, setOpenManager] = useState(false)
 
@@ -40,7 +44,13 @@ const TourPlans = ({ plans, countPlans }) => {
                 <div className="themeTour-plan__route__box">
                   <div className="themeTour-plan__routeAndIcon">
                     <FaMapMarkerAlt className="themeTour-plan__icon" />
-                    <h4 className="themeTour-plan__route">{plan.route}</h4>
+                    <h4
+                      className={`themeTour-plan__route ${
+                        state.lenguage === "CN" ? "cn-font__noto_medium" : ""
+                      }`}
+                    >
+                      {plan.route}
+                    </h4>
                   </div>
                   <FaPlus
                     className={`themeTour-plan__icon ${
@@ -55,10 +65,22 @@ const TourPlans = ({ plans, countPlans }) => {
                 }`}
               >
                 <div className="themeTour-plan__stayAndMeals text-align-justify">
-                  <h4>{plan.stayAndMeals}</h4>
+                  <h4
+                    className={`themeTour-plan__route ${
+                      state.lenguage === "CN" ? "cn-font__noto_light" : ""
+                    }`}
+                  >
+                    {plan.stayAndMeals}
+                  </h4>
                 </div>
                 <div className="themeTour-plan__itinerary text-align-justify">
-                  <h4>{plan.itinerary}</h4>
+                  <h4
+                    className={`themeTour-plan__route ${
+                      state.lenguage === "CN" ? "cn-font__noto_light" : ""
+                    }`}
+                  >
+                    {plan.itinerary}
+                  </h4>
                 </div>
 
                 <Img

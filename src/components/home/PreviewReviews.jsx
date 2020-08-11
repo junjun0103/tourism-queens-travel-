@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "@emotion/styled"
 import Review from "./Review"
+import Title from "../ui/title"
 
 const DivReview = styled.div`
   display: flex;
@@ -23,8 +24,12 @@ const PreviewReview = ({ contents }) => {
   return (
     <>
       <section className="section section-center">
-        <h2 className="title-style test">Reviews</h2>
-        <h4 className="subtitle-style ">Stroies from our clients</h4>
+        <Title titleEn="Reviews" titleCn="客户分享"></Title>
+        <Title
+          subTitle={true}
+          titleEn="Travelers' Stories"
+          titleCn="旅行者的故事"
+        ></Title>
       </section>
       <DivReview>
         <Directory>

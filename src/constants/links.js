@@ -122,7 +122,14 @@ const tempLinksEn = dataEN.map(link => {
 const tempLinksCn = dataCN.map(link => {
   return (
     <li key={link.id}>
-      <Link to={link.url}>{link.text}</Link>
+      <TransitionLink
+        exit={{ length: 0.5 }}
+        entry={{ delay: 0.5 }}
+        to={link.url}
+        activeClassName={"link_avtive"}
+      >
+        {link.text}
+      </TransitionLink>
     </li>
   )
 })
@@ -149,7 +156,7 @@ export default ({ styleClass }) => {
       // }}
       >
         <select
-          class="custom-select"
+          className="custom-select"
           name="lenguage"
           id="lenguage"
           onChange={_handleChange}

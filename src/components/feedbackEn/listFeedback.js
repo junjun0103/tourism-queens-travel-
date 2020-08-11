@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import Previewfeedback from "./previewFeedback"
 import useFeedfback from "../../hooks/usefeedback"
+import Title from "../ui/title"
 
 const ListFeedBack = ({ contents, title }) => {
   //import feedback hook datas
@@ -11,14 +12,18 @@ const ListFeedBack = ({ contents, title }) => {
 
   return (
     <>
-        <h2 className="title-style">reviews</h2>
-        <h4 className="subtitle-style">Stroies from our clients</h4>
-        <div className=" preview-center">
-          {/**Map for the datas */}
-          {feedbacks.map(feedback => (
-            <Previewfeedback key={feedbacks.id} feedback={feedback} />
-          ))}
-        </div>
+      <Title titleEn="reviews" titleCn="客户分享"></Title>
+      <Title
+        subTitle={true}
+        titleEn="Travelers' Stories"
+        titleCn="旅行者的故事"
+      ></Title>
+      <div className=" preview-center">
+        {/**Map for the datas */}
+        {feedbacks.map(feedback => (
+          <Previewfeedback key={feedbacks.id} feedback={feedback} />
+        ))}
+      </div>
     </>
   )
 }

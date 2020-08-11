@@ -1,4 +1,5 @@
-import React, { useState } from "react"
+import React, { useState, useContext } from "react"
+import { GlobalStateContext } from "../../context/GlobalContextProvider"
 import styled from "@emotion/styled"
 import BackgroundImage from "gatsby-background-image"
 import { Link } from "gatsby"
@@ -21,8 +22,8 @@ const Item = styled.div`
   overflow: hidden;
   cursor: pointer;
 
-  @media(max-width:768px){
-    width:90%;
+  @media (max-width: 768px) {
+    width: 90%;
     height: 300px;
   }
 
@@ -37,9 +38,9 @@ const Item = styled.div`
     opacity: 0.7;
     position: absolute;
     transition: all 0.5s ease-in-out;
-    
-    @media(max-width:768px){
-      width:100%;
+
+    @media (max-width: 768px) {
+      width: 100%;
       height: 300px;
     }
 
@@ -51,7 +52,7 @@ const Item = styled.div`
     }
 
     .subtitle {
-      margin-top:10px;
+      margin-top: 10px;
       font-weight: lighter;
       font-size: 16px;
       color: white;
@@ -68,22 +69,41 @@ const Item = styled.div`
     }
   }
   .hoverOut {
-    @media(min-width:768px){
-      margin-bottom: -110px !important;
+    @media (min-width: 768px) {
+      margin-bottom: -100px !important;
     }
-    
   }
 `
 
 const ThemeTour = ({
   photo,
   title_en,
+  title_cn,
   slug,
   name_en,
+  name_cn,
   shortDescription_en,
+  shortDescription_cn,
   date,
   idx,
 }) => {
+  // language state
+  const state = useContext(GlobalStateContext) || { lenguage: "EN" }
+  //declare lenguage variables
+  let title = "",
+    name = "",
+    shortDescription = ""
+
+  if (state.lenguage === "EN") {
+    title = title_en
+    name = name_en
+    shortDescription = shortDescription_en
+  } else {
+    title = title_cn
+    name = name_cn
+    shortDescription = shortDescription_cn
+  }
+
   const [reviewHover, setReviewHover] = useState(false)
 
   const contentHover = () => {
@@ -103,9 +123,27 @@ const ThemeTour = ({
             to={"/reviews/" + slug}
             className={`content ${reviewHover ? "" : "hoverOut"}`}
           >
-            <h3 className="title">{title_en}</h3>
-            <h4 className="subtitle">{name_en}</h4>
-            <h5 className="description">{shortDescription_en}</h5>
+            <h3
+              className={`title ${
+                state.lenguage === "CN" ? "cn-font__noto_bold" : ""
+              }`}
+            >
+              {title}
+            </h3>
+            <h4
+              className={`subtitle ${
+                state.lenguage === "CN" ? "cn-font__noto_medium" : ""
+              }`}
+            >
+              {name}
+            </h4>
+            <h5
+              className={`description ${
+                state.lenguage === "CN" ? "cn-font__noto_medium" : ""
+              }`}
+            >
+              {shortDescription}
+            </h5>
             <h4 className="contentDate">{date}</h4>
           </Link>
         </ImageBackground>

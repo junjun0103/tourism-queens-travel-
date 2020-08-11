@@ -10,6 +10,7 @@ import AboutUs from "../components/home/aboutUs"
 import WhyUs from "../components/home/whyUs"
 import { GlobalStateContext } from "../context/GlobalContextProvider"
 import "../css/pages/index.css"
+import Title from "../components/ui/title"
 
 export const query = graphql`
   {
@@ -73,7 +74,11 @@ const IndexPage = ({
 
       {/**Slogan */}
       <article className="main-header__bottom__bar">
-        <h1 className="main-header__bottom__text">
+        <h1
+          className={`main-header__bottom__text ${
+            state.lenguage === "CN" ? "cn-font__zcool" : ""
+          }`}
+        >
           {state.lenguage === "EN"
             ? `Choose Queen's Travel, explore your dream`
             : "独一无二的新西兰，与众不同的群星假期"}
@@ -81,10 +86,12 @@ const IndexPage = ({
       </article>
 
       <section className="section section-center mt-2">
-        <h2 className="title-style test">theme tours</h2>
-        <h4 className="subtitle-style ">
-          Explore your travel dream with our unique tour
-        </h4>
+        <Title titleEn="theme tours" titleCn="独家主题行程"></Title>
+        <Title
+          titleEn="Explore your travel dream with our unique tour"
+          titleCn="以我们独特的行程来完成您的旅游梦"
+          subTitle={true}
+        ></Title>
       </section>
       <ThemeTour contents={themeTourData} />
       <section className="section section-center">

@@ -75,18 +75,18 @@ h2 {
 }
 h1 {
   /* 36pt/11.9 = 3rem */
-  font-size: 2.8rem !important;
+  font-size: 2.2rem !important;
   font-family: var(--ff-slogan);
   font-weight: 700;
 }
 h2 {
   /* 22pt/11.9 = 1.84rem */
-  font-size: 1.84rem;
+  font-size: 1.8rem;
   font-family: var(--ff-primary);
 }
 h3 {
   /* 16pt/11.9 = 1.34rem */
-  font-size: 1.34rem;
+  font-size: 1.22rem;
   font-family: var(--ff-primary);
   text-transform: capitalize;
 }
@@ -114,11 +114,11 @@ p {
   }
   h1 {
     /* 36pt/11.9 = 3rem */
-    font-size: 2rem !important;
+    font-size: 1.8rem !important;
   }
   h2 {
     /* 22pt/11.9 = 1.84rem */
-    font-size: 1.44rem;
+    font-size: 1.4rem;
   }
   h3 {
     /* 16pt/11.9 = 1.34rem */
@@ -178,6 +178,25 @@ p {
     font-size: 0.7rem;
   }
 }
+
+.cn-font__zcool {
+  font-family: var(--ff-secondary-cn);
+}
+.cn-font__noto_bold,
+.cn-font__noto_medium,
+.cn-font__noto_light {
+  font-family: var(--ff-primary-cn);
+}
+.cn-font__noto_bold {
+  font-weight: 700;
+}
+.cn-font__noto_medium {
+  font-weight: 500;
+}
+.cn-font__noto_light {
+  font-weight: 300;
+}
+
 .break-word {
   word-break: break-word;
 }
@@ -189,6 +208,9 @@ p {
 }
 .text-align-justify {
   text-align: justify;
+}
+.text-align-center {
+  text-align: center;
 }
 .text-shadow-dark {
   text-shadow: 1px 2px #000;
@@ -270,13 +292,17 @@ p {
   color: white;
   box-shadow: 0px 3px var(--clr-primary-2);
 }
-.subtitle-style {
+.subtitle-style,
+.subtitle-style__noMT {
   text-align: justify;
   width: 55%;
+}
+.subtitle-style {
   margin-top: 1.2rem;
 }
 @media screen and (max-width: 880px) {
-  .subtitle-style {
+  .subtitle-style,
+  .subtitle-style__noMT {
     width: 100%;
   }
 }
@@ -290,13 +316,14 @@ p {
   grid-gap: 2.5rem;
 }
 .preview-container_bestSale,
-.preview-container_themeTour,
-.preview-container_review {
+.preview-container_themeTour {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   background-color: white;
 }
 .preview-container_review {
+  display: grid;
+  grid-template-columns: 1fr;
   background-color: var(--clr-primary-4);
 }
 .preview-boxShadow {
@@ -396,7 +423,6 @@ Pages
 }
 .nuevo div:nth-child(1) {
   animation-delay: 0.1s;
-  color: blue;
 }
 .nuevo div:nth-child(2) {
   animation-delay: 0.2s;
@@ -427,7 +453,6 @@ Pages
 }
 .siempre div:nth-child(5) {
   animation-delay: 0.1s;
-  color: blue;
 }
 .siempre div:nth-child(4) {
   animation-delay: 0.2s;

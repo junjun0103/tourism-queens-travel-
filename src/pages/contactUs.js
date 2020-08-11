@@ -2,6 +2,8 @@ import React from "react"
 import ContactUsForm from "../components/ui/contactUsForm"
 import Layout from "../components/ui/layout"
 import "../css/pages/contactUs.css"
+import Title from "../components/ui/title"
+import LanguageConverter from "../components/ui/languageConverter"
 
 import { Map, TileLayer, Marker, Popup } from "react-leaflet"
 import L from "leaflet"
@@ -32,24 +34,58 @@ const ContactUs = () => {
     <>
       <Layout>
         <section className="contactUs-page section section-center">
-          <h2 className="title-style">contact detail</h2>
+          <Title titleEn="contact detail" titleCn="在线咨询"></Title>
           <div className="contactUs-container">
             <div className="contactUs-info">
-              <h4>Contact :</h4>
+              <LanguageConverter
+                tag="h4"
+                valueEn="Contact :"
+                valueCn="联系电话 :"
+                styleCn="cn-font__noto_light"
+              ></LanguageConverter>
               <h4>+64 9 4800 118</h4>
-              <h4>Fax :</h4>
+              <LanguageConverter
+                tag="h4"
+                valueEn="Fax :"
+                valueCn="联系传真 :"
+                styleCn="cn-font__noto_light"
+              ></LanguageConverter>
               <h4>+64 9 4800 228</h4>
-              <h4>Email :</h4>
+              <LanguageConverter
+                tag="h4"
+                valueEn="Email :"
+                valueCn="联系邮件 :"
+                styleCn="cn-font__noto_light"
+              ></LanguageConverter>
               <h4>inbound@queenstravel.com</h4>
-              <h4>QQ :</h4>
+              <LanguageConverter
+                tag="h4"
+                valueEn="QQ :"
+                valueCn="联系QQ :"
+                styleCn="cn-font__noto_light"
+              ></LanguageConverter>
               <h4>2725799562</h4>
-              <h4>WeChat :</h4>
+              <LanguageConverter
+                tag="h4"
+                valueEn="WeChat :"
+                valueCn="联系微信 :"
+                styleCn="cn-font__noto_light"
+              ></LanguageConverter>
               <h4>Queens-NZ</h4>
-              <h4>Address :</h4>
+              <LanguageConverter
+                tag="h4"
+                valueEn="Address :"
+                valueCn="联系地址 :"
+                styleCn="cn-font__noto_light"
+              ></LanguageConverter>
               <h4>129A Onewa Road, Northcote, Auckland 0627, New Zealand</h4>
             </div>
             <div className="contactUs-map">
-              <Map center={[DEFAULT_LAT, DEFAULT_LAN]} zoom={DEFAULT_ZOOM}>
+              <Map
+                center={[DEFAULT_LAT, DEFAULT_LAN]}
+                zoom={DEFAULT_ZOOM}
+                className="indexOrder"
+              >
                 <TileLayer
                   attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                   url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

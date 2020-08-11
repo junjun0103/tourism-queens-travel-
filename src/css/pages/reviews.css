@@ -4,7 +4,7 @@ Review (Feedback)
 ===============
 */
 .preview-container_review {
-  grid-template-rows: minmax(12rem, 18vh) 2rem 2rem minmax(2rem, 5rem) 1.5rem;
+  grid-template-rows: minmax(12rem, 18vh) 2rem 1.5rem 4rem 1.5rem;
 }
 
 .review-container {

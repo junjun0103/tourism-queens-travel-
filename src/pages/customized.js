@@ -55,8 +55,10 @@ const Customized = ({
         <article className="customizedSlider-containder">
           <Slider
             contents={nodes}
-            title="customized tour reviews"
-            sliderStyle="reviews"
+            titleEn="customized tour reviews"
+            titleCn="定制行程 客户分享"
+            subTitleEn="Travelers' Stories"
+            subTitleCn="旅行者的故事"
           ></Slider>
         </article>
 
