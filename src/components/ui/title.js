@@ -11,7 +11,7 @@ const Title = ({ titleEn, titleCn, subTitle, style = "subtitle-style" }) => {
         {/* "CN" has a different font style */}
         <h4
           className={`${style} ${
-            state.lenguage === "CN" ? "cn-font__noto_bold" : ""
+            state.lenguage === "CN" ? "cn-font__noto_medium" : ""
           }`}
         >
           {state.lenguage === "EN" ? titleEn : titleCn}
