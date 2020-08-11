@@ -1,4 +1,5 @@
-import React from "react"
+import React, { useContext } from "react"
+import { GlobalStateContext } from "../../context/GlobalContextProvider"
 import styled from "@emotion/styled"
 import BackgroundImage from "gatsby-background-image"
 import { Link } from "gatsby"
@@ -13,8 +14,8 @@ const Item = styled.div`
   margin: 0 2.5px 5px;
   overflow: hidden;
 
-  @media(max-width:768px){
-    width:90%;
+  @media (max-width: 768px) {
+    width: 90%;
     height: 300px;
   }
 
@@ -76,7 +77,9 @@ const Item = styled.div`
   }
 `
 
-const ThemeTour = ({ title_en, background_img, slug }) => {
+const ThemeTour = ({ title_en, title_cn, background_img, slug }) => {
+  // language state
+  const state = useContext(GlobalStateContext) || { lenguage: "EN" }
   return (
     <Item>
       <Link
@@ -88,7 +91,13 @@ const ThemeTour = ({ title_en, background_img, slug }) => {
       />
 
       <Link to={"/themeTour/" + slug} className="content">
-        <h3 className="title">{title_en}</h3>
+        <h3
+          className={`title ${
+            state.lenguage === "CN" ? "cn-font__noto_bold" : ""
+          }`}
+        >
+          {state.lenguage === "EN" ? title_en : title_cn}
+        </h3>
       </Link>
     </Item>
   )

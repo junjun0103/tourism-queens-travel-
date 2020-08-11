@@ -1,7 +1,11 @@
-import React from "react"
+import React, { useContext } from "react"
+import { GlobalStateContext } from "../../context/GlobalContextProvider"
 import { Link } from "gatsby"
 
 const PreviewTour = ({ tour }) => {
+  // language state
+  const state = useContext(GlobalStateContext) || { lenguage: "EN" }
+
   const {
     excluded_cn,
     excluded_en,
@@ -21,6 +25,18 @@ const PreviewTour = ({ tour }) => {
     background_img,
   } = tour
 
+  //declare lenguage variables
+  let title = "",
+    slogan = ""
+
+  if (state.lenguage === "EN") {
+    title = title_en
+    slogan = slogan_en
+  } else {
+    title = title_cn
+    slogan = slogan_cn
+  }
+
   return (
     <>
       <Link to={"/themeTour/" + slug}>
@@ -30,8 +46,20 @@ const PreviewTour = ({ tour }) => {
             alt="img"
             className="preview-img"
           ></img>
-          <h3 className="preview-title">{title_en}</h3>
-          <h4 className="preview-subTitle">{slogan_en}</h4>
+          <h3
+            className={`preview-title ${
+              state.lenguage === "CN" ? "cn-font__noto_bold" : ""
+            }`}
+          >
+            {title}
+          </h3>
+          <h4
+            className={`preview-subTitle ${
+              state.lenguage === "CN" ? "cn-font__noto_medium" : ""
+            }`}
+          >
+            {slogan}
+          </h4>
         </div>
       </Link>
     </>

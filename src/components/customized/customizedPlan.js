@@ -326,7 +326,12 @@ const CustomizedPlan = () => {
                   onChange={onChange}
                   placeholder={state.lenguage === "EN" ? "Other" : "其他"}
                 ></textarea>
-                <button className="contact-form__btn btn btn_mt2" type="submit">
+                <button
+                  className={`contact-form__btn btn btn_mt2 ${
+                    state.lenguage === "CN" ? "cn-font__noto_medium" : ""
+                  }`}
+                  type="submit"
+                >
                   {state.lenguage === "EN" ? "send" : "送出"}
                 </button>
               </div>

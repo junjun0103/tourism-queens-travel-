@@ -75,18 +75,18 @@ h2 {
 }
 h1 {
   /* 36pt/11.9 = 3rem */
-  font-size: 2.5rem !important;
+  font-size: 2.2rem !important;
   font-family: var(--ff-slogan);
   font-weight: 700;
 }
 h2 {
   /* 22pt/11.9 = 1.84rem */
-  font-size: 1.84rem;
+  font-size: 1.8rem;
   font-family: var(--ff-primary);
 }
 h3 {
   /* 16pt/11.9 = 1.34rem */
-  font-size: 1.34rem;
+  font-size: 1.22rem;
   font-family: var(--ff-primary);
   text-transform: capitalize;
 }
@@ -114,11 +114,11 @@ p {
   }
   h1 {
     /* 36pt/11.9 = 3rem */
-    font-size: 1.9rem !important;
+    font-size: 1.8rem !important;
   }
   h2 {
     /* 22pt/11.9 = 1.84rem */
-    font-size: 1.44rem;
+    font-size: 1.4rem;
   }
   h3 {
     /* 16pt/11.9 = 1.34rem */
@@ -208,6 +208,9 @@ p {
 }
 .text-align-justify {
   text-align: justify;
+}
+.text-align-center {
+  text-align: center;
 }
 .text-shadow-dark {
   text-shadow: 1px 2px #000;

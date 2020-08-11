@@ -191,7 +191,12 @@ const ContactUsForm = () => {
                 className="contact-form__input contact-form__control"
                 required
               ></input>
-              <button className="contact-form__btn btn" type="submit">
+              <button
+                className={`contact-form__btn btn ${
+                  state.lenguage === "CN" ? "cn-font__noto_medium" : ""
+                }`}
+                type="submit"
+              >
                 {state.lenguage === "EN" ? "send" : "送出"}
               </button>
             </form>

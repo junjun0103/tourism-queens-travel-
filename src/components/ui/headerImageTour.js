@@ -1,7 +1,8 @@
-import React from "react"
+import React, { useContext } from "react"
 import BackgroundImage from "gatsby-background-image"
 import styled from "@emotion/styled"
 import Modal from "./modal"
+import { GlobalStateContext } from "../../context/GlobalContextProvider"
 
 const ImageBackground = styled(BackgroundImage)`
   width: 100vw;
@@ -25,6 +26,8 @@ const BgDark = styled.main`
 `
 
 const HeaderImage = ({ title, slogan, highlight, bgImage, mapImage }) => {
+  //language state
+  const state = useContext(GlobalStateContext) || { lenguage: "EN" }
   // modal Ref
   const modalRef = React.useRef()
   // modal open function
@@ -37,16 +40,30 @@ const HeaderImage = ({ title, slogan, highlight, bgImage, mapImage }) => {
         <div className="themeTour-header__title">
           <div className="themeTour-header__title_back"></div>
           <div className="themeTour-header__title_front">
-            <h3>{title}</h3>
+            <h3
+              className={`${
+                state.lenguage === "CN" ? "cn-font__noto_bold" : ""
+              }`}
+            >
+              {title}
+            </h3>
           </div>
         </div>
         <br />
         <div className="themeTour-header__subtitle">
-          <h1>{slogan}</h1>
+          <h1 className={`${state.lenguage === "CN" ? "cn-font__zcool" : ""}`}>
+            {slogan}
+          </h1>
         </div>
         <div className="themeTour-header__highlightBox">
           <div className="themeTour-header__highlightBox__content">
-            <h4>{highlight}</h4>
+            <h4
+              className={`${
+                state.lenguage === "CN" ? "cn-font__noto_medium" : ""
+              }`}
+            >
+              {highlight}
+            </h4>
           </div>
           <div className="themeTour-header__highlightBox__map">
             <img
