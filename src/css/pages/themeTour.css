@@ -202,6 +202,18 @@ Theme tour
   padding: 0.15rem 1.5rem;
   align-items: center;
 }
+@media screen and (max-width: 700px) {
+  .themeTour-plan__route__box {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+@media screen and (max-width: 450px) {
+  .themeTour-plan__route__box {
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+}
 .themeTour-plan__routeAndIcon {
   display: flex;
 }
@@ -232,6 +244,12 @@ Theme tour
   background-color: var(--clr-primary-4);
   padding: 1rem;
   border-radius: var(--radius-small);
+}
+@media screen and (max-width: 450px) {
+  .themeTour-plan__stayAndMeals,
+  .themeTour-plan__itinerary {
+    padding: 0.5rem;
+  }
 }
 
 .photo {
@@ -362,4 +380,66 @@ Theme tour
     margin: 1rem auto;
     grid-gap: 1rem 0;
   }
+}
+/*
+===============
+Blog Template
+===============
+*/
+.richText-template {
+  font-size: 0.97rem;
+  font-family: var(--ff-secondary);
+  line-height: 1.7rem;
+}
+@media screen and (max-width: 800px) {
+  .richText-template {
+    font-size: 0.92rem;
+    line-height: 1.5rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .richText-template {
+    font-size: 0.82rem;
+    line-height: 1.4rem;
+  }
+}
+@media screen and (max-width: 350px) {
+  .richText-template {
+    font-size: 0.8rem;
+    line-height: 1.3rem;
+  }
+}
+.richText-template h1,
+.richText-template h2 {
+  text-align: center;
+}
+.richText-template ul {
+  display: inline-block;
+}
+.richText-template ul li {
+  color: black;
+}
+.richText-template ul li::before {
+  content: "\2022 ";
+}
+
+.richText-template blockquote {
+  background: white;
+  border-radius: var(--radius);
+  padding: 1rem;
+  line-height: 1.5;
+  color: black;
+  margin: 0.5rem 0;
+}
+.richText-template pre {
+  background: #222;
+  color: yellow;
+  overflow-x: scroll;
+  padding: 1rem 1.5rem;
+  border-radius: var(--radius);
+}
+.richText-template img {
+  width: 15rem;
+  height: 15rem;
+  margin: 3rem 0;
 }

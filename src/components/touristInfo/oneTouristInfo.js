@@ -2,6 +2,7 @@ import React, { useContext } from "react"
 import Layaout from "../ui/layout"
 import { graphql } from "gatsby"
 import { GlobalStateContext } from "../../context/GlobalContextProvider"
+import ReactMarkdown from "react-markdown"
 
 export const query = graphql`
   query($slug: String!) {
@@ -70,8 +71,14 @@ const OneTouristInfo = ({
               return (
                 <div className="tourInfo-one__items">
                   <h3>{item.subject}</h3>
-                  <div className="tourInfo-one__content">
-                    <h4>{item.content}</h4>
+                  <div
+                    className={`richText-template tourInfo-one__content ${
+                      state.lenguage === "CN" ? "cn-font__noto_light" : ""
+                    }`}
+                  >
+                    <article className="richText-content text-align-justify">
+                      <ReactMarkdown source={item.content}></ReactMarkdown>
+                    </article>
                   </div>
                 </div>
               )

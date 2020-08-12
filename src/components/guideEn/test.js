@@ -3,6 +3,7 @@ import Layaout from "../ui/layout"
 import { graphql } from "gatsby"
 import { GlobalStateContext } from "../../context/GlobalContextProvider"
 import LanguageConverter from "../../components/ui/languageConverter"
+import ReactMarkdown from "react-markdown"
 
 export const query = graphql`
   query($slug: String!) {
@@ -82,13 +83,15 @@ const OneFeedBack = ({
                   >
                     {item.subject}
                   </h3>
-                  <h4
-                    className={`${
+                  <div
+                    className={`richText-template ${
                       state.lenguage === "CN" ? "cn-font__noto_medium" : ""
                     }`}
                   >
-                    {item.content}
-                  </h4>
+                    <article className="richText-content text-align-justify">
+                      <ReactMarkdown source={item.content}></ReactMarkdown>
+                    </article>
+                  </div>
                 </div>
               )
             })}
@@ -99,13 +102,15 @@ const OneFeedBack = ({
                 valueEn="notice from queen's"
                 valueCn="群星温馨提示"
               ></LanguageConverter>
-              <h4
-                className={`tourInfo-one__content ${
+              <div
+                className={`richText-template tourInfo-one__content ${
                   state.lenguage === "CN" ? "cn-font__noto_medium" : ""
                 }`}
               >
-                {notice}
-              </h4>
+                <article className="richText-content text-align-justify">
+                  <ReactMarkdown source={notice}></ReactMarkdown>
+                </article>
+              </div>
             </div>
           </div>
         </div>

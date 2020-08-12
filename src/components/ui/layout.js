@@ -41,7 +41,7 @@ const Layout = ({ children }) => {
           rel="stylesheet"
         ></link>
         <link
-          href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;500;700&family=ZCOOL+XiaoWei&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500&family=Noto+Serif+SC:wght@300;500;700&family=ZCOOL+XiaoWei&display=swap"
           rel="stylesheet"
         ></link>
         <link

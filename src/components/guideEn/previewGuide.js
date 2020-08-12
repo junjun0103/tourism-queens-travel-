@@ -1,6 +1,8 @@
 import React from "react"
 import { FaUserTie } from "react-icons/fa"
 import Modal from "../ui/modal"
+import ReactMarkdown from "react-markdown"
+
 //import { Link } from "gatsby"
 //  <Link to={"/" + slug}>Here</Link>
 const PreviewGuide = ({ guide, language }) => {
@@ -33,13 +35,15 @@ const PreviewGuide = ({ guide, language }) => {
             </h3>
           </div>
           {/* guide profile */}
-          <h4
-            className={`text-align-justify ${
+          <div
+            className={`richText-template ${
               language === "CN" ? "cn-font__noto_light" : ""
             }`}
           >
-            {guide.profile}
-          </h4>
+            <article className="richText-content text-align-justify">
+              <ReactMarkdown source={guide.profile}></ReactMarkdown>
+            </article>
+          </div>
         </div>
       </div>
       {/* modal component */}

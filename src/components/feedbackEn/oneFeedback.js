@@ -91,7 +91,9 @@ const OneFeedBack = ({
               </h2>
               <h3
                 className={`review-contents_nameDate ${
-                  state.lenguage === "CN" ? "cn-font__noto_bold" : ""
+                  state.lenguage === "CN"
+                    ? "cn-font__noto_sans_medium"
+                    : "en-font__overpass_bold"
                 }`}
               >
                 {name}&nbsp;

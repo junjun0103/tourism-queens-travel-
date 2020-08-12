@@ -55,7 +55,9 @@ const PreviewFeedback = ({ feedback }) => {
           </h4>
           <h4
             className={`preview-subtitle ${
-              state.lenguage === "CN" ? "cn-font__noto_medium" : ""
+              state.lenguage === "CN"
+                ? "cn-font__noto_sans_medium"
+                : "en-font__overpass_bold"
             }`}
           >
             {name}
@@ -67,7 +69,15 @@ const PreviewFeedback = ({ feedback }) => {
           >
             {shortDescription}
           </h4>
-          <h4 className="preview-price">{date}</h4>
+          <h4
+            className={`preview-price ${
+              state.lenguage === "CN"
+                ? "cn-font__noto_sans_medium"
+                : "en-font__overpass_bold"
+            }`}
+          >
+            {date}
+          </h4>
         </div>
       </Link>
     </>

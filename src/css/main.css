@@ -11,6 +11,7 @@ Variables
   --ff-slogan: "Amatic SC", sans-serif; /* wgt:700 */
   --ff-footer: "Noto Serif SC", sans-serif; /* wgt:700 */
   --ff-primary-cn: "Noto Serif SC", sans-serif; /* wgt: 300, 500, 700 */
+  --ff-primary2-cn: "Noto Sans SC", sans-serif; /* wgt: 500 */
   --ff-secondary-cn: "ZCOOL XiaoWei", sans-serif;
   /* Colors */
   --clr-white: #fff;
@@ -140,7 +141,7 @@ p {
     margin-bottom: 0.2rem;
   }
   h1 {
-    font-size: 1.4rem !important;
+    font-size: 1.5rem !important;
   }
   h2 {
     font-size: 1.2rem;
@@ -162,7 +163,7 @@ p {
     margin-bottom: 0rem;
   }
   h1 {
-    font-size: 1.2rem !important;
+    font-size: 1.3rem !important;
   }
   h2 {
     font-size: 1rem;
@@ -179,8 +180,16 @@ p {
   }
 }
 
+.en-font__overpass_bold {
+  font-family: var(--ff-secondary);
+  font-weight: 700;
+}
 .cn-font__zcool {
   font-family: var(--ff-secondary-cn);
+}
+
+.cn-font__noto_sans_medium {
+  font-family: var(--ff-primary2-cn);
 }
 .cn-font__noto_bold,
 .cn-font__noto_medium,
