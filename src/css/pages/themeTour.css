@@ -77,7 +77,7 @@ Theme tour
   line-height: 1;
   font-size: 6rem;
   color: var(--clr-primary-5);
-  z-index: 3;
+  z-index: 0;
 }
 .themeTour-header__subtitle::after {
   content: "\201D";
@@ -87,7 +87,7 @@ Theme tour
   line-height: 1;
   font-size: 6rem;
   color: var(--clr-primary-5);
-  z-index: 3;
+  z-index: 0;
 }
 .themeTour-header__highlightBox {
   display: grid;
@@ -183,12 +183,13 @@ Theme tour
   border-radius: 50%;
   justify-self: end;
   margin-right: -0.45rem;
-  z-index: 3;
   background-color: black;
   border-color: black;
 }
 .themeTour-plan__line {
+  opacity: 0.3;
   border-left: 2.5px solid var(--clr-primary-2);
+  z-index: 0;
 }
 .themeTour-plan__route__btn {
   width: 100%;
@@ -218,6 +219,7 @@ Theme tour
   display: flex;
 }
 .themeTour-plan__icon {
+  z-index: 0;
   font-size: 0.9rem;
 }
 .xIcon {
@@ -328,11 +330,12 @@ Theme tour
     padding: 0.5rem;
   }
   .themeTour-header__subtitle::before {
-    font-size: 3rem;
-    left: -2.5rem;
+    font-size: 4rem;
+    left: -2rem;
   }
   .themeTour-header__subtitle::after {
-    font-size: 3rem;
+    font-size: 4rem;
+    right: -2rem;
   }
   .themeTour-header__highlightBox__map {
     margin: 0.5rem;

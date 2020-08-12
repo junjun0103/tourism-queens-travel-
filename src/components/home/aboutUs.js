@@ -45,7 +45,7 @@ const AboutUs = () => {
       <div className="btn-aboutUs">
         <Link
           to={"/aboutUs/"}
-          className={`btn btn-center ${
+          className={`btn btn-center cn_h4 ${
             state.lenguage === "CN" ? "cn-font__noto_medium" : ""
           }`}
         >

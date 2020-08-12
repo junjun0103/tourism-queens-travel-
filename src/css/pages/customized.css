@@ -119,7 +119,6 @@ Cusomaized tour
 }
 @media screen and (max-width: 610px) {
   .custimizedProcess-steps__text {
-    width: 95%;
     max-width: 15rem;
     margin-bottom: 1rem;
   }

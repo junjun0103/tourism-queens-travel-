@@ -13,43 +13,39 @@ const dataEN = [
     text: "home",
     url: "/",
   },
+
   {
     id: 2,
-    text: "BestSale",
-    url: "/bestSale/",
-  },
-  {
-    id: 3,
     text: "ThemeTour",
     url: "/themeTour/",
   },
   {
-    id: 4,
+    id: 3,
     text: "Customized",
     url: "/customized/",
   },
   {
-    id: 5,
+    id: 4,
     text: "GuideTeam",
     url: "/guideTeam/",
   },
   {
-    id: 6,
+    id: 5,
     text: "Information",
     url: "/touristInformation/",
   },
   {
-    id: 7,
+    id: 6,
     text: "Reviews",
     url: "/reviews/",
   },
   {
-    id: 8,
+    id: 7,
     text: "ContactUs",
     url: "/contactUs/",
   },
   {
-    id: 9,
+    id: 8,
     text: "AboutUs",
     url: "/aboutUs/",
   },

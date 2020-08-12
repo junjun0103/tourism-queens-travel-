@@ -47,7 +47,9 @@ const TourPlans = ({ plans, countPlans }) => {
                     <FaMapMarkerAlt className="themeTour-plan__icon" />
                     <h4
                       className={`themeTour-plan__route ${
-                        state.lenguage === "CN" ? "cn-font__noto_medium" : ""
+                        state.lenguage === "CN"
+                          ? "cn-font__noto_medium cn_h4"
+                          : ""
                       }`}
                     >
                       {plan.route}

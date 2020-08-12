@@ -76,7 +76,7 @@ const IndexPage = ({
       <article className="main-header__bottom__bar">
         <h1
           className={`main-header__bottom__text ${
-            state.lenguage === "CN" ? "cn-font__zcool" : ""
+            state.lenguage === "CN" ? "cn-font__zcool cn_h1" : ""
           }`}
         >
           {state.lenguage === "EN"

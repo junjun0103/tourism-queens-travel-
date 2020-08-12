@@ -20,7 +20,9 @@ const LanguageConverter = ({
     return (
       <div>
         <h4
-          className={`${style} ${state.lenguage === "EN" ? styleEn : styleCn}`}
+          className={`${style} ${
+            state.lenguage === "EN" ? styleEn : `cn_h4 ${styleCn}`
+          }`}
         >
           {state.lenguage === "EN" ? valueEn : valueCn}
         </h4>
@@ -32,7 +34,9 @@ const LanguageConverter = ({
     return (
       <div>
         <h3
-          className={`${style} ${state.lenguage === "EN" ? styleEn : styleCn}`}
+          className={`${style} ${
+            state.lenguage === "EN" ? styleEn : `cn_h3 ${styleCn}`
+          }`}
         >
           {state.lenguage === "EN" ? valueEn : valueCn}
         </h3>
