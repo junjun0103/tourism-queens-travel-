@@ -1,7 +1,7 @@
 import React, { useContext } from "react"
 import { GlobalStateContext } from "../../context/GlobalContextProvider"
 
-const Title = ({ titleEn, titleCn, subTitle, style = "subtitle-style" }) => {
+const Title = ({ titleEn, titleCn, subTitle, styleGlobal = "subtitle-style" }) => {
   const state = useContext(GlobalStateContext) || { lenguage: "EN" }
   //if it is a subtitle, then show return this
   if (subTitle) {
@@ -10,7 +10,7 @@ const Title = ({ titleEn, titleCn, subTitle, style = "subtitle-style" }) => {
         {/* style = "subtitle-style" <= default style has margin top 1.2rem */}
         {/* "CN" has a different font style */}
         <h4
-          className={`${style} ${
+          className={`${styleGlobal} ${
             state.lenguage === "CN" ? "cn-font__noto_sans_light cn_h4" : ""
           }`}
         >

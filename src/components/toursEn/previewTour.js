@@ -7,17 +7,7 @@ const PreviewTour = ({ tour }) => {
   const state = useContext(GlobalStateContext) || { lenguage: "EN" }
 
   const {
-    excluded_cn,
-    excluded_en,
-    highlight_cn,
-    highlight_en,
     slug,
-    included_cn,
-    included_en,
-    policy_cn,
-    policy_en,
-    priceDetail_cn,
-    priceDetail_en,
     slogan_cn,
     slogan_en,
     title_cn,

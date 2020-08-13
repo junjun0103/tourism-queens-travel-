@@ -11,7 +11,7 @@ const LanguageConverter = ({
   valueCn,
   styleEn,
   styleCn,
-  style,
+  styleGlobal,
 }) => {
   const state = useContext(GlobalStateContext) || { lenguage: "EN" }
 
@@ -20,7 +20,7 @@ const LanguageConverter = ({
     return (
       <div>
         <h4
-          className={`${style} ${
+          className={`${styleGlobal} ${
             state.lenguage === "EN" ? styleEn : `cn_h4 ${styleCn}`
           }`}
         >
@@ -34,7 +34,7 @@ const LanguageConverter = ({
     return (
       <div>
         <h3
-          className={`${style} ${
+          className={`${styleGlobal} ${
             state.lenguage === "EN" ? styleEn : `cn_h3 ${styleCn}`
           }`}
         >

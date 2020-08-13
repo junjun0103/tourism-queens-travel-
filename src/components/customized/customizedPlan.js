@@ -90,7 +90,7 @@ const CustomizedPlan = () => {
     <article className="customizedForm-containder">
       <LanguageConverter
         tag="h3"
-        style="customizedForm-title"
+        styleGlobal={"customizedForm-title"}
         styleCn="cn-font__noto_bold"
         valueEn="Plan your holiday by 5 Simple Filters"
         valueCn="开始规划您的假期"
@@ -104,7 +104,7 @@ const CustomizedPlan = () => {
                 <hr className="customizedForm-titleHr" />
                 <LanguageConverter
                   tag="h3"
-                  style="customizedForm-title__inside"
+                  styleGlobal="customizedForm-title__inside"
                   styleCn="cn-font__noto_bold"
                   valueEn="Requirement"
                   valueCn="需求"
@@ -113,14 +113,14 @@ const CustomizedPlan = () => {
               </div>
               <div className="customizedForm-formBox">
                 {/**Number of People */}
-                <label className="customizedForm-formBox__label">
+                <div className="customizedForm-formBox__label">
                   <LanguageConverter
                     tag="h4"
                     styleCn="cn-font__noto_light"
                     valueEn="Number of people"
                     valueCn="人数"
                   />
-                </label>
+                </div>
                 <input
                   className="customizedForm-input"
                   type="number"
@@ -131,16 +131,16 @@ const CustomizedPlan = () => {
                   value={people}
                   onChange={onChange}
                   required
-                ></input>
+                />
                 {/**DateTime of Tickets */}
-                <label className="customizedForm-formBox__label">
+                <div className="customizedForm-formBox__label">
                   <LanguageConverter
                     tag="h4"
                     styleCn="cn-font__noto_light"
                     valueEn="Departure Date"
                     valueCn="出团日期"
                   />
-                </label>
+                </div>
                 <input
                   className="customizedForm-input"
                   type="date"
@@ -149,8 +149,8 @@ const CustomizedPlan = () => {
                   value={departureDate}
                   onChange={onChange}
                   required
-                ></input>
-                <label className="customizedForm-containder_formBox__label"></label>
+                />
+                {/*}<label className="customizedForm-containder_formBox__label"></label>
                 {/**CheckBox of Tickets bought */}
                 <div className="customizedForm-checkbox__container">
                   <input
@@ -158,7 +158,7 @@ const CustomizedPlan = () => {
                     value={isChecked}
                     onClick={toggleChecked}
                     id="customizedForm-checkbox"
-                  ></input>
+                  />
                   <label
                     className="customizedForm-checkbox__label"
                     htmlFor="customizedForm-checkbox"
@@ -178,14 +178,14 @@ const CustomizedPlan = () => {
                   ></textarea>
                 </div>
                 {/**number of durations days */}
-                <label className="customizedForm-formBox__label">
+                <div className="customizedForm-formBox__label">
                   <LanguageConverter
                     tag="h4"
                     styleCn="cn-font__noto_light"
                     valueEn="Duration (Days)"
                     valueCn="出团行程天数日期"
                   />
-                </label>
+                </div>
                 <input
                   className="customizedForm-input"
                   type="text"
@@ -196,16 +196,16 @@ const CustomizedPlan = () => {
                   onChange={onChange}
                   value={duration}
                   required
-                ></input>
+                />
                 {/**TextArea of Request */}
-                <label className="customizedForm-formBox__label">
+                <div className="customizedForm-formBox__label">
                   <LanguageConverter
                     tag="h4"
                     styleCn="cn-font__noto_light"
                     valueEn="Special Request"
                     valueCn="特殊要求 例如"
                   />
-                </label>
+                </div>
                 <textarea
                   className="customizedForm-input"
                   type="text"
@@ -220,14 +220,14 @@ const CustomizedPlan = () => {
                   }
                 ></textarea>
                 {/**Budget */}
-                <label className="customizedForm-formBox__label">
+                <div className="customizedForm-formBox__label">
                   <LanguageConverter
                     tag="h4"
                     styleCn="cn-font__noto_light"
                     valueEn="Budget"
                     valueCn="預算"
                   />
-                </label>
+                </div>
                 <input
                   className="customizedForm-input"
                   type="text"
@@ -236,7 +236,7 @@ const CustomizedPlan = () => {
                   onChange={onChange}
                   placeholder={state.lenguage === "EN" ? "Budget" : "預算"}
                   required
-                ></input>
+                />
               </div>
             </div>
 
@@ -246,7 +246,7 @@ const CustomizedPlan = () => {
                 <hr className="customizedForm-titleHr" />
                 <LanguageConverter
                   tag="h3"
-                  style="customizedForm-title__inside"
+                  styleGlobal="customizedForm-title__inside"
                   styleCn="cn-font__noto_bold"
                   valueEn="Contact"
                   valueCn="联络"
@@ -255,14 +255,14 @@ const CustomizedPlan = () => {
               </div>
               <div className="customizedForm-formBox">
                 {/**Name */}
-                <label className="customizedForm-formBox__label">
+                <div className="customizedForm-formBox__label">
                   <LanguageConverter
                     tag="h4"
                     styleCn="cn-font__noto_light"
                     valueEn="Name"
                     valueCn="姓名"
                   />
-                </label>
+                </div>
                 <input
                   className="customizedForm-input"
                   type="text"
@@ -271,16 +271,16 @@ const CustomizedPlan = () => {
                   value={name}
                   onChange={onChange}
                   required
-                ></input>
+                />
                 {/**Email */}
-                <label className="customizedForm-formBox__label">
+                <div className="customizedForm-formBox__label">
                   <LanguageConverter
                     tag="h4"
                     styleCn="cn-font__noto_light"
                     valueEn="Email"
                     valueCn="电子信箱"
                   />
-                </label>
+                </div>
                 <input
                   className="customizedForm-input"
                   type="text"
@@ -289,16 +289,16 @@ const CustomizedPlan = () => {
                   onChange={onChange}
                   placeholder={state.lenguage === "EN" ? "Email" : "电子信箱"}
                   required
-                ></input>
+                />
                 {/**Phone */}
-                <label className="customizedForm-formBox__label">
+                <div className="customizedForm-formBox__label">
                   <LanguageConverter
                     tag="h4"
                     styleCn="cn-font__noto_light"
                     valueEn="Phone"
                     valueCn="连络电话"
                   />
-                </label>
+                </div>
                 <input
                   className="customizedForm-input"
                   type="text"
@@ -307,16 +307,16 @@ const CustomizedPlan = () => {
                   onChange={onChange}
                   placeholder={state.lenguage === "EN" ? "Phone" : "连络电话"}
                   required
-                ></input>
+                />
                 {/**Other */}
-                <label className="customizedForm-formBox__label">
+                <div className="customizedForm-formBox__label">
                   <LanguageConverter
                     tag="h4"
                     styleCn="cn-font__noto_light"
                     valueEn="Other"
                     valueCn="其他"
                   />
-                </label>
+                </div>
                 <textarea
                   className="customizedForm-input"
                   type="text"

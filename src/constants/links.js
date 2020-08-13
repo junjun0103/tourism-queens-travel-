@@ -1,5 +1,4 @@
 import React, { useContext } from "react"
-import { Link } from "gatsby"
 import TransitionLink from "gatsby-plugin-transition-link"
 import {
   GlobalDispatchContext,
@@ -159,7 +158,7 @@ export default ({ styleClass }) => {
           className="custom-select"
           name="lenguage"
           id="lenguage"
-          onChange={_handleChange}
+          onBlur={_handleChange}
         >
           <option value="null">Language</option>
           <option value="EN">English</option>

@@ -4,7 +4,7 @@ export const GlobalStateContext = React.createContext()
 export const GlobalDispatchContext = React.createContext()
 
 const initialState = {
-  lenguage: "EN",
+  lenguage: "CN",
 }
 
 function reducer(state, action) {

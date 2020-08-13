@@ -32,7 +32,7 @@ const TourPlans = ({ plans, countPlans }) => {
           <div className="themeTour-plan__container" key={i}>
             <h3 className="themeTour-plan__days">day{i + 1}</h3>
             <div className="themeTour-plan__lineAndDot">
-              <button className="themeTour-plan__dot"></button>
+              {/*}<button className="themeTour-plan__dot"></button>
               {/* if the plan is the last item,the line wont show up. */}
               <div
                 className={`${

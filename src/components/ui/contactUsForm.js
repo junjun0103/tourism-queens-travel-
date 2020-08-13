@@ -82,14 +82,14 @@ const ContactUsForm = () => {
         <div className="contactForm-outside">
           <div className="contactForm-inside">
             <form className="contact-form" onSubmit={formSubmit}>
-              <label className="contact-form__label">
+              <div className="contact-form__label">
                 <LanguageConverter
                   tag="h4"
                   valueEn="First Name"
                   valueCn="名字"
                   styleCn="cn-font__noto_light"
-                ></LanguageConverter>
-              </label>
+                />
+              </div>
               <input
                 name="fname"
                 type="text"
@@ -98,15 +98,15 @@ const ContactUsForm = () => {
                 placeholder={state.lenguage === "EN" ? "first name" : "名字"}
                 className="contact-form__input contact-form__control"
                 required
-              ></input>
-              <label className="contact-form__label">
+              />
+              <div className="contact-form__label">
                 <LanguageConverter
                   tag="h4"
                   valueEn="Surname"
                   valueCn="姓氏"
                   styleCn="cn-font__noto_light"
-                ></LanguageConverter>
-              </label>
+                />
+              </div>
               <input
                 name="sname"
                 type="text"
@@ -115,15 +115,15 @@ const ContactUsForm = () => {
                 placeholder={state.lenguage === "EN" ? "surname" : "姓氏"}
                 className="contact-form__input contact-form__control"
                 required
-              ></input>
-              <label className="contact-form__label">
+              />
+              <div className="contact-form__label">
                 <LanguageConverter
                   tag="h4"
                   valueEn="Email"
                   valueCn="联系邮件"
                   styleCn="cn-font__noto_light"
-                ></LanguageConverter>
-              </label>
+                />
+              </div>
               <input
                 name="email"
                 type="email"
@@ -132,15 +132,15 @@ const ContactUsForm = () => {
                 placeholder={state.lenguage === "EN" ? "email" : "联系邮件"}
                 className="contact-form__input contact-form__control"
                 required
-              ></input>
-              <label className="contact-form__label">
+              />
+              <div className="contact-form__label">
                 <LanguageConverter
                   tag="h4"
                   valueEn="Contact"
                   valueCn="连络电话"
                   styleCn="cn-font__noto_light"
-                ></LanguageConverter>
-              </label>
+                />
+              </div>
               <input
                 name="contact"
                 type="number"
@@ -151,15 +151,15 @@ const ContactUsForm = () => {
                 }
                 className="contact-form__input contact-form__control"
                 required
-              ></input>
-              <label className="contact-form__label">
+              />
+              <div className="contact-form__label">
                 <LanguageConverter
                   tag="h4"
                   valueEn="Message"
                   valueCn="留言"
                   styleCn="cn-font__noto_light"
-                ></LanguageConverter>
-              </label>
+                />
+              </div>
               <textarea
                 name="message"
                 type="text"
@@ -170,7 +170,7 @@ const ContactUsForm = () => {
                 className="contact-form__textarea contact-form__control"
                 required
               ></textarea>
-              <label className="contact-form__label__generator">
+              <div className="contact-form__label__generator">
                 <h4
                   className={`${
                     state.lenguage === "CN" ? "cn-font__noto_light" : ""
@@ -181,7 +181,7 @@ const ContactUsForm = () => {
                     : "请输入验证码: "}
                   {Math.floor(Math.random() * 9999) + 1000}
                 </h4>
-              </label>
+              </div>
               <input
                 name="rnumber"
                 type="text"
@@ -190,7 +190,7 @@ const ContactUsForm = () => {
                 }
                 className="contact-form__input contact-form__control"
                 required
-              ></input>
+              />
               <button
                 className={`contact-form__btn btn ${
                   state.lenguage === "CN" ? "cn-font__noto_medium" : ""

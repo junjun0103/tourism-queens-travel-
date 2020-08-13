@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react"
+import React, { useContext } from "react"
 import Layaout from "../ui/layout"
 import { graphql } from "gatsby"
 import { GlobalStateContext } from "../../context/GlobalContextProvider"

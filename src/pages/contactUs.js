@@ -6,7 +6,7 @@ import Title from "../components/ui/title"
 import LanguageConverter from "../components/ui/languageConverter"
 
 import { Map, TileLayer, Marker, Popup } from "react-leaflet"
-import L from "leaflet"
+
 
 const DEFAULT_LAN = 174.7364
 const DEFAULT_LAT = -36.8102
@@ -42,42 +42,42 @@ const ContactUs = () => {
                 valueEn="Contact :"
                 valueCn="联系电话 :"
                 styleCn="cn-font__noto_light"
-              ></LanguageConverter>
+              />
               <h4>+64 9 4800 118</h4>
               <LanguageConverter
                 tag="h4"
                 valueEn="Fax :"
                 valueCn="联系传真 :"
                 styleCn="cn-font__noto_light"
-              ></LanguageConverter>
+              />
               <h4>+64 9 4800 228</h4>
               <LanguageConverter
                 tag="h4"
                 valueEn="Email :"
                 valueCn="联系邮件 :"
                 styleCn="cn-font__noto_light"
-              ></LanguageConverter>
+              />
               <h4>inbound@queenstravel.com</h4>
               <LanguageConverter
                 tag="h4"
                 valueEn="QQ :"
                 valueCn="联系QQ :"
                 styleCn="cn-font__noto_light"
-              ></LanguageConverter>
+              />
               <h4>2725799562</h4>
               <LanguageConverter
                 tag="h4"
                 valueEn="WeChat :"
                 valueCn="联系微信 :"
                 styleCn="cn-font__noto_light"
-              ></LanguageConverter>
+              />
               <h4>Queens-NZ</h4>
               <LanguageConverter
                 tag="h4"
                 valueEn="Address :"
                 valueCn="联系地址 :"
                 styleCn="cn-font__noto_light"
-              ></LanguageConverter>
+              />
               <h4>129A Onewa Road, Northcote, Auckland 0627, New Zealand</h4>
             </div>
             <div className="contactUs-map">
@@ -89,7 +89,7 @@ const ContactUs = () => {
                 <TileLayer
                   attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                   url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                ></TileLayer>
+                />
 
                 <Marker
                   position={[DEFAULT_LAT, DEFAULT_LAN]}

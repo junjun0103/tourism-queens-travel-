@@ -16,13 +16,13 @@ const ListTour = () => {
         subTitle={true}
         titleEn="Chinese & English Guides are available for the below tours"
         titleCn="以下行程为中文或英语导游带团"
-      ></Title>
+      />
       <Title
         subTitle={true}
-        style="subtitle-style__noMT"
+        styleGlobal="subtitle-style__noMT"
         titleEn="For more information, please see the itinerary details"
         titleCn="详情请查看各行程细节"
-      ></Title>
+      />
       <div className="preview-center">
         {/**Map for the datas */}
         {tours.map(tour => (
