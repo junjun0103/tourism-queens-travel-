@@ -59,7 +59,7 @@ const Item = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: rgba(90, 93, 102, 0.7);
+    background-color: rgba(90, 93, 102, 1);
     opacity: 0.7;
     position: absolute;
     transition: all 0.5s ease-in-out;
