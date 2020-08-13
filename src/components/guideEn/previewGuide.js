@@ -35,12 +35,12 @@ const PreviewGuide = ({ guide, language }) => {
             </h3>
           </div>
           {/* guide profile */}
-          <div
-            className={`richText-template ${
-              language === "CN" ? "cn-font__noto_light" : ""
-            }`}
-          >
-            <article className="richText-content text-align-justify">
+          <div className="richText-template">
+            <article
+              className={`richText-content text-align-justify ${
+                language === "CN" ? "cn-font__noto_sans_light" : ""
+              }`}
+            >
               <ReactMarkdown source={guide.profile}></ReactMarkdown>
             </article>
           </div>

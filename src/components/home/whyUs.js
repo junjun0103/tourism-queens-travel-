@@ -28,7 +28,7 @@ const WhyUs = () => {
             <LanguageConverter
               tag="h4"
               style="clr-white text-shadow-grery text-align-center"
-              styleCn="cn-font__noto_light"
+              styleCn="cn-font__noto_sans_light"
               valueEn="Over 17 years experiences with own operating system"
               valueCn="群星专注于新西兰本土旅游,十七年积累和研发出群星特有的旅游行程以及预定操作系统"
             />
@@ -46,7 +46,7 @@ const WhyUs = () => {
             <LanguageConverter
               tag="h4"
               style="clr-white text-shadow-grery text-align-center"
-              styleCn="cn-font__noto_light"
+              styleCn="cn-font__noto_sans_light"
               valueEn="Fund of knowledge with our professional team"
               valueCn="群星有着丰富的本地知识, 及专业的操作团队"
             />
@@ -64,7 +64,7 @@ const WhyUs = () => {
             <LanguageConverter
               tag="h4"
               style="clr-white text-shadow-grery text-align-center"
-              styleCn="cn-font__noto_light"
+              styleCn="cn-font__noto_sans_light"
               valueEn="We believe only passion can lead you to success"
               valueCn="群星的团队都是跟您一样热爱旅游, 群星始终相信只有热爱旅游才可以做好旅游"
             />
@@ -82,7 +82,7 @@ const WhyUs = () => {
             <LanguageConverter
               tag="h4"
               style="clr-white text-shadow-grery text-align-center"
-              styleCn="cn-font__noto_light"
+              styleCn="cn-font__noto_sans_light"
               valueEn="We see 'TRAVEL' in different way"
               valueCn="群星不光有着独特的旅游行程, 最重要的是群星对于 '旅行' 本身, 有着独特理解与认识"
             />
@@ -100,7 +100,7 @@ const WhyUs = () => {
             <LanguageConverter
               tag="h4"
               style="clr-white text-shadow-grery text-align-center"
-              styleCn="cn-font__noto_light"
+              styleCn="cn-font__noto_sans_light"
               valueEn="Fulfill the meaning and fun of travel"
               valueCn="群星纯粹于旅游, 让您可以感受到旅游真正的意义及乐趣"
             />
@@ -118,7 +118,7 @@ const WhyUs = () => {
             <LanguageConverter
               tag="h4"
               style="clr-white text-shadow-grery text-align-center"
-              styleCn="cn-font__noto_light"
+              styleCn="cn-font__noto_sans_light"
               valueEn="Anxiety free with our perfect service"
               valueCn="群星拥有完善的服务系统, 让您在旅行的过程中能够高枕无忧"
             />

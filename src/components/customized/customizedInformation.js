@@ -15,7 +15,7 @@ const CustomizedInformation = () => {
           <br />
           <h4
             className={`text-align-justify ${
-              state.lenguage === "CN" ? "cn-font__noto_light" : ""
+              state.lenguage === "CN" ? "cn-font__noto_sans_light" : ""
             }`}
           >
             {state.lenguage === "EN"
@@ -34,7 +34,7 @@ const CustomizedInformation = () => {
           <br />
           <h4
             className={`text-align-justify ${
-              state.lenguage === "CN" ? "cn-font__noto_light" : ""
+              state.lenguage === "CN" ? "cn-font__noto_sans_light" : ""
             }`}
           >
             {state.lenguage === "EN"

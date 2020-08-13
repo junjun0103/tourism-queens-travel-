@@ -32,15 +32,13 @@ const TourInformation = ({
           </div>
         </div>
         <div className="themeTour-notice__content ">
-          <div
-            className={`${
-              state.lenguage === "CN" ? "cn-font__noto_light" : ""
+          <article
+            className={`richText-content text-align-justify ${
+              state.lenguage === "CN" ? "cn-font__noto_sans_light" : ""
             }`}
           >
-            <article className="richText-content text-align-justify">
-              <ReactMarkdown source={priceDetails}></ReactMarkdown>
-            </article>
-          </div>
+            <ReactMarkdown source={priceDetails}></ReactMarkdown>
+          </article>
         </div>
       </div>
       <div className="themeTour-notice__included__box">
@@ -61,15 +59,13 @@ const TourInformation = ({
           </div>
         </div>
         <div className="themeTour-notice__content">
-          <div
-            className={`${
-              state.lenguage === "CN" ? "cn-font__noto_light" : ""
+          <article
+            className={`richText-content text-align-justify ${
+              state.lenguage === "CN" ? "cn-font__noto_sans_light" : ""
             }`}
           >
-            <article className="richText-content text-align-justify">
-              <ReactMarkdown source={included}></ReactMarkdown>
-            </article>
-          </div>
+            <ReactMarkdown source={included}></ReactMarkdown>
+          </article>
         </div>
       </div>
       <div className="themeTour-notice__excluded__box">
@@ -90,15 +86,13 @@ const TourInformation = ({
           </div>
         </div>
         <div className="themeTour-notice__content">
-          <div
-            className={`${
-              state.lenguage === "CN" ? "cn-font__noto_light" : ""
+          <article
+            className={`richText-content text-align-justify ${
+              state.lenguage === "CN" ? "cn-font__noto_sans_light" : ""
             }`}
           >
-            <article className="richText-content text-align-justify">
-              <ReactMarkdown source={excluded}></ReactMarkdown>
-            </article>
-          </div>
+            <ReactMarkdown source={excluded}></ReactMarkdown>
+          </article>
         </div>
       </div>
       <div className="themeTour-notice__important__box">
@@ -119,15 +113,13 @@ const TourInformation = ({
           </div>
         </div>
         <div className="themeTour-notice__content">
-          <div
-            className={`${
-              state.lenguage === "CN" ? "cn-font__noto_light" : ""
+          <article
+            className={`richText-content text-align-justify ${
+              state.lenguage === "CN" ? "cn-font__noto_sans_light" : ""
             }`}
           >
-            <article className="richText-content text-align-justify">
-              <ReactMarkdown source={notice}></ReactMarkdown>
-            </article>
-          </div>
+            <ReactMarkdown source={notice}></ReactMarkdown>
+          </article>
         </div>
       </div>
       <div className="themeTour-notice__policy__box">
@@ -148,15 +140,13 @@ const TourInformation = ({
           </div>
         </div>
         <div className="themeTour-notice__content">
-          <div
-            className={`${
-              state.lenguage === "CN" ? "cn-font__noto_light" : ""
+          <article
+            className={`richText-content text-align-justify ${
+              state.lenguage === "CN" ? "cn-font__noto_sans_light" : ""
             }`}
           >
-            <article className="richText-content text-align-justify">
-              <ReactMarkdown source={policy}></ReactMarkdown>
-            </article>
-          </div>
+            <ReactMarkdown source={policy}></ReactMarkdown>
+          </article>
         </div>
       </div>
     </article>

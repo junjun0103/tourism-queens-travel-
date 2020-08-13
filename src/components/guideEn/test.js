@@ -85,7 +85,7 @@ const OneFeedBack = ({
                   </h3>
                   <div
                     className={`richText-template ${
-                      state.lenguage === "CN" ? "cn-font__noto_medium" : ""
+                      state.lenguage === "CN" ? "cn-font__noto_sans_light" : ""
                     }`}
                   >
                     <article className="richText-content text-align-justify">
@@ -104,7 +104,7 @@ const OneFeedBack = ({
               ></LanguageConverter>
               <div
                 className={`richText-template tourInfo-one__content ${
-                  state.lenguage === "CN" ? "cn-font__noto_medium" : ""
+                  state.lenguage === "CN" ? "cn-font__noto_sans_light" : ""
                 }`}
               >
                 <article className="richText-content text-align-justify">

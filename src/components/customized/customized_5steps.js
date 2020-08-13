@@ -47,7 +47,7 @@ const Customized_5steps = () => {
             <h3>1</h3>
             <h4
               className={`break-word ${
-                state.lenguage === "CN" ? "cn-font__noto_light" : ""
+                state.lenguage === "CN" ? "cn-font__noto_sans_light" : ""
               }`}
             >
               {state.lenguage === "EN"
@@ -64,7 +64,7 @@ const Customized_5steps = () => {
             <h3>2</h3>
             <h4
               className={`break-word ${
-                state.lenguage === "CN" ? "cn-font__noto_light" : ""
+                state.lenguage === "CN" ? "cn-font__noto_sans_light" : ""
               }`}
             >
               {state.lenguage === "EN"
@@ -81,7 +81,7 @@ const Customized_5steps = () => {
             <h3>3</h3>
             <h4
               className={`break-word ${
-                state.lenguage === "CN" ? "cn-font__noto_light" : ""
+                state.lenguage === "CN" ? "cn-font__noto_sans_light" : ""
               }`}
             >
               {state.lenguage === "EN" ? "•Confirm Itinerary " : "确认行程,"}
@@ -106,7 +106,7 @@ const Customized_5steps = () => {
             <h3>4</h3>
             <h4
               className={`break-word ${
-                state.lenguage === "CN" ? "cn-font__noto_light" : ""
+                state.lenguage === "CN" ? "cn-font__noto_sans_light" : ""
               }`}
             >
               {state.lenguage === "EN"
@@ -127,7 +127,7 @@ const Customized_5steps = () => {
             <h3>5</h3>
             <h4
               className={`break-word ${
-                state.lenguage === "CN" ? "cn-font__noto_light" : ""
+                state.lenguage === "CN" ? "cn-font__noto_sans_light" : ""
               }`}
             >
               {state.lenguage === "EN"

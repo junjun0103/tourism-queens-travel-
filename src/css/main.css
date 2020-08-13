@@ -267,6 +267,11 @@ p {
 
 .cn-font__noto_sans_medium {
   font-family: var(--ff-primary2-cn);
+  font-weight: 500;
+}
+.cn-font__noto_sans_light {
+  font-family: var(--ff-primary2-cn);
+  font-weight: 300;
 }
 .cn-font__noto_bold,
 .cn-font__noto_medium,

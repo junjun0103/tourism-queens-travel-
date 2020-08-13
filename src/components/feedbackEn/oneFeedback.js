@@ -101,7 +101,7 @@ const OneFeedBack = ({
               </h3>
               <p
                 className={`review-contents_content ${
-                  state.lenguage === "CN" ? "cn-font__noto_medium" : ""
+                  state.lenguage === "CN" ? "cn-font__noto_sans_light" : ""
                 }`}
               >
                 {content}

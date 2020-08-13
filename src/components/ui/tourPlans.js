@@ -67,22 +67,22 @@ const TourPlans = ({ plans, countPlans }) => {
                   openManager[plan.id] ? "themeTour-plan__box" : "inactive"
                 }`}
               >
-                <div
-                  className={`richText-template themeTour-plan__stayAndMeals ${
-                    state.lenguage === "CN" ? "cn-font__noto_light" : ""
-                  }`}
-                >
-                  <article className="richText-content text-align-justify">
+                <div className="richText-template themeTour-plan__itinerary">
+                  <article
+                    className={`richText-content text-align-justify ${
+                      state.lenguage === "CN" ? "cn-font__noto_sans_light" : ""
+                    }`}
+                  >
                     <ReactMarkdown source={plan.stayAndMeals}></ReactMarkdown>
                   </article>
                 </div>
 
-                <div
-                  className={`richText-template themeTour-plan__itinerary ${
-                    state.lenguage === "CN" ? "cn-font__noto_light" : ""
-                  }`}
-                >
-                  <article className="richText-content text-align-justify">
+                <div className="richText-template themeTour-plan__itinerary">
+                  <article
+                    className={`richText-content text-align-justify ${
+                      state.lenguage === "CN" ? "cn-font__noto_sans_light" : ""
+                    }`}
+                  >
                     <ReactMarkdown source={plan.itinerary}></ReactMarkdown>
                   </article>
                 </div>
