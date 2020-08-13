@@ -211,8 +211,8 @@ Theme tour
 }
 @media screen and (max-width: 450px) {
   .themeTour-plan__route__box {
-    padding-left: 0rem;
-    padding-right: 0rem;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
   }
 }
 .themeTour-plan__routeAndIcon {
