@@ -40,7 +40,7 @@ const PreviewFeedback = ({ feedback }) => {
   return (
     <>
       <Link to={"/reviews/" + slug}>
-        <div className="preview-container_review">
+        <div className="preview-container_review preview-container_review_boxShadow">
           <img
             src={photo.sharp.fluid.src}
             alt="img"

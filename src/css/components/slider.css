@@ -17,6 +17,10 @@ Slider
   margin: 0.5rem;
 }
 
+.preview-container_themeTour__slider__boxShadow {
+  box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.15);
+}
+
 .preview-date {
   margin-left: 4rem;
   font-weight: 300;

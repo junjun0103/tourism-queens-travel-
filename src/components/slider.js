@@ -47,7 +47,7 @@ const Slider = ({ contents, titleEn, titleCn, subTitleEn, subTitleCn }) => {
 
           //Carrousel for reviews
           return (
-            <div className="preview-container_review slider-height">
+            <div className="preview-container_review slider-height preview-container_themeTour__slider__boxShadow">
               <img
                 src={content.photo.sharp.fluid.src}
                 alt="img"
@@ -65,7 +65,13 @@ const Slider = ({ contents, titleEn, titleCn, subTitleEn, subTitleCn }) => {
               >
                 {contentName}
               </h4>
-              <h4 className="preview-shortDescription">{contentShortDesc}</h4>
+              <h4
+                className={`preview-shortDescription ${
+                  state.lenguage === "CN" ? "cn-font__noto_light" : ""
+                }`}
+              >
+                {contentShortDesc}
+              </h4>
 
               <Link className="preview-price" to={"/reviews/" + content.slug}>
                 <h5>
