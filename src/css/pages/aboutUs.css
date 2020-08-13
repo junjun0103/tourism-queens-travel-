@@ -15,7 +15,7 @@ About US
 .aboutUs-logo {
   justify-self: center;
   align-self: center;
-  width: 100%;
+  width: 90%;
 }
 @media screen and (max-width: 900px) {
   .aboutUs-container {
