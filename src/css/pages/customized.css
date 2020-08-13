@@ -11,7 +11,6 @@ Cusomaized tour
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-column-gap: 4rem;
-  align-items: center;
 }
 .custimized-introduction__imgWithText {
   max-width: 35rem;
@@ -120,7 +119,6 @@ Cusomaized tour
 }
 @media screen and (max-width: 610px) {
   .custimizedProcess-steps__text {
-    width: 95%;
     max-width: 15rem;
     margin-bottom: 1rem;
   }

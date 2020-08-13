@@ -3,6 +3,7 @@ import Image from "gatsby-image"
 import styled from "@emotion/styled"
 import { FaMapMarkerAlt, FaPlus } from "react-icons/fa"
 import { GlobalStateContext } from "../../context/GlobalContextProvider"
+import ReactMarkdown from "react-markdown"
 
 const Img = styled(Image)`
   width: 200px;
@@ -46,7 +47,9 @@ const TourPlans = ({ plans, countPlans }) => {
                     <FaMapMarkerAlt className="themeTour-plan__icon" />
                     <h4
                       className={`themeTour-plan__route ${
-                        state.lenguage === "CN" ? "cn-font__noto_medium" : ""
+                        state.lenguage === "CN"
+                          ? "cn-font__noto_medium cn_h4"
+                          : ""
                       }`}
                     >
                       {plan.route}
@@ -64,25 +67,25 @@ const TourPlans = ({ plans, countPlans }) => {
                   openManager[plan.id] ? "themeTour-plan__box" : "inactive"
                 }`}
               >
-                <div className="themeTour-plan__stayAndMeals text-align-justify">
-                  <h4
-                    className={`themeTour-plan__route ${
-                      state.lenguage === "CN" ? "cn-font__noto_light" : ""
-                    }`}
-                  >
-                    {plan.stayAndMeals}
-                  </h4>
-                </div>
-                <div className="themeTour-plan__itinerary text-align-justify">
-                  <h4
-                    className={`themeTour-plan__route ${
-                      state.lenguage === "CN" ? "cn-font__noto_light" : ""
-                    }`}
-                  >
-                    {plan.itinerary}
-                  </h4>
+                <div
+                  className={`richText-template themeTour-plan__stayAndMeals ${
+                    state.lenguage === "CN" ? "cn-font__noto_light" : ""
+                  }`}
+                >
+                  <article className="richText-content text-align-justify">
+                    <ReactMarkdown source={plan.stayAndMeals}></ReactMarkdown>
+                  </article>
                 </div>
 
+                <div
+                  className={`richText-template themeTour-plan__itinerary ${
+                    state.lenguage === "CN" ? "cn-font__noto_light" : ""
+                  }`}
+                >
+                  <article className="richText-content text-align-justify">
+                    <ReactMarkdown source={plan.itinerary}></ReactMarkdown>
+                  </article>
+                </div>
                 <Img
                   fluid={plan.photo1.sharp.fluid}
                   alt="photo1"

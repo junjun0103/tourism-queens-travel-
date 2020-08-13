@@ -1,5 +1,7 @@
-import React from "react"
+import React, { useContext } from "react"
 import LanguageConverter from "../ui/languageConverter"
+import { GlobalStateContext } from "../../context/GlobalContextProvider"
+import ReactMarkdown from "react-markdown"
 
 const TourInformation = ({
   priceDetails,
@@ -8,6 +10,8 @@ const TourInformation = ({
   notice,
   policy,
 }) => {
+  //language state
+  const state = useContext(GlobalStateContext) || { lenguage: "EN" }
   return (
     <article className="themeTour-notice__article">
       <div className="themeTour-notice__price__box">
@@ -28,7 +32,15 @@ const TourInformation = ({
           </div>
         </div>
         <div className="themeTour-notice__content ">
-          <h4>{priceDetails}</h4>
+          <div
+            className={`${
+              state.lenguage === "CN" ? "cn-font__noto_light" : ""
+            }`}
+          >
+            <article className="richText-content text-align-justify">
+              <ReactMarkdown source={priceDetails}></ReactMarkdown>
+            </article>
+          </div>
         </div>
       </div>
       <div className="themeTour-notice__included__box">
@@ -49,7 +61,15 @@ const TourInformation = ({
           </div>
         </div>
         <div className="themeTour-notice__content">
-          <h4>{included}</h4>
+          <div
+            className={`${
+              state.lenguage === "CN" ? "cn-font__noto_light" : ""
+            }`}
+          >
+            <article className="richText-content text-align-justify">
+              <ReactMarkdown source={included}></ReactMarkdown>
+            </article>
+          </div>
         </div>
       </div>
       <div className="themeTour-notice__excluded__box">
@@ -70,7 +90,15 @@ const TourInformation = ({
           </div>
         </div>
         <div className="themeTour-notice__content">
-          <h4>{excluded}</h4>
+          <div
+            className={`${
+              state.lenguage === "CN" ? "cn-font__noto_light" : ""
+            }`}
+          >
+            <article className="richText-content text-align-justify">
+              <ReactMarkdown source={excluded}></ReactMarkdown>
+            </article>
+          </div>
         </div>
       </div>
       <div className="themeTour-notice__important__box">
@@ -91,7 +119,15 @@ const TourInformation = ({
           </div>
         </div>
         <div className="themeTour-notice__content">
-          <h4>{notice}</h4>
+          <div
+            className={`${
+              state.lenguage === "CN" ? "cn-font__noto_light" : ""
+            }`}
+          >
+            <article className="richText-content text-align-justify">
+              <ReactMarkdown source={notice}></ReactMarkdown>
+            </article>
+          </div>
         </div>
       </div>
       <div className="themeTour-notice__policy__box">
@@ -112,7 +148,15 @@ const TourInformation = ({
           </div>
         </div>
         <div className="themeTour-notice__content">
-          <h4>{policy}</h4>
+          <div
+            className={`${
+              state.lenguage === "CN" ? "cn-font__noto_light" : ""
+            }`}
+          >
+            <article className="richText-content text-align-justify">
+              <ReactMarkdown source={policy}></ReactMarkdown>
+            </article>
+          </div>
         </div>
       </div>
     </article>

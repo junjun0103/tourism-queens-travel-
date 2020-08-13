@@ -40,8 +40,8 @@ const CustomizeTour = () => {
         <div className="main-btn__customized">
           <Link
             to={"/customized/"}
-            className={`btn btn-center ${
-              state.lenguage === "CN" ? "cn-font__noto_medium" : ""
+            className={`btn btn-center cn_h4 ${
+              state.lenguage === "CN" ? "cn-font__noto_medium " : ""
             }`}
           >
             {state.lenguage === "EN"

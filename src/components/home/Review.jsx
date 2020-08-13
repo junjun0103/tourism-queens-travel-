@@ -132,7 +132,9 @@ const ThemeTour = ({
             </h3>
             <h4
               className={`subtitle ${
-                state.lenguage === "CN" ? "cn-font__noto_medium" : ""
+                state.lenguage === "CN"
+                  ? "cn-font__noto_sans_medium"
+                  : "en-font__overpass_bold"
               }`}
             >
               {name}
@@ -144,7 +146,15 @@ const ThemeTour = ({
             >
               {shortDescription}
             </h5>
-            <h4 className="contentDate">{date}</h4>
+            <h4
+              className={`contentDate ${
+                state.lenguage === "CN"
+                  ? "cn-font__noto_sans_medium"
+                  : "en-font__overpass_bold"
+              }`}
+            >
+              {date}
+            </h4>
           </Link>
         </ImageBackground>
       </Item>

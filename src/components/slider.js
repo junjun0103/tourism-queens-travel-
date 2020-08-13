@@ -55,13 +55,30 @@ const Slider = ({ contents, titleEn, titleCn, subTitleEn, subTitleCn }) => {
               ></img>
 
               <h4 className="preview-departureDay">{contentTitle}</h4>
-              <h4 className="preview-subtitle">{contentName}</h4>
+
+              <h4
+                className={`preview-subtitle ${
+                  state.lenguage === "CN"
+                    ? "cn-font__noto_sans_medium"
+                    : "en-font__overpass_bold"
+                }`}
+              >
+                {contentName}
+              </h4>
               <h4 className="preview-shortDescription">{contentShortDesc}</h4>
 
               <Link className="preview-price" to={"/reviews/" + content.slug}>
                 <h5>
                   {state.lenguage === "EN" ? "Read More" : "更多"}
-                  <span className="preview-date">{content.date}</span>
+                  <span
+                    className={`preview-date ${
+                      state.lenguage === "CN"
+                        ? "cn-font__noto_sans_medium"
+                        : "en-font__overpass_bold"
+                    }`}
+                  >
+                    {content.date}
+                  </span>
                 </h5>
               </Link>
             </div>

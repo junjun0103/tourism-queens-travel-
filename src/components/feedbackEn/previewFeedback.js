@@ -48,26 +48,36 @@ const PreviewFeedback = ({ feedback }) => {
           ></img>
           <h4
             className={`preview-departureDay ${
-              state.lenguage === "CN" ? "cn-font__noto_medium" : ""
+              state.lenguage === "CN" ? "cn-font__noto_medium cn_h4" : ""
             }`}
           >
             {title}
           </h4>
           <h4
             className={`preview-subtitle ${
-              state.lenguage === "CN" ? "cn-font__noto_medium" : ""
+              state.lenguage === "CN"
+                ? "cn-font__noto_sans_medium cn_h4"
+                : "en-font__overpass_bold"
             }`}
           >
             {name}
           </h4>
           <h4
             className={`preview-shortDescription word-break-break-all ${
-              state.lenguage === "CN" ? "cn-font__noto_light" : ""
+              state.lenguage === "CN" ? "cn-font__noto_light cn_h4" : ""
             }`}
           >
             {shortDescription}
           </h4>
-          <h4 className="preview-price">{date}</h4>
+          <h4
+            className={`preview-price ${
+              state.lenguage === "CN"
+                ? "cn-font__noto_sans_medium "
+                : "en-font__overpass_bold"
+            }`}
+          >
+            {date}
+          </h4>
         </div>
       </Link>
     </>

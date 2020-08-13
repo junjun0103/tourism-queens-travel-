@@ -77,7 +77,7 @@ Theme tour
   line-height: 1;
   font-size: 6rem;
   color: var(--clr-primary-5);
-  z-index: 3;
+  z-index: 0;
 }
 .themeTour-header__subtitle::after {
   content: "\201D";
@@ -87,7 +87,7 @@ Theme tour
   line-height: 1;
   font-size: 6rem;
   color: var(--clr-primary-5);
-  z-index: 3;
+  z-index: 0;
 }
 .themeTour-header__highlightBox {
   display: grid;
@@ -183,12 +183,13 @@ Theme tour
   border-radius: 50%;
   justify-self: end;
   margin-right: -0.45rem;
-  z-index: 3;
   background-color: black;
   border-color: black;
 }
 .themeTour-plan__line {
+  opacity: 0.3;
   border-left: 2.5px solid var(--clr-primary-2);
+  z-index: 0;
 }
 .themeTour-plan__route__btn {
   width: 100%;
@@ -202,10 +203,23 @@ Theme tour
   padding: 0.15rem 1.5rem;
   align-items: center;
 }
+@media screen and (max-width: 700px) {
+  .themeTour-plan__route__box {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+@media screen and (max-width: 450px) {
+  .themeTour-plan__route__box {
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+}
 .themeTour-plan__routeAndIcon {
   display: flex;
 }
 .themeTour-plan__icon {
+  z-index: 0;
   font-size: 0.9rem;
 }
 .xIcon {
@@ -232,6 +246,12 @@ Theme tour
   background-color: var(--clr-primary-4);
   padding: 1rem;
   border-radius: var(--radius-small);
+}
+@media screen and (max-width: 450px) {
+  .themeTour-plan__stayAndMeals,
+  .themeTour-plan__itinerary {
+    padding: 0.5rem;
+  }
 }
 
 .photo {
@@ -310,11 +330,12 @@ Theme tour
     padding: 0.5rem;
   }
   .themeTour-header__subtitle::before {
-    font-size: 3rem;
-    left: -2.5rem;
+    font-size: 4rem;
+    left: -2rem;
   }
   .themeTour-header__subtitle::after {
-    font-size: 3rem;
+    font-size: 4rem;
+    right: -2rem;
   }
   .themeTour-header__highlightBox__map {
     margin: 0.5rem;
@@ -362,4 +383,66 @@ Theme tour
     margin: 1rem auto;
     grid-gap: 1rem 0;
   }
+}
+/*
+===============
+Blog Template
+===============
+*/
+.richText-template {
+  font-size: 0.97rem;
+  font-family: var(--ff-secondary);
+  line-height: 1.7rem;
+}
+@media screen and (max-width: 800px) {
+  .richText-template {
+    font-size: 0.92rem;
+    line-height: 1.5rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .richText-template {
+    font-size: 0.82rem;
+    line-height: 1.4rem;
+  }
+}
+@media screen and (max-width: 350px) {
+  .richText-template {
+    font-size: 0.8rem;
+    line-height: 1.3rem;
+  }
+}
+.richText-template h1,
+.richText-template h2 {
+  text-align: center;
+}
+.richText-template ul {
+  display: inline-block;
+}
+.richText-template ul li {
+  color: black;
+}
+.richText-template ul li::before {
+  content: "\2022 ";
+}
+
+.richText-template blockquote {
+  background: white;
+  border-radius: var(--radius);
+  padding: 1rem;
+  line-height: 1.5;
+  color: black;
+  margin: 0.5rem 0;
+}
+.richText-template pre {
+  background: #222;
+  color: yellow;
+  overflow-x: scroll;
+  padding: 1rem 1.5rem;
+  border-radius: var(--radius);
+}
+.richText-template img {
+  width: 15rem;
+  height: 15rem;
+  margin: 3rem 0;
 }
