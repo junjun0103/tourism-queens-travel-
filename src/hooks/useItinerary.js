@@ -10,25 +10,14 @@ const UseItinerary = () => {
         nodes {
           slug
           id
-          slug
-          included_cn
-          included_en
-          highlight_cn
-          highlight_en
-          excluded_cn
-          excluded_en
-          policy_cn
-          policy_en
+          included
+          highlight
+          excluded
+          policy
           title_cn
-          title_en
-          slogan_cn
-          slogan_en
-          price_cn
-          price_en
-          priceDetail_cn
-          priceDetail_en
-          departureDay_cn
-          departureDay_en
+          slogan
+          priceDetail
+          departureDay
           background_img {
             sharp: childImageSharp {
               fluid {
@@ -60,24 +49,15 @@ const UseItinerary = () => {
   return result.allStrapiBestSales.nodes.map(itinerary => ({
     id: itinerary.id,
     slug: itinerary.slug,
-    included_cn: itinerary.included_cn,
-    included_en: itinerary.included_en,
-    highlight_cn: itinerary.highlight_cn,
-    highlight_en: itinerary.highlight_en,
-    excluded_cn: itinerary.excluded_cn,
-    excluded_en: itinerary.excluded_en,
-    policy_cn: itinerary.policy_cn,
-    policy_en: itinerary.policy_en,
+    included:itinerary.included,
+    highlight:itinerary.highlight,
+    excluded:itinerary.excluded,
+    policy:itinerary.policy,
     title_cn: itinerary.title_cn,
-    title_en: itinerary.title_en,
-    slogan_cn: itinerary.slogan_cn,
-    slogan_en: itinerary.slogan_en,
-    price_cn: itinerary.price_cn,
-    price_en: itinerary.price_en,
-    priceDetail_cn: itinerary.priceDetail_cn,
-    priceDetail_en: itinerary.priceDetail_en,
-    departureDay_cn: itinerary.departureDay_cn,
-    departureDay_en: itinerary.departureDay_en,
+    slogan:itinerary.slogan,
+    price:itinerary.price,
+    priceDetail:itinerary.priceDetail,
+    departureDay:itinerary.departureDay,
     plans_cn: itinerary.plans_cn,
     background_img: itinerary.background_img,
   }))

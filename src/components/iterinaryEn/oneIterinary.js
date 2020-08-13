@@ -10,19 +10,13 @@ export const query = graphql`
   query($slug: String!) {
     allStrapiBestSales(filter: { slug: { eq: $slug } }) {
       nodes {
-        excluded_cn
-        excluded_en
-        highlight_cn
-        highlight_en
+        excluded
+        highlight
         slug
-        included_cn
-        included_en
-        policy_cn
-        policy_en
-        priceDetail_cn
-        priceDetail_en
-        slogan_cn
-        slogan_en
+        included
+        policy
+        priceDetail
+        slogan
         title_cn
         title_en
         background_img {
@@ -36,26 +30,6 @@ export const query = graphql`
           sharp: childImageSharp {
             fixed {
               ...GatsbyImageSharpFixed
-            }
-          }
-        }
-        plans_en {
-          id
-          route
-          stayAndMeals
-          itinerary
-          photo1 {
-            sharp: childImageSharp {
-              fluid {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
-          photo2 {
-            sharp: childImageSharp {
-              fluid {
-                ...GatsbyImageSharpFluid
-              }
             }
           }
         }
@@ -89,71 +63,30 @@ const OneIterinary = ({
     allStrapiBestSales: { nodes },
   },
 }) => {
-  //restructure
+  //destructuring
   const {
     background_img,
     map,
-    slogan_en,
-    slogan_cn,
-    title_en,
+    slogan,
     title_cn,
-    highlight_cn,
-    highlight_en,
-    plans_en,
+    highlight,
     plans_cn,
-    excluded_en,
-    excluded_cn,
-    included_en,
-    included_cn,
-    policy_en,
-    policy_cn,
-    priceDetail_en,
-    priceDetail_cn,
+    excluded,
+    included,
+    policy,
+    priceDetail
   } = nodes[0]
   const state = useContext(GlobalStateContext) || { lenguage: "EN" }
 
   //declare lenguage variables
-  var countPlans = 0,
-    title = "",
-    slogan = "",
-    highlight = "",
-    plans = [],
-    priceDetails = "",
-    included = "",
-    excluded = "",
-    policy = ""
+  var countPlans = 0
 
   //declare global image variables
   const bgImage = background_img.sharp.fluid,
     mapImage = map.sharp.fixed.src
 
-  if (state.lenguage === "EN") {
-    //main Background Image
-    title = title_en
-    slogan = slogan_en
-    highlight = highlight_en
-    //plans
-    plans = plans_en
-    countPlans = plans_en.length
-    //information
-    priceDetails = priceDetail_en
-    included = included_en
-    excluded = excluded_en
-    policy = policy_en
-  } else {
-    //English main Background Image
-    title = title_cn
-    slogan = slogan_cn
-    highlight = highlight_cn
-    //Chinese plans
-    countPlans = plans_cn.length
-    plans = plans_cn
-    //Chinese information
-    priceDetails = priceDetail_cn
-    included = included_cn
-    excluded = excluded_cn
-    policy = policy_cn
-  }
+   var title = title_cn,
+    plans = plans_cn;
 
   return (
     <Layaout>
@@ -174,7 +107,7 @@ const OneIterinary = ({
 
         {/**Plans Information */}
         <TourInformation
-          priceDetails={priceDetails}
+          priceDetails={priceDetail}
           included={included}
           excluded={excluded}
           policy={policy}
