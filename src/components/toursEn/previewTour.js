@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 
 const PreviewTour = ({ tour }) => {
   // language state
-  const state = useContext(GlobalStateContext) || { lenguage: "EN" }
+  const state = useContext(GlobalStateContext) || { lenguage: "CN" }
 
   const {
     slug,

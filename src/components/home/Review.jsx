@@ -88,7 +88,7 @@ const ThemeTour = ({
   idx,
 }) => {
   // language state
-  const state = useContext(GlobalStateContext) || { lenguage: "EN" }
+  const state = useContext(GlobalStateContext) || { lenguage: "CN" }
   //declare lenguage variables
   let title = "",
     name = "",

@@ -5,7 +5,7 @@ import Title from "../ui/title"
 import { GlobalStateContext } from "../../context/GlobalContextProvider"
 const ListIterinary = () => {
   // language state
-  const state = useContext(GlobalStateContext) || { lenguage: "EN" }
+  const state = useContext(GlobalStateContext) || { lenguage: "CN" }
 
   //bring data from hook
   const result = UseItinerary()

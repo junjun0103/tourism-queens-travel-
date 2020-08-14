@@ -135,7 +135,7 @@ const tempLinksCn = dataCN.map(link => {
 
 export default ({ styleClass }) => {
   const dispatch = useContext(GlobalDispatchContext)
-  const state = useContext(GlobalStateContext) || { lenguage: "EN" }
+  const state = useContext(GlobalStateContext) || { lenguage: "N" }
 
   const _handleChange = event => {
     console.log(event.target.value)
@@ -158,7 +158,7 @@ export default ({ styleClass }) => {
           className="custom-select"
           name="lenguage"
           id="lenguage"
-          onBlur={_handleChange}
+          onChange={_handleChange}
         >
           <option value="null">Language</option>
           <option value="EN">English</option>

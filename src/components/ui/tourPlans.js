@@ -17,7 +17,7 @@ const Img = styled(Image)`
 
 const TourPlans = ({ plans, countPlans }) => {
   //language state
-  const state = useContext(GlobalStateContext) || { lenguage: "EN" }
+  const state = useContext(GlobalStateContext) || { lenguage: "CN" }
 
   //state for open the plan
   const [openManager, setOpenManager] = useState(false)

@@ -20,7 +20,7 @@ const query = graphql`
 
 const ContactUsForm = () => {
   // language status
-  const state = useContext(GlobalStateContext) || { lenguage: "EN" }
+  const state = useContext(GlobalStateContext) || { lenguage: "CN" }
 
   const [user, setUser] = useState({
     fname: "",

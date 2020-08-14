@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import { GlobalStateContext } from "../../context/GlobalContextProvider"
 
 const PreviewFeedback = ({ feedback }) => {
-  const state = useContext(GlobalStateContext) || { lenguage: "EN" }
+  const state = useContext(GlobalStateContext) || { lenguage: "CN" }
 
   const {
     slug,

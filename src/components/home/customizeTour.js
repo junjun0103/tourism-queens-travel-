@@ -5,7 +5,7 @@ import { GlobalStateContext } from "../../context/GlobalContextProvider"
 import Title from "../ui/title"
 
 const CustomizeTour = () => {
-  const state = useContext(GlobalStateContext) || { lenguage: "EN" }
+  const state = useContext(GlobalStateContext) || { lenguage: "CN" }
   return (
     <>
       {/**Customize tour of Home */}

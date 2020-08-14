@@ -5,7 +5,7 @@ import { Link } from "gatsby"
 import logo from "../../images/logo_bottom.png"
 
 const AboutUs = () => {
-  const state = useContext(GlobalStateContext) || { lenguage: "EN" }
+  const state = useContext(GlobalStateContext) || { lenguage: "CN" }
   return (
     <article className="main-aboutUs__containder">
       <div className="main-aboutUs__box">

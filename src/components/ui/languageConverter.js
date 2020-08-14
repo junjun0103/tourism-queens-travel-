@@ -2,9 +2,9 @@ import React, { useContext } from "react"
 import { GlobalStateContext } from "../../context/GlobalContextProvider"
 
 // tag : h3 or h4
-// valueEn/valueCn : english and chinese
-// style : syle for english and chinese
-// styleEn/styleCn : style for english and chinese
+// valueEn/valueCn : value for english or chinese
+// styleGlobal : syle for english and chinese
+// styleEn/styleCn : style for english or chinese
 const LanguageConverter = ({
   tag,
   valueEn,
@@ -13,7 +13,7 @@ const LanguageConverter = ({
   styleCn,
   styleGlobal,
 }) => {
-  const state = useContext(GlobalStateContext) || { lenguage: "EN" }
+  const state = useContext(GlobalStateContext) || { lenguage: "CN" }
 
   // return h4 tag
   if (tag === "h4") {

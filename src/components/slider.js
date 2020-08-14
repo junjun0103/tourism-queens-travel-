@@ -6,7 +6,7 @@ import Title from "../components/ui/title"
 import "../css/components/slider.css"
 
 const Slider = ({ contents, titleEn, titleCn, subTitleEn, subTitleCn }) => {
-  const state = useContext(GlobalStateContext) || { lenguage: "EN" }
+  const state = useContext(GlobalStateContext) || { lenguage: "CN" }
 
   return (
     <div>

@@ -74,9 +74,9 @@ const OneIterinary = ({
     excluded,
     included,
     policy,
-    priceDetail
+    priceDetail,
   } = nodes[0]
-  const state = useContext(GlobalStateContext) || { lenguage: "EN" }
+  const state = useContext(GlobalStateContext) || { lenguage: "CN" }
 
   //declare lenguage variables
   var countPlans = 0
@@ -85,8 +85,8 @@ const OneIterinary = ({
   const bgImage = background_img.sharp.fluid,
     mapImage = map.sharp.fixed.src
 
-   var title = title_cn,
-    plans = plans_cn;
+  var title = title_cn,
+    plans = plans_cn
 
   return (
     <Layaout>

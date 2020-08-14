@@ -79,7 +79,7 @@ const Item = styled.div`
 
 const ThemeTour = ({ title_en, title_cn, background_img, slug }) => {
   // language state
-  const state = useContext(GlobalStateContext) || { lenguage: "EN" }
+  const state = useContext(GlobalStateContext) || { lenguage: "CN" }
   return (
     <Item>
       <Link

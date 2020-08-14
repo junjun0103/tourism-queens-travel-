@@ -27,7 +27,7 @@ const BgDark = styled.main`
 
 const HeaderImage = ({ title, slogan, highlight, bgImage, mapImage }) => {
   //language state
-  const state = useContext(GlobalStateContext) || { lenguage: "EN" }
+  const state = useContext(GlobalStateContext) || { lenguage: "CN" }
   // modal Ref
   const modalRef = React.useRef()
   // modal open function

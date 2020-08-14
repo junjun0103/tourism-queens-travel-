@@ -4,7 +4,7 @@ import img from "../../images/fern.jpg"
 import Title from "../ui/title"
 
 const CustomizedInformation = () => {
-  const state = useContext(GlobalStateContext) || { lenguage: "EN" }
+  const state = useContext(GlobalStateContext) || { lenguage: "CN" }
 
   return (
     <article className="custimized-introduction__container">

@@ -34,7 +34,7 @@ const OneFeedBack = ({
     allStrapiTouristInformation: { nodes },
   },
 }) => {
-  const state = useContext(GlobalStateContext) || { lenguage: "EN" }
+  const state = useContext(GlobalStateContext) || { lenguage: "CN" }
 
   //restructure
   const {

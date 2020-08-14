@@ -34,7 +34,7 @@ const OneTouristInfo = ({
   },
 }) => {
   //language state
-  const state = useContext(GlobalStateContext) || { lenguage: "EN" }
+  const state = useContext(GlobalStateContext) || { lenguage: "CN" }
 
   //restructure
   const {

@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 
 const PreviewIterinary = ({ iterinary }) => {
   // language state
-  const state = useContext(GlobalStateContext) || { lenguage: "EN" }
+  const state = useContext(GlobalStateContext) || { lenguage: "CN" }
   const {
     slug,
     title_cn,

@@ -232,7 +232,7 @@ Cusomaized tour
   .customizedForm-formBox {
     grid-template-columns: 1fr;
   }
-  .customizedForm-formBox__label {
+  .customizedForm-formBox__label__emptyBox {
     display: none;
   }
   .customizedForm-input {

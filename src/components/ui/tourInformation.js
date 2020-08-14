@@ -11,7 +11,7 @@ const TourInformation = ({
   policy,
 }) => {
   //language state
-  const state = useContext(GlobalStateContext) || { lenguage: "EN" }
+  const state = useContext(GlobalStateContext) || { lenguage: "CN" }
   return (
     <article className="themeTour-notice__article">
       <div className="themeTour-notice__price__box">

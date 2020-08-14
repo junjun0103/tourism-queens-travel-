@@ -62,7 +62,7 @@ const IndexPage = ({
     allStrapiFeedbacks: { nodes: feedbackData },
   },
 }) => {
-  const state = useContext(GlobalStateContext) || { lenguage: "EN" }
+  const state = useContext(GlobalStateContext) || { lenguage: "CN" }
 
   console.log("aca")
   console.log(themeTourData)

@@ -1,8 +1,13 @@
 import React, { useContext } from "react"
 import { GlobalStateContext } from "../../context/GlobalContextProvider"
 
-const Title = ({ titleEn, titleCn, subTitle, styleGlobal = "subtitle-style" }) => {
-  const state = useContext(GlobalStateContext) || { lenguage: "EN" }
+const Title = ({
+  titleEn,
+  titleCn,
+  subTitle,
+  styleGlobal = "subtitle-style",
+}) => {
+  const state = useContext(GlobalStateContext) || { lenguage: "CN" }
   //if it is a subtitle, then show return this
   if (subTitle) {
     return (

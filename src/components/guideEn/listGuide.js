@@ -5,7 +5,7 @@ import Title from "../ui/title"
 import { GlobalStateContext } from "../../context/GlobalContextProvider"
 const ListGuide = ({}) => {
   //language state
-  const state = useContext(GlobalStateContext) || { lenguage: "EN" }
+  const state = useContext(GlobalStateContext) || { lenguage: "CN" }
 
   // "isChineseGuide = false" means show english speaking tour guides
   const [isChineseGuide, setIsChineseGuide] = React.useState(false)

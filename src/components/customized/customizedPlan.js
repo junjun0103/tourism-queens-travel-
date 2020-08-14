@@ -6,7 +6,7 @@ import { GlobalStateContext } from "../../context/GlobalContextProvider"
 
 const CustomizedPlan = () => {
   //language state
-  const state = useContext(GlobalStateContext) || { lenguage: "EN" }
+  const state = useContext(GlobalStateContext) || { lenguage: "CN" }
 
   //State of Flight Schedule
   const [isChecked, setIsChecked] = React.useState(false)
@@ -152,6 +152,7 @@ const CustomizedPlan = () => {
                 />
                 {/*}<label className="customizedForm-containder_formBox__label"></label>
                 {/**CheckBox of Tickets bought */}
+                <label className="customizedForm-formBox__label__emptyBox"></label>
                 <div className="customizedForm-checkbox__container">
                   <input
                     type="checkbox"

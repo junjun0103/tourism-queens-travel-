@@ -26,8 +26,8 @@ function useOnScreen(options) {
 
 const Customized_5steps = () => {
   const [ref, visible] = useOnScreen({ rootMargin: "-50px" })
-  const state = useContext(GlobalStateContext) || { lenguage: "EN" }
-  
+  const state = useContext(GlobalStateContext) || { lenguage: "CN" }
+
   return (
     <>
       <div

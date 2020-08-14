@@ -110,7 +110,7 @@ const OneFeedBack = ({
     priceDetail_en,
     priceDetail_cn,
   } = nodes[0]
-  const state = useContext(GlobalStateContext) || { lenguage: "EN" }
+  const state = useContext(GlobalStateContext) || { lenguage: "CN" }
 
   //declare lenguage variables
   var countPlans = 0,
