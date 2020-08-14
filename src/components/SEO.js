@@ -17,7 +17,7 @@ export const query = graphql`
     }
   }
 `
-const SEO = ({ title_en, title_cn, desc_en, desc_cn }) => {
+const SEO = ({ title_en, title_cn, desc_en, desc_cn, image }) => {
   // language status
   const state = useContext(GlobalStateContext) || { lenguage: "CN" }
   const { site } = useStaticQuery(query)
