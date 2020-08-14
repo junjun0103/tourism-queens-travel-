@@ -78,7 +78,6 @@ h1 {
   /* 36pt/11.9 = 3rem */
   font-size: 2.2rem !important;
   font-family: var(--ff-slogan);
-  font-weight: 700;
 }
 h2 {
   /* 22pt/11.9 = 1.84rem */
@@ -263,6 +262,7 @@ p {
 }
 .cn-font__zcool {
   font-family: var(--ff-secondary-cn);
+  font-weight: 400;
 }
 
 .cn-font__noto_sans_medium {

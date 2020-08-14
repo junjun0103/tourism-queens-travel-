@@ -5,6 +5,7 @@ import { GlobalStateContext } from "../../context/GlobalContextProvider"
 import HeaderImage from "../ui/headerImageTour"
 import TourPlans from "../ui/tourPlans"
 import TourInformation from "../ui/tourInformation"
+import SEO from "../SEO"
 
 export const query = graphql`
   query($slug: String!) {
@@ -69,6 +70,7 @@ const OneIterinary = ({
     map,
     slogan,
     title_cn,
+    title_en,
     highlight,
     plans_cn,
     excluded,
@@ -90,6 +92,12 @@ const OneIterinary = ({
 
   return (
     <Layaout>
+      <SEO
+        title_en={title_en}
+        title_cn={title_cn}
+        desc_en={highlight}
+        desc_cn={highlight}
+      />
       {/** Main Background Image*/}
       <HeaderImage
         title={title}

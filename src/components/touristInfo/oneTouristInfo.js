@@ -3,6 +3,7 @@ import Layaout from "../ui/layout"
 import { graphql } from "gatsby"
 import { GlobalStateContext } from "../../context/GlobalContextProvider"
 import ReactMarkdown from "react-markdown"
+import SEO from "../SEO"
 
 export const query = graphql`
   query($slug: String!) {
@@ -63,6 +64,7 @@ const OneTouristInfo = ({
 
   return (
     <Layaout>
+      <SEO title_en={title_en} title_cn={title_cn} />
       <section className="section section-center">
         <div className="tourInfo-one__container">
           <h2 className="title-style">{title}</h2>

@@ -3,6 +3,7 @@ import Layaout from "../ui/layout"
 import { graphql } from "gatsby"
 import Modal from "../ui/modal"
 import { GlobalStateContext } from "../../context/GlobalContextProvider"
+import SEO from "../SEO"
 
 export const query = graphql`
   query($slug: String!) {
@@ -72,6 +73,12 @@ const OneFeedBack = ({
   }
   return (
     <Layaout>
+      <SEO
+        title_en={title_en}
+        title_cn={title_cn}
+        desc_en={content_en}
+        desc_cn={content_cn}
+      />
       <section className="section section-center">
         <div className=" review-container">
           <div className="review-container_items">

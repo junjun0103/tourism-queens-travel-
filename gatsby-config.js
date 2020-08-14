@@ -1,8 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title_en: `Queen's Travel`,
+    title_cn: `群星旅游公司`,
+    image: "/images/inner_big_logo_3.png",
+    url: "http://queenstravel.com", // No trailing slash allowed!
+    description_en: `Queens Travel is a registered inbound operator that is based in Auckland, New Zealand. We aim to provide a diversified experience to customers, the pursuit for perfection is a spirit for the company. Queens Travel has been providing quality service to ADS tour groups, Incentive groups and FITs for more than 18 years in New Zealand.`,
+    description_cn: `位于南半球美丽的'千帆之都'——新西兰最大城市奥克兰的——群星旅游公司（Queens Travel）是一家在新西兰注册的旅行社.`,
+    author: `@queen`,
   },
   plugins: [
     "gatsby-plugin-emotion",

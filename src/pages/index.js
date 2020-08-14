@@ -10,6 +10,7 @@ import WhyUs from "../components/home/whyUs"
 import { GlobalStateContext } from "../context/GlobalContextProvider"
 import "../css/pages/index.css"
 import Title from "../components/ui/title"
+import SEO from "../components/SEO"
 
 export const query = graphql`
   {
@@ -68,6 +69,8 @@ const IndexPage = ({
   console.log(themeTourData)
   return (
     <Layout>
+      <SEO title_en="Home" title_cn="首页" />
+
       {/**main image */}
       <MainImage />
 

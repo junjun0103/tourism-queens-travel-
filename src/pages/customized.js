@@ -6,6 +6,7 @@ import Customized_5steps from "../components/customized/customized_5steps"
 import CustomizedInformation from "../components/customized/customizedInformation"
 import CustomizedPlan from "../components/customized/customizedPlan"
 import "../css/pages/customized.css"
+import SEO from "../components/SEO"
 
 export const query = graphql`
   {
@@ -43,6 +44,7 @@ const Customized = ({
 }) => {
   return (
     <Layout>
+      <SEO title_en="Customized Tour" title_cn="群星定制" />
       <section className="custimized-page section section-center">
         {/*Top and Image Information*/}
         <CustomizedInformation />

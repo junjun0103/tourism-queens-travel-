@@ -6,18 +6,20 @@ import Awards from "../components/awards"
 import "../css/pages/aboutUs.css"
 import Title from "../components/ui/title"
 import LanguageConverter from "../components/ui/languageConverter"
+import SEO from "../components/SEO"
 
 const AboutUs = () => {
   return (
     <>
       <Layout>
+        <SEO title_en="About Us" title_cn="关于群星" />
         <section className="aboutUs-page section section-center">
           <div className="aboutUs-container">
             <div className="aboutUs-content">
               <Title titleEn="introduction" titleCn="关于群星"></Title>
               <LanguageConverter
-                tag={'h4'}
-                styleGlobal={'aboutUs-content__introduction text-align-justify'}
+                tag={"h4"}
+                styleGlobal={"aboutUs-content__introduction text-align-justify"}
                 styleCn="cn-font__noto_sans_light"
                 valueEn="Queens Travel is a registered inbound operator that is based in Auckland, New Zealand. We aim to provide a diversified experience to customers, the pursuit for perfection is a spirit for the company. Queens Travel has been providing quality service to ADS tour groups, Incentive groups and FITs for more than 18 years in New Zealand."
                 valueCn="位于南半球美丽的'千帆之都'——新西兰最大城市奥克兰的——群星旅游公司（Queens Travel）是一家在新西兰注册的旅行社。"

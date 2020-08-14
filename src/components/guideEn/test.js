@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 import { GlobalStateContext } from "../../context/GlobalContextProvider"
 import LanguageConverter from "../../components/ui/languageConverter"
 import ReactMarkdown from "react-markdown"
+import SEO from "../SEO"
 
 export const query = graphql`
   query($slug: String!) {
@@ -63,6 +64,8 @@ const OneFeedBack = ({
 
   return (
     <Layaout>
+      <SEO title_en={title_en} title_cn={title_cn} />
+
       <section className="section section-center">
         <div className="tourInfo-one__container">
           <h2

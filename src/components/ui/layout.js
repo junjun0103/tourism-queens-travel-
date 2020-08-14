@@ -22,8 +22,12 @@ const Layout = ({ children }) => {
   return (
     <>
       <Helmet>
-        <title>Queen Tourism</title>
-        <meta name="description" content="Queen Tourism Description" />
+        <title>Queen's Travel</title>
+        {/* for naver webmaster verification */}
+        <meta
+          name="naver-site-verification"
+          content="e2c8cedb7b1c0ed5bafa584ea0d2b2f6e31c9be9"
+        />
         <link
           href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
           rel="stylesheet"

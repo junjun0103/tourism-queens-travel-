@@ -4,9 +4,9 @@ import Layout from "../components/ui/layout"
 import "../css/pages/contactUs.css"
 import Title from "../components/ui/title"
 import LanguageConverter from "../components/ui/languageConverter"
+import SEO from "../components/SEO"
 
 import { Map, TileLayer, Marker, Popup } from "react-leaflet"
-
 
 const DEFAULT_LAN = 174.7364
 const DEFAULT_LAT = -36.8102
@@ -33,6 +33,7 @@ const ContactUs = () => {
   return (
     <>
       <Layout>
+        <SEO title_en="Contact Us" title_cn="在线咨询" />
         <section className="contactUs-page section section-center">
           <Title titleEn="contact detail" titleCn="在线咨询"></Title>
           <div className="contactUs-container">

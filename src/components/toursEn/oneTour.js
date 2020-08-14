@@ -5,6 +5,7 @@ import { GlobalStateContext } from "../../context/GlobalContextProvider"
 import HeaderImage from "../ui/headerImageTour"
 import TourPlans from "../ui/tourPlans"
 import TourInformation from "../ui/tourInformation"
+import SEO from "../SEO"
 
 export const query = graphql`
   query($slug: String!) {
@@ -156,6 +157,12 @@ const OneFeedBack = ({
   }
   return (
     <Layaout>
+      <SEO
+        title_en={title_en}
+        title_cn={title_cn}
+        desc_en={highlight_en}
+        desc_cn={highlight_cn}
+      />
       {/** Main Background Image*/}
       <HeaderImage
         title={title}
