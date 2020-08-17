@@ -148,6 +148,10 @@ main-whyUs
 .main-whyUs__contents__icon {
   font-size: 3rem;
 }
+.main-whyUs__contents__title {
+  text-align: center;
+  width: 100%;
+}
 .main-whyUs__contents__text {
   background-color: var(--clr-primary-1);
   width: 90%;

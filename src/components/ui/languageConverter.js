@@ -1,5 +1,6 @@
 import React, { useContext } from "react"
 import { GlobalStateContext } from "../../context/GlobalContextProvider"
+import  '../../css/components/languageConverter.css'
 
 // tag : h3 or h4
 // valueEn/valueCn : value for english or chinese

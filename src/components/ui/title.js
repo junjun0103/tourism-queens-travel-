@@ -31,7 +31,9 @@ const Title = ({
         {/* "CN" has a different font style */}
         <h1
           className={`title-style ${
-            state.lenguage === "CN" ? "cn-font__noto_bold  cn_h2" : ""
+            state.lenguage === "CN"
+              ? "cn-font__noto_bold  cn_h2"
+              : "title-style__en"
           }`}
         >
           {state.lenguage === "EN" ? titleEn : titleCn}

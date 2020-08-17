@@ -18,12 +18,14 @@ const WhyUs = () => {
       <div className="main-whyUs__box">
         <div className="main-whyUs__contents">
           <FaEye className="main-whyUs__contents__icon" />
-          <LanguageConverter
-            tag="h3"
-            styleCn="cn-font__noto_bold"
-            valueEn="Concentrated"
-            valueCn="专注"
-          />
+          <div className="main-whyUs__contents__title">
+            <LanguageConverter
+              tag="h3"
+              styleCn="cn-font__noto_bold"
+              valueEn="Concentrated"
+              valueCn="专注"
+            />
+          </div>
           <div className="main-whyUs__contents__text">
             <LanguageConverter
               tag="h4"
@@ -36,12 +38,14 @@ const WhyUs = () => {
         </div>
         <div className="main-whyUs__contents">
           <FaUserTie className="main-whyUs__contents__icon" />
-          <LanguageConverter
-            tag="h3"
-            styleCn="cn-font__noto_bold"
-            valueEn="Professional"
-            valueCn="专业"
-          />
+          <div className="main-whyUs__contents__title">
+            <LanguageConverter
+              tag="h3"
+              styleCn="cn-font__noto_bold"
+              valueEn="Professional"
+              valueCn="专业"
+            />
+          </div>
           <div className="main-whyUs__contents__text">
             <LanguageConverter
               tag="h4"
@@ -54,12 +58,14 @@ const WhyUs = () => {
         </div>
         <div className="main-whyUs__contents">
           <FaHotjar className="main-whyUs__contents__icon" />
-          <LanguageConverter
-            tag="h3"
-            styleCn="cn-font__noto_bold"
-            valueEn="Passionate"
-            valueCn="热情"
-          />
+          <div className="main-whyUs__contents__title">
+            <LanguageConverter
+              tag="h3"
+              styleCn="cn-font__noto_bold"
+              valueEn="Passionate"
+              valueCn="热情"
+            />
+          </div>
           <div className="main-whyUs__contents__text">
             <LanguageConverter
               tag="h4"
@@ -72,12 +78,14 @@ const WhyUs = () => {
         </div>
         <div className="main-whyUs__contents">
           <FaStar className="main-whyUs__contents__icon" />
-          <LanguageConverter
-            tag="h3"
-            styleCn="cn-font__noto_bold"
-            valueEn="Unique"
-            valueCn="独特"
-          />
+          <div className="main-whyUs__contents__title">
+            <LanguageConverter
+              tag="h3"
+              styleCn="cn-font__noto_bold"
+              valueEn="Unique"
+              valueCn="独特"
+            />
+          </div>
           <div className="main-whyUs__contents__text">
             <LanguageConverter
               tag="h4"
@@ -90,12 +98,14 @@ const WhyUs = () => {
         </div>
         <div className="main-whyUs__contents">
           <FaSeedling className="main-whyUs__contents__icon" />
-          <LanguageConverter
-            tag="h3"
-            styleCn="cn-font__noto_bold"
-            valueEn="Pure"
-            valueCn="纯粹"
-          />
+          <div className="main-whyUs__contents__title">
+            <LanguageConverter
+              tag="h3"
+              styleCn="cn-font__noto_bold"
+              valueEn="Pure"
+              valueCn="纯粹"
+            />
+          </div>
           <div className="main-whyUs__contents__text">
             <LanguageConverter
               tag="h4"
@@ -108,12 +118,14 @@ const WhyUs = () => {
         </div>
         <div className="main-whyUs__contents">
           <FaSmile className="main-whyUs__contents__icon" />
-          <LanguageConverter
-            tag="h3"
-            styleCn="cn-font__noto_bold"
-            valueEn="Service"
-            valueCn="服务"
-          />
+          <div className="main-whyUs__contents__title">
+            <LanguageConverter
+              tag="h3"
+              styleCn="cn-font__noto_bold"
+              valueEn="Service"
+              valueCn="服务"
+            />
+          </div>
           <div className="main-whyUs__contents__text">
             <LanguageConverter
               tag="h4"

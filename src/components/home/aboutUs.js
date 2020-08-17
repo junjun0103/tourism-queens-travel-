@@ -12,7 +12,9 @@ const AboutUs = () => {
         <div className="main-aboutUs__contents">
           <h2
             className={`title-style__white ${
-              state.lenguage === "CN" ? "cn-font__noto_bold" : ""
+              state.lenguage === "CN"
+                ? "cn-font__noto_bold"
+                : "title-style__white__en"
             }`}
           >
             {state.lenguage === "EN" ? "about us" : "关于群星"}
@@ -44,11 +46,11 @@ const AboutUs = () => {
       <div className="btn-aboutUs">
         <Link
           to={"/aboutUs/"}
-          className={`btn btn-center cn_h4 ${
-            state.lenguage === "CN" ? "cn-font__noto_medium" : ""
+          className={`btn btn-center ${
+            state.lenguage === "CN" ? "cn-font__noto_medium cn_h4" : ""
           }`}
         >
-          {state.lenguage === "EN" ? "more" : "更多"}
+          {state.lenguage === "CN" ? "更多" : "more"}
         </Link>
       </div>
     </article>

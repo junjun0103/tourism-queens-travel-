@@ -104,7 +104,6 @@ p {
 }
 @media screen and (max-width: 800px) {
   h2 {
-    margin-bottom: 0.5rem;
     font-size: 1.4rem;
   }
   h3 {
@@ -123,7 +122,6 @@ p {
 }
 @media screen and (max-width: 500px) {
   h2 {
-    margin-bottom: 0.2rem;
     font-size: 1.2rem;
   }
   h3 {
@@ -139,7 +137,6 @@ p {
 }
 @media screen and (max-width: 350px) {
   h2 {
-    margin-bottom: 0rem;
     font-size: 1rem;
   }
   h3 {
@@ -353,8 +350,6 @@ p {
 .title-style,
 .title-style__white {
   margin: 0 !important;
-  font-size: 1.8rem;
-  font-family: var(--ff-primary);
   display: inline-block;
   padding-bottom: 0.3rem;
 }
@@ -365,13 +360,18 @@ p {
   color: white;
   box-shadow: 0px 3px var(--clr-primary-2);
 }
+.title-style__en,
+.title-style__white__en {
+  font-size: 1.8rem;
+  font-family: var(--ff-primary);
+}
 @media screen and (max-width: 800px) {
   .slogan-style {
     /* 36pt/11.9 = 3rem */
     font-size: 1.8rem;
   }
-  .title-style,
-  .title-style__white {
+  .title-style__en,
+  .title-style__white__en {
     /* 22pt/11.9 = 1.84rem */
     font-size: 1.4rem;
   }
@@ -380,8 +380,8 @@ p {
   .slogan-style {
     font-size: 1.5rem;
   }
-  .title-style,
-  .title-style__white {
+  .title-style__en,
+  .title-style__white__en {
     font-size: 1.2rem;
   }
 }

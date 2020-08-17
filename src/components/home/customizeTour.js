@@ -40,13 +40,13 @@ const CustomizeTour = () => {
         <div className="main-btn__customized">
           <Link
             to={"/customized/"}
-            className={`btn btn-center cn_h4 ${
-              state.lenguage === "CN" ? "cn-font__noto_medium " : ""
+            className={`btn btn-center ${
+              state.lenguage === "CN" ? "cn-font__noto_light cn_h4" : ""
             }`}
           >
-            {state.lenguage === "EN"
-              ? "customize your tour"
-              : "开始订制您的行程"}
+            {state.lenguage === "CN"
+              ? "开始订制您的行程"
+              : "customize your tour"}
           </Link>
         </div>
       </article>
