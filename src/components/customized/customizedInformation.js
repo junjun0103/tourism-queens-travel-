@@ -15,7 +15,7 @@ const CustomizedInformation = () => {
           <br />
           <h4
             className={`text-align-justify ${
-              state.lenguage === "CN" ? "cn-font__noto_sans_light" : ""
+              state.lenguage === "CN" ? "cn-font__noto_sans_light cn_h4" : ""
             }`}
           >
             {state.lenguage === "EN"
@@ -25,16 +25,18 @@ const CustomizedInformation = () => {
           <br />
           <br />
           <h3
-            className={`${state.lenguage === "CN" ? "cn-font__noto_bold" : ""}`}
+            className={`${
+              state.lenguage === "CN" ? "cn-font__noto_bold cn_h3" : ""
+            }`}
           >
             {state.lenguage === "EN"
               ? "Private customization mode:"
-              : "只要是您想要的，我们都能为您私人订制:"}
+              : "订制模式:"}
           </h3>
           <br />
           <h4
             className={`text-align-justify ${
-              state.lenguage === "CN" ? "cn-font__noto_sans_light" : ""
+              state.lenguage === "CN" ? "cn-font__noto_sans_light cn_h4" : ""
             }`}
           >
             {state.lenguage === "EN"
