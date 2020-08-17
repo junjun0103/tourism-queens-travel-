@@ -58,11 +58,13 @@ const Item = styled.div`
       color: white;
     }
     .description {
+      margin-top: 0.5rem;
       font-weight: lighter;
       font-size: 14px;
       color: white;
     }
     .contentDate {
+      margin-top: 0.5rem;
       text-align: right;
       color: white;
       font-weight: bold;
