@@ -44,7 +44,7 @@ const Customized = ({
 }) => {
   return (
     <Layout>
-      <SEO title_en="Customized Tour" title_cn="群星定制" />
+      <SEO title_en="Customized Tour" title_cn="群星定制" desc_en="Family, partner, friends, business, etc., starting from a group of 2 people. The whole trip is equipped with a private driver guide. We can tailor-make itinerary according to your requirements and the length of your journey. The attractions will be chosen according to your personal interests and preferences." desc_cn="家庭、伴侣、朋友、商务等小团队出行，2人起成团全程配备群星私人导游兼司机。按照您的需求、爱好，量身定制行程并提供最专业建议，开着车带着您完成一次难忘之旅！"/>
       <section className="custimized-page section section-center">
         {/*Top and Image Information*/}
         <CustomizedInformation />

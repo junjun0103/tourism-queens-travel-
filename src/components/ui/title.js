@@ -29,13 +29,13 @@ const Title = ({
     return (
       <div>
         {/* "CN" has a different font style */}
-        <h2
+        <h1
           className={`title-style ${
             state.lenguage === "CN" ? "cn-font__noto_bold  cn_h2" : ""
           }`}
         >
           {state.lenguage === "EN" ? titleEn : titleCn}
-        </h2>
+        </h1>
       </div>
     )
   }

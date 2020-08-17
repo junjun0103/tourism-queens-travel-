@@ -70,17 +70,12 @@ textarea {
 }
 h1,
 h2 {
-  margin-bottom: 0.75rem;
   text-transform: capitalize;
   letter-spacing: var(--spacing);
 }
-h1 {
-  /* 36pt/11.9 = 3rem */
-  font-size: 2.2rem !important;
-  font-family: var(--ff-slogan);
-}
+
 h2 {
-  /* 22pt/11.9 = 1.84rem */
+  margin-bottom: 0.75rem;
   font-size: 1.8rem;
   font-family: var(--ff-primary);
 }
@@ -95,7 +90,7 @@ h4 {
   font-size: 1rem;
   font-family: var(--ff-secondary);
   font-weight: 300;
-  line-height: 1.4rem;
+  line-height: 1.2rem;
 }
 h5 {
   /* 11pt/11.9 = 0.92rem */
@@ -108,16 +103,8 @@ p {
   color: var(--clr-grey-3);
 }
 @media screen and (max-width: 800px) {
-  h1,
   h2 {
     margin-bottom: 0.5rem;
-  }
-  h1 {
-    /* 36pt/11.9 = 3rem */
-    font-size: 1.8rem !important;
-  }
-  h2 {
-    /* 22pt/11.9 = 1.84rem */
     font-size: 1.4rem;
   }
   h3 {
@@ -135,14 +122,8 @@ p {
   }
 }
 @media screen and (max-width: 500px) {
-  h1,
   h2 {
     margin-bottom: 0.2rem;
-  }
-  h1 {
-    font-size: 1.5rem !important;
-  }
-  h2 {
     font-size: 1.2rem;
   }
   h3 {
@@ -157,14 +138,8 @@ p {
   }
 }
 @media screen and (max-width: 350px) {
-  h1,
   h2 {
     margin-bottom: 0rem;
-  }
-  h1 {
-    font-size: 1.3rem !important;
-  }
-  h2 {
     font-size: 1rem;
   }
   h3 {
@@ -181,7 +156,7 @@ p {
 
 .cn_h1 {
   /* 36pt/11.9 = 3rem */
-  font-size: 2rem !important;
+  font-size: 2rem;
 }
 .cn_h2 {
   /* 22pt/11.9 = 1.84rem */
@@ -202,7 +177,7 @@ p {
 @media screen and (max-width: 800px) {
   .cn_h1 {
     /* 36pt/11.9 = 3rem */
-    font-size: 1.5rem !important;
+    font-size: 1.5rem;
   }
   .cn_h2 {
     /* 22pt/11.9 = 1.84rem */
@@ -223,7 +198,7 @@ p {
 }
 @media screen and (max-width: 500px) {
   .cn_h1 {
-    font-size: 1.1rem !important;
+    font-size: 1.1rem;
   }
   .cn_h2 {
     font-size: 1rem;
@@ -240,7 +215,7 @@ p {
 }
 @media screen and (max-width: 350px) {
   .cn_h1 {
-    font-size: 1rem !important;
+    font-size: 1rem;
   }
   .cn_h2 {
     font-size: 0.95rem;
@@ -371,8 +346,15 @@ p {
   max-width: 1200px;
 }
 
+.slogan-style {
+  font-size: 2.2rem;
+  font-family: var(--ff-slogan);
+}
 .title-style,
 .title-style__white {
+  margin: 0 !important;
+  font-size: 1.8rem;
+  font-family: var(--ff-primary);
   display: inline-block;
   padding-bottom: 0.3rem;
 }
@@ -383,6 +365,36 @@ p {
   color: white;
   box-shadow: 0px 3px var(--clr-primary-2);
 }
+@media screen and (max-width: 800px) {
+  .slogan-style {
+    /* 36pt/11.9 = 3rem */
+    font-size: 1.8rem;
+  }
+  .title-style,
+  .title-style__white {
+    /* 22pt/11.9 = 1.84rem */
+    font-size: 1.4rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .slogan-style {
+    font-size: 1.5rem;
+  }
+  .title-style,
+  .title-style__white {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 350px) {
+  .slogan-style {
+    font-size: 1.3rem;
+  }
+  .title-style,
+  .title-style__white {
+    font-size: 1rem;
+  }
+}
+
 .subtitle-style,
 .subtitle-style__noMT {
   text-align: justify;

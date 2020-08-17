@@ -135,7 +135,7 @@ const tempLinksCn = dataCN.map(link => {
 
 export default ({ styleClass }) => {
   const dispatch = useContext(GlobalDispatchContext)
-  const state = useContext(GlobalStateContext) || { lenguage: "N" }
+  const state = useContext(GlobalStateContext) || { lenguage: "CN" }
 
   const _handleChange = event => {
     console.log(event.target.value)

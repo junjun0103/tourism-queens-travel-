@@ -178,8 +178,8 @@ Theme tour
   grid-template-columns: repeat(2, 1fr);
 }
 .themeTour-plan__dot {
-  width: 0.8rem;
-  height: 0.8rem;
+  width: 0.7rem;
+  height: 0.7rem;
   border-radius: 50%;
   justify-self: end;
   margin-right: -0.45rem;

@@ -51,7 +51,11 @@ const HeaderImage = ({ title, slogan, highlight, bgImage, mapImage }) => {
         </div>
         <br />
         <div className="themeTour-header__subtitle">
-          <h1 className={`${state.lenguage === "CN" ? "cn-font__zcool" : ""}`}>
+          <h1
+            className={`slogan-style ${
+              state.lenguage === "CN" ? "cn-font__zcool" : ""
+            }`}
+          >
             {slogan}
           </h1>
         </div>

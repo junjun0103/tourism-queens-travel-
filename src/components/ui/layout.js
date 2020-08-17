@@ -28,6 +28,11 @@ const Layout = ({ children }) => {
           name="naver-site-verification"
           content="e2c8cedb7b1c0ed5bafa584ea0d2b2f6e31c9be9"
         />
+        {/* for google webmaster verification */}
+        <meta
+          name="google-site-verification"
+          content="7IGWtUlvxLHB7p-vPOJ0DDgcHXxqfkfcl9BHsQD59q0"
+        />
         <link
           href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
           rel="stylesheet"

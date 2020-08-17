@@ -29,7 +29,7 @@ const PreviewTour = ({ tour }) => {
 
   return (
     <>
-      <Link to={"/themeTour/" + slug}>
+      <Link rel="canonical" to={"/themeTour/" + slug}>
         <div className="preview-container_themeTour preview-boxShadow">
           <img
             src={background_img.sharp.fluid.src}

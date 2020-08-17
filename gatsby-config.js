@@ -4,7 +4,7 @@ module.exports = {
     title_cn: `群星旅游公司`,
     image: "/images/inner_big_logo_3.png",
     url: "http://queenstravel.com", // No trailing slash allowed!
-    description_en: `Queens Travel is a registered inbound operator that is based in Auckland, New Zealand. We aim to provide a diversified experience to customers, the pursuit for perfection is a spirit for the company. Queens Travel has been providing quality service to ADS tour groups, Incentive groups and FITs for more than 18 years in New Zealand.`,
+    description_en: `Queens Travel has been providing quality service to ADS tour groups, Incentive groups and FITs for more than 18 years in New Zealand.`,
     description_cn: `位于南半球美丽的'千帆之都'——新西兰最大城市奥克兰的——群星旅游公司（Queens Travel）是一家在新西兰注册的旅行社.`,
     author: `@queen`,
   },
@@ -45,10 +45,10 @@ module.exports = {
         name: `gatsby-starter-default`,
         short_name: `starter`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#339966`,
+        theme_color: `#339966`,
         display: `minimal-ui`,
-        //icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
     {

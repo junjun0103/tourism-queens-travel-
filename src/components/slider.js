@@ -18,6 +18,7 @@ const Slider = ({ contents, titleEn, titleCn, subTitleEn, subTitleCn }) => {
         titleEn={subTitleEn}
         titleCn={subTitleCn}
       ></Title>
+      <br />
       <Carousel
         enableMouseSwipe={true}
         enableSwipe={true}

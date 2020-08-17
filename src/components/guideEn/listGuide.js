@@ -29,7 +29,7 @@ const ListGuide = ({}) => {
       ></Title>
       <Title
         subTitle={true}
-        style="subtitle-style__noMT"
+        styleGlobal="subtitle-style__noMT"
         titleEn="Find our guides below and see how they become travel experts"
         titleCn="观看下方了解他们如何成为新西兰旅游达人的故事"
       ></Title>

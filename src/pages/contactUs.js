@@ -33,7 +33,7 @@ const ContactUs = () => {
   return (
     <>
       <Layout>
-        <SEO title_en="Contact Us" title_cn="在线咨询" />
+        <SEO title_en="Contact Us" title_cn="在线咨询" desc_en="Contact:+64 9 4800 118, Email:inbound@queenstravel.com Address:129A Onewa Road, Northcote, Auckland 0627, New Zealand" desc_cn="联系电话:+64 9 4800 118, 联系邮件:inbound@queenstravel.com 联系QQ:2725799562, 联系微信:Queens-NZ, 联系地址:129A Onewa Road, Northcote, Auckland 0627, New Zealand" />
         <section className="contactUs-page section section-center">
           <Title titleEn="contact detail" titleCn="在线咨询"></Title>
           <div className="contactUs-container">

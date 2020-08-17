@@ -12,7 +12,7 @@ const AboutUs = () => {
   return (
     <>
       <Layout>
-        <SEO title_en="About Us" title_cn="关于群星" />
+        <SEO title_en="About Us" title_cn="关于群星" desc_en="Queens Travel owns several professional qualifications including Approved Destination Status and Qualmark, the company is also a member of Premier Kiwi Partnership Program of Tourism New Zealand, Tourism Export Council and Tourism Industry Association." desc_cn="群星旅游公司以设计新西兰南北岛旅游线路和提供专业旅游地接服务为主，拥有十七年丰富的旅游地接操作和服务经验，并与当地旅游供应商保持着密切的合作关系，以迖到为客人提供多元化的旅游服务,群星旅游公司本著專业和诚信的營運模式,在本地旅游行业拥有高品质的信誉和卓越口碑."/>
         <section className="aboutUs-page section section-center">
           <div className="aboutUs-container">
             <div className="aboutUs-content">

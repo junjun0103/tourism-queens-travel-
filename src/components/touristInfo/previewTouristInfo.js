@@ -8,7 +8,7 @@ const PreviewTour = ({ tourinfo }) => {
   return (
     <>
       {
-        <Link to={"/touristInformation/" + slug}>
+        <Link rel="canonical" to={"/touristInformation/" + slug}>
           <div className="preview-tourInfo__container">
             <img
               src={tourinfo.icon.sharp.fluid.src}

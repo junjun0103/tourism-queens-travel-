@@ -26,7 +26,11 @@ const IndexMain = () => {
   console.log(imagebg)
   return (
     <ImageBackground tag="section" fluid={imagebg.sharp.fluid}>
-      <img src={logo_white} className="main-header__logo"></img>
+      <img
+        src={logo_white}
+        className="main-header__logo"
+        alt="logo_white"
+      ></img>
     </ImageBackground>
   )
 }
