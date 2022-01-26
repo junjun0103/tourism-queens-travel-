@@ -24,18 +24,18 @@ module.exports = {
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: `http://128.199.125.141:1337`,
+        apiURL: `http://127.0.0.1:1337`,
         queryLimit: 1000,
         contentTypes: [
-          `best-sales`,
+          `itinerary`,
           "Feedbacks",
           "Theme-Tour",
           "Tour-Guides",
           "Tourist-Information",
         ],
         loginData: {
-          identifier: "carlos",
-          password: "123456",
+          identifier: "jun",
+          password: "junjun0103",
         },
       },
     },

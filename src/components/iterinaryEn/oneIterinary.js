@@ -9,7 +9,7 @@ import SEO from "../SEO"
 
 export const query = graphql`
   query($slug: String!) {
-    allStrapiBestSales(filter: { slug: { eq: $slug } }) {
+    allStrapiItinerary(filter: { slug: { eq: $slug } }) {
       nodes {
         excluded
         highlight
@@ -19,7 +19,6 @@ export const query = graphql`
         priceDetail
         slogan
         title_cn
-        title_en
         background_img {
           sharp: childImageSharp {
             fluid(quality: 100) {
@@ -61,7 +60,7 @@ export const query = graphql`
 
 const OneIterinary = ({
   data: {
-    allStrapiBestSales: { nodes },
+    allStrapiItinerary: { nodes },
   },
 }) => {
   //destructuring
